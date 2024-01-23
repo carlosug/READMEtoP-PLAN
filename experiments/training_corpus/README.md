@@ -2,11 +2,13 @@
 ---
 This folder aims to keep track of the experiements related to the research question:
 
-* can machines understand and execute installation plans for biomedical software?
-### Selection criteria:
+* can machines interpret and execute installation plans for biomedical software?
 
+### Selection criteria:
 The repositories will be selected one or more reasons:
 + bioinformatics software documentation
++ part of awesome software list
++ found in code repository
 
 ### Benchmark file
 **installationtype.csv**
