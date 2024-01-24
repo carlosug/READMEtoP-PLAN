@@ -6,7 +6,7 @@ This folder aims to keep track of the experiements related to the research quest
 
 ### Selection criteria [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) :
 The repositories will be selected on community-curated list of software packages:
-+ bioinformatics software documentation ([e.g](https://blog.bioconductor.org/posts/2022-10-22-awesome-lists/));
++ bioinformatics software documentation ([e.g](https://blog.bioconductor.org/posts/2022-10-22-awesome-lists/)) and/or [bio.tools](https://bio.tools/t?page=1&q=%27Python%27&topic=%27Neurobiology%27&sort=score);
 + part of [awesome-healthcare list](https://github.com/kakoni/awesome-healthcare) or;
 + part of [awesome-ai-devtools](https://github.com/jamesmurdza/awesome-ai-devtools);
 + part of [awesome-neuroscience](https://github.com/analyticalmonk/awesome-neuroscience);
