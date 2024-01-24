@@ -43,5 +43,7 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 * softwareRequirements
 * **buildInstructions**
 
+**Altenrate methods of installation**: mostly devided in ```fromClient```, ```fromSource```, and ```fromContainer```
+
 
 
