@@ -46,4 +46,26 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 **Altenrate methods of installation**: mostly devided in ```fromClient```, ```fromSource```, and ```fromContainer```
 
 
+### Software type
+
+| Type | Description |
+| ----- | ----------------- |
+| Library| A collection of components that are used to construct other tools|
+| Script| A tool written for some run-time environment| 
+| Package| A tool that is aimed to be executed through the command-line|
+| Service| A collection of codes that do not fit any of the previous categories |
+
+### Taxonomy of research software installation types
+The type of software installation: a discrete software entity can have more than one e.g. command-line, services
+
+| Mode | Description | Complexity | Method | Steps | number of steps |
+| ----- | ----------------- | ---------------------- | -------------------- |
+| Source| A collection of components that are used to construct other tools| High | Git | | |
+| Package Manager| A tool written for some run-time environment| Low | Pip | | |
+| Container| A tool that is aimed to be executed through the command-line| High | Docker | | |
+| Binary| Github source and binary releases | Low | Downdload | download the tarball, unpack it, and run it | 3 |
+
+#### Package managers
+
+
 
