@@ -61,7 +61,7 @@ The type of software installation: a discrete software entity can have more than
 | Container| A tool that is aimed to be executed through the command-line| High | Docker | |`## Installing through Docker` | |
 | Binary| Github source and binary releases (binary dependencies) | Low | - | download the tarball, unpack it, and run it (ready-to-run)  | 3 | |
 
-### Source
+**Source**
 Goal: provide the source code to enable the ability to review the source code and understand its workings
 compile from source
 Deal with source code dependencies
@@ -69,7 +69,7 @@ You need to build the source code yourself. That means you need to take care of 
 A source file contains the original code as written by the developer in whatever language he/she chooses (C, C++, Python etc),and is generic
 Installing a program "from source" means installing a program without using a package manager. You compile the source code and copy the binaries to your computer instead
 
-#### Package managers
+**Package managers**
 Pre-built package
 A package (RPM or DEB for example) is the binary executable (or interpreted script etc) pre-prepared for your particular distro. The task of preparing the source for compiling (adding any necessary patches etc), the actual compile, creating distro specific config files, creating pre and post install scripts etc are all done for you by the package maintainer.
 
@@ -83,7 +83,7 @@ A package (RPM or DEB for example) is the binary executable (or interpreted scri
 |Pypi| | pip | ```pypi install package``` |
 
 
-### Binary
+**Binary**
 precompiled binaries are ready-to-run executable files
 Deal with binary dependencies
 
@@ -91,6 +91,7 @@ Deal with binary dependencies
 example:[https://www.qemu.org/download/](https://www.qemu.org/download/)
 
 To download and build binaries
+
 ```wget https://download.example.org/example.tar.xz```
 
 ```tar xcJf example.tar.xz```
