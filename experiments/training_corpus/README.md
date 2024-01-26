@@ -11,6 +11,7 @@ The repositories will be selected on community-curated list of software packages
 + part of [awesome-ai-devtools](https://github.com/jamesmurdza/awesome-ai-devtools);
 + part of [awesome-neuroscience](https://github.com/analyticalmonk/awesome-neuroscience);
 + part of [biological image analysis](https://github.com/hallvaaw/awesome-biological-image-analysis)
+* part of [Awesome-genome-visualization](https://github.com/cmdcolin/awesome-genome-visualization)
 
 Also thinking about LLMs for bioinformatics
 
@@ -20,7 +21,6 @@ A list of research software registries (also known as catalog, index, warehouse,
 * [Research software directory]()
 * [4TUResearchData repository]()
 * [Codewithpapers](https://paperswithcode.com/)
-* [Awesome-genome-visualization](https://github.com/cmdcolin/awesome-genome-visualization)
 
 
 
