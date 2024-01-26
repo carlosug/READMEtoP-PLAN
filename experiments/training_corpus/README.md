@@ -59,7 +59,7 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 The type of software installation: a discrete software entity can have more than one e.g. command-line, services
 
 | Mode | Description | Complexity | Method | Steps | number of steps |
-| ----- | ----------------- | ---------------------- | -------------------- |
+| ----- | ----------------- | ---------------------- | -------------------- | ------- | -------- |
 | Source| A collection of components that are used to construct other tools| High | Git | | |
 | Package Manager| A tool written for some run-time environment| Low | Pip | | |
 | Container| A tool that is aimed to be executed through the command-line| High | Docker | | |
