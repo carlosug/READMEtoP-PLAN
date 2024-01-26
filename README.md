@@ -33,3 +33,9 @@ We will be using one of the following tools (possibly following [The Softcite ap
 - [hypothes.is](https://web.hypothes.is/)
 
 
+#### TODO:
+- Select repos with different levels of difficulty/complexity -- explain why the levels are set out that way
+- Annotate the different alternative installation options that exist for repositories. Run evaluationfor each
+- Define how each step is going to be annotated in a plan -- what happens if there are optional steps?
+
+
