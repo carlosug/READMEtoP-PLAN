@@ -19,12 +19,8 @@ A list of research software registries (also known as catalog, index, warehouse,
 
 * [Research software directory]()
 * [4TUResearchData repository]()
-* [TUD]()
-* [Research Software Heritage]()
-* [Marven Central Repository]()
-* [Apache projects](https://projects.apache.org/)
-* [ORKG](https://orkg.org)
 * [Codewithpapers](https://paperswithcode.com/)
+* [Awesome-genome-visualization](https://github.com/cmdcolin/awesome-genome-visualization)
 
 
 
@@ -58,14 +54,57 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 ### Taxonomy of research software installation types
 The type of software installation: a discrete software entity can have more than one e.g. command-line, services
 
-| Mode | Description | Complexity | Method | Steps | number of steps |
+| Mode | Description | Complexity | Method(s) | Steps | number of steps | README section |
 | ----- | ----------------- | ---------------------- | -------------------- | ------- | -------- |
-| Source| A collection of components that are used to construct other tools| High | Git | | |
-| Package Manager| A tool written for some run-time environment| Low | Pip | | |
-| Container| A tool that is aimed to be executed through the command-line| High | Docker | | |
-| Binary| Github source and binary releases | Low | Downdload | download the tarball, unpack it, and run it | 3 |
+| Source| Raw material (source) with a compiler to download the executable that machines then runs| High | Git and official release websites | Download the compiler and install all the required libraries manually  | | `## Manual install` , `## from source`, `## Install from Github`|
+| Package Manager| A tool written for some run-time environment| Low | Pip |1 |`## Install from Pypi` |
+| Container| A tool that is aimed to be executed through the command-line| High | Docker | |`## Installing through Docker` |
+| Binary| Github source and binary releases (binary dependencies) | Low | - | download the tarball, unpack it, and run it (ready-to-run)  | 3 |
+
+### Source
+Goal: provide the source code to enable the ability to review the source code and understand its workings
+compile from source
+Deal with source code dependencies
+You need to build the source code yourself. That means you need to take care of the dependencies yourself. 
+A source file contains the original code as written by the developer in whatever language he/she chooses (C, C++, Python etc),and is generic
+Installing a program "from source" means installing a program without using a package manager. You compile the source code and copy the binaries to your computer instead
 
 #### Package managers
+Pre-built package
+A package (RPM or DEB for example) is the binary executable (or interpreted script etc) pre-prepared for your particular distro. The task of preparing the source for compiling (adding any necessary patches etc), the actual compile, creating distro specific config files, creating pre and post install scripts etc are all done for you by the package maintainer.
+
+| Name | Channel | Steps | Commands
+| ----- | ----------------- | ---------------------- |
+| Conda| bioconda | 1 |  ```conda install bioconda::sambamba``` or ```conda install bioconda/label/cf201901::sambamba``` |
+| GNU Guix| | 1 | ```guix install sambamba``` or | ```guix install sambamba``` |
+| Homebrew| homebrew-bio | 1  | ```brew install brewsci/bio/sambamba``` |
+| Fedora| dnf | 1  | ```dnf install package``` |
+| Debian| apt | 1 | ```apt install package``` |
+|Pypi| | pip | ```pypi install package``` |
+
+
+### Binary
+precompiled binaries are ready-to-run executable files
+Deal with binary dependencies
+
+
+example:[https://www.qemu.org/download/](https://www.qemu.org/download/)
+
+To download and build binaries
+```wget https://download.example.org/example.tar.xz```
+```tar xcJf example.tar.xz```
+```cd example```
+```./configure```
+```make```
+
+To download and build binaries from **git**
+
+```git clone https://github.com/example.git```
+```cd example```
+```git submodule init```
+```git submodule update --recursive```
+```./configure```
+```make```
 
 
 
