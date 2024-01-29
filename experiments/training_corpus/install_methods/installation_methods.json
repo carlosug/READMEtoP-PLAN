@@ -1,0 +1,20 @@
+"software_installation" : [
+    {
+        "run": [
+            [
+                "pylode",
+                "cli.:main"
+            ]
+        ],
+        "type": "package manager",
+        "installation": "pip install pylode",
+        "raking":[1]
+    },
+    {
+        "type": "source",
+        "run": "pip install pylode",
+        "mentioned_in_Readme": True,
+        "ranking": [2]
+    }
+],
+"software_type": "package manager"

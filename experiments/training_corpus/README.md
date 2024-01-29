@@ -64,7 +64,7 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 | Service| A collection of codes that do not fit any of the previous categories |
 
 ### Taxonomy of research software installation types
-The type of software installation: a discrete software entity can have more than one e.g. command-line, services
+The type of software installation: a discrete software entity can have more than one level of complexity e.g. command-line, services
 
 | Mode | Description | Complexity | Method(s) | Steps | number of steps | README section |
 | ----- | ----------------- | ---------------------- | -------------------- | ------- | -------- | -- |
@@ -75,7 +75,9 @@ The type of software installation: a discrete software entity can have more than
 
 **Source**
 Goal: provide the source code to enable the ability to review the source code and understand its workings
+Development setup sometimes it is called
 compile from source
+Running in command line mode
 Deal with source code dependencies
 You need to build the source code yourself. That means you need to take care of the dependencies yourself. 
 A source file contains the original code as written by the developer in whatever language he/she chooses (C, C++, Python etc),and is generic
@@ -98,6 +100,7 @@ A package (RPM or DEB for example) is the binary executable (or interpreted scri
 **Binary**
 precompiled binaries are ready-to-run executable files
 Deal with binary dependencies
+Running AML in user interface mode
 
 
 example:[https://www.qemu.org/download/](https://www.qemu.org/download/)

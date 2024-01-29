@@ -1,6 +1,0 @@
-repository;annotator;method;type;complexity;description_step;command;comment
-Transposonmapper;C;container;package;medium;pull the image directly;docker pull leilaicruz/satay:latest; first comment
-Transposonmapper;C;container;package;medium;verify the image;docker images; second comment
-Transposonmapper;C;container;package;medium;move to the image;docker build . -t leilaicruz/satay:latest; second comment
-Transposonmapper;C;container;package; medium;run contaimer;docker run --rm -it -e DISPLAY=docker.for.mac.host.internal:0 -v $(pwd):/data leilaicruz/satay # (mac OS) </br> docker run --rm -it --net=host -e DISPLAY=:0 -v $(pwd):/data leilaicruz/satay # (linux OS); third comment
-
