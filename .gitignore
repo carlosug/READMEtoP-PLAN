@@ -1,4 +1,4 @@
 # Virtual envs
-.somef-env/
-.somef-env3.9/
-.somef-env3.11/
+*.somef-env
+*.somef-env3.9
+*.somef-env3.11
