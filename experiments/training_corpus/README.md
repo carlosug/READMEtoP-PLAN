@@ -169,26 +169,81 @@ We will present the different steps from the instruction in natural language to 
 Let `concepts(w)` be the set of ontological concepts to which the word `w` could be mapped. For a `single instruction (ai, oi, pi)` consisting of an `action verb ai`, an `object oi` and a set of `prepositions`
 
 
-**GOAL**= Capture a collection of **Step** within a `**Plan**` for acomplishing installation **Task(s)**
+**GOAL**= Capture a collection of **`Step(s)`** within a **`Plan`** for acomplishing software installation **`Task(s)`**
 
-**Ontological concepts**
+**Ontological `concepts`**
 
-`**Plan**`: a sequence/collection of instatiated **Step(s)** that a machine execute one **Action** among many alternatives to fulfil its objective in installation **Task(s)**. *e.g. Method 2: Install package from source*
+**`Plan`**: a sequence/collection of instatiated **Step(s)** that a machine execute one **Action** among many alternatives to fulfil its objective in installation. A installation method (similar to procedure) is an instance of the `Plan` **Task(s)**. *e.g. Method 2: Install package from source*
 
-``**Step(s)**``: a list of sequencial Action(s) to be executed by a machine *e.g. Clone the repository `git clone repository`, `second` create virtual environment*
+**`Step(s)`**: a list of sequencial Action(s) part of a `Plan` to be executed by a machine *e.g. Clone the repository from source `git clone repository`, `second` create virtual environment*
 
-`**Action(s)**`: a list of executions by a machine *e.g.`git clone repository`*
+**`Action(s)`**: a list of indivisible sequence of operations that must executed without interruption. Each `Action` is an instance of the `Step` concept *e.g.`git clone repository`*
 
-`**Task(s)**`: a list of computational actions steps in software installation domain. *e.g Method 1: From source*
+**`Task(s)`**: a list of computationally actions steps in software installation domain. *e.g Method 1: From source* *(TBC)*
+
+Possibility to define **`SubPlans`** *e.g. alternative methods for installing software* within the Plan (similar to procedure)
+
 
 
 #### 2. Resolve the meaning of the words using Cyc Ontology and or P-plan
 
 **Formal Instruction Representation**
 
-Each step action1, action2, etc is an instance of an action concept like *CloneTheRepository*. The action *CloneTheRepository* needs to have information about the object to be manipulated and the location where this object is to be placed. For execution, the formal instruction representation has to be transformed into a valid machine-readable plan
+Each step action1, action2, etc is an instance of an action concept like *CloneTheRepository*. The action *CloneTheRepository* needs to have information about the object to be manipulated and the location where this object is to be placed. For execution, the formal instruction representation has to be transformed into a valid machine-readable plan. The plans for a machine are implemented in P-PLAN, which provdes an expressive and extensible ontology representation for semantically writing plans to machines.
 
+```ttl
+@prefix p-plan: <http://purl.org/net/p-plan#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+_:b0 a p-plan:Plan ;
+    rdfs:label "Installing a software open source tool using containerization" ;
+    p-plan:isStepOfPlan _:b1, _:b2, _:b3, _:b4, _:b5, _:b6 .
+
+_:b1 a p-plan:Step ;
+    rdfs:label "Prerequisites" ;
+    rdfs:comment "Ensure you have Docker installed on your system. If not, download and install Docker from its official website." .
+
+_:b2 a p-plan:Step ;
+    rdfs:label "Pull the Docker Image" ;
+    rdfs:comment "Locate the section in the README that specifies the Docker image for the software tool. Use the `docker pull` command to download the image from the Docker Hub or another container registry." ;
+    p-plan:correspondsToStep _:b7 .
+
+_:b7 a p-plan:Step ;
+    rdfs:label "docker pull <image_name>:<tag>" ;
+    rdf:type "Bash" .
+
+_:b3 a p-plan:Step ;
+    rdfs:label "Run the Container" ;
+    rdfs:comment "After pulling the image, use the `docker run` command to create and start a container from the image. This step often includes mounting volumes for data persistence and specifying ports if the software requires network access." ;
+    p-plan:correspondsToStep _:b8 .
+
+_:b8 a p-plan:Step ;
+    rdfs:label "docker run -d -p <host_port>:<container_port> -v <host_directory>:<container_directory> <image_name>:<tag>" ;
+    rdf:type "Bash" .
+
+_:b4 a p-plan:Step ;
+    rdfs:label "Access the Software" ;
+    rdfs:comment "Depending on the software, you might access it through a web interface, command line, or API. The README should provide details on how to interact with the software once it's running in the Docker container." .
+
+_:b5 a p-plan:Step ;
+    rdfs:label "Custom Configuration" ;
+    rdfs:comment "Some tools may require additional configuration steps, such as setting environment variables or editing configuration files. These steps should also be detailed in the README section for containerization." .
+
+_:b6 a p-plan:Step ;
+    rdfs:label "Stopping and Removing the Container" ;
+    rdfs:comment "When you're done using the software, you can stop the container using `docker stop <container_id>` and remove it with `docker rm <container_id>`. Replace `<container_id>` with the ID of your container." ;
+    p-plan:correspondsToStep _:b9, _:b10 .
+
+_:b9 a p-plan:Step ;
+    rdfs:label "docker stop <container_id>" ;
+    rdf:type "Bash" .
+
+_:b10 a p-plan:Step ;
+    rdfs:label "docker rm <container_id>" ;
+    rdf:type "Bash" .
+```
 
 Task Info:
 ```json
