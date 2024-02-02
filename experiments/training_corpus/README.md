@@ -6,7 +6,7 @@ This folder aims to keep track of the experiements related to the research quest
 
 ### Selection criteria [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) :
 The repositories will be selected on community-curated list of software packages:
-+ bioinformatics software documentation ([e.g](https://blog.bioconductor.org/posts/2022-10-22-awesome-lists/)) and/or [bio.tools](https://bio.tools/t?page=1&q=%27Python%27&topic=%27Neurobiology%27&sort=score);
++ bioinformatics software documentation ([e.g](https://blog.bioconductor.org/posts/2022-10-22-awesome-lists/)) and/or [bio.tools](https://bio.tools/api/t/?documentationType=%22Installation+instructions%22&tool=%22Web%20service%22&programming%20language=%22python%22);
 + part of [awesome-healthcare list](https://github.com/kakoni/awesome-healthcare) or;
 + part of [awesome-ai-devtools](https://github.com/jamesmurdza/awesome-ai-devtools);
 + part of [awesome-neuroscience](https://github.com/analyticalmonk/awesome-neuroscience);
@@ -51,29 +51,49 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 * softwareRequirements
 * **buildInstructions**
 
-**Altenrate methods of installation**: mostly devided in ```fromClient```, ```fromSource```, and ```fromContainer```
 
+**Context**: Currently unknown the ```Factor(s)``` that impact the installation process and its level of difficulty.
+**Definition**: The level of difficulty of the installation process is defined as the state or degree of being intricate or complicated to complete the process successfully.
 
-### Software type
+```Factor(s)```: type of software, clarity of instructions, presence of **Dependencies**, number of **Steps** involved, errors in the installation process. ``Factor(s)`` describes the variables as something akin to `software understanding features`, the features with the goal of facilitating the adoption of a software[ref.Inspect4py](Inspect4py). It includes:
 
-| Type | Description |
+| Features | Definition |
+|----------|------------|
+| Class metadata | Extract information such as name, methods, function arguments |
+| Requirements | Provide a list of required packages and their versions |
+| Dependencies | list the internal and external modules used by the target (to be installed) software |
+| **Software invocation** | ranks the different alternatives to run the software component based on relevance |
+| **Main software type** | Estimates whether the target software is a package, library, srvice or scripts |
+
+**Main Software type**
+Levels of granuality on which software can be described. From top to the bottom:
+
+| Type | Description | *Examples* |
 | ----- | ----------------- |
-| Library| A collection of components that are used to construct other tools|
-| Script| A tool written for some run-time environment| 
-| Package| A tool that is aimed to be executed through the command-line|
-| Service| A collection of codes that do not fit any of the previous categories |
+| Bundle| A container with metadata about the software and its functionality | *N3.js library* |
+| Library| A collection of components (codes) which are used to construct other software| *N3.js library* |
+| Package| A tool that is aimed to be executed through the command-line| *somef* |
+| Module| A concrete software package | *N3.js 0.10.0* |
+| Component| A specific part of a module that runs in a specific environment and set of parameters | *N3.js 0.10.0 Parser* |
+| Script| A code written for some run-time environment| *script.py* |
+| Service| A collection of codes where the main functionality is to start a web service via scripts | *reactjs* |
 
-### Taxonomy of research software installation types
-The type of software installation: a discrete software entity can have more than one level of complexity e.g. command-line, services
+Other taxonomy of types are considered [biotoolsSchema](https://github.com/bio-tools/biotoolsSchemaDocs/blob/master/controlled_vocabularies.rst)
 
-| Mode | Description | Complexity | Method(s) | Steps | number of steps | README section |
+### Taxonomy of research software installation types (`Method`) and level of difficulty
+
+
+| Method | Description | Difficulty | Method(s) | Steps | Dependec | README section |
 | ----- | ----------------- | ---------------------- | -------------------- | ------- | -------- | -- |
-| Source| Raw material (source) with a compiler to download the executable that machines then runs| High | Git and official release websites | Download the compiler and install all the required libraries manually  | | `## Manual install` , `## from source`, `## Install from Github`|
-| Package Manager| A tool written for some run-time environment| Low | Pip |1 |`## Install from Pypi` | |
-| Container| A tool that is aimed to be executed through the command-line| High | Docker | |`## Installing through Docker` | |
-| Binary| Github source and binary releases (binary dependencies) | Low | - | download the tarball, unpack it, and run it (ready-to-run)  | 3 | |
+| Source-based| Raw material (source) with a compiler to download the executable that machines then runs| High | Git and official release websites | Download the compiler and install all the required libraries manually  | | `## Manual install` , `## from source`, `## Install from Github`|
+| Package Manager-based| A tool written for some run-time environment| Low | Pip |1 |`## Install from Pypi` | |
+| Container-based| A tool that is aimed to be executed through the command-line| High | Docker | |`## Installing through Docker` | |
+| Binary-based| Github source and binary releases (binary dependencies) | Low | - | download the tarball, unpack it, and run it (ready-to-run)  | 3 | |
 
-**Method 1: from Source**
+
+
+
+**Method 1: Source-based installation**
 Goal: provide the source code to enable the ability to review the source code and understand its workings
 Development setup sometimes it is called
 compile from source
@@ -83,7 +103,7 @@ You need to build the source code yourself. That means you need to take care of 
 A source file contains the original code as written by the developer in whatever language he/she chooses (C, C++, Python etc),and is generic
 Installing a program "from source" means installing a program without using a package manager. You compile the source code and copy the binaries to your computer instead
 
-**Method 2: from Package managers**
+**Method 2: Package manager-based installation**
 Pre-built package
 A package (RPM or DEB for example) is the binary executable (or interpreted script etc) pre-prepared for your particular distro. The task of preparing the source for compiling (adding any necessary patches etc), the actual compile, creating distro specific config files, creating pre and post install scripts etc are all done for you by the package maintainer.
 
@@ -96,9 +116,10 @@ A package (RPM or DEB for example) is the binary executable (or interpreted scri
 | Debian| apt | 1 | ```apt install package``` |
 |Pypi| | pip | ```pypi install package``` |
 
-**Method 3: from Container**
+**Method 3: Container-based installation**
 
-**Method 4: Binary**
+
+**Method 4: Binary-based installation**
 precompiled binaries are ready-to-run executable files
 Deal with binary dependencies
 Running AML in user interface mode
@@ -134,3 +155,85 @@ To download and build binaries from **git**
 
 
 
+
+### Translating abstract to executable instructions
+
+Create a method to connect human-readable language instructions to actions and collection of actions in software installation domain (manchine learning a planning domain). We limit ourselves to tasks that can be characterized as "software manipulation” and involve picking up, putting down and handling objects at different places. Examples of such tasks are setting a table, cleaning up, making toast or cooking tea. To the best of our knowledge this work is the first to mine complex task descriptions from the readmes and translate them into executable agent plans.
+
+
+We will present the different steps from the instruction in natural language to an executable plan with the example sentence **"Place the cup on the table"** **Install package from source**.
+
+
+#### 1. structure of instructions is identified
+
+Let `concepts(w)` be the set of ontological concepts to which the word `w` could be mapped. For a `single instruction (ai, oi, pi)` consisting of an `action verb ai`, an `object oi` and a set of `prepositions`
+
+
+**GOAL**= Capture a collection of **Step** within a `**Plan**` for acomplishing installation **Task(s)**
+
+**Ontological concepts**
+
+`**Plan**`: a sequence/collection of instatiated **Step(s)** that a machine execute one **Action** among many alternatives to fulfil its objective in installation **Task(s)**. *e.g. Method 2: Install package from source*
+
+``**Step(s)**``: a list of sequencial Action(s) to be executed by a machine *e.g. Clone the repository `git clone repository`, `second` create virtual environment*
+
+`**Action(s)**`: a list of executions by a machine *e.g.`git clone repository`*
+
+`**Task(s)**`: a list of computational actions steps in software installation domain. *e.g Method 1: From source*
+
+
+#### 2. Resolve the meaning of the words using Cyc Ontology and or P-plan
+
+**Formal Instruction Representation**
+
+Each step action1, action2, etc is an instance of an action concept like *CloneTheRepository*. The action *CloneTheRepository* needs to have information about the object to be manipulated and the location where this object is to be placed. For execution, the formal instruction representation has to be transformed into a valid machine-readable plan
+
+
+
+Task Info:
+```json
+['task_id'] = "trial_00000_T000000000000000"        (unique instruction ID)
+['task_type'] = "pick_heat_then_place_in_recep"     (one of 7 task types)
+['plan_params'] = {'object_target': "AlarmClock",   (object)
+                   'parent_target': "DeskLamp",     (receptacle)
+                   'mrecep_target': "",             (movable receptacle)
+                   "toggle_target": "",             (toggle object)
+                   "object_sliced": false}          (should the object be sliced?)
+
+```
+
+Language Annotations:
+```json
+['turk_annotations']['anns'] =  
+             [{'task_desc': "Examine a clock using the light of a lamp.",                 (goal instruction) 
+               'high_descs': ["Turn to the left and move forward to the window ledge.",   (list of step-by-step instructions)
+                              "Pick up the alarm clock on the table", ...],               (indexes aligned with high_idx)
+               'votes': [1, 1, 1]                                                         (AMTurk languauge quality votes)
+              },
+              ...]
+```
+
+Expert Demonstration:
+
+```json
+['plan'] = {'high_pddl':
+                ...,
+                ["high_idx": 4,                          (high-level subgoal index)
+                 "discrete_action":                    
+                     {"action": "PutObject",             (discrete high-level action)
+                      "args": ["bread", "microwave"],    (discrete params)
+                 "planner_action": <PDDL_ACTION> ],      (PDDL action)
+                ...],
+                 
+            'low_actions': 
+                ...,
+                ["high_idx": 1,                          (high-level subgoal index)
+                 "discrete_action":
+                     {"action": "PickupObject",          (discrete low-level action)
+                      "args": 
+                          {"bbox": [180, 346, 332, 421]} (bounding box for interact action)
+                           "mask": [0, 0, ... 1, 1]},    (compressed pixel mask for interact action)
+                 "api_action": <API_CMD> ],              (THOR API command for replay)
+                ...], 
+           }
+```
