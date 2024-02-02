@@ -197,6 +197,7 @@ Each step action1, action2, etc is an instance of an action concept like *CloneT
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+# Define the Plan
 _:b0 a p-plan:Plan ;
     rdfs:label "Installing a software open source tool using containerization" ;
     p-plan:isStepOfPlan _:b1, _:b2, _:b3, _:b4, _:b5, _:b6 .
