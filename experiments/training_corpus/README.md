@@ -69,7 +69,7 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 Levels of granuality on which software can be described. From top to the bottom:
 
 | Type | Description | *Examples* |
-| ----- | ----------------- |
+| ----- | ----------------- |--|
 | Bundle| A container with metadata about the software and its functionality | *N3.js library* |
 | Library| A collection of components (codes) which are used to construct other software| *N3.js library* |
 | Package| A tool that is aimed to be executed through the command-line| *somef* |
