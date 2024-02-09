@@ -173,15 +173,17 @@ Let `concepts(w)` be the set of ontological concepts to which the word `w` could
 
 **Ontological `concepts`**
 
-**`Plan`**: a sequence/collection of instatiated **Step(s)** that a machine execute one **Action** among many alternatives to fulfil its objective in installation. A installation method (similar to procedure) is an instance of the `Plan` **Task(s)**. *e.g. Method 2: Install package from source*
+**`p-plan:Plan`**: a sequence/collection of instatiated **Step(s)** that a machine execute one **Action** among many alternatives to fulfil its objective in installation. A installation method (similar to procedure) is an instance of the `Plan` **Task(s)**. *e.g. Method 2: Install package from source*
 
-**`Step(s)`**: a list of sequencial Action(s) part of a `Plan` to be executed by a machine *e.g. Clone the repository from source `git clone repository`, `second` create virtual environment*
+**`p-plan:Step(s)`**: a list of planned Action(s) part of a `Plan` to be executed by an Agent *e.g. comments such as Clone the repository from source , `second` create virtual environment*. 
 
-**`Action(s)`**: a list of indivisible sequence of operations that must executed without interruption. Each `Action` is an instance of the `Step` concept *e.g.`git clone repository`*
+**`p-plan:Variable`**: a list of indivisible sequence of operations that must executed without interruption. *e.g.`git clone repository` `python3 -m venv .venv`* **[DISCLAIMER = it can be associated with a p-plan:Variable to represent input of the step such code blocks enclose it in backticks (`)**
+Steps within a Plan could be linked to a specific executable step (or `Action`) or refer to a class of `Steps`. A plan `Step` could be performed in different executions of the same plan.
 
+
+Optional:
 **`Task(s)`**: a list of computationally actions steps in software installation domain. *e.g Method 1: From source* *(TBC)*
-
-Possibility to define **`SubPlans`** *e.g. alternative methods for installing software* within the Plan (similar to procedure)
+Possibility to define **`SubPlans`** *e.g. alternative methods for installing software* within the Plan (similar to procedure) as **`p-plan:MultiStep`**
 
 
 
@@ -189,61 +191,53 @@ Possibility to define **`SubPlans`** *e.g. alternative methods for installing so
 
 **Formal Instruction Representation**
 
-Each step action1, action2, etc is an instance of an action concept like *CloneTheRepository*. The action *CloneTheRepository* needs to have information about the object to be manipulated and the location where this object is to be placed. For execution, the formal instruction representation has to be transformed into a valid machine-readable plan. The plans for a machine are implemented in P-PLAN, which provdes an expressive and extensible ontology representation for semantically writing plans to machines.
+Each step action1, action2, etc is an instance of an action concept like *CloneTheRepository*. The action *CloneTheRepository* needs to have information about the object to be manipulated and the location where this object is to be placed. For execution, the formal instruction representation has to be transformed into a valid machine-readable plan. The plans for a machine are implemented in P-PLAN, which provides an expressive and extensible vocabulary representation for semantically writing and describing plans *e.g. scientific workflows* to machines.
+
+Example of the Plan: Install software [https://raw.githubusercontent.com/lm-sys/FastChat/main/README.md](https://raw.githubusercontent.com/lm-sys/FastChat/main/README.md)
 
 ```ttl
 @prefix p-plan: <http://purl.org/net/p-plan#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 
 # Define the Plan
-_:b0 a p-plan:Plan ;
-    rdfs:label "Installing a software open source tool using containerization" ;
-    p-plan:isStepOfPlan _:b1, _:b2, _:b3, _:b4, _:b5, _:b6 .
+_:P1 a p-plan:Plan ;
+    rdfs:label "### Method 1: With pip" ;
+    p-plan:isStepOfPlan _:Step1P1 .
 
-_:b1 a p-plan:Step ;
-    rdfs:label "Prerequisites" ;
-    rdfs:comment "Ensure you have Docker installed on your system. If not, download and install Docker from its official website." .
+# Define the Step _:Step1P1
+_:Step1P1 a p-plan:Step ;
+    rdfs:label "```bash pip3 install "fschat[model_worker,webui]"```" ;
+    p-plan:isStepOfPlan _:P1 . # final step of Plan _:P1 .
 
-_:b2 a p-plan:Step ;
-    rdfs:label "Pull the Docker Image" ;
-    rdfs:comment "Locate the section in the README that specifies the Docker image for the software tool. Use the `docker pull` command to download the image from the Docker Hub or another container registry." ;
-    p-plan:correspondsToStep _:b7 .
+# Define the Plan
+_:P2 a p-plan:Plan ;
+    rdfs:label "### Method 2: From source" ;
+    p-plan:isStepOfPlan _:Step1P2, Step2P2, Step2P3 .
 
-_:b7 a p-plan:Step ;
-    rdfs:label "docker pull <image_name>:<tag>" ;
-    rdf:type "Bash" .
+# Define the Step _:Step1P2
+_:Step1P2 a p-plan:Step ;
+    rdfs:label "```bash git clone https://github.com/lm-sys/FastChat.git" ;
+    rdfs:comment "1. Clone this repository and" ;
+    p-plan:isStepOfPlan _:P2 .
 
-_:b3 a p-plan:Step ;
-    rdfs:label "Run the Container" ;
-    rdfs:comment "After pulling the image, use the `docker run` command to create and start a container from the image. This step often includes mounting volumes for data persistence and specifying ports if the software requires network access." ;
-    p-plan:correspondsToStep _:b8 .
+_:Step2P2 a p-plan:Step ;
+    rdfs:label "cd FastChat" ;
+    rdfs:comment "navigate to the FastChat folder" ;
+    p-plan:isStepOfPlan _:P2 .
 
-_:b8 a p-plan:Step ;
-    rdfs:label "docker run -d -p <host_port>:<container_port> -v <host_directory>:<container_directory> <image_name>:<tag>" ;
-    rdf:type "Bash" .
+_:Step2P3 a p-plan:Step ;
+    rdfs:label "```bash brew install rust cmake```" ;
+    rdfs:comment "If you are running on Mac" ;
+    p-plan:isStepOfPlan _:P2 . # optional step
 
-_:b4 a p-plan:Step ;
-    rdfs:label "Access the Software" ;
-    rdfs:comment "Depending on the software, you might access it through a web interface, command line, or API. The README should provide details on how to interact with the software once it's running in the Docker container." .
-
-_:b5 a p-plan:Step ;
-    rdfs:label "Custom Configuration" ;
-    rdfs:comment "Some tools may require additional configuration steps, such as setting environment variables or editing configuration files. These steps should also be detailed in the README section for containerization." .
-
-_:b6 a p-plan:Step ;
-    rdfs:label "Stopping and Removing the Container" ;
-    rdfs:comment "When you're done using the software, you can stop the container using `docker stop <container_id>` and remove it with `docker rm <container_id>`. Replace `<container_id>` with the ID of your container." ;
-    p-plan:correspondsToStep _:b9, _:b10 .
-
-_:b9 a p-plan:Step ;
-    rdfs:label "docker stop <container_id>" ;
-    rdf:type "Bash" .
-
-_:b10 a p-plan:Step ;
-    rdfs:label "docker rm <container_id>" ;
-    rdf:type "Bash" .
+_:Step2P4 a p-plan:Step ;
+    rdfs:label "```bash
+pip3 install --upgrade pip  # enable PEP 660 support pip3 install -e".[model_worker,webui]"" ;
+    rdfs:comment "2. Install Package" ;
+    p-plan:isStepOfPlan _:P2 . # final step
 ```
 
 Task Info:
