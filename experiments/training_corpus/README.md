@@ -14,10 +14,10 @@ The repositories will be selected on community-curated list of software packages
 * part of [Awesome-genome-visualization](https://github.com/cmdcolin/awesome-genome-visualization)
 
 
-## Study Subjects
-The following versions of 26 Java projects using Maven were selected as study subjects:
+## Study Subjects inspected manually
+The following versions of 26 research software projects using Python were selected as study subjects:
 
-| # | GitHub Repository | Commit Hash | Stable release as of 01.01.23 |
+| # | GitHub Repository | Stars | Stable release as of 01.01.23 |
 | - | ----------------- | ----------- | ----------------------------- |
 | 1 | [jenkins](https://github.com/jenkinsci/jenkins) | [ce7e5d7](https://github.com/jenkinsci/jenkins/commit/ce7e5d70373a36c8d26d4117384a9c5cb57ff1c1) | [2.384](https://mvnrepository.com/artifact/org.jenkins-ci.main/jenkins-core/2.384) |  |  |
 | 2 | [mybatis-3](https://github.com/mybatis/mybatis-3) | [c195f12](https://github.com/mybatis/mybatis-3/commit/c195f12808a88a1ee245dc86d9c1621042655970) | [3.5.11](https://mvnrepository.com/artifact/org.mybatis/mybatis/3.5.11) |  |  |
@@ -25,19 +25,18 @@ The following versions of 26 Java projects using Maven were selected as study su
 | 4 | [checkstyle](https://github.com/checkstyle/checkstyle) | [233c91b](https://github.com/checkstyle/checkstyle/commit/233c91be45abc1ddf67c1df7bc8f9f8ab64caa1c) | [10.6.0](https://mvnrepository.com/artifact/com.puppycrawl.tools/checkstyle/10.6.0) |  |  |
 | 5 | [CoreNLP](https://github.com/stanfordnlp/CoreNLP) | [f7782ff](https://github.com/stanfordnlp/CoreNLP/commit/f7782ff5f235584b0fc559f266961b5ab013556a) | [4.5.1](https://mvnrepository.com/artifact/edu.stanford.nlp/stanford-corenlp/4.5.1) |  |  |
 
-Also thinking about LLMs for bioinformatics
 
-### Available software repositories
+<!-- ### Available software repositories
 A list of research software registries (also known as catalog, index, warehouse, repository, hub, platform, and other terms) can be found here: [Awesome Research Software Registries](https://github.com/NLeSC/awesome-research-software-registries) 
 
 * [Research software directory]()
 * [4TUResearchData repository]()
-* [Codewithpapers](https://paperswithcode.com/)
+* [Codewithpapers](https://paperswithcode.com/) -->
 
 
 
 
-### Benchmark file
+<!-- ### Benchmark file
 **installationtype.csv**
 Annotated benchmark, curated by hand. It contains following fields (associated with [CodeMeta properties](https://raw.githubusercontent.com/codemeta/codemeta/2.0/codemeta.jsonld):
 * SoftwareSourceCode: repository URL end-point
@@ -49,21 +48,70 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 * operatingSystem
 * programmingLanguage
 * softwareRequirements
-* **buildInstructions**
+* **buildInstructions** -->
 
+### Taxonomy of research software installation types (`Method`) and level of difficulty:
 
-**Context**: Currently unknown the ```Factor(s)``` that impact the installation process and its level of difficulty.
-**Definition**: The level of difficulty of the installation process is defined as the state or degree of being intricate or complicated to complete the process successfully.
+**Context**: Currently unknown standards for measuring level of difficulty in a research software installation process, and the ```Factor(s)``` that impact the installation process and its `level of difficulty`.
+**Definition**: We define `level of difficulty` of the installation process as the state or degree of being intricate or complicated to complete the process successfully.
 
-```Factor(s)```: type of software, clarity of instructions, presence of **Dependencies**, number of **Steps** involved, errors in the installation process. ``Factor(s)`` describes the variables as something akin to `software understanding features`, the features with the goal of facilitating the adoption of a software[ref.Inspect4py](Inspect4py). It includes:
+```Factor(s)```: type of software, clarity of instructions, presence of **Dependencies**, number of **Steps** involved, errors in the installation process. ``Factor(s)`` describes the variables as something akin to `software understanding features`, the features with the goal of facilitating the adoption of a software[ref.Inspect4py](Inspect4py). It includes **DISCLAIMER: bear in mind that determining the exact level of difficulty can still be subjective depending on individual experiences and expertise**:
 
 | Features | Definition |
 |----------|------------|
-| Class metadata | Extract information such as name, methods, function arguments |
 | Requirements | Provide a list of required packages and their versions |
-| Dependencies | list the internal and external modules used by the target (to be installed) software |
+| Dependencies | list the internal and external modules used by the target (to be installed) software.  A larger number of dependencies may indicate more complexity |
 | **Software invocation** | ranks the different alternatives to run the software component based on relevance |
 | **Main software type** | Estimates whether the target software is a package, library, srvice or scripts |
+| **Detailed instructions** | writes concise and clear instructions |
+| **Containerization** | helps researchers dealing with complex installation |
+| **Package managers** | eases difficulty in installation proccess |
+
+
+We manually categorise the level of difficulty the README installation_instruction has in our sample as:
+
+* `Simple`: Label a research software repository with straightforward installation process. Example:
+
+`md
+## Installation prerequisites
+- Python >= 3.8
+
+## Installation method pip:
+Install the library using pip:
+`bash
+pip install myprojectML
+`
+
+
+* `Moderate`: label a research software repository that requires several `dependencies` and offers multiple installation methods (or options). Especially for DL frameworks
+
+`md
+# Installation
+## Prerequisites
+- CUDA Toolkit (for GPU acceleration)
+- TensorFlow >=2.0
+- scikit-learn
+
+## Installation via pip
+If you don't have CUDA installed, use pip to install the CPU-only version:
+`
+`bash
+pip install mynlpframework_cpu
+`
+
+or
+`md
+# If you have CUDA installed, use pip to install the GPU version:
+`
+
+`bash
+pip install mynlpframework
+`
+
+
+* `Complex`:
+
+
 
 **Main Software type**
 Levels of granuality on which software can be described. From top to the bottom:
@@ -79,8 +127,6 @@ Levels of granuality on which software can be described. From top to the bottom:
 | Service| A collection of codes where the main functionality is to start a web service via scripts | *reactjs* |
 
 Other taxonomy of types are considered [biotoolsSchema](https://github.com/bio-tools/biotoolsSchemaDocs/blob/master/controlled_vocabularies.rst)
-
-### Taxonomy of research software installation types (`Method`) and level of difficulty
 
 
 | Method | Description | Difficulty | Method(s) | Steps | Dependec | README section |
