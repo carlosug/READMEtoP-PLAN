@@ -130,9 +130,9 @@ Levels of granuality on which software can be described. From top to the bottom:
 | Method | Description | Text | Code | Steps | Difficulty | README section |
 | ----- | ----------------- | ---------------------- | -------------------- | ------- | -------- | -- |
 | Source-based| Raw material (source) with a compiler to download the executable that machines then runs| ## Install from GitHub. To run, please follow the next steps: 1. Clone this GitHub repository. 2. Install software (you should be in the folder that you just cloned). 3. Test installation | ```git clone https://github.com.git``` ```cd folder pip install -e .``` ```software --help```| 3 | Moderate | `## from source`, `##from Github`|
-| Package Manager-based| A tool written for some run-time environment| Low | Pip |1 |`## Install from Pypi` | |
-| Container-based| A tool that is aimed to be executed through the command-line| High | Docker | |`## Installing through Docker` | |
-| Binary-based| Github source and binary releases (binary dependencies) | Low | - | download the tarball, unpack it, and run it (ready-to-run)  | 3 | |
+| Package Manager-based| A tool written for some run-time environment| Install from Pip: | `pip install software` |1 | Simple | `## from package manager`|
+| Container-based| A tool that is aimed to be executed through the command-line| ## Installing Through Docker. To run through Docker, use the Docker image already built. Then, to run your image just type: | `docker pull image` ```bash docker run -it image /bin/bash```| 2 |`## Installing through Docker` | |
+| Binary-based| Github source and binary releases (binary dependencies) | Low | - | download the tarball, unpack it, and run it (ready-to-run)  | 1 | |
 
 
 
@@ -221,7 +221,7 @@ Let `concepts(w)` be the set of ontological concepts to which the word `w` could
 
 **`p-plan:Step(s)`**: a list of planned Action(s) part of a `Plan` to be executed by an Agent *e.g. comments such as Clone the repository from source , `second` create virtual environment*. 
 
-**`p-plan:Variable`**: a list of indivisible sequence of operations that must executed without interruption. *e.g.`git clone repository` `python3 -m venv .venv`* **[DISCLAIMER = it can be associated with a p-plan:Variable to represent input of the step such code blocks enclose it in backticks (`)**
+**`p-plan:Variable`**: a list of indivisible sequence of operations that must executed without interruption. *e.g.`git clone repository` `python3 -m venv .venv`* **[DISCLAIMER = it can be associated with a p-plan:Variable to represent input of the step such code blocks(to denote word or phrase as code) enclose it in backticks (`)**
 Steps within a Plan could be linked to a specific executable step (or `Action`) or refer to a class of `Steps`. A plan `Step` could be performed in different executions of the same plan.
 
 
