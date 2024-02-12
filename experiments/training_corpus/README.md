@@ -72,37 +72,35 @@ We manually categorise the level of difficulty the README installation_instructi
 
 * `Simple`: Label a research software repository with straightforward installation process. Example:
 
-`md
-## Installation prerequisites
+`## Installation prerequisites`
 - Python >= 3.8
 
-## Installation method pip:
+`## Installation method pip:`
 Install the library using pip:
+
 `bash
 pip install myprojectML
 `
 
 
-* `Moderate`: label a research software repository that requires several `dependencies` and offers multiple installation methods (or options). Especially for DL frameworks
+* `Moderate`: label a research software repository that requires several `dependencies` and offers multiple installation methods (or options). Especially for DL frameworks. Example:
 
-`md
-# Installation
-## Prerequisites
+
+`## Prerequisites`
 - CUDA Toolkit (for GPU acceleration)
 - TensorFlow >=2.0
 - scikit-learn
 
-## Installation via pip
+`## Installation via pip`
 If you don't have CUDA installed, use pip to install the CPU-only version:
-`
+
 `bash
 pip install mynlpframework_cpu
 `
 
 or
-`md
-# If you have CUDA installed, use pip to install the GPU version:
-`
+
+`# If you have CUDA installed, use pip to install the GPU version:`
 
 `bash
 pip install mynlpframework
