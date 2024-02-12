@@ -1,11 +1,13 @@
-# Benchmark for installation instructions of software repositories
+# Benchmark for installation instructions of research software repositories
 ---
 This folder aims to keep track of the experiements related to the research question:
 
 * can machines interpret and execute installation plans for biomedical software?
 
-### Selection criteria [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) :
-The repositories will be selected on community-curated list of software packages:
+### 1. Selection criteria:
+The repositories will be selected on community-curated list of software packages. Automated extraction of README files:
++ Github repositories with specific topics
++ Most recent ML papers with repositories in [paperwithcodes]
 + bioinformatics software documentation ([e.g](https://blog.bioconductor.org/posts/2022-10-22-awesome-lists/)) and/or [bio.tools](https://bio.tools/api/t/?documentationType=%22Installation+instructions%22&tool=%22Web%20service%22&programming%20language=%22python%22);
 + part of [awesome-healthcare list](https://github.com/kakoni/awesome-healthcare) or;
 + part of [awesome-ai-devtools](https://github.com/jamesmurdza/awesome-ai-devtools);
@@ -13,9 +15,12 @@ The repositories will be selected on community-curated list of software packages
 + part of [biological image analysis](https://github.com/hallvaaw/awesome-biological-image-analysis)
 * part of [Awesome-genome-visualization](https://github.com/cmdcolin/awesome-genome-visualization)
 
+---
 
-### Study Subjects inspected manually
+### 2. Study Subjects inspected manually
 The following versions of 26 research software projects using Python were selected as study subjects:
+
+<!-- # Select a representative sample of research software repositories from various domains and languages. This can be done manually or through automated means such as web scraping or API access. -->
 
 | # | GitHub Repository | Stars | Stable release as of 01.01.23 |
 | - | ----------------- | ----------- | ----------------------------- |
@@ -50,11 +55,14 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 * softwareRequirements
 * **buildInstructions** -->
 
-### Taxonomy of research software installation options (`Method`) and level of difficulty:
+---
+### 3. Classify research software installation options (`Method`) and level of difficulty:
 
-**Context**: Currently unknown standards for measuring level of difficulty in a research software installation process, and the ```Factor(s)``` that impact the installation process and its `level of difficulty`.
+**Context**: Currently unknown standards for measuring level of difficulty in a research software installation process, and the ```Factor(s)``` that impact the different `Methods` installation process and its `Level of difficulty`.
 
-**Definition**: We define `level of difficulty` of the installation process as the state or degree of being intricate or complicated to complete the process successfully.
+#### Definitions: 
+- **Installation Methods**: instructions to follow in a research software installation process. In context of the study, there are several different methods (see below).
+- **Level of difficulty**: We define `level of difficulty` of the installation process as the state or degree of being intricate or complicated to complete the process successfully.
 
 ```Factor(s)```: type of software, clarity of instructions, presence of **Dependencies**, number of **Steps** involved, errors in the installation process. ``Factor(s)`` describes the variables as something akin to `software understanding features`, the features with the goal of facilitating the adoption of a software[ref.Inspect4py](Inspect4py). It includes **DISCLAIMER: bear in mind that determining the exact level of difficulty can still be subjective depending on individual experiences and expertise**:
 
@@ -69,6 +77,90 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 | **Package managers** | eases difficulty in installation proccess |
 
 
+#### Installation methods:
+
+**Method 1: Source-based installation**
+
+- **Goal**: provide a standardized command-line interface for managing software packages installation process and its dependencies.
+- **Definition**: Installing a software "from source" means installing a software without using automatic tools e.g. container or package manager.
+- **Requiremements**:
+- Running in command line mode;
+- Deal with source code dependencies;
+- Compile the source code and copy the binaries to your computer instead;
+- Build the source code yourself, dealing with the dependencies. 
+`Comments`: Development setup sometimes it is called compile from source
+
+**Method 2: Package manager-based installation**
+
+- **Goal**: provide the source code that contains the original code written by a developer/researcher to enable the ability to review the source code and understand its workings
+- **Definition**: Installing a software "from source" means installing the software along with its dependencies indexed in official package managers.
+- **Requirements**
+| Name | Channel | Steps | Commands |
+| ----- | ----------------- | ---------------------- | --- |
+| Conda| bioconda | 1 |  ```conda install bioconda::sambamba``` or ```conda install bioconda/label/cf201901::sambamba``` |
+| GNU Guix| | 1 | ```guix install sambamba``` or | ```guix install sambamba``` |
+| Homebrew| homebrew-bio | 1  | ```brew install brewsci/bio/sambamba``` |
+| Fedora| dnf | 1  | ```dnf install package``` |
+| Debian| apt | 1 | ```apt install package``` |
+|Pypi| | pip | ```pypi install package``` |
+
+**Method 3: Container-based installation**
+
++ **Goal**: provide a way of packaging research software and their dependencies inside lightweight, standalone containers.
++ **Definition**:  a method to create isolated environments where the application runs consistently regardless of the host environment. Popular container platforms include Docker, Podman, and Singularity.
++ **Requirements**:
+
+**Method 4: Binary-based installation**
+
+- **Goal**: provide the downloading and running precompiled executable files or libraries specifically designed for a particular operating system and architecture
+- **Definition**: a binary files contains the entire codebase and associated resources needed to run the software, eliminating the need for compilation or building the software from source.
+- **Requirements**
++ precompiled binaries are ready-to-run executable files
++ Deal with binary dependencies
++ Running usually in in user interface mode
+
+Sometimes readme contains example on `cmd`:[https://www.qemu.org/download/](https://www.qemu.org/download/)
+
+To download and build binaries
+```wget https://download.example.org/example.tar.xz```
+```tar xcJf example.tar.xz```
+```cd example```
+```./configure```
+```make```
+
+<!-- To download and build binaries from **git**
+
+```git clone https://github.com/example.git```
+
+```cd example```
+
+```git submodule init```
+
+```git submodule update --recursive```
+
+```./configure```
+
+```make``` -->
+
+
+
+<!-- **Main Software type**
+Levels of granuality on which software can be described. From top to the bottom:
+
+| Type | Description | *Examples* |
+| ----- | ----------------- |--|
+| Bundle| A container with metadata about the software and its functionality | *N3.js library* |
+| Library| A collection of components (codes) which are used to construct other software| *N3.js library* |
+| Package| A tool that is aimed to be executed through the command-line| *somef* |
+| Module| A concrete software package | *N3.js 0.10.0* |
+| Component| A specific part of a module that runs in a specific environment and set of parameters | *N3.js 0.10.0 Parser* |
+| Script| A code written for some run-time environment| *script.py* |
+| Service| A collection of codes where the main functionality is to start a web service via scripts | *reactjs* | -->
+
+<!-- Other taxonomy of types are considered [biotoolsSchema](https://github.com/bio-tools/biotoolsSchemaDocs/blob/master/controlled_vocabularies.rst) -->
+
+
+#### Level of difficulty
 We manually categorise the level of difficulty the README installation_instruction has in our sample as:
 
 * `Simple`: Label a research software repository with straightforward installation process.
@@ -111,100 +203,9 @@ pip install mynlpframework
 * `Complex`: it has numerous dependencies and complex configuration requirements
 
 
+---
 
-**Method 1: Source-based installation**
-- **Goal**: provide a standardized command-line interface for managing software packages installation process and its dependencies.
-- **Definition**: Installing a software "from source" means installing a software without using automatic tools e.g. container or package manager.
-- **Requiremements**:
-- Running in command line mode;
-- Deal with source code dependencies;
-- Compile the source code and copy the binaries to your computer instead;
-- Build the source code yourself, dealing with the dependencies. 
-`Comments`: Development setup sometimes it is called compile from source
-
-**Method 2: Package manager-based installation**
-- **Goal**: provide the source code that contains the original code written by a developer/researcher to enable the ability to review the source code and understand its workings
-- **Definition**: Installing a software "from source" means installing the software along with its dependencies indexed in official package managers.
-- **Requirements**
-
-| Name | Channel | Steps | Commands |
-| ----- | ----------------- | ---------------------- | --- |
-| Conda| bioconda | 1 |  ```conda install bioconda::sambamba``` or ```conda install bioconda/label/cf201901::sambamba``` |
-| GNU Guix| | 1 | ```guix install sambamba``` or | ```guix install sambamba``` |
-| Homebrew| homebrew-bio | 1  | ```brew install brewsci/bio/sambamba``` |
-| Fedora| dnf | 1  | ```dnf install package``` |
-| Debian| apt | 1 | ```apt install package``` |
-|Pypi| | pip | ```pypi install package``` |
-
-**Method 3: Container-based installation**
-
-
-**Method 4: Binary-based installation**
-
-- **Goal**: provide a way of packaging research software and their dependencies inside lightweight, standalone containers.
-- **Definition**:  a method to create isolated environments where the application runs consistently regardless of the host environment. Popular container platforms include Docker, Podman, and Singularity.
-- **Requirements**
-
-
-
-
-
-**Method 4: Binary-based installation**
-
-- **Goal**: provide the downloading and running precompiled executable files or libraries specifically designed for a particular operating system and architecture
-- **Definition**: a binary files contains the entire codebase and associated resources needed to run the software, eliminating the need for compilation or building the software from source.
-- **Requirements**
-- precompiled binaries are ready-to-run executable files
-- Deal with binary dependencies
-- Running usually in in user interface mode
-
-
-Sometimes readme contains example on `cmd`:[https://www.qemu.org/download/](https://www.qemu.org/download/)
-
-To download and build binaries
-
-```wget https://download.example.org/example.tar.xz```
-
-```tar xcJf example.tar.xz```
-
-```cd example```
-
-```./configure```
-
-```make```
-
-<!-- To download and build binaries from **git**
-
-```git clone https://github.com/example.git```
-
-```cd example```
-
-```git submodule init```
-
-```git submodule update --recursive```
-
-```./configure```
-
-```make``` -->
-
-
-
-<!-- **Main Software type**
-Levels of granuality on which software can be described. From top to the bottom:
-
-| Type | Description | *Examples* |
-| ----- | ----------------- |--|
-| Bundle| A container with metadata about the software and its functionality | *N3.js library* |
-| Library| A collection of components (codes) which are used to construct other software| *N3.js library* |
-| Package| A tool that is aimed to be executed through the command-line| *somef* |
-| Module| A concrete software package | *N3.js 0.10.0* |
-| Component| A specific part of a module that runs in a specific environment and set of parameters | *N3.js 0.10.0 Parser* |
-| Script| A code written for some run-time environment| *script.py* |
-| Service| A collection of codes where the main functionality is to start a web service via scripts | *reactjs* | -->
-
-<!-- Other taxonomy of types are considered [biotoolsSchema](https://github.com/bio-tools/biotoolsSchemaDocs/blob/master/controlled_vocabularies.rst) -->
-
-
+#### Matrix Installation methods and level of Difficulty:
 | Method | Description | Text | Code | Steps | Difficulty | README section |
 | ----- | ----------------- | ---------------------- | -------------------- | ------- | -------- | -- |
 | Source-based| Raw material (source) with a compiler to download the executable that machines then runs| ## Install from GitHub. To run, please follow the next steps: 1. Clone this GitHub repository. 2. Install software (you should be in the folder that you just cloned). 3. Test installation | ```git clone https://github.com.git``` ```cd folder pip install -e .``` ```software --help```| 3 | Complex | `## from source`, `##from Github`|
@@ -212,11 +213,9 @@ Levels of granuality on which software can be described. From top to the bottom:
 | Container-based| A tool that is aimed to be executed through the command-line| ## Installing Through Docker. To run through Docker, use the Docker image already built. Then, to run your image just type: | `docker pull image` ```bash docker run -it image /bin/bash```| 2 | Moderate | `## Installing through Docker` |
 | Binary-based| Github source and binary releases (binary dependencies) | ## download the tarball, unpack it, and run it (ready-to-run)  | none | 3 | Moderate | |
 
+---
 
-
-
-
-### Translating abstract to executable instructions
+### 4. Translating abstract to executable instructions
 
 Create a method to connect human-readable language instructions to actions and collection of actions in software installation domain (manchine learning a planning domain). We limit ourselves to tasks that can be characterized as "software manipulation” and involve picking up, putting down and handling objects at different places. Examples of such tasks are setting a table, cleaning up, making toast or cooking tea. To the best of our knowledge this work is the first to mine complex task descriptions from the readmes and translate them into executable agent plans.
 
