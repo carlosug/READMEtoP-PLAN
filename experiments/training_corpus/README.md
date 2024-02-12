@@ -95,6 +95,7 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 - **Goal**: provide the source code that contains the original code written by a developer/researcher to enable the ability to review the source code and understand its workings
 - **Definition**: Installing a software "from source" means installing the software along with its dependencies indexed in official package managers.
 - **Requirements**
+
 | Name | Channel | Steps | Commands |
 | ----- | ----------------- | ---------------------- | --- |
 | Conda| bioconda | 1 |  ```conda install bioconda::sambamba``` or ```conda install bioconda/label/cf201901::sambamba``` |
@@ -217,27 +218,29 @@ pip install mynlpframework
 
 ### 4. Translating abstract to executable instructions
 
-Create a method to connect human-readable language instructions to actions and collection of actions in software installation domain (manchine learning a planning domain). We limit ourselves to tasks that can be characterized as "software manipulation” and involve picking up, putting down and handling objects at different places. Examples of such tasks are setting a table, cleaning up, making toast or cooking tea. To the best of our knowledge this work is the first to mine complex task descriptions from the readmes and translate them into executable agent plans.
+Create a method to connect human-readable language instructions to steps (or activity) and collection of steps in software installation domain (machine learning a planning domain). We limit ourselves to tasks that can be characterized as "software installation and involve manually downloading, extracting, compiling, or configuring individual components; instead, they just. Examples of such tasks are also run a single command to install the desired software and its dependencies. To the best of our knowledge this work is the first to mine complex task descriptions from the readmes and translate them into executable agent plans.
 
 
 We will present the different steps from the instruction in natural language to an executable plan with the example sentence **"Place the cup on the table"** **Install package from source**.
 
 
 #### 1. structure of instructions is identified
+<!-- 
+unified model that reuses several semantic models to show how a installation process can be semantically modeled -->
 
-Let `concepts(w)` be the set of ontological concepts to which the word `w` could be mapped. For a `single instruction (ai, oi, pi)` consisting of an `action verb ai`, an `object oi` and a set of `prepositions`
-
+<!-- Let `concepts(w)` be the set of ontological concepts to which the word `w` could be mapped. For a `single instruction (ai, oi, pi)` consisting of an `action verb ai`, an `object oi` and a set of `prepositions` -->
 
 **GOAL**= Capture a collection of **`Step(s)`** within a **`Plan`** for acomplishing software installation **`Task(s)`**
 
 **Ontological `concepts`**
 
-**`p-plan:Plan`**: a sequence/collection of instatiated **Step(s)** that a machine execute one **Action** among many alternatives to fulfil its objective in installation. A installation method (similar to procedure) is an instance of the `Plan` **Task(s)**. *e.g. Method 2: Install package from source*
+**`p-plan:Plan`**: a sequence/collection of instatiated **Step(s)** that a machine executes to fulfil its objective in installation. A installation Method (similar to procedure or option) is an instance of the `Plan` *e.g. Method 2: Install package from source:*
 
-**`p-plan:Step(s)`**: a list of planned Action(s) part of a `Plan` to be executed by an Agent *e.g. comments such as Clone the repository from source , `second` create virtual environment*. 
+**`p-plan:Step(s)`**: a list of planned Action(s) or *Activity* or *Task* as part of a `Plan` to be executed by an Agent *e.g. First clone the repository from source , then create virtual environment*. 
 
-**`p-plan:Variable`**: a list of indivisible sequence of operations that must executed without interruption. *e.g.`git clone repository` `python3 -m venv .venv`* **[DISCLAIMER = it can be associated with a p-plan:Variable to represent input of the step such code blocks(to denote word or phrase as code) enclose it in backticks (`)**
-Steps within a Plan could be linked to a specific executable step (or `Action`) or refer to a class of `Steps`. A plan `Step` could be performed in different executions of the same plan.
+**`p-plan:Variable`**: a list of indivisible sequence of *Operations* that must executed without interruption. A concept similar to `bpmn:ScriptTask` *e.g.`git clone software`, `python3 -m venv .venv`* **[DISCLAIMER = it can be associated with a p-plan:Variable to represent input of the step such code blocks(to denote word or phrase as code) enclose it in backticks (`)**
+
+<!-- Steps within a Plan could be linked to a specific executable step (or `Action`) or refer to a class of `Steps`. A plan `Step` could be performed in different executions of the same plan. -->
 
 
 Optional:
@@ -260,6 +263,7 @@ Example of the Plan: Install software [https://raw.githubusercontent.com/lm-sys/
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix bpmn: <http://www.w3.org/ns/ ## no found w3 ttl
 
 # Define the Plan
 _:P1 a p-plan:Plan ;
@@ -268,23 +272,27 @@ _:P1 a p-plan:Plan ;
 
 # Define the Step _:Step1P1
 _:Step1P1 a p-plan:Step ;
+    rdf:type bpmn:ScriptTasks ;
     rdfs:label "```bash pip3 install "fschat[model_worker,webui]"```" ;
     p-plan:isStepOfPlan _:P1 . # final step of Plan _:P1 .
 
 # Define the Plan
 _:P2 a p-plan:Plan ;
     rdfs:label "### Method 2: From source" ;
+    rdf:type bpmn:ManualTasks ;
     p-plan:isStepOfPlan _:Step1P2, Step2P2, Step2P3 .
 
 # Define the Step _:Step1P2
 _:Step1P2 a p-plan:Step ;
-    rdfs:label "```bash git clone https://github.com/lm-sys/FastChat.git" ;
+    rdfs:label "```bash git clone https://github.com/lm-sys/FastChat.git```" ;
     rdfs:comment "1. Clone this repository and" ;
+    rdf:type bpmn:ManualTasks ;
     p-plan:isStepOfPlan _:P2 .
 
 _:Step2P2 a p-plan:Step ;
-    rdfs:label "cd FastChat" ;
+    rdfs:label "```cd FastChat```" ;
     rdfs:comment "navigate to the FastChat folder" ;
+    rdf:type bpmn:ScriptTasks ;
     p-plan:isStepOfPlan _:P2 .
 
 _:Step2P3 a p-plan:Step ;
@@ -293,56 +301,7 @@ _:Step2P3 a p-plan:Step ;
     p-plan:isStepOfPlan _:P2 . # optional step
 
 _:Step2P4 a p-plan:Step ;
-    rdfs:label "```bash
-pip3 install --upgrade pip  # enable PEP 660 support pip3 install -e".[model_worker,webui]"" ;
+    rdfs:label "```bash pip3 install --upgrade pip  # enable PEP 660 support pip3 install -e".[model_worker,webui]```"" ;
     rdfs:comment "2. Install Package" ;
     p-plan:isStepOfPlan _:P2 . # final step
-```
-
-Task Info:
-```json
-['task_id'] = "trial_00000_T000000000000000"        (unique instruction ID)
-['task_type'] = "pick_heat_then_place_in_recep"     (one of 7 task types)
-['plan_params'] = {'object_target': "AlarmClock",   (object)
-                   'parent_target': "DeskLamp",     (receptacle)
-                   'mrecep_target': "",             (movable receptacle)
-                   "toggle_target": "",             (toggle object)
-                   "object_sliced": false}          (should the object be sliced?)
-
-```
-
-Language Annotations:
-```json
-['turk_annotations']['anns'] =  
-             [{'task_desc': "Examine a clock using the light of a lamp.",                 (goal instruction) 
-               'high_descs': ["Turn to the left and move forward to the window ledge.",   (list of step-by-step instructions)
-                              "Pick up the alarm clock on the table", ...],               (indexes aligned with high_idx)
-               'votes': [1, 1, 1]                                                         (AMTurk languauge quality votes)
-              },
-              ...]
-```
-
-Expert Demonstration:
-
-```json
-['plan'] = {'high_pddl':
-                ...,
-                ["high_idx": 4,                          (high-level subgoal index)
-                 "discrete_action":                    
-                     {"action": "PutObject",             (discrete high-level action)
-                      "args": ["bread", "microwave"],    (discrete params)
-                 "planner_action": <PDDL_ACTION> ],      (PDDL action)
-                ...],
-                 
-            'low_actions': 
-                ...,
-                ["high_idx": 1,                          (high-level subgoal index)
-                 "discrete_action":
-                     {"action": "PickupObject",          (discrete low-level action)
-                      "args": 
-                          {"bbox": [180, 346, 332, 421]} (bounding box for interact action)
-                           "mask": [0, 0, ... 1, 1]},    (compressed pixel mask for interact action)
-                 "api_action": <API_CMD> ],              (THOR API command for replay)
-                ...], 
-           }
 ```
