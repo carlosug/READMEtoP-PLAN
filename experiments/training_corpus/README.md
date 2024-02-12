@@ -14,7 +14,7 @@ The repositories will be selected on community-curated list of software packages
 * part of [Awesome-genome-visualization](https://github.com/cmdcolin/awesome-genome-visualization)
 
 
-## Study Subjects inspected manually
+### Study Subjects inspected manually
 The following versions of 26 research software projects using Python were selected as study subjects:
 
 | # | GitHub Repository | Stars | Stable release as of 01.01.23 |
@@ -50,9 +50,10 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 * softwareRequirements
 * **buildInstructions** -->
 
-### Taxonomy of research software installation types (`Method`) and level of difficulty:
+### Taxonomy of research software installation options (`Method`) and level of difficulty:
 
 **Context**: Currently unknown standards for measuring level of difficulty in a research software installation process, and the ```Factor(s)``` that impact the installation process and its `level of difficulty`.
+
 **Definition**: We define `level of difficulty` of the installation process as the state or degree of being intricate or complicated to complete the process successfully.
 
 ```Factor(s)```: type of software, clarity of instructions, presence of **Dependencies**, number of **Steps** involved, errors in the installation process. ``Factor(s)`` describes the variables as something akin to `software understanding features`, the features with the goal of facilitating the adoption of a software[ref.Inspect4py](Inspect4py). It includes **DISCLAIMER: bear in mind that determining the exact level of difficulty can still be subjective depending on individual experiences and expertise**:
@@ -111,45 +112,20 @@ pip install mynlpframework
 
 
 
-**Main Software type**
-Levels of granuality on which software can be described. From top to the bottom:
-
-| Type | Description | *Examples* |
-| ----- | ----------------- |--|
-| Bundle| A container with metadata about the software and its functionality | *N3.js library* |
-| Library| A collection of components (codes) which are used to construct other software| *N3.js library* |
-| Package| A tool that is aimed to be executed through the command-line| *somef* |
-| Module| A concrete software package | *N3.js 0.10.0* |
-| Component| A specific part of a module that runs in a specific environment and set of parameters | *N3.js 0.10.0 Parser* |
-| Script| A code written for some run-time environment| *script.py* |
-| Service| A collection of codes where the main functionality is to start a web service via scripts | *reactjs* |
-
-<!-- Other taxonomy of types are considered [biotoolsSchema](https://github.com/bio-tools/biotoolsSchemaDocs/blob/master/controlled_vocabularies.rst) -->
-
-
-| Method | Description | Text | Code | Steps | Difficulty | README section |
-| ----- | ----------------- | ---------------------- | -------------------- | ------- | -------- | -- |
-| Source-based| Raw material (source) with a compiler to download the executable that machines then runs| ## Install from GitHub. To run, please follow the next steps: 1. Clone this GitHub repository. 2. Install software (you should be in the folder that you just cloned). 3. Test installation | ```git clone https://github.com.git``` ```cd folder pip install -e .``` ```software --help```| 3 | Complex | `## from source`, `##from Github`|
-| Package Manager-based| A tool written for some run-time environment| ## Install from Pip: | `pip install software` |1 | Simple | `## from package manager`|
-| Container-based| A tool that is aimed to be executed through the command-line| ## Installing Through Docker. To run through Docker, use the Docker image already built. Then, to run your image just type: | `docker pull image` ```bash docker run -it image /bin/bash```| 2 | Moderate | `## Installing through Docker` |
-| Binary-based| Github source and binary releases (binary dependencies) | ## download the tarball, unpack it, and run it (ready-to-run)  | none | 3 | Moderate | |
-
-
-
-
 **Method 1: Source-based installation**
-Goal: provide the source code to enable the ability to review the source code and understand its workings
-Development setup sometimes it is called
-compile from source
-Running in command line mode
-Deal with source code dependencies
-You need to build the source code yourself. That means you need to take care of the dependencies yourself. 
-A source file contains the original code as written by the developer in whatever language he/she chooses (C, C++, Python etc),and is generic
-Installing a program "from source" means installing a program without using a package manager. You compile the source code and copy the binaries to your computer instead
+- **Goal**: provide a standardized command-line interface for managing software packages installation process and its dependencies.
+- **Definition**: Installing a software "from source" means installing a software without using automatic tools e.g. container or package manager.
+- **Requiremements**:
+- Running in command line mode;
+- Deal with source code dependencies;
+- Compile the source code and copy the binaries to your computer instead;
+- Build the source code yourself, dealing with the dependencies. 
+`Comments`: Development setup sometimes it is called compile from source
 
 **Method 2: Package manager-based installation**
-Pre-built package
-A package (RPM or DEB for example) is the binary executable (or interpreted script etc) pre-prepared for your particular distro. The task of preparing the source for compiling (adding any necessary patches etc), the actual compile, creating distro specific config files, creating pre and post install scripts etc are all done for you by the package maintainer.
+- **Goal**: provide the source code that contains the original code written by a developer/researcher to enable the ability to review the source code and understand its workings
+- **Definition**: Installing a software "from source" means installing the software along with its dependencies indexed in official package managers.
+- **Requirements**
 
 | Name | Channel | Steps | Commands |
 | ----- | ----------------- | ---------------------- | --- |
@@ -164,12 +140,26 @@ A package (RPM or DEB for example) is the binary executable (or interpreted scri
 
 
 **Method 4: Binary-based installation**
-precompiled binaries are ready-to-run executable files
-Deal with binary dependencies
-Running AML in user interface mode
+
+- **Goal**: provide a way of packaging research software and their dependencies inside lightweight, standalone containers.
+- **Definition**:  a method to create isolated environments where the application runs consistently regardless of the host environment. Popular container platforms include Docker, Podman, and Singularity.
+- **Requirements**
 
 
-example:[https://www.qemu.org/download/](https://www.qemu.org/download/)
+
+
+
+**Method 4: Binary-based installation**
+
+- **Goal**: provide the downloading and running precompiled executable files or libraries specifically designed for a particular operating system and architecture
+- **Definition**: a binary files contains the entire codebase and associated resources needed to run the software, eliminating the need for compilation or building the software from source.
+- **Requirements**
+- precompiled binaries are ready-to-run executable files
+- Deal with binary dependencies
+- Running usually in in user interface mode
+
+
+Sometimes readme contains example on `cmd`:[https://www.qemu.org/download/](https://www.qemu.org/download/)
 
 To download and build binaries
 
@@ -183,7 +173,7 @@ To download and build binaries
 
 ```make```
 
-To download and build binaries from **git**
+<!-- To download and build binaries from **git**
 
 ```git clone https://github.com/example.git```
 
@@ -195,7 +185,33 @@ To download and build binaries from **git**
 
 ```./configure```
 
-```make```
+```make``` -->
+
+
+
+<!-- **Main Software type**
+Levels of granuality on which software can be described. From top to the bottom:
+
+| Type | Description | *Examples* |
+| ----- | ----------------- |--|
+| Bundle| A container with metadata about the software and its functionality | *N3.js library* |
+| Library| A collection of components (codes) which are used to construct other software| *N3.js library* |
+| Package| A tool that is aimed to be executed through the command-line| *somef* |
+| Module| A concrete software package | *N3.js 0.10.0* |
+| Component| A specific part of a module that runs in a specific environment and set of parameters | *N3.js 0.10.0 Parser* |
+| Script| A code written for some run-time environment| *script.py* |
+| Service| A collection of codes where the main functionality is to start a web service via scripts | *reactjs* | -->
+
+<!-- Other taxonomy of types are considered [biotoolsSchema](https://github.com/bio-tools/biotoolsSchemaDocs/blob/master/controlled_vocabularies.rst) -->
+
+
+| Method | Description | Text | Code | Steps | Difficulty | README section |
+| ----- | ----------------- | ---------------------- | -------------------- | ------- | -------- | -- |
+| Source-based| Raw material (source) with a compiler to download the executable that machines then runs| ## Install from GitHub. To run, please follow the next steps: 1. Clone this GitHub repository. 2. Install software (you should be in the folder that you just cloned). 3. Test installation | ```git clone https://github.com.git``` ```cd folder pip install -e .``` ```software --help```| 3 | Complex | `## from source`, `##from Github`|
+| Package Manager-based| A tool written for some run-time environment| ## Install from Pip: | `pip install software` |1 | Simple | `## from package manager`|
+| Container-based| A tool that is aimed to be executed through the command-line| ## Installing Through Docker. To run through Docker, use the Docker image already built. Then, to run your image just type: | `docker pull image` ```bash docker run -it image /bin/bash```| 2 | Moderate | `## Installing through Docker` |
+| Binary-based| Github source and binary releases (binary dependencies) | ## download the tarball, unpack it, and run it (ready-to-run)  | none | 3 | Moderate | |
+
 
 
 
