@@ -221,7 +221,7 @@ pip install mynlpframework
 Create a method to connect human-readable language instructions to steps (or activity) and collection of steps in software installation domain (machine learning a planning domain). We limit ourselves to tasks that can be characterized as "software installation and involve manually downloading, extracting, compiling, or configuring individual components; instead, they just. Examples of such tasks are also run a single command to install the desired software and its dependencies. To the best of our knowledge this work is the first to mine complex task descriptions from the readmes and translate them into executable agent plans.
 
 
-We will present the different steps from the instruction in natural language to an executable plan with the example sentence **"Place the cup on the table"** **Install package from source**.
+We will present the different steps from the instruction in natural language to an executable plan with the example sentence: **Install package from source**.
 
 
 #### 1. structure of instructions is identified
@@ -253,7 +253,7 @@ Possibility to define **`SubPlans`** *e.g. alternative methods for installing so
 
 **Formal Instruction Representation**
 
-Each step action1, action2, etc is an instance of an action concept like *CloneTheRepository*. The action *CloneTheRepository* needs to have information about the object to be manipulated and the location where this object is to be placed. For execution, the formal instruction representation has to be transformed into a valid machine-readable plan. The plans for a machine are implemented in P-PLAN, which provides an expressive and extensible vocabulary representation for semantically writing and describing plans *e.g. scientific workflows* to machines.
+Each step Step1P1, Step2P1, etc is an instance of an step concept like *Clone this repo*. The Step *Clone this repo* needs to have information about the repository (object) to be cloned and the location where this object is to be placed. For execution, the formal instruction representation has to be transformed into a valid machine-readable plan. The plans for a machine are implemented in P-PLAN, which provides an expressive and extensible vocabulary representation for semantically writing and describing plans *e.g. scientific workflows* to machines.
 
 Example of the Plan: Install software [https://raw.githubusercontent.com/lm-sys/FastChat/main/README.md](https://raw.githubusercontent.com/lm-sys/FastChat/main/README.md)
 
