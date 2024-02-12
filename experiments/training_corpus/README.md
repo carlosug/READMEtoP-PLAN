@@ -1,8 +1,8 @@
-# Benchmark for installation instructions of research software repositories
+# Benchmark for installation instructions of Research/Scientific Software Repositories
 ---
 This folder aims to keep track of the experiements related to the research question:
 
-* can machines interpret and execute installation plans for biomedical software?
+* can machines interpret and execute installation plans for Research/Scientific Software?
 
 ### 1. Selection criteria:
 The repositories will be selected on community-curated list of software packages. Automated extraction of README files:
