@@ -22,7 +22,7 @@ The following versions of 26 research software projects using Python were select
 
 <!-- # Select a representative sample of research software repositories from various domains and languages. This can be done manually or through automated means such as web scraping or API access. -->
 
-| # | GitHub Repository | Stars | Stable release as of 01.01.23 |
+| # | Repositories | Stars | Stable release as of 01.01.23 |
 | - | ----------------- | ----------- | ----------------------------- |
 | 1 | [jenkins](https://github.com/jenkinsci/jenkins) | [ce7e5d7](https://github.com/jenkinsci/jenkins/commit/ce7e5d70373a36c8d26d4117384a9c5cb57ff1c1) | [2.384](https://mvnrepository.com/artifact/org.jenkins-ci.main/jenkins-core/2.384) |  |  |
 | 2 | [mybatis-3](https://github.com/mybatis/mybatis-3) | [c195f12](https://github.com/mybatis/mybatis-3/commit/c195f12808a88a1ee245dc86d9c1621042655970) | [3.5.11](https://mvnrepository.com/artifact/org.mybatis/mybatis/3.5.11) |  |  |
@@ -263,45 +263,42 @@ Example of the Plan: Install software [https://raw.githubusercontent.com/lm-sys/
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix bpmn: <http://www.w3.org/ns/ ## no found w3 ttl
+@prefix bpmn: <http://www.w3.org/ns/bpmn#> .
 
-# Define the Plan
+# Define the Plan _:P1
 _:P1 a p-plan:Plan ;
-    rdfs:label "### Method 1: With pip" ;
+    rdfs:label "Method 1: With pip" ;
     p-plan:isStepOfPlan _:Step1P1 .
 
 # Define the Step _:Step1P1
-_:Step1P1 a p-plan:Step ;
-    rdf:type bpmn:ScriptTasks ;
-    rdfs:label "```bash pip3 install "fschat[model_worker,webui]"```" ;
-    p-plan:isStepOfPlan _:P1 . # final step of Plan _:P1 .
+_:Step1P1 a p-plan:Step, bpmn:ScriptTask ;
+    rdfs:label "pip3 install 'fschat[model_worker,webui]'" ;
+    p-plan:isStepOfPlan _:P1 .
 
-# Define the Plan
+# Define the Plan _:P2
 _:P2 a p-plan:Plan ;
-    rdfs:label "### Method 2: From source" ;
-    rdf:type bpmn:ManualTasks ;
-    p-plan:isStepOfPlan _:Step1P2, Step2P2, Step2P3 .
+    rdfs:label "Method 2: From source" ;
+    p-plan:isStepOfPlan _:Step1P2, _:Step2P2, _:Step2P3, _:Step2P4 .
 
 # Define the Step _:Step1P2
-_:Step1P2 a p-plan:Step ;
-    rdfs:label "```bash git clone https://github.com/lm-sys/FastChat.git```" ;
+_:Step1P2 a p-plan:Step, bpmn:ManualTask ;
+    rdfs:label "git clone https://github.com/lm-sys/FastChat.git" ;
     rdfs:comment "1. Clone this repository and" ;
-    rdf:type bpmn:ManualTasks ;
     p-plan:isStepOfPlan _:P2 .
 
-_:Step2P2 a p-plan:Step ;
-    rdfs:label "```cd FastChat```" ;
+_:Step2P2 a p-plan:Step, bpmn:ScriptTask ;
+    rdfs:label "cd FastChat" ;
     rdfs:comment "navigate to the FastChat folder" ;
-    rdf:type bpmn:ScriptTasks ;
     p-plan:isStepOfPlan _:P2 .
 
-_:Step2P3 a p-plan:Step ;
-    rdfs:label "```bash brew install rust cmake```" ;
+_:Step2P3 a p-plan:Step, bpmn:ScriptTask ;
+    rdfs:label "brew install rust cmake" ;
     rdfs:comment "If you are running on Mac" ;
-    p-plan:isStepOfPlan _:P2 . # optional step
+    p-plan:isStepOfPlan _:P2 .
 
-_:Step2P4 a p-plan:Step ;
-    rdfs:label "```bash pip3 install --upgrade pip  # enable PEP 660 support pip3 install -e".[model_worker,webui]```"" ;
+_:Step2P4 a p-plan:Step, bpmn:ScriptTask ;
+    rdfs:label "pip3 install --upgrade pip # enable PEP 660 support pip3 install -e .[model_worker,webui]" ;
     rdfs:comment "2. Install Package" ;
-    p-plan:isStepOfPlan _:P2 . # final step
+    p-plan:isStepOfPlan _:P2 .
+
 ```
