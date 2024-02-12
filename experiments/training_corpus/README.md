@@ -70,9 +70,9 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 
 We manually categorise the level of difficulty the README installation_instruction has in our sample as:
 
-* `Simple`: Label a research software repository with straightforward installation process. Example:
+* `Simple`: Label a research software repository with straightforward installation process.
 
-`## Installation prerequisites`
+<!-- `## Installation prerequisites`
 - Python >= 3.8
 
 `## Installation method pip:`
@@ -80,13 +80,13 @@ Install the library using pip:
 
 `bash
 pip install myprojectML
-`
+` -->
 
 
-* `Moderate`: label a research software repository that requires several `dependencies` and offers multiple installation methods (or options). Especially for DL frameworks. Example:
+* `Moderate`: label a research software repository that requires several `dependencies` and offers multiple installation methods (or options). Especially for DL frameworks.
 
 
-`## Prerequisites`
+<!-- `## Prerequisites`
 - CUDA Toolkit (for GPU acceleration)
 - TensorFlow >=2.0
 - scikit-learn
@@ -104,10 +104,10 @@ or
 
 `bash
 pip install mynlpframework
-`
+` -->
 
 
-* `Complex`:
+* `Complex`: it has numerous dependencies and complex configuration requirements
 
 
 
@@ -124,12 +124,12 @@ Levels of granuality on which software can be described. From top to the bottom:
 | Script| A code written for some run-time environment| *script.py* |
 | Service| A collection of codes where the main functionality is to start a web service via scripts | *reactjs* |
 
-Other taxonomy of types are considered [biotoolsSchema](https://github.com/bio-tools/biotoolsSchemaDocs/blob/master/controlled_vocabularies.rst)
+<!-- Other taxonomy of types are considered [biotoolsSchema](https://github.com/bio-tools/biotoolsSchemaDocs/blob/master/controlled_vocabularies.rst) -->
 
 
-| Method | Description | Difficulty | Method(s) | Steps | Dependec | README section |
+| Method | Description | Text | Code | Steps | Difficulty | README section |
 | ----- | ----------------- | ---------------------- | -------------------- | ------- | -------- | -- |
-| Source-based| Raw material (source) with a compiler to download the executable that machines then runs| High | Git and official release websites | Download the compiler and install all the required libraries manually  | | `## Manual install` , `## from source`, `## Install from Github`|
+| Source-based| Raw material (source) with a compiler to download the executable that machines then runs| ## Install from GitHub. To run, please follow the next steps: 1. Clone this GitHub repository. 2. Install software (you should be in the folder that you just cloned). 3. Test installation | ```git clone https://github.com.git``` ```cd folder pip install -e .``` ```software --help```| 3 | Moderate | `## from source`, `##from Github`|
 | Package Manager-based| A tool written for some run-time environment| Low | Pip |1 |`## Install from Pypi` | |
 | Container-based| A tool that is aimed to be executed through the command-line| High | Docker | |`## Installing through Docker` | |
 | Binary-based| Github source and binary releases (binary dependencies) | Low | - | download the tarball, unpack it, and run it (ready-to-run)  | 3 | |
