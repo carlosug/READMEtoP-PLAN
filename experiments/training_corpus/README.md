@@ -209,16 +209,16 @@ pip install mynlpframework
 **Scoring system/scheme based on all factors**
 
 
-| Factors | Definition | Points
-|----------|------------|
-| **Number requirements**| Provide a list of required packages and their versions | 1-5
-| **Number of dependencies** | list the internal and external modules used by the target (to be installed) software.  A larger number of dependencies may indicate more complexity | 1-5
-| **Number installation methods** | available the different alternatives to install the software | 1-5
-| **Main software type** | Estimates whether the target software is a package, library, service or scripts | 1 - 4
-| **Clarity on instructions** | writes concise and clear instructions | 0-3
-| **Method 1 only** | from source (calculate length steps) | 3 
-| **Method 2 only** | from PiP | 1
-| **Method 3 only** | from Container | 2
+| Factors | Definition | Points |
+|----------|------------| ---- |
+| **Number requirements**| Provide a list of required packages and their versions | 1-5 |
+| **Number of dependencies** | list the internal and external modules used by the target (to be installed) software.  A larger number of dependencies may indicate more complexity | 1-5 |
+| **Number installation methods** | available the different alternatives to install the software | 1-5 |
+| **Main software type** | Estimates whether the target software is a package, library, service or scripts | 1 - 4 |
+| **Clarity on instructions** | writes concise and clear instructions | 0-3 |
+| **Method 1 only** | from source (calculate length steps) | 3 |
+| **Method 2 only** | from PiP | 1 |
+| **Method 3 only** | from Container | 2 |
 
 
 <!-- ```py
