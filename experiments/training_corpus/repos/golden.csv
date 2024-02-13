@@ -255,3 +255,130 @@ Installation instructions for Linux (Ubuntu and Pop!_OS): download the Linux zip
 Installation instructions for Mac OS: download the Mac zip file and copy the NRN-EZ app to the Applications folder. 
 
 Installation instructions for Windows: download the Win zip file and run the installation wizard.",
+causnet,https://bio.tools/,https://raw.githubusercontent.com/nand1155/CausNet/main/README.md,,0,https://bio.tools/t?sort=citationDate&ord=desc,,Library,13/02/2024,two years,"## Installation
+
+You can install the development version from GitHub with:
+
+``` r
+require(""devtools"")
+install_github(""https://github.com/nand1155/CausNet"")
+```",
+viralcc,https://bio.tools/,https://raw.githubusercontent.com/dyxstat/Reproduce_ViralCC/main/README.md,,0,https://bio.tools/t?sort=citationDate&ord=desc,,command_line,13/02/2024,8 months,"# Instruction of reproducing results in ViralCC paper
+We take the cow fecal datasets for example. The other two datasets were processed following the same procedure.
+
+Scripts to process the intermediate data and plot figures are available in the folder [Scripts](https://github.com/dyxstat/Reproduce_ViralCC/tree/main/Scripts).
+
+Source data of Figure 2 and 3 in the main text and Figure S1 in the supplementary materials are provided in the folder [Source Data](https://github.com/dyxstat/Reproduce_ViralCC/tree/main/Source%20Data).
+
+**Version of softwares exploited in the analyses**
+```
+fastq_dump command from Sratoolkit: v2.10.8
+
+bbduk.sh and clumpify.sh command from BBTools suite: v37.25
+
+megahit command from MEGAHIT: v1.2.9
+
+bwa command from BWA MEM: v0.7.17
+
+samtools command from Samtools: v1.15.1
+
+wrapper_phage_contigs_sorter_iPlant.pl command from VirSorter: v1.0.6
+
+checkv command from CheckV: 0.7.0
+```
+
+**Step 1 Download and preprocess the raw data**
+
+Note: NCBI may update its links for downloading the database. Please check the latest link at [NCBI](https://www.ncbi.nlm.nih.gov/) if you meet the download error.
+```
+wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-13/ERR2282092/ERR2282092.1
+wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-13/ERR2530126/ERR2530126.1
+wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-13/ERR2530127/ERR2530127.1
+
+fastq-dump --split-files --gzip ERR2282092.1
+fastq-dump --split-files --gzip ERR2530126.1
+fastq-dump --split-files --gzip ERR2530127.1
+
+bbduk.sh  in1=ERR2282092.1_1.fastq.gz in2=ERR2282092.1_2.fastq.gz out1=COWSG1_AQ.fastq.gz out2=COWSG2_AQ.fastq.gz ref=/home1/yuxuandu/cmb/SOFTWARE/bbmap/resources/adapters.fa ktrim=r k=23 mink=11 hdist=1 minlen=50 tpe tbo
+bbduk.sh  in1=ERR2530126.1_1.fastq.gz in2=ERR2530126.1_2.fastq.gz out1=S3HIC1_AQ.fastq.gz out2=S3HIC2_AQ.fastq.gz ref=/home1/yuxuandu/cmb/SOFTWARE/bbmap/resources/adapters.fa ktrim=r k=23 mink=11 hdist=1 minlen=50 tpe tbo
+bbduk.sh  in1=ERR2530127.1_1.fastq.gz in2=ERR2530127.1_2.fastq.gz out1=M1HIC1_AQ.fastq.gz out2=M1HIC2_AQ.fastq.gz ref=/home1/yuxuandu/cmb/SOFTWARE/bbmap/resources/adapters.fa ktrim=r k=23 mink=11 hdist=1 minlen=50 tpe tbo
+
+bbduk.sh  in1=S3HIC1_AQ.fastq.gz in2=S3HIC2_AQ.fastq.gz out1=S3HIC1_CL.fastq.gz out2=S3HIC2_CL.fastq.gz trimq=10 qtrim=r ftm=5 minlen=50
+bbduk.sh  in1=M1HIC1_AQ.fastq.gz in2=M1HIC2_AQ.fastq.gz out1=M1HIC1_CL.fastq.gz out2=M1HIC2_CL.fastq.gz trimq=10 qtrim=r ftm=5 minlen=50
+bbduk.sh  in1=COWSG1_AQ.fastq.gz in2=COWSG2_AQ.fastq.gz out1=COWSG1_CL.fastq.gz out2=COWSG2_CL.fastq.gz trimq=10 qtrim=r ftm=5 minlen=50
+
+bbduk.sh in1=S3HIC1_CL.fastq.gz in2=S3HIC2_CL.fastq.gz out1=S3HIC1_trim.fastq.gz out2=S3HIC2_trim.fastq.gz ftl=10
+bbduk.sh in1=M1HIC1_CL.fastq.gz in2=M1HIC2_CL.fastq.gz out1=M1HIC1_trim.fastq.gz out2=M1HIC2_trim.fastq.gz ftl=10
+
+clumpify.sh in1=S3HIC1_trim.fastq.gz in2=S3HIC2_trim.fastq.gz out1=S3HIC1_dedup.fastq.gz out2=S3HIC2_dedup.fastq.gz dedupe
+clumpify.sh in1=M1HIC1_trim.fastq.gz in2=M1HIC2_trim.fastq.gz out1=M1HIC1_dedup.fastq.gz out2=M1HIC2_dedup.fastq.gz dedupe
+cat S3HIC1_dedup.fastq.gz M1HIC1_dedup.fastq.gz > HIC1.fastq.gz
+cat S3HIC2_dedup.fastq.gz M1HIC2_dedup.fastq.gz > HIC2.fastq.gz
+```
+
+**Step 2: Assemble contigs and align processed Hi-C reads to contigs**
+```
+megahit -1 COWSG1_CL.fastq.gz -2 COWSG2_CL.fastq.gz -o COW_ASSEMBLY --min-contig-len 1000 --k-min 21 --k-max 141 --k-step 12 --merge-level 20,0.95
+
+bwa index final.contigs.fa
+bwa mem -5SP final.contigs.fa HIC1.fastq.gz HIC2.fastq.gz > COW_MAP.sam
+samtools view -F 0x904 -bS COW_MAP.sam > COW_MAP_UNSORTED.bam
+samtools sort -n COW_MAP_UNSORTED.bam -o COW_MAP_SORTED.bam
+```
+
+**Step3: Identify viral contigs from assembled contigs**
+```
+perl removesmalls.pl 3000 final.contigs.fa > cow_3000.fa
+wrapper_phage_contigs_sorter_iPlant.pl -f cow_3000.fa --db 1 --wdir output_directory --ncpu 16 --data-dir /panfs/qcb-panasas/yuxuandu/virsorter-data
+Rscript find_viral_contig.R
+```
+
+**Step4: Run ViralCC**
+```
+python ./viralcc.py pipeline -v final.contigs.fa COW_MAP_SORTED.bam viral.txt out_cow
+```
+
+**Step5: Evaluation draft viral genomes using CheckV**
+```
+python concatenation.py -p out_cow/VIRAL_BIN -o viralCC_cow_bins.fa
+checkv end_to_end viralCC_cow_bins.fa output_checkv_viralcc_cow -t 16 -d /panfs/qcb-panasas/yuxuandu/checkv-db-v1.0
+```",
+DRaW,https://bio.tools/,https://raw.githubusercontent.com/BioinformaticsIASBS/DRaW/main/README.md,,0,https://bio.tools/t?sort=citationDate&ord=desc,,,,,"# Running DRaW on COVID-19 datasets
+The DRaW has been applied on three COVID-19 datasets, DS1, DS2, and DS3. There are three subdirectories, “DS1_repur”, “DS2_repur”, and “DS3_repur”, in the “Drug-Repurposing” directory. Each subdirectory has been assigned to one of the mentioned datasets. We put the Draw implementation file for each dataset in each subdirectory separately. This is due to keep the corresponding hyperparameters of each dataset. 
+We use Adam as the optimizer with a learning rate equal to 0.001, beta1 = 0.9, beta2 = 0.999, and epsilon = 1e−7. The dropout rate is set to 0.5. The batch size is chosen by the number of samples per dataset. This hyperparameter for DS1 is equal to 8, and those for DS2 and DS3 are set to 32.
+To run the model, it is enough to execute ""Drug-Repurposing.py"" script in the command line. After that, execute ""score.py"". The repurposed drugs will be stored in the ""meanScore.csv"" spreadsheet. It contains the average of ach drug ranking. The lower, the better. For example, to run the DRaW on DS1:
+```bash
+cd Drug-Repurposing\DS1_repur
+python Drug-Repurposing.py 
+python score.py
+```
+Same goes for other datasets. Just change the directory path.
+# Performance analysis
+In order to analysis the performance, there is a one extra directory in the root, “Performance_analysis”. By running following command the model is trained on a given dataset and returns its performance metrics, AUC-ROC, AUPR, F1 score, etc.   
+The input parameter “dataset_name” is one the following five datasets’ name. The first one is COVID-19 DS3 and other four are golden benchmarks. 
+'DS3','ic','nr','gpcr','e'
+
+```bash
+cd Performance_analysis
+python main.py dataset_name
+```",
+NRN-EZ,https://bio.tools/,https://raw.githubusercontent.com/scimemia/NRN-EZ/master/README.md,,,,,,,6 months,"**INSTALLATION FOR VERSION 1.1.6**
+
+NRN-EZ was built with PyInstaller 3.6, and requires the following languages and libraries:
+
+•	Python 3.6.9 and higher (currently up to 3.10)
+
+•	PyQt 5.10.1
+
+•	PyQtGraph 0.11.0
+
+Installation instructions for Linux (Ubuntu and Pop!_OS): download the Linux zip file and, from the command window, run a bash command for the install.sh file, in the corresponding installation folder. 
+
+Installation instructions for Mac OS: download the Mac zip file and copy the NRN-EZ app to the Applications folder. 
+
+Installation instructions for Windows: download the Win zip file and run the installation wizard.",
+guiding-instruction-based-image-editing-via,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/apple/ml-mgie/main/README.md,computer_science,3089,top,,,13/02/2024,29/09/2023,,
+self-play-fine-tuning-converts-weak-language,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/uclaml/SPIN/main/README.md,computer_science,430,top,,,13/02/2024,2/1/24,,
+genegpt-teaching-large-language-models-to-use,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/ncbi/GeneGPT/main/README.md,computer_science,214,top,,,13/02/2024,19/04/2023,,
+the-boundary-of-neural-network-trainability,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/Sohl-Dickstein/fractal/main/README.md,computer_science,41,top,,,13/02/2024,9/2/24,,
+learning-to-fly-in-seconds,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/arplaboratory/learning-to-fly/master/README.MD,computer_science,201,top,,,13/02/2024,22/11/2023,,
