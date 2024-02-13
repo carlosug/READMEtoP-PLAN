@@ -18,17 +18,17 @@ The repositories will be selected on community-curated list of software packages
 ---
 
 ### 2. Study Subjects inspected manually
-The following versions of 26 research software projects using Python were selected as study subjects:
+The following versions of research software projects using Python were selected as study subjects:
 
 <!-- # Select a representative sample of research software repositories from various domains and languages. This can be done manually or through automated means such as web scraping or API access. -->
 
-| # | Repositories | Stars | Stable release as of 01.01.23 |
+| # | Repositories | Number | Topic |
 | - | ----------------- | ----------- | ----------------------------- |
-| 1 | [jenkins](https://github.com/jenkinsci/jenkins) | [ce7e5d7](https://github.com/jenkinsci/jenkins/commit/ce7e5d70373a36c8d26d4117384a9c5cb57ff1c1) | [2.384](https://mvnrepository.com/artifact/org.jenkins-ci.main/jenkins-core/2.384) |  |  |
-| 2 | [mybatis-3](https://github.com/mybatis/mybatis-3) | [c195f12](https://github.com/mybatis/mybatis-3/commit/c195f12808a88a1ee245dc86d9c1621042655970) | [3.5.11](https://mvnrepository.com/artifact/org.mybatis/mybatis/3.5.11) |  |  |
-| 3 | [flink](https://github.com/apache/flink) | [c41c8e5](https://github.com/apache/flink/commit/c41c8e5cfab683da8135d6c822693ef851d6e2b7) | [1.15.3](https://mvnrepository.com/artifact/org.apache.flink/flink-core/1.15.3) |  |  |
-| 4 | [checkstyle](https://github.com/checkstyle/checkstyle) | [233c91b](https://github.com/checkstyle/checkstyle/commit/233c91be45abc1ddf67c1df7bc8f9f8ab64caa1c) | [10.6.0](https://mvnrepository.com/artifact/com.puppycrawl.tools/checkstyle/10.6.0) |  |  |
-| 5 | [CoreNLP](https://github.com/stanfordnlp/CoreNLP) | [f7782ff](https://github.com/stanfordnlp/CoreNLP/commit/f7782ff5f235584b0fc559f266961b5ab013556a) | [4.5.1](https://mvnrepository.com/artifact/edu.stanford.nlp/stanford-corenlp/4.5.1) |  |  |
+| 1 | [github](https://github.com/jenkinsci/jenkins) | [X]() | [LLM]() |  |  |
+| 2 | [Paperwithcode](https://paperswithcode.com/api/v1/repositories/) | [X]() | [ML]() |  |  |
+| 3 | [bio.tools](https://bio.tools/api/t/?documentationType=%22Installation+instructions%22&tool=%22Web%20service%22&programming%20language=%22python%22) | [X]() | [Bioinformatics]() |  |  |
+| 4 | [awesome-ai-devtools](https://github.com/jamesmurdza/awesome-ai-devtools) | [250]() | [LLMs]() |  |  |
+| 5 | [Awesome-genome-visualization](https://github.com/cmdcolin/awesome-genome-visualization)| [150](https://github.com/stanfordnlp/CoreNLP/commit/f7782ff5f235584b0fc559f266961b5ab013556a) | [Genomics]() |  |  |
 
 
 <!-- ### Available software repositories
@@ -62,19 +62,10 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 
 #### Definitions: 
 - **Installation Methods**: instructions to follow in a research software installation process. In context of the study, there are several different methods (see below).
-- **Level of difficulty**: We define `level of difficulty` of the installation process as the state or degree of being intricate or complicated to complete the process successfully.
+- **Level of difficulty**: a position on scale that quantify the relative difficulty of completing a task related to installation process in the R/S software. It measures how complex a task is to execute and incluces several `Factors` determine its level.
 
-```Factor(s)```: type of software, clarity of instructions, presence of **Dependencies**, number of **Steps** involved, errors in the installation process. ``Factor(s)`` describes the variables as something akin to `software understanding features`, the features with the goal of facilitating the adoption of a software[ref.Inspect4py](Inspect4py). It includes **DISCLAIMER: bear in mind that determining the exact level of difficulty can still be subjective depending on individual experiences and expertise**:
+```Factor(s)```: type of software, clarity of instructions, presence of **Dependencies**, number of **Steps** involved, and available optional installation methods in the readme. ``Factor(s)`` describes the variables as something akin to `software understanding features`, the features with the goal of facilitating the adoption of a software[ref.Inspect4py](Inspect4py). It includes **DISCLAIMER: bear in mind that determining the exact level of difficulty can still be subjective depending on individual experiences and expertise**.  Based on the given factors, here the scoring scheme could be:
 
-| Features | Definition |
-|----------|------------|
-| Requirements | Provide a list of required packages and their versions |
-| Dependencies | list the internal and external modules used by the target (to be installed) software.  A larger number of dependencies may indicate more complexity |
-| **Software invocation** | ranks the different alternatives to run the software component based on relevance |
-| **Main software type** | Estimates whether the target software is a package, library, srvice or scripts |
-| **Detailed instructions** | writes concise and clear instructions |
-| **Containerization** | helps researchers dealing with complex installation |
-| **Package managers** | eases difficulty in installation proccess |
 
 
 #### Installation methods:
@@ -177,7 +168,7 @@ pip install myprojectML
 ` -->
 
 
-* `Moderate`: label a research software repository that requires several `dependencies` and offers multiple installation methods (or options). Especially for DL frameworks.
+* `Moderate`: label a research software repository that requires several `dependencies,` and offers multiple installation methods (or options). Especially for DL frameworks.
 
 
 <!-- `## Prerequisites`
@@ -201,7 +192,7 @@ pip install mynlpframework
 ` -->
 
 
-* `Complex`: it has numerous dependencies and complex configuration requirements
+* `Complex`: it has numerous dependencies, more than one installation method available in readme, and complex configuration requirements 
 
 
 ---
@@ -213,6 +204,21 @@ pip install mynlpframework
 | Package Manager-based| A tool written for some run-time environment| ## Install from Pip: | `pip install software` |1 | Simple | `## from package manager`|
 | Container-based| A tool that is aimed to be executed through the command-line| ## Installing Through Docker. To run through Docker, use the Docker image already built. Then, to run your image just type: | `docker pull image` ```bash docker run -it image /bin/bash```| 2 | Moderate | `## Installing through Docker` |
 | Binary-based| Github source and binary releases (binary dependencies) | ## download the tarball, unpack it, and run it (ready-to-run)  | none | 3 | Moderate | |
+
+
+**Scoring system/scheme based on all factors**
+
+
+| Factors | Definition | Points
+|----------|------------|
+| **Number requirements**| Provide a list of required packages and their versions | 1-5
+| **Number of dependencies** | list the internal and external modules used by the target (to be installed) software.  A larger number of dependencies may indicate more complexity | 1-5
+| **Number installation methods** | available the different alternatives to install the software | 1-5
+| **Main software type** | Estimates whether the target software is a package, library, service or scripts | 1 - 4
+| **Clarity on instructions** | writes concise and clear instructions | 0-3
+| **Method 1 only** | from source (calculate length steps) | 3 
+| **Method 2 only** | from PiP | 1
+| **Method 3 only** | from Container | 2
 
 ---
 
