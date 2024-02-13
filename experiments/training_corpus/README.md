@@ -220,6 +220,76 @@ pip install mynlpframework
 | **Method 2 only** | from PiP | 1
 | **Method 3 only** | from Container | 2
 
+
+<!-- ```py
+def count_dependencies(requirements_file):
+    """Count the number of dependencies in a requirements file."""
+    try:
+        with open(requirements_file) as f:
+            content = f.readlines()
+            num_deps = sum([len(line.strip().split()) > 0 for line in content])
+            return num_deps
+    except FileNotFoundError:
+        print(f"Could not find '{requirements_file}'.")
+        return 0
+
+def check_platform_compatibility(os_info):
+    """Check platform compatibility based on operating system info."""
+    supported_os = ["Linux", "Windows", "MacOS"]
+    if os.name in supported_os:
+        return 3
+    elif "RHEL" in os_info or "CentOS" in os_info:
+        return 2
+    else:
+        return 0
+
+def check_clarity_of_instructions(readme):
+    """Determine clarity of instructions based on README content."""
+    clear_keywords = ["simple", "quick", "intuitive", "clear"]
+    num_clear_keywords = sum([1 for word in readme.lower().split() if word in clear_keywords])
+    return min(num_clear_keywords, 3)
+
+def check_availability_automation_tools(setup_script):
+    """Check for availability of automation tools in setup script."""
+    available_tools = ["make", "cmake", "pip", "conda"]
+    return int(any([tool in setup_script for tool in available_tools])) * 2
+
+def check_presence_precompiled_binaries(downloads_folder):
+    """Check for presence of precompiled binaries in downloads folder."""
+    num_binary_files = sum([os.path.isfile(os.path.join(downloads_folder, f)) for f in os.listdir(downloads_folder)])
+    return int(num_binary_files > 0) * 2
+
+def check_known_issues(issue_count):
+    """Determine impact of known issues based on issue count."""
+    critical_issues = ["build failure", "runtime error"]
+    severe_issues = ["major functionality loss"]
+    moderate_issues = ["minor bugs"]
+    weighted_score = sum([1 if issue in critical_issues else (issue_count // 10 if issue in severe_issues else (issue_count // 100 if issue in moderate_issues else 0)) for issue in issues])
+    return min(weighted_score, 3)
+
+def analyze_installation(req_file, setup_script, readme, downloads_folder, os_info):
+    """Analyze installation complexity based on input parameters."""
+    issues = []
+    deps = count_dependencies(req_file)
+    plat_comp = check_platform_compatibility(os_info)
+    clar_inst = check_clarity_of_instructions(readme)
+    auto_tools = check_availability_automation_tools(setup_script)
+    binary_files = check_presence_precompiled_binaries(downloads_folder)
+    known_issues = check_known_issues(len(issues))
+
+    score = deps + plat_comp + clar_inst + auto_tools + binary_files + known_issues
+    complexity = ""
+
+    if score <= 3:
+        complexity = "Easy"
+    elif score <= 9:
+        complexity = "Moderate"
+    else:
+        complexity = "Hard"
+
+    return complexity
+``` -->
+
 ---
 
 ### 4. Translating abstract to executable instructions
