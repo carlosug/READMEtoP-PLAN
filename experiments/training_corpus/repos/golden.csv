@@ -1,5 +1,5 @@
-﻿url,repo,readme,portal,stars,selection,categories,,date_collection,date_submission,text,comments
-vcr-video-representation-for-contextual,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/oronnir/VCR/main/README.md,machine_learning,1,latest,,,13/02/2024,12/2/24,,
+﻿url,repo,readme,portal,stars,selection,categories,,date_collection,date_submission,text,comments,steps (text and code comments),instructions,seq_order,extra_info,optional_steps,optional_instructions,seq_order,extra_info_optional,"available_method (1=source, 2=packagemanager, 3=container, 4=binary)"
+vcr-video-representation-for-contextual,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/oronnir/VCR/main/README.md,machine_learning,1,latest,,,13/02/2024,12/2/24,,,,,,,,,,,
 ensuring-trustworthy-and-ethical-behaviour-in,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/AAAI-DISIM-UnivAQ/DALI/master/README.md,machine_learning,15,latest,,,13/02/2024,12/2/24,"## Installation
 
 **OS X & Linux:**
@@ -23,19 +23,45 @@ bash startmas.sh
 &nbsp;&nbsp;&nbsp;&nbsp; You will see different windows opening:
 * &nbsp;&nbsp;&nbsp;&nbsp; Prolog LINDA server (active_server_wi.pl)
 * &nbsp;&nbsp;&nbsp;&nbsp; Prolog FIPA client (active_user_wi.pl) 
-* &nbsp;&nbsp;&nbsp;&nbsp; 1 instance of DALI metaintepreter for each agent (active_dali_wi.pl)",
-synthesizing-sentiment-controlled-feedback,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/MIntelligence-Group/CMFeed/main/README.md,machine_learning,0,latest,,,13/02/2024,12/2/24,,
+* &nbsp;&nbsp;&nbsp;&nbsp; 1 instance of DALI metaintepreter for each agent (active_dali_wi.pl)",,"**OS X & Linux:**
+1.  To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.
+2.  Then, you can download DALI and test it by running an example DALI MAS:
+```sh
+git clone https://github.com/AAAI-DISIM-UnivAQ/DALI.git
+cd DALI/Examples/advanced
+bash startmas.sh
+```","**OS X & Linux:**
+1.  To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.
+2.  Then, you can download DALI and test it by running an example DALI MAS:
+```sh
+git clone https://github.com/AAAI-DISIM-UnivAQ/DALI.git
+cd DALI/Examples/advanced
+bash startmas.sh
+```","1,2","&nbsp;&nbsp;&nbsp;&nbsp; You will see different windows opening:
+* &nbsp;&nbsp;&nbsp;&nbsp; Prolog LINDA server (active_server_wi.pl)
+* &nbsp;&nbsp;&nbsp;&nbsp; Prolog FIPA client (active_user_wi.pl) 
+* &nbsp;&nbsp;&nbsp;&nbsp; 1 instance of DALI metaintepreter for each agent (active_dali_wi.pl)","**Windows:**
+1.  To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.
+2.  Then, you can download DALI from https://github.com/AAAI-DISIM-UnivAQ/DALI.git.
+3.  Unzip the repository, go to the folder ""DALI/Examples/basic"", and test if DALI works by duble clicking ""startmas.bat"" file (this will launch an example DALI MAS). \","**Windows:**
+1.  To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.
+2.  Then, you can download DALI from https://github.com/AAAI-DISIM-UnivAQ/DALI.git.
+3.  Unzip the repository, go to the folder ""DALI/Examples/basic"", and test if DALI works by duble clicking ""startmas.bat"" file (this will launch an example DALI MAS). \","1,2","&nbsp;&nbsp;&nbsp;&nbsp; You will see different windows opening:
+* &nbsp;&nbsp;&nbsp;&nbsp; Prolog LINDA server (active_server_wi.pl)
+* &nbsp;&nbsp;&nbsp;&nbsp; Prolog FIPA client (active_user_wi.pl) 
+* &nbsp;&nbsp;&nbsp;&nbsp; 1 instance of DALI metaintepreter for each agent (active_dali_wi.pl)",1
+synthesizing-sentiment-controlled-feedback,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/MIntelligence-Group/CMFeed/main/README.md,machine_learning,0,latest,,,13/02/2024,12/2/24,,,,,,,,,,,
 only-the-curve-shape-matters-training,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/cfeng783/GTT/main/README.md,machine_learning,0,latest,,,13/02/2024,12/2/24,"## Getting Started
 
 #### Install dependencies (with python 3.10) 
 
 ```shell
 pip install -r requirements.txt
-```",
-from-uncertainty-to-precision-enhancing,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/fer-agathe/calibration_binary_classifier/main/README.md,machine_learning,0,latest,,,13/02/2024,12/2/24,,
-stochastic-gradient-flow-dynamics-of-test,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/rodsveiga/sgf_dyn/main/README.md,machine_learning,,,,,13/02/2024,12/2/24,,
-accuracy-of-textfooler-black-box-adversarial,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/zero-one-loss/wordcnn01/main/LICENSE*,machine_learning,0,,,,13/02/2024,12/2/24,,
-differentially-private-decentralized-learning-1,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/totilas/DPrandomwalk/main/README.md,machine_learning,,,,,13/02/2024,12/2/24,,
+```",,,,,,,,,,
+from-uncertainty-to-precision-enhancing,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/fer-agathe/calibration_binary_classifier/main/README.md,machine_learning,0,latest,,,13/02/2024,12/2/24,,,,,,,,,,,
+stochastic-gradient-flow-dynamics-of-test,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/rodsveiga/sgf_dyn/main/README.md,machine_learning,,,,,13/02/2024,12/2/24,,,,,,,,,,,
+accuracy-of-textfooler-black-box-adversarial,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/zero-one-loss/wordcnn01/main/LICENSE*,machine_learning,0,,,,13/02/2024,12/2/24,,,,,,,,,,,
+differentially-private-decentralized-learning-1,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/totilas/DPrandomwalk/main/README.md,machine_learning,,,,,13/02/2024,12/2/24,,,,,,,,,,,
 aydiv-adaptable-yielding-3d-object-detection,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/sanjay-810/AYDIV2/main/README.md,machine_learning,1,,,,13/02/2024,12/2/24,"### **Installation**
 1.  Prepare for the running environment. 
 
@@ -79,10 +105,10 @@ aydiv-adaptable-yielding-3d-object-detection,https://paperwithcode.com/paper/,ht
     cd pcdet/ops/iou3d/cuda_op
     python setup.py develop
     cd ../../../..
-    ```",
+    ```",,,,,,,,,,
 cartesian-atomic-cluster-expansion-for,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/BingqingCheng/cace/main/README.md,machine_learning,4,latest,,,13/02/2024,12/2/24,"## Installation
 
-Please refer to the `setup.py` file for installation instructions.",
+Please refer to the `setup.py` file for installation instructions.",,,,,,,,,,
 teller-a-trustworthy-framework-for,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/less-and-less-bugs/Trust_TELLER/main/README.md,machine_learning,1,latest,,,13/02/2024,12/2/24,"## Getting Started
 
 Step 1: Download the dataset folder from onedrive by [data.zip](https://portland-my.sharepoint.com/:u:/g/personal/liuhui3-c_my_cityu_edu_hk/EfApQlFP3PhFjUW4527STo0BALMdP16zs-HPMNgwQVFWsA?e=zoHlW2). Unzip this folder into the project  directory.  You can find four orginal datasets,  pre-processed datasets (i.e., val.jsonl, test.jsonl, train.jsonl in each dataset folder) and the files incuding questions and answers 
@@ -91,7 +117,7 @@ Step 2: Place you OpenAI key into the file named api_key.txt.
 
 ```
 openai.api_key = """"
-```",
+```",,,,,,,,,,
 continuous-time-radar-inertial-and-lidar,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/utiasASRL/steam_icp/master/README.md,computer_science,77,latest,robotics,,13/02/2024,9/2/24,"## Installation
 
 Clone this repository and its submodules.
@@ -123,8 +149,58 @@ docker run -it --name steam_icp \
 
 ```bash
 bash build.sh
-```",
-towards-a-thermodynamical-deep-learning,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/fedezocco/ThermoVisMedRob/main/README.md,computer_science,0,latest,robotics,,13/02/2024,8/2/24,,demo-video
+```",,"1. Clone this repository and its submodules.
+2. We use docker to install dependencies The recommended way to build the docker image is
+```bash
+docker build -t steam_icp \
+  --build-arg USERID=$(id -u) \
+  --build-arg GROUPID=$(id -g) \
+  --build-arg USERNAME=$(whoami) \
+  --build-arg HOMEDIR=${HOME} .
+```
+3. When starting a container, remember to mount the code, dataset, and output directories to proper locations in the container.
+An example command to start a docker container with the image is
+
+```bash
+docker run -it --name steam_icp \
+  --privileged \
+  --network=host \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  -v ${HOME}:${HOME}:rw \
+  steam_icp
+
+4.(Inside Container) Go to the root directory of this repository and build STEAM-ICP
+
+```bash
+bash build.sh
+```","1. Clone this repository and its submodules.
+2. We use docker to install dependencies The recommended way to build the docker image is
+```bash
+docker build -t steam_icp \
+  --build-arg USERID=$(id -u) \
+  --build-arg GROUPID=$(id -g) \
+  --build-arg USERNAME=$(whoami) \
+  --build-arg HOMEDIR=${HOME} .
+```
+3. When starting a container, remember to mount the code, dataset, and output directories to proper locations in the container.
+An example command to start a docker container with the image is
+
+```bash
+docker run -it --name steam_icp \
+  --privileged \
+  --network=host \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  -v ${HOME}:${HOME}:rw \
+  steam_icp
+
+4.(Inside Container) Go to the root directory of this repository and build STEAM-ICP
+
+```bash
+bash build.sh
+```","1,2,3,4",,,,,,3
+towards-a-thermodynamical-deep-learning,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/fedezocco/ThermoVisMedRob/main/README.md,computer_science,0,latest,robotics,,13/02/2024,8/2/24,,demo-video,,,,,,,,,
 robust-parameter-fitting-to-realistic-network,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/PFischbeck/parameter-fitting-experiments/main/Readme.md,computer_science,0,latest,Social and Information Networks Data Structures and Algorithms,,13/02/2024,8/2/24,"# Installation
 
 - Make sure you have Python, Pip and R installed.
@@ -144,12 +220,12 @@ R -e 'install.packages(c(""ggplot2"", ""reshape2"", ""plyr"", ""dplyr"", ""scale
 ```
 
 - Download the file `konect-data.zip` from [Zenodo](https://doi.org/10.5281/zenodo.10629451) and extract its contents into the folder `input_data/konect`
-- Optional: Download the file `output-data.zip` from [Zenodo](https://doi.org/10.5281/zenodo.10629451) and extract its contents into the folder `output_data`. This way, you can access all experiment results without running them yourself.",
+- Optional: Download the file `output-data.zip` from [Zenodo](https://doi.org/10.5281/zenodo.10629451) and extract its contents into the folder `output_data`. This way, you can access all experiment results without running them yourself.",,,,,,,,,,
 get-tok-a-genai-enriched-multimodal-tiktok,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/gabbypinto/GET-Tok-Peru/main/README.md,computer_science,1,latest,Social and Information Networks Computers and Society Human-Computer Interaction ,,13/02/2024,8/2/24,"## Installation
 pip install -r requirements.txt 
 
-*Note: I did not us a virtual environment so the packages in the requirements.txt file are probably not reflective of all the packages used in this project. If some issues pop up please don't hesitate to email me at: gpinto@usc.edu*",
-a-longitudinal-study-of-italian-and-french,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/orsoFra/LS_FRIT_UKR/main/README.md,computer_science,0,latest,Social and Information Networks Computers and Society,,13/02/2024,7/2/24,,
+*Note: I did not us a virtual environment so the packages in the requirements.txt file are probably not reflective of all the packages used in this project. If some issues pop up please don't hesitate to email me at: gpinto@usc.edu*",,,,,,,,,,
+a-longitudinal-study-of-italian-and-french,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/orsoFra/LS_FRIT_UKR/main/README.md,computer_science,0,latest,Social and Information Networks Computers and Society,,13/02/2024,7/2/24,,,,,,,,,,,
 geometric-slosh-free-tracking-for-robotic,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/jonarriza96/gsft/main/README.md,computer_science,1,latest,robotics,,13/02/2024,7/2/24,"## Installation
 
 ### Dependencies
@@ -176,12 +252,12 @@ To ensure that Python paths are properly defined, update the `~/.bashrc` by addi
 ```
 export GSFT_PATH=/path_to_gsfc
 export PYTHONPATH=$PYTHONPATH:/$GSFT_PATH
-```",
+```",,,,,,,,,,
 real-time-line-based-room-segmentation-and,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/EricssonResearch/Line-Based-Room-Segmentation-and-EDF/release/README.md,computer_science,0,latest,robotics,,13/02/2024,7/2/24,"## Installation
 The project can be installed by running the following command in your terminal:
 ```bash
 pip install -r requirements.txt
-```",
+```",,,,,,,,,,
 viga,https://bio.tools/,https://raw.githubusercontent.com/viralInformatics/VIGA/master/README.md,,7,https://bio.tools/t?sort=citationDate&ord=desc,,command_line,13/02/2024,last week,"## Installation
 
 ### Step1: Download VIGA
@@ -238,8 +314,51 @@ Base on python 3.6.8
 ```
 pip install pandas=1.1.5 numpy=1.19.5  matplotlib=3.3.4  biopython=1.79
 ```
-",
-lncrtpred,https://bio.tools/,https://raw.githubusercontent.com/zglabDIB/LncRTPred/main/README.md,,,https://bio.tools/t?sort=citationDate&ord=desc,,command_line,13/02/2024,8 months,,
+",multiple steps and dependencies installation,"### Step1: Download VIGA
+### Step 2: Download Database
+### Step 3: Installation of dependent software
+### Step 4: Python Dependencies
+","## Installation
+
+### Step1: Download VIGA
+
+1.1. Download VIGA with Git from GitHub
+```
+git clone https://github.com/viralInformatics/VIGA.git
+```
+or Download ZIP to local
+
+### Step 2: Download Database
+```
+2.1. download taxdmp.zip [Index of /pub/taxonomy (nih.gov)](https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/) and unzip taxdmp.zip and put it in ./db/
+2.2 download ""prot.accession2taxid"" file from https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/accession2taxid/
+2.3. download ""RefSeqVirusProtein"" file from
+wget -c ftp.ncbi.nlm.nih.gov/refseq/release/viral/viral.1.protein.faa.gz
+gzip -d viral.1.protein.faa.gz
+mv viral.1.protein.faa RefSeqVirusProtein
+2.4. download ""nr"" file from
+wget -c ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nr.gz
+or ascp -T  -i  asperaweb_id_dsa.openssh --host=ftp.ncbi.nih.gov --user=anonftp --mode=recv /blast/db/FASTA/nr.gz ./
+gzip -d nr.gz
+2.5. Use Diamond v2.0.11.149 to create two separate databases as the indexing libraries in the current version are incompatible with each other.
+2.6. In order to set up a reference database for DIAMOND, the makedb command needs to be executed with the following command line:
+diamond makedb --in YourPath/RefSeqVirusProtein  -d Diamond_RefSeqVirusProtein --taxonmap YourPath/prot.accession2taxid --taxonnodes YourPath/nodes.dmp
+diamond makedb --in nr -d Dimond_nr --taxonmap YourPath/prot.accession2taxid --taxonnodes YourPath/nodes.dmp
+```
+### Step 3: Installation of dependent software
+3.1. Installing Some Software Using Conda
+```
+conda install fastp=0.12.4 trinity=2.8.5 diamond=2.0.11.149 ragtag=2.1.0 quast=5.0.2
+```
+3.2. Manual Installation of MetaCompass
+https://github.com/marbl/MetaCompass
+
+### Step 4: Python Dependencies
+4.1.Base on python 3.6.8
+```
+pip install pandas=1.1.5 numpy=1.19.5  matplotlib=3.3.4  biopython=1.79
+```","1,2,3,4,5,6",,,,,,"1,4"
+lncrtpred,https://bio.tools/,https://raw.githubusercontent.com/zglabDIB/LncRTPred/main/README.md,,,https://bio.tools/t?sort=citationDate&ord=desc,,command_line,13/02/2024,8 months,,,,,,,,,,,
 nrn-ez,https://bio.tools/,https://raw.githubusercontent.com/scimemia/NRN-EZ/master/README.md,,,,,Script,13/02/2024,last week,"**INSTALLATION FOR VERSION 1.1.6**
 
 NRN-EZ was built with PyInstaller 3.6, and requires the following languages and libraries:
@@ -254,7 +373,7 @@ Installation instructions for Linux (Ubuntu and Pop!_OS): download the Linux zip
 
 Installation instructions for Mac OS: download the Mac zip file and copy the NRN-EZ app to the Applications folder. 
 
-Installation instructions for Windows: download the Win zip file and run the installation wizard.",
+Installation instructions for Windows: download the Win zip file and run the installation wizard.",,,,,,,,,,
 causnet,https://bio.tools/,https://raw.githubusercontent.com/nand1155/CausNet/main/README.md,,0,https://bio.tools/t?sort=citationDate&ord=desc,,Library,13/02/2024,two years,"## Installation
 
 You can install the development version from GitHub with:
@@ -262,7 +381,7 @@ You can install the development version from GitHub with:
 ``` r
 require(""devtools"")
 install_github(""https://github.com/nand1155/CausNet"")
-```",
+```",,,,,,,,,,
 viralcc,https://bio.tools/,https://raw.githubusercontent.com/dyxstat/Reproduce_ViralCC/main/README.md,,0,https://bio.tools/t?sort=citationDate&ord=desc,,command_line,13/02/2024,8 months,"# Instruction of reproducing results in ViralCC paper
 We take the cow fecal datasets for example. The other two datasets were processed following the same procedure.
 
@@ -342,7 +461,7 @@ python ./viralcc.py pipeline -v final.contigs.fa COW_MAP_SORTED.bam viral.txt ou
 ```
 python concatenation.py -p out_cow/VIRAL_BIN -o viralCC_cow_bins.fa
 checkv end_to_end viralCC_cow_bins.fa output_checkv_viralcc_cow -t 16 -d /panfs/qcb-panasas/yuxuandu/checkv-db-v1.0
-```",
+```",,,,,,,,,,
 DRaW,https://bio.tools/,https://raw.githubusercontent.com/BioinformaticsIASBS/DRaW/main/README.md,,0,https://bio.tools/t?sort=citationDate&ord=desc,,,,,"# Running DRaW on COVID-19 datasets
 The DRaW has been applied on three COVID-19 datasets, DS1, DS2, and DS3. There are three subdirectories, “DS1_repur”, “DS2_repur”, and “DS3_repur”, in the “Drug-Repurposing” directory. Each subdirectory has been assigned to one of the mentioned datasets. We put the Draw implementation file for each dataset in each subdirectory separately. This is due to keep the corresponding hyperparameters of each dataset. 
 We use Adam as the optimizer with a learning rate equal to 0.001, beta1 = 0.9, beta2 = 0.999, and epsilon = 1e−7. The dropout rate is set to 0.5. The batch size is chosen by the number of samples per dataset. This hyperparameter for DS1 is equal to 8, and those for DS2 and DS3 are set to 32.
@@ -361,7 +480,7 @@ The input parameter “dataset_name” is one the following five datasets’ nam
 ```bash
 cd Performance_analysis
 python main.py dataset_name
-```",
+```",,,,,,,,,,
 NRN-EZ,https://bio.tools/,https://raw.githubusercontent.com/scimemia/NRN-EZ/master/README.md,,,,,,,6 months,"**INSTALLATION FOR VERSION 1.1.6**
 
 NRN-EZ was built with PyInstaller 3.6, and requires the following languages and libraries:
@@ -376,9 +495,87 @@ Installation instructions for Linux (Ubuntu and Pop!_OS): download the Linux zip
 
 Installation instructions for Mac OS: download the Mac zip file and copy the NRN-EZ app to the Applications folder. 
 
-Installation instructions for Windows: download the Win zip file and run the installation wizard.",
-guiding-instruction-based-image-editing-via,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/apple/ml-mgie/main/README.md,computer_science,3089,top,,,13/02/2024,29/09/2023,,
-self-play-fine-tuning-converts-weak-language,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/uclaml/SPIN/main/README.md,computer_science,430,top,,,13/02/2024,2/1/24,,
-genegpt-teaching-large-language-models-to-use,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/ncbi/GeneGPT/main/README.md,computer_science,214,top,,,13/02/2024,19/04/2023,,
-the-boundary-of-neural-network-trainability,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/Sohl-Dickstein/fractal/main/README.md,computer_science,41,top,,,13/02/2024,9/2/24,,
-learning-to-fly-in-seconds,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/arplaboratory/learning-to-fly/master/README.MD,computer_science,201,top,,,13/02/2024,22/11/2023,,
+Installation instructions for Windows: download the Win zip file and run the installation wizard.",,,,,,,,,,
+guiding-instruction-based-image-editing-via,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/apple/ml-mgie/main/README.md,computer_science,3089,top,,,13/02/2024,29/09/2023,"## Requirements
+```
+conda create -n mgie python=3.10 -y
+conda activate mgie
+conda update -n base -c defaults conda setuptools -y
+conda install -c conda-forge git git-lfs ffmpeg vim htop ninja gpustat -y
+conda clean -a -y
+
+pip install -U pip cmake cython==0.29.36 pydantic==1.10 numpy
+pip install -U gdown pydrive2 wget jupyter jupyterlab jupyterthemes ipython
+pip install -U sentencepiece transformers diffusers tokenizers datasets gradio==3.37 accelerate evaluate git+https://github.com/openai/CLIP.git
+pip install -U https://download.pytorch.org/whl/cu113/torch-1.12.0%2Bcu113-cp310-cp310-linux_x86_64.whl https://download.pytorch.org/whl/cu113/torchvision-0.13.0%2Bcu113-cp310-cp310-linux_x86_64.whl https://download.pytorch.org/whl/cu113/torchaudio-0.12.0%2Bcu113-cp310-cp310-linux_x86_64.whl
+pip install -U deepspeed
+
+# git clone this repo
+cd ml-mgie
+git submodule update --init --recursive
+cd LLaVA
+pip install -e .
+pip install -U https://download.pytorch.org/whl/cu113/torch-1.12.0%2Bcu113-cp310-cp310-linux_x86_64.whl https://download.pytorch.org/whl/cu113/torchvision-0.13.0%2Bcu113-cp310-cp310-linux_x86_64.whl https://download.pytorch.org/whl/cu113/torchaudio-0.12.0%2Bcu113-cp310-cp310-linux_x86_64.whl
+pip install -U ninja flash-attn==1.0.2
+pip install -U pydrive2 gdown wget
+
+cd ..
+cp mgie_llava.py LLaVA/llava/model/llava.py
+cp mgie_train.py LLaVA/llava/train/train.py
+```",installation section not found,"1. create conda environment
+conda create -n mgie python=3.10 -y
+conda activate mgie
+conda update -n base -c defaults conda setuptools -y
+conda install -c conda-forge git git-lfs ffmpeg vim htop ninja gpustat -y
+conda clean -a -y
+2. install dependencies
+pip install -U pip cmake cython==0.29.36 pydantic==1.10 numpy
+pip install -U gdown pydrive2 wget jupyter jupyterlab jupyterthemes ipython
+pip install -U sentencepiece transformers diffusers tokenizers datasets gradio==3.37 accelerate evaluate git+https://github.com/openai/CLIP.git
+pip install -U https://download.pytorch.org/whl/cu113/torch-1.12.0%2Bcu113-cp310-cp310-linux_x86_64.whl https://download.pytorch.org/whl/cu113/torchvision-0.13.0%2Bcu113-cp310-cp310-linux_x86_64.whl https://download.pytorch.org/whl/cu113/torchaudio-0.12.0%2Bcu113-cp310-cp310-linux_x86_64.whl
+pip install -U deepspeed
+
+3. git clone this repo
+cd ml-mgie
+git submodule update --init --recursive
+cd LLaVA
+4. install module
+pip install -e .
+pip install -U https://download.pytorch.org/whl/cu113/torch-1.12.0%2Bcu113-cp310-cp310-linux_x86_64.whl https://download.pytorch.org/whl/cu113/torchvision-0.13.0%2Bcu113-cp310-cp310-linux_x86_64.whl https://download.pytorch.org/whl/cu113/torchaudio-0.12.0%2Bcu113-cp310-cp310-linux_x86_64.whl
+pip install -U ninja flash-attn==1.0.2
+pip install -U pydrive2 gdown wget
+
+cd ..
+cp mgie_llava.py LLaVA/llava/model/llava.py
+cp mgie_train.py LLaVA/llava/train/train.py
+```","1. create conda environment
+conda create -n mgie python=3.10 -y
+conda activate mgie
+conda update -n base -c defaults conda setuptools -y
+conda install -c conda-forge git git-lfs ffmpeg vim htop ninja gpustat -y
+conda clean -a -y
+2. install dependencies
+pip install -U pip cmake cython==0.29.36 pydantic==1.10 numpy
+pip install -U gdown pydrive2 wget jupyter jupyterlab jupyterthemes ipython
+pip install -U sentencepiece transformers diffusers tokenizers datasets gradio==3.37 accelerate evaluate git+https://github.com/openai/CLIP.git
+pip install -U https://download.pytorch.org/whl/cu113/torch-1.12.0%2Bcu113-cp310-cp310-linux_x86_64.whl https://download.pytorch.org/whl/cu113/torchvision-0.13.0%2Bcu113-cp310-cp310-linux_x86_64.whl https://download.pytorch.org/whl/cu113/torchaudio-0.12.0%2Bcu113-cp310-cp310-linux_x86_64.whl
+pip install -U deepspeed
+
+3. git clone this repo
+cd ml-mgie
+git submodule update --init --recursive
+cd LLaVA
+4. install module
+pip install -e .
+pip install -U https://download.pytorch.org/whl/cu113/torch-1.12.0%2Bcu113-cp310-cp310-linux_x86_64.whl https://download.pytorch.org/whl/cu113/torchvision-0.13.0%2Bcu113-cp310-cp310-linux_x86_64.whl https://download.pytorch.org/whl/cu113/torchaudio-0.12.0%2Bcu113-cp310-cp310-linux_x86_64.whl
+pip install -U ninja flash-attn==1.0.2
+pip install -U pydrive2 gdown wget
+
+cd ..
+cp mgie_llava.py LLaVA/llava/model/llava.py
+cp mgie_train.py LLaVA/llava/train/train.py
+```","1,2,3,4",,,,,,1
+self-play-fine-tuning-converts-weak-language,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/uclaml/SPIN/main/README.md,computer_science,430,top,,,13/02/2024,2/1/24,,,,,,,,,,,
+genegpt-teaching-large-language-models-to-use,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/ncbi/GeneGPT/main/README.md,computer_science,214,top,,,13/02/2024,19/04/2023,,,,,,,,,,,
+the-boundary-of-neural-network-trainability,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/Sohl-Dickstein/fractal/main/README.md,computer_science,41,top,,,13/02/2024,9/2/24,,,,,,,,,,,
+learning-to-fly-in-seconds,https://paperwithcode.com/paper/,https://raw.githubusercontent.com/arplaboratory/learning-to-fly/master/README.MD,computer_science,201,top,,,13/02/2024,22/11/2023,,,,,,,,,,,
