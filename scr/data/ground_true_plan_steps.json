@@ -5,30 +5,37 @@
                 "id": "1",
                 "name": "AAAI-DISIM-UnivAQ/DALI",
                 "url": "https://raw.githubusercontent.com/AAAI-DISIM-UnivAQ/DALI/master/README.md",
-                "n_plans": 1,
+                "n_plans": 2,
                 "plan_nodes": [
                     {
                         "type": "Source",
                         "plan_step": [
                             "Step 1: To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.",
-                            "Step 2: Then, you can download DALI and",
-                            "Step 3: Test it by running an example DALI MAS",
-                            "Step 4: Unzip the repository",
-                            "Step 5: Go to the folder at DALI/Examples/basic", 
-                            "Step 6: Test if DALI works by duble clicking startmas.bat file (this will launch an example DALI MAS)."
+                            "Step 2: Then, you can download DALI and test it by running an example DALI MAS"
                         ],
                         "commands": [
-                            "git clone https://github.com/AAAI-DISIM-UnivAQ/DALI.git",
-                            "cd DALI/Examples/advanced",
-                            "bash startmas.sh",
+                            "",
+                            "git clone https://github.com/AAAI-DISIM-UnivAQ/DALI.git \n cd DALI/Examples/advanced \n bash startmas.sh"
+                        ],
+                        "operating_system": ["Linux"]
+                    },
+                    {
+                        "type": "Source",
+                        "plan_step": [
+                            "Step 1: To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.",
+                            "Step 2: Then, you can download DALI and test it by running an example DALI MAS",
+                            "Step 3: Unzip the repository go to the folder DALI/Examples/basic, and test if DALI works by duble clicking startmas.bat file (this will launch an example DALI MAS)"
+                        ],
+                        "commands": [
                             "",
                             "",
                             ""
-                        ]
+                        ],
+                        "operating_system": ["Windows"]
                     }
                 ],
                 "readme_instructions": "",
-                "type": "easy"
+                "skip_content": ""
             },
             {
                 "id": "2",
@@ -43,11 +50,12 @@
                         ],
                         "commands": [
                             ""
-                        ]
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
-                "type": "incomplete"
+                "skip_content":"requirements Python 3.6 or higher, Numpy, ASE (Atomic Simulation environment), Pytorch, matscipy"
             },
             {
                 "id": "3",
@@ -66,11 +74,12 @@
                             "bash \n conda create -n cam python=3.8 -y \n conda activate cam \n  pip install -r requirements.txt`",
                             "bash script/train.sh",
                             "bash script/eval_tiny.sh"
-                        ]
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
-                "type": ""
+                "skip_content": ""
             },
             {
                 "id": "4",
@@ -81,21 +90,18 @@
                     {
                         "type": "Source",
                         "plan_step": [
-                            "Step 1: Download the dataset folder from onedrive by [data.zip](https://portland-my.sharepoint.com/:u:/g/personal/liuhui3-c_my_cityu_edu_hk/EfApQlFP3PhFjUW4527STo0BALMdP16zs-HPMNgwQVFWsA?e=zoHlW2).", 
-                            "Step 2: Unzip this folder into the project directory.",
-                            "Step 3: Check the four orginal datasets,  pre-processed datasets and the files incuding questions and answers",
-                            "Step 4: Place the OpenAI key into the file named api_key.txt."
+                            "Step 1: Download the dataset folder from onedrive by [data.zip](https://portland-my.sharepoint.com/:u:/g/personal/liuhui3-c_my_cityu_edu_hk/EfApQlFP3PhFjUW4527STo0BALMdP16zs-HPMNgwQVFWsA?e=zoHlW2). Unzip this folder into the project  directory.  You can find four orginal datasets,  pre-processed datasets (i.e., val.jsonl, test.jsonl, train.jsonl in each dataset folder) and the files incuding questions and answers.", 
+                            "Step 2: Place the OpenAI key into the file named api_key.txt."
                         ],
                         "commands": [
                             "",
-                            "",
-                            "",
                             "openai.api_key = ''"
-                        ]
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
-                "type": "incomplete"
+                "skip_content": ""
             },
             {
                 "id": "5",
@@ -107,23 +113,21 @@
                         "type": "Container",
                         "plan_step": [
                             "Step 1: Clone this repository and its submodules.",
-                            "Step 2: Build the docker image to install dependencies.",
-                            "Step 3: Mount the code, dataset, and output directories to proper locations in the container.",
-                            "Step 4: Start docker container.",
-                            "Step 5: Inside the container, Build STEAM-ICP"
+                            "Step 2: We use docker to install dependencies The recommended way to build the docker image is",
+                            "Step 3: When starting a container, remember to mount the code, dataset, and output directories to proper locations in the container. An example command to start a docker container with the image is",
+                            "Step 4: (Inside Container) Go to the root directory of this repository and build STEAM-ICP"
                         ],
                         "commands": [
+                            "docker build -t steam_icp  \n --build-arg USERID=$(id -u) \n--build-arg GROUPID=$(id -g) \n--build-arg USERNAME=$(whoami) \n --build-arg HOMEDIR=${HOME}.",
                             "",
-                            "docker build -t steam_icp --build-arg USERID=$(id -u) --build-arg GROUPID=$(id -g) --build-arg USERNAME=$(whoami) --build-arg HOMEDIR=${HOME}",
                             "",
-                            "",
-                            "docker run -it --name steam_icp --privileged   --network=host -e DISPLAY=$DISPLAY  -v /tmp/.X11-unix:/tmp/.X11-unix -v ${HOME}:${HOME}:rw -- steam_icp",
                             "bash build.sh"
-                        ]
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
-                "type": "incomplete"
+                "skip_content": ""
             },
             {
                 "id": "6",
@@ -135,35 +139,27 @@
                         "type": "Source",
                         "plan_step": [
                             "Step 1: Make sure you have Python, Pip and R installed.",
-                            "Step 2: Install the `pygirgs` package at https://github.com/PFischbeck/pygirgs.",
-                            "Step 3: Install the R dependencies (used for plots).",
-                            "Step 4: Checkout the repository.",
-                            "Step 5: Install the python dependencies.",
-                            "Step 6: Download the file at https://doi.org/10.5281/zenodo.10629451.",
-                            "Step 7: Extract the content",
-                            "Step 8: Place it into the folder `input_data/konect`"
+                            "Step 2: Checkout this repository.",
+                            "Step 3: Install the python dependencies with.",
+                            "Step 4: Install the pygirgs package at https://github.com/PFischbeck/pygirgs.",
+                            "Step 5: Install the R dependencies (used for plots) with",
+                            "Step 6: Download the file at https://doi.org/10.5281/zenodo.10629451 and extract the content",
+                            "Step optional: Download the file output-data.zip from Zenodo and extract its contents into the folder output_data. This way, you can access all experiment results without running them yourself."
                         ],
                         "commands": [
                             "",
                             "",
+                            "pip3 install -r requirements.txt",
                             "R -e 'install.packages(c(ggplot2", "reshape2", "plyr", "dplyr", "scales), repos=https://cloud.r-project.org/",
-                            "",
                             "pip3 install -r requirements.txt",
                             "",
-                            "",
                             ""
-                        ]
-                    },
-                    {
-                        "type": "Binary",
-                        "plan_step": [
-                            "Step 1(Optional):Download the file `output-data.zip` from (https://doi.org/10.5281/zenodo.10629451)",
-                            "Step 2: extract its contents into the folder `output_data`."
-                        ]
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
-                "type": "easy"
+                "skip_content": ""
             },
             {
                 "id": "7",
@@ -174,15 +170,16 @@
                     {
                         "type": "Source",
                         "plan_step": [
-                            "Step 1: Install requirements."
+                            "Step 1: pip install -r requirements."
                         ],
                         "commands": [
                             "pip install -r requirements.txt"
-                        ]
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
-                "type": "incomplete"
+                "skip_content": "`Note: I did not us a virtual environment so the packages in the requirements.txt file are probably not reflective of all the packages used in this project. If some issues pop up please don't hesitate to email me at"
             },
             {
                 "id": "8",
@@ -201,15 +198,16 @@
                             "git submodule init | git submodule update",
                             "conda create --name gsft python=3.9 | conda activate gsft | pip install -r requirements.txt",
                             "export GSFT_PATH=/path_to_gsfc | export PYTHONPATH=$PYTHONPATH:/$GSFT_PATH"
-                        ]
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
-                "type": "incomplete"
+                "skip_content": ""
             },
             {
                 "id": "9",
-                "name": "AAAI-DISIM-UnivAQ",
+                "name": "EricssonResearch/Line-Based-Room-Segmentation-and-EDF",
                 "url": "https://raw.githubusercontent.com/EricssonResearch/Line-Based-Room-Segmentation-and-EDF/release/README.md",
                 "n_plans": 1,
                 "plan_nodes": [
@@ -220,11 +218,12 @@
                         ],
                         "commands": [
                             "pip install -r requirements.txt"
-                        ]
+                        ],
+                        "operating_system":[]
                     }
                 ],
                 "readme_instructions": "",
-                "type": "incomplete"
+                "skip_content": ""
             },
             {
                 "id": "10",
@@ -243,7 +242,7 @@
                             "Step 6: Use Diamond v2.0.11.149 to create two separate databases as the indexing libraries in the current version are incompatible with each other.",
                             "Step 7: In order to set up a reference database for DIAMOND, the `makedb` command needs to be executed with the following command line",
                             "Step 8: Installing Some Software Using Conda",
-                            "Step 9: Install Python Dependencies"
+                            "Step 9: Python Dependencies"
                         ],
                         "commands": [
                             "git clone https://github.com/viralInformatics/VIGA.git",
@@ -255,41 +254,56 @@
                             "diamond makedb --in YourPath/RefSeqVirusProtein  -d Diamond_RefSeqVirusProtein --taxonmap YourPath/prot.accession2taxid --taxonnodes YourPath/nodes.dmp | diamond makedb --in nr -d Dimond_nr --taxonmap YourPath/prot.accession2taxid --taxonnodes YourPath/nodes.dmp",
                             "conda install fastp=0.12.4 trinity=2.8.5 diamond=2.0.11.149 ragtag=2.1.0 quast=5.0.2",
                             "pip install pandas=1.1.5 numpy=1.19.5  matplotlib=3.3.4  biopython=1.79"
-                        ]
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
-                "type": "complex"
+                "skip_content": "rather looks substeps than steps"
             },
             {
                 "id": "11",
                 "name": "scimemia/NRN-EZ",
                 "url": "https://raw.githubusercontent.com/scimemia/NRN-EZ/master/README.md",
-                "n_plans": 1,
+                "n_plans": 3,
                 "plan_nodes": [
                     {
                         "type": "Binary",
                         "plan_step": [
-                            "Step 1: NRN-EZ was built with PyInstaller 3.6, and requires the following languages and libraries: Python 3.6.9 and higher (currently up to 3.10), PyQt 5.10.1, PyQtGraph 0.11.0.",
-                            "Step 2: Installation instructions for Linux (Ubuntu and Pop!_OS): download the Linux zip file.",
-                            "Step 3 OS1: From the command window, run a bash command for the install.sh file, in the corresponding installation folder.",
-                            "Step 3 OS2: Installation instructions for Mac OS: download the Mac zip file and copy the NRN-EZ app to the Applications folder.",
-                            "Step 4 OS3: Installation instructions for Windows: download the Win zip file and run the installation wizard"
+                            "Step 1: Installation instructions for Linux (Ubuntu and Pop!_OS): download the Linux zip file and, from the command window, run a bash command for the install.sh file, in the corresponding installation folder."
                         ],
                         "commands": [
-                            "",
-                            "",
-                            "",
                             ""
-                        ]
+                        ],
+                        "operating_system":["Linux"]
+                    },
+                    {
+                        "type": "Binary",
+                        "plan_step": [
+                            "Step 1: Installation instructions for Mac OS: download the Mac zip file and copy the NRN-EZ app to the Applications folder."
+                        ],
+                        "commands": [
+                            ""
+                        ],
+                        "operating_system":["Mac"]
+                    },
+                    {
+                        "type": "Binary-Win",
+                        "plan_step": [
+                            "Step 1: Installation instructions for Windows: download the Win zip file and run the installation wizard."
+                        ],
+                        "commands": [
+                            ""
+                        ],
+                        "operating_system": ["Windows"]
                     }
                 ],
                 "readme_instructions": "",
-                "type": "incomplete"
+                "skip_content": "NRN-EZ was built with PyInstaller 3.6, and requires the following languages and libraries: Python 3.6.9 and higher (currently up to 3.10, PyQt 5.10.1, PyQtGraph 0.11.0"
             },
             {
                 "id": "12",
-                "name": "Reproduce_ViralCC",
+                "name": "dyxstat/Reproduce_ViralCC",
                 "url": "https://raw.githubusercontent.com/dyxstat/Reproduce_ViralCC/main/README.md",
                 "n_plans": 1,
                 "plan_nodes": [
@@ -308,11 +322,12 @@
                             "perl removesmalls.pl 3000 final.contigs.fa > cow_3000.fa \n wrapper_phage_contigs_sorter_iPlant.pl -f cow_3000.fa --db 1 --wdir output_directory --ncpu 16 --data-dir /panfs/qcb-panasas/yuxuandu/virsorter-data \n Rscript find_viral_contig.R",
                             "python ./viralcc.py pipeline -v final.contigs.fa COW_MAP_SORTED.bam viral.txt out_cow",
                             "python concatenation.py -p out_cow/VIRAL_BIN -o viralCC_cow_bins.fa \n checkv end_to_end viralCC_cow_bins.fa output_checkv_viralcc_cow -t 16 -d /panfs/qcb-panasas/yuxuandu/checkv-db-v1.0"
-                        ]
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
-                "type": "complex"
+                "skip_content": "Note: NCBI may update its links for downloading the database. Please check the latest link at NCBI if you meet the download error."
             },
             {
                 "id": "13",
@@ -341,11 +356,12 @@
                             "pip install -U https://download.pytorch.org/whl/cu113/torch-1.12.0%2Bcu113-cp310-cp310-linux_x86_64.whl https://download.pytorch.org/whl/cu113/torchvision-0.13.0%2Bcu113-cp310-cp310-linux_x86_64.whl https://download.pytorch.org/whl/cu113/torchaudio-0.12.0%2Bcu113-cp310-cp310-linux_x86_64.whl \n pip install -U ninja flash-attn==1.0.2 \n pip install -U pydrive2 gdown wget",
                             "cd ..",
                             "cp mgie_llava.py LLaVA/llava/model/llava.py \n cp mgie_train.py LLaVA/llava/train/train.py"
-                        ]
+                        ],
+                        "operating_system":[]
                     }
                 ],
                 "readme_instructions": "",
-                "type": "complex"
+                "skip_content": "Put official LLaVA-7B in _ckpt/LLaVA-7B-v1 and download pre-trained ckpt (on IPr2Pr + MagicBrush) in _ckpt/mgie_7b"
             },
             {
                 "id": "14",
@@ -366,45 +382,47 @@
                             "pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu118",
                             "python -m pip install . \n python -m pip install flash-attn --no-build-isolation",
                             "huggingface-cli login --token ${your_access_token}"
-                        ]
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
-                "type": "complex"
+                "skip_content": ""
             },
             {
                 "id": "15",
-                "name": "AAAI-DISIM-UnivAQ",
+                "name": "ncbi/GeneGPT",
                 "url": "https://raw.githubusercontent.com/ncbi/GeneGPT/main/README.md",
                 "n_plans": 4,
                 "plan_nodes": [
                     {
                         "type": "Source",
                         "plan_step": [
-                            "Step 1: The code has been tested with Python 3.9.13.",
-                            "Step 2: Run the code.",
-                            "Step 3: You also need an OpenAI API key to run GeneGPT with Codex. Replace the placeholder with your key in `config.py`.",
-                            "Step 4: Generate a video based on object detection description."
+                            "Step 1: The code has been tested with Python 3.9.13. Please first install the required packages by",
+                            "Step 2: You also need an OpenAI API key to run GeneGPT with Codex. Replace the placeholder with your key in `config.py`.",
+                            "Step 3: After setting up the environment, one can run GeneGPT on GeneTuring by.",
+                            "Step 4: To run GeneGPT-slim, simply use"
                         ],
                         "commands": [
                             "pip install -r requirements.txt",
-                            "",
                             "$ cat config.py \n API_KEY = 'YOUR_OPENAI_API_KEY",
-                            ""
-                        ]
+                            "python main.py 111111",
+                            "python main.py 001001"
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
-                "type": "complex"
+                "skip_content": "attention, rather than steps, they look substeps"
             },
             {
                 "id": "16",
                 "name": "arplaboratory/learning-to-fly",
                 "url": "https://raw.githubusercontent.com/arplaboratory/learning-to-fly/master/README.MD",
-                "n_plans": 3,
+                "n_plans": 4,
                 "plan_nodes": [
                     {
-                        "type": "Docker isolated",
+                        "type": "Container",
                         "plan_step": [
                             "Step 1: We provide a pre-built Docker image with a simple web interface that can be executed using a single command (given that Docker is already installed on your machine):",
                             "Step 2: After the container is running, navigate to [https://0.0.0.0:8000](https://0.0.0.0:8000) and you should see something like (after starting the training): <https>",
@@ -416,16 +434,18 @@
                             "cmd $ dash",
                             "wget ttxr.",
                             "pip clone ."
-                        ]
+                        ],
+                        "operating_system": ["Docker (isolated"]
                     },
                     {
-                        "type": "Docker installation",
+                        "type": "Container",
                         "plan_step": [
                             "Step 1: Install Docker on your machine. Then move to the original directory `learning_to_fly` and build the Docker image.",
-                            "Step 2 - optional: If desired you can also build the container for building the firmware",
+                            "Step 2: If desired you can also build the container for building the firmware",
                             "Step 3: After that you can run it",
                             "Step 4: Navigate to https://0.0.0.0:8000 with your browser, and you should see something like in the screenshot above (after starting the training).",
-                            "Step 5: Navigate to https://0.0.0.0:6006 with your browser to investigate the Tensorboard logs."
+                            "Step 5: Navigate to https://0.0.0.0:6006 with your browser to investigate the Tensorboard logs.",
+                            "Step 6: If you would like to benchmark the training speed you can use."
                         ],
                         "commands": [
                             "docker build -t arpllab/learning_to_fly",
@@ -433,7 +453,8 @@
                             "docker run -it --rm -p 8000:8000 arpllab/learning_to_fly",
                             "docker run -it --rm -p 6006:6006 arpllab/learning_to_fly training_headless",
                             "docker run -it --rm arpllab/learning_to_fly training_benchmark"
-                        ]
+                        ],
+                        "operating_system":["Docker installation(isolated"]
                     },
                     {
                         "type": "Source",
@@ -441,13 +462,37 @@
                             "Step 1: Clone this repository.",
                             "Step 2: Then instantiate the `RLtools` submodule.",
                             "Step 3: Instantiate some dependencies of `RLtools'.",
-                            "Step 4 (Linux): Install dependencies on Ubuntu",
-                            "Step 5 (Linux): As an alternative to openblas you can also install [Intel MKL](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-download.html) which in our experience is significantly faster than OpenBLAS.",
-                            "Step 4 (Mac): Install dependencies on macOS",
-                            "Step 5 (Mac): Please make sure that `brew` links the libraries correctly. If not you might have to link e.g. `protobuf` manually using `brew link protobuf`.",
-                            "Step 6 (Mac): Going back to the main directory (`learning_to_fly`), we can now configure the build of the code.",
-                            "Step 7: Build the targets",
-                            "Step 8: Run the code (in the original directory `learning_to_fly`)"
+                            "Step 4: Install dependencies on Ubuntu",
+                            "Step 5: As an alternative to openblas you can also install [Intel MKL](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-download.html) which in our experience is significantly faster than OpenBLAS.",
+                            "Step 6: Going back to the main directory (learning_to_fly), we can now configure the build of the code",
+                            "Step 7: Finally, we can build the targets.",
+                            "Step 8: After successfully building the targets, we can run the code (in the original directory learning_to_fly).",
+                            "Step 9: To run the training with the UI, we download the JavaScript dependencies in the form of the two files three.module.js and OrbitControls.js",
+                            "Step 10: After that we can execute the UI binary from the root folder.",
+                            "Step 11: To run the benchmark (with UI, checkpointing and Tensorboard logging turned off)"
+                        ],
+                        "commands": [
+                            "git clone https://github.com/arplaboratory/learning-to-fly learning_to_fly \n cd learning_to_fly",
+                            "git submodule update --init -- external/rl_tools \n cd external/rl_tools",
+                            "git submodule update --init -- external/cli11 external/highfive external/json/ external/tensorboard tests/lib/googletest/",
+                            "sudo apt update && sudo apt install libhdf5-dev libopenblas-dev protobuf-compiler libprotobuf-dev libboost-all-dev"
+                        ],
+                        "operating_system":["Linux"]
+                    },
+                    {
+                        "type": "Source",
+                        "plan_step": [
+                            "Step 1: Clone this repository.",
+                            "Step 2: Then instantiate the `RLtools` submodule.",
+                            "Step 3: Instantiate some dependencies of `RLtools'.",
+                            "Step 4: Install dependencies on macOS",
+                            "Step 5: Please make sure that `brew` links the libraries correctly. If not you might have to link e.g. `protobuf` manually using `brew link protobuf`.",
+                            "Step 6: Going back to the main directory (`learning_to_fly`), we can now configure the build of the code.",
+                            "Step 7: Finally, we can build the targets",
+                            "Step 8: After successfully building the targets, we can run the code (in the original directory learning_to_fly).",
+                            "Step 9: To run the training with the UI, we download the JavaScript dependencies in the form of the two files three.module.js and OrbitControls.js",
+                            "Step 10: After that we can execute the UI binary from the root folder.",
+                            "Step 11: To run the benchmark (with UI, checkpointing and Tensorboard logging turned off)"
                         ],
                         "commands": [
                             "git clone https://github.com/arplaboratory/learning-to-fly learning_to_fly \n cd learning_to_fly",
@@ -459,11 +504,12 @@
                             "cd ../../ \n mkdir build \n cd build - Ubuntu + OpenBLAS: `cmake .. -DCMAKE_BUILD_TYPE=Release -DRL_TOOLS_BACKEND_ENABLE_OPENBLAS:BOOL=ON` \n - Ubuntu + MKL: `cmake .. -DCMAKE_BUILD_TYPE=Release -DRL_TOOLS_BACKEND_ENABLE_MKL:BOOL=ON` \n - macOS (tested on Sonoma): `cmake .. -DCMAKE_BUILD_TYPE=Release`",
                             "cmake --build . -j8",
                             "cd .. \n cd .."
-                        ]
+                        ],
+                        "operating_system":["Mac"]
                     }
                 ],
                 "readme_instructions": "",
-                "type": "complex"
+                "skip_content": "This is the fastest configuration, without logging, UI, checkpointing etc. (refering to Contanier type)"
             },
             {
                 "id": "17",
@@ -475,16 +521,17 @@
                         "type": "Source",
                         "plan_step": [
                             "Step 1: Install the requirements.",
-                            "Step 1: (optional): or set up TPU VM."
+                            "Step optional: or set up TPU VM."
                         ],
                         "commands": [
                             "conda create -n lwm python=3.10 \n pip install -U jax[cuda12_pip]==0.4.23 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html \n pip install -r requirements.txt",
                             "sh tpu_vm_setup.sh"
-                        ]
+                        ],
+                        "operating_system": ["linux"]
                     }
                 ],
                 "readme_instructions": "",
-                "type": "complex"
+                "skip_content": "This codebase is supported on Ubuntu and has not been tested on Windows or macOS. We recommend using TPUs for training and inference, although it is also possible to use GPUs. On TPU, the code is highly optimized with Jax's Pallas and can achieve high MFUs with RingAttention at very large context sizes. On GPU, the code is based on XLA and is not as optimized as it is for TPU."
             },
             {
                 "id": "18",
@@ -495,12 +542,9 @@
                     {
                         "type": "Source",
                         "plan_step": [
-                            "Step 1: (optional) Create conda environment.",
-                            "Step 1: Clone the repository",
-                            "Step 2: Install requirements.",
-                            "Step 3: Configure the LLMs. Before running UFO, you need to provide your LLM configurations. You can configure `ufo/config/config.yaml` file as follows.",
-                            "Step 4: Set API Azure OpenAI key",
-                            "Step 5: Start UFO"
+                            "Step 1: Installation.",
+                            "Step 1: Step 2: Configure the LLMs",
+                            "Step 2: Install requirements."
                         ],
                         "commands": [
                             "conda create -n ufo python=3.10 \n # conda activate ufo",
@@ -509,26 +553,23 @@
                             "API_TYPE: openai \n OPENAI_API_BASE: https://api.openai.com/v1/chat/completions # The base URL for the OpenAI API \n OPENAI_API_KEY: YOUR_API_KEY  # Set the value to the openai key for the llm model \n OPENAI_API_MODEL: GPTV_MODEL_NAME  # The only OpenAI model by now that accepts visual input",
                             "API_TYPE: aoai \n OPENAI_API_BASE: YOUR_ENDPOINT # The AOAI API address. Format: https://{your-resource-name}.openai.azure.com/openai/deployments/{deployment-id}/chat/completions?api-version={api-version} \n OPENAI_API_KEY: YOUR_API_KEY  # Set the value to the openai key for the llm model \n OPENAI_API_MODEL: GPTV_MODEL_NAME  # The only OpenAI model by now that accepts visual input",
                             "# assume you are in the cloned UFO folder \n python -m ufo --task <your_task_name>"
-                        ]
+                        ],
+                        "operating_system":["Windows"]
                     }
                 ],
                 "readme_instructions": "",
-                "type": "complex"
+                "skip_content": "getting started, subsection Step1.Installation and subsection Step2.Configure TO CHECK"
             },
             {
                 "id": "19",
-                "name": "atid/dora",
+                "name": "catid/dora",
                 "url": "https://raw.githubusercontent.com/catid/dora/main/README.md",
                 "n_plans": 1,
                 "plan_nodes": [
                     {
                         "type": "Source",
                         "plan_step": [
-                            "Step 1: Install conda: https://docs.conda.io/projects/miniconda/en/latest/index.html.",
-                            "Step 2: Clone the repository.",
-                            "Step 3: Create conda environment",
-                            "Step 4: Install requirements.",
-                            "Step 5: Run the python script"
+                            "Step 1: Install conda: https://docs.conda.io/projects/miniconda/en/latest/index.html."
                         ],
                         "commands": [
                             "",
@@ -537,7 +578,8 @@
                             "pip install -U -r requirements.txt",
                             "pip clone .",
                             "python dora.py"
-                        ]
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
@@ -553,22 +595,23 @@
                         "type": "Source",
                         "plan_step": [
                             "Step 1: Clone the project.",
-                            "Step 2: Install requirements."
+                            "Step 2: Install."
                         ],
                         "commands": [
                             "git clone --recursive https://github.com/AILab-CVC/YOLO-World.git",
                             "pip install torch wheel -q \n pip install -e ."
-                        ]
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
-                "type": "complex"
+                "skip_content": "Getting Started. 1. Installation subsection..."
             },
             {
                 "id": "21",
                 "name": "tensorflow",
                 "url": "https://raw.githubusercontent.com/tensorflow/tensorflow/master/README.md",
-                "n_plans": 2,
+                "n_plans": 3,
                 "plan_nodes": [
                     {
                         "type": "PackageManager",
@@ -579,7 +622,19 @@
                         "commands": [
                             "pip install tensorflow",
                             ""
-                        ]
+                        ],
+                        "operating_system": ["Windows", "Linux"]
+                    },
+                    {
+                        "type": "PackageManager",
+                        "plan_step": [
+                            "Step 1: Other devices (DirectX and MacOS-metal) are supported using Device plugins."
+                        ],
+                        "commands": [
+                            "pip install tensorflow",
+                            ""
+                        ],
+                        "operating_system": ["Mac"]
                     },
                     {
                         "type": "Binary",
@@ -592,76 +647,113 @@
                     }
                 ],
                 "readme_instructions": "",
-                "type": "complex"
+                "skip_content": "confusing readme_instruction!! to check"
             },
             {
                 "id": "22",
                 "name": "transformers",
                 "url": "https://raw.githubusercontent.com/huggingface/transformers/main/README.md",
-                "n_plans": 1,
+                "n_plans": 3,
                 "plan_nodes": [
                     {
                         "type": "PackageManager",
                         "plan_step": [
                             "Step 1: Create a virtual environment with the version of Python you're going to use and activate it.",
                             "Step 2: Then, you will need to install at least one of Flax, PyTorch, or TensorFlow. Please refer to [TensorFlow installation page](https://www.tensorflow.org/install/), [PyTorch installation page](https://pytorch.org/get-started/locally/#start-locally) and/or [Flax](https://github.com/google/flax#quick-install) and [Jax](https://github.com/google/jax#installation) installation pages regarding the specific installation command for your platform.",
-                            "Step 3: (pip) When one of those backends has been installed, Transformers can be installed using pip as follows",
-                            "Step 3: (conda) Transformer can be installed using conda as follows."
+                            "Step 3: When one of those backends has been installed, Transformers can be installed using pip as follows"
                         ],
                         "commands": [
                             "",
                             "",
                             "pip install transformers",
                             "conda install conda-forge::transformers"
-                        ]
+                        ],
+                        "operating_system": ["pip"]
+                    },
+                    {
+                        "type": "PackageManager",
+                        "plan_step": [
+                            "Step 1: Create a virtual environment with the version of Python you're going to use and activate it.",
+                            "Step 2: Then, you will need to install at least one of Flax, PyTorch, or TensorFlow. Please refer to [TensorFlow installation page](https://www.tensorflow.org/install/), [PyTorch installation page](https://pytorch.org/get-started/locally/#start-locally) and/or [Flax](https://github.com/google/flax#quick-install) and [Jax](https://github.com/google/jax#installation) installation pages regarding the specific installation command for your platform.",
+                            "Step 3: Transformer can be installed using conda as follows."
+                        ],
+                        "commands": [
+                            "",
+                            "",
+                            "pip install transformers",
+                            "conda install conda-forge::transformers"
+                        ],
+                        "operating_system":["Conda"]
                     }
                 ],
-                "readme_instructions": "",
-                "type": "complex"
+                "readme_instructions": "This repository is tested on Python 3.8+, Flax 0.4.1+, PyTorch 1.11+, and TensorFlow 2.6+. You should install Transformers in a virtual environment. If you're unfamiliar with Python virtual environments, check out the user guide.",
+                "skip_content": "complex"
             },
             {
                 "id": "23",
-                "name": "DIG",
+                "name": "divelab/DIG",
                 "url": "https://raw.githubusercontent.com/divelab/DIG/dig-stable/README.md",
-                "n_plans": 1,
+                "n_plans": 2,
                 "plan_nodes": [
                     {
                         "type": "PackageManager",
                         "plan_step": [
                             "Step 1: Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.10.0).",
                             "Step 2: Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#) (>=2.0.0)",
-                            "Step 3: Install DIG: Dive into Graphs.."
+                            "Step 3: Install DIG: Dive into Graphs.",
+                            "Step 4: After installation, you can check the version. You have successfully installed DIG: Dive into Graphs if no error occurs."
                         ],
                         "commands": [
                             "python -c import torch; print(torch.__version__)",
                             "python -c import torch_geometric; print(torch_geometric.__version__)",
-                            "pip install dive-into-graphs"
-                        ]
+                            "pip install dive-into-graphs",
+                            "python print(version)"
+                        ],
+                        "operating_system": ["pip"]
+                    },
+                    {
+                        "type": "source",
+                        "plan_step": [
+                            "Step 1: If you want to try the latest features that have not been released yet, you can install dig from source."
+                        ],
+                        "commands": [
+                            ""
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
-                "type": "complex"
+                "skip_content": "complex"
             },
             {
                 "id": "24",
-                "name": "langchain",
+                "name": "langchain-ai/langchain",
                 "url": "https://raw.githubusercontent.com/langchain-ai/langchain/master/README.md",
-                "n_plans": 1,
+                "n_plans": 2,
                 "plan_nodes": [
                     {
                         "type": "PackageManager",
                         "plan_step": [
-                            "Step 1: (pip) With pip.",
-                            "Step 2: (conda) With conda."
+                            "Step 1: With pip."
                         ],
                         "commands": [
-                            "pip install langchain",
+                            "pip install langchain"
+                        ],
+                        "operating_system": ["pip"]
+                    },
+                    {
+                        "type": "PackageManager",
+                        "plan_step": [
+                            "Step 1: With conda."
+                        ],
+                        "commands": [
                             "conda install langchain -c conda-forge"
-                        ]
+                        ],
+                        "operating_system": ["conda"]
                     }
                 ],
                 "readme_instructions": "",
-                "type": "complex"
+                "skip_content": ""
             },
             {
                 "id": "25",
@@ -675,37 +767,39 @@
                             "Step 1: Copy the `CamGen_v2` folder into the Blender [add-on folder](https://docs.blender.org/manual/en/latest/advanced/blender_directory_layout.html#platform-dependent-paths) that is right for your operating system, e.g. for Blender 4.0 under Linux ~/.config/blender/4.0/scripts/addons/.",
                             "Step 2: Open Blender and navigate to `Edit > Preferences > Add-ons`.",
                             "Step 3: Find and activate `Generic: Camera_Generator_v2` the list of available Add-ons. You will need to press *refresh* in the Add-ons panel if you do not see the Camera_Generator option..",
-                            "Step 4[Optional]: To enable experimental lens analysis operations and plotting of the results, additional packages have to be installed for Blender's bundled Python version."
+                            "Step 4 [Optional]: To enable experimental lens analysis operations and plotting of the results, additional packages have to be installed for Blender's bundled Python version."
                         ],
                         "commands": [
                             "",
                             "",
                             "",
                             "$BLENDERPATH/$VERSION/python/bin/python3.10 -m pip install matplotlib PyQt5'"
-                        ]
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
-                "type": "complex"
+                "skip_content": "Requirements Blender 4.0 or higher (should work with previous versions, but was not tested)"
             },
             {
                 "id": "26",
                 "name": "facebookresearch/jepa",
                 "url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
-                "n_plans": 4,
+                "n_plans": 1,
                 "plan_nodes": [
                     {
                         "type": "Source",
                         "plan_step": [
-                            "Step 1: Create a new Conda environment, activate it, and run the [setup.py](setup.py) script"
+                            "Step 1: Run"
                         ],
                         "commands": [
-                            "`python setup.py install`"
-                        ]
+                            "conda create -n jepa python=3.9 pip \n conda activate jepa \n python setup.py install`"
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
-                "type": "complex"
+                "skip_content": ""
             },
             {
                 "id": "27",
@@ -717,22 +811,21 @@
                         "type": "Source",
                         "plan_step": [
                             "Step 1: First, download and set up the repo.",
-                            "Step 2: We provide an [`environment.yml`](environment.yml) file that can be used to create a Conda environment. If you only want",
-                            "Step 3: to run pre-trained models locally on CPU, you can remove the `cudatoolkit` and `pytorch-cuda` requirements from the file."
+                            "Step 2: We provide an [`environment.yml`](environment.yml) file that can be used to create a Conda environment. If you only want to run pre-trained models locally on CPU, you can remove the `cudatoolkit` and `pytorch-cuda` requirements from the file."
                         ],
                         "commands": [
                             "git clone https://github.com/facebookresearch/DiT.git \n cd DiT",
-                            "",
                             "conda env create -f environment.yml \n conda activate DiT"
-                        ]
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
-                "type": "complex"
+                "skip_content": ""
             },
             {
                 "id": "28",
-                "name": "",
+                "name": "ml-stat-Sustech/TorchCP",
                 "url": "https://raw.githubusercontent.com/ml-stat-Sustech/TorchCP/master/README.md",
                 "n_plans": 1,
                 "plan_nodes": [
@@ -745,15 +838,16 @@
                         "commands": [
                             "pip install torchcp",
                             "pip install --index-url https://test.pypi.org/simple/ --no-deps torchcp"
-                        ]
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
-                "type": "complex"
+                "skip_content": ""
             },
             {
                 "id": "29",
-                "name": "Neural-Network-Diffusion",
+                "name": "NUS-HPC-AI-Lab/Neural-Network-Diffusion",
                 "url": "https://raw.githubusercontent.com/NUS-HPC-AI-Lab/Neural-Network-Diffusion/main/README.md",
                 "n_plans": 1,
                 "plan_nodes": [
@@ -762,17 +856,18 @@
                         "plan_step": [
                             "Step 1: Clone the repository.",
                             "Step 2: Create a new Conda environment and activate it.",
-                            "Step 3 (optional): or install necessary package by"
+                            "Step 3: (optional): or install necessary package by"
                         ],
                         "commands": [
                             "git clone https://github.com/NUS-HPC-AI-Lab/Neural-Network-Diffusion.git",
                             "conda env create -f environment.yml \n conda activate DiT \n conda activate pdiff",
                             "pip install -r requirements.txt"
-                        ]
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
-                "type": "complex"
+                "skip_content": "yml and pip same plans?"
             },
             {
                 "id": "30",
@@ -792,14 +887,15 @@
                             "cd Aydiv \n python depth_to_lidar.py",
                             "",
                             "cd Aydiv \n python setup.py develop \n cd pcdet/ops/iou3d/cuda_op \n python setup.py develop \n cd ../../../.."
-                        ]
+                        ],
+                        "operating_system":[]
                     }
                 ],
                 "readme_instructions": "",
-                "type": "complex"
+                "skip_content": ""
             },
             {
-                "id": "32",
+                "id": "31",
                 "name": "nand1155/CausNet",
                 "url": "https://raw.githubusercontent.com/nand1155/CausNet/main/README.md",
                 "n_plans": 1,
@@ -811,14 +907,15 @@
                         ],
                         "commands": [
                             "`r require('devtools') \n install_github(`https://github.com/nand1155/CausNet`)"
-                        ]
+                        ],
+                        "operating_system":[]
                     }
                 ],
                 "readme_instructions":"",
-                "type": "complex"
+                "skip_content": ""
             },
             {
-                "id": "33",
+                "id": "32",
                 "name": "FasterDecoding/BitDelta",
                 "url": "https://raw.githubusercontent.com/FasterDecoding/BitDelta/main/README.md",
                 "n_plans": 1,
@@ -832,14 +929,15 @@
                         "commands": [
                             "git clone https://github.com/FasterDecoding/BitDelta /n cd BitDelta",
                             "conda create -yn bitdelta python=3.9 \n conda activate bitdelta \n pip install -e ."
-                        ]
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
-                "type": "complex"
+                "skip_content": ""
             },
             {
-                "id": "34",
+                "id": "33",
                 "name": "XueyangFeng/ReHAC",
                 "url": "https://raw.githubusercontent.com/XueyangFeng/ReHAC/main/README.md",
                 "n_plans": 1,
@@ -851,11 +949,12 @@
                         ],
                         "commands": [
                             "git clone https://github.com/XueyangFeng/ReHAC.git \n cd ReHAC \n pip install -r requirements.txt"
-                        ]
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions":"",
-                "type": "complex"
+                "skip_content": ""
             }
         ]
     }
