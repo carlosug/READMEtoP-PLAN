@@ -333,7 +333,6 @@ unified model that reuses several semantic models to show how a installation pro
 
 **`p-plan:Step(s)`**: a list of planned Action(s) or *Activity* as part of a `Plan` to be executed by an Agent. These are a list of indivisible sequence of **actions** that must executed without interruption. *e.g. First clone the repository from source , then create virtual environment*.  Step within a Plan could be linked to one specific executable operation, or refer to a group of operations. A Step then could invoke more than one **action**.  Each sentence in a readme is an instance of the Step concept. E.g.:
 
-`md
 `## Step 1: action1[Clone the repository] and action2[create a virtual environment]`
 
 `## Step 2: action3[Cofigure] the installation with required dependencies`
