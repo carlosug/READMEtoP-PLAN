@@ -79,7 +79,7 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 - Deal with source code dependencies;
 - Compile the source code and copy the binaries to your computer instead;
 - Build the source code yourself, dealing with the dependencies. 
-`Comments`: Development setup sometimes it is called compile from source
+`Comments`: Also it is called `compile from source`or `native installation`
 
 **Method 2: Package manager-based installation**
 
@@ -94,31 +94,39 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 | Homebrew| homebrew-bio | 1  | ```brew install brewsci/bio/sambamba``` |
 | Fedora| dnf | 1  | ```dnf install package``` |
 | Debian| apt | 1 | ```apt install package``` |
-|Pypi| | pip | ```pypi install package``` |
+|Pypi| | pip | 1 | ```pypi install package``` |
 
 **Method 3: Container-based installation**
 
 + **Goal**: provide a way of packaging research software and their dependencies inside lightweight, standalone containers.
 + **Definition**:  a method to create isolated environments where the application runs consistently regardless of the host environment. Popular container platforms include Docker, Podman, and Singularity.
-+ **Requirements**:
++ **Features**:
 
 **Method 4: Binary-based installation**
 
-- **Goal**: provide the downloading and running precompiled executable files or libraries specifically designed for a particular operating system and architecture
+- **Goal**: provide the downloading and running precompiled executable files or libraries specifically designed for a particular operating system and architecture. It is typically located in Github sources and binary releases.
 - **Definition**: a binary files contains the entire codebase and associated resources needed to run the software, eliminating the need for compilation or building the software from source.
-- **Requirements**
+- **Features**:
 + precompiled binaries are ready-to-run executable files
 + Deal with binary dependencies
 + Running usually in in user interface mode
+- **General Steps**:
++ Step 1: Download the tarball.
++ Step 2: Unpack it
++ Step 3: Run it according to the accompanying release notes
+To download and build binaries ` commands`:
 
-Sometimes readme contains example on `cmd`:[https://www.qemu.org/download/](https://www.qemu.org/download/)
+```bash
+wget https://download.example.org/example.tar.xz
+tar xcJf example.tar.xz
+cd example
+./configure
+make
+```
 
-To download and build binaries
-```wget https://download.example.org/example.tar.xz```
-```tar xcJf example.tar.xz```
-```cd example```
-```./configure```
-```make```
+`Notes`" Sometimes readme contains example on `cmd`:[https://www.qemu.org/download/](https://www.qemu.org/download/)
+
+
 
 <!-- To download and build binaries from **git**
 
@@ -207,8 +215,6 @@ pip install mynlpframework
 
 
 **Scoring system/scheme based on all factors**
-
-
 | Factors | Definition | Points |
 |----------|------------| ---- |
 | **Number requirements**| Provide a list of required packages and their versions | 1-5 |
@@ -294,8 +300,7 @@ def analyze_installation(req_file, setup_script, readme, downloads_folder, os_in
 
 ### 4. Translating abstract to executable instructions
 
-Create a method to connect human-readable language instructions to steps (or activity) and collection of steps in software installation domain (machine learning a planning domain). We limit ourselves to tasks that can be characterized as "software installation and involve manually downloading, extracting, compiling, or configuring individual components; instead, they just. Examples of such tasks are also run a single command to install the desired software and its dependencies. To the best of our knowledge this work is the first to mine complex task descriptions from the readmes and translate them into executable agent plans.
-
+Create a method to connect human-readable language instructions to Step(s) (or activity) and collection of Steps as installation Plans in a research software installation task. We limit ourselves to tasks that can be characterized as "software installation and involve manually downloading, extracting, compiling, or configuring individual components. Examples of such tasks are also run a single command to install the desired software and its dependencies. To the best of our knowledge this work is the first to mine complex task descriptions from the readmes and translate them into executable agent plans.
 
 We will present the different steps from the instruction in natural language to an executable plan with the example sentence: **Install package from source**.
 
@@ -310,18 +315,38 @@ unified model that reuses several semantic models to show how a installation pro
 
 **Ontological `concepts`**
 
-**`p-plan:Plan`**: a sequence/collection of instatiated **Step(s)** that a machine executes to fulfil its objective in installation. A installation Method (similar to procedure or option) is an instance of the `Plan` *e.g. Method 2: Install package from source:*
+**1.Properties**:
 
-**`p-plan:Step(s)`**: a list of planned Action(s) or *Activity* or *Task* as part of a `Plan` to be executed by an Agent *e.g. First clone the repository from source , then create virtual environment*. 
+**2. Classes**:
 
-**`p-plan:Variable`**: a list of indivisible sequence of *Operations* that must executed without interruption. A concept similar to `bpmn:ScriptTask` *e.g.`git clone software`, `python3 -m venv .venv`* **[DISCLAIMER = it can be associated with a p-plan:Variable to represent input of the step such code blocks(to denote word or phrase as code) enclose it in backticks (`)**
+**`p-plan:Plan`**: a sequence/collection of instatiated **Step(s)** that a machine executes to fulfil its objective in installation. A installation Method (similar to installation procedure or option) is an instance of the `Plan`. A installation method is an instance of the Plan concept. E.g.: We define four general `p-plan:Plan`:
+
+| Plan | Name | Subplan | Text |
+| ----- | ----------------- | ---------------------- | --- |
+| 0| source | 3 |  ```Install from Source``` or ```Native Installation``` |
+| 1| | container | 7| ```Install with Docker``` or | ```Insolated Docker option``` |
+| 2| package manager | 7  | ```with Pip``` or `with conda` |
+| 3| binary | 3  | ```Install from source``` |
+ 
+
+ *e.g. Method 2: Install package from source:*
+
+**`p-plan:Step(s)`**: a list of planned Action(s) or *Activity* as part of a `Plan` to be executed by an Agent. These are a list of indivisible sequence of **actions** that must executed without interruption. *e.g. First clone the repository from source , then create virtual environment*.  Step within a Plan could be linked to one specific executable operation, or refer to a group of operations. A Step then could invoke more than one **action**.  Each sentence in a readme is an instance of the Step concept. E.g.:
+
+`md
+## Step 1: action1[Clone the repository] and action2[create a virtual environment]
+
+## Step 2: action3[Cofigure] the installation with required dependencies
+`
+
+<!-- **`p-plan:Variable`**: a list of indivisible sequence of *Operations* that must executed without interruption. A concept similar to `bpmn:ScriptTask` *e.g.`git clone software`, `python3 -m venv .venv`* **[DISCLAIMER = it can be associated with a p-plan:Variable to represent input of the step such code blocks(to denote word or phrase as code) enclose it in backticks (`)** -->
 
 <!-- Steps within a Plan could be linked to a specific executable step (or `Action`) or refer to a class of `Steps`. A plan `Step` could be performed in different executions of the same plan. -->
 
 
-Optional:
+<!-- Optional:
 **`Task(s)`**: a list of computationally actions steps in software installation domain. *e.g Method 1: From source* *(TBC)*
-Possibility to define **`SubPlans`** *e.g. alternative methods for installing software* within the Plan (similar to procedure) as **`p-plan:MultiStep`**
+Possibility to define **`SubPlans`** *e.g. alternative methods for installing software* within the Plan (similar to procedure) as **`p-plan:MultiStep`** -->
 
 
 
