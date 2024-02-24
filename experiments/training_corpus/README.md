@@ -324,7 +324,7 @@ unified model that reuses several semantic models to show how a installation pro
 | Plan | Name | Subplan | Text |
 | ----- | ----------------- | ---------------------- | --- |
 | 0| source | 3 |  ```Install from Source``` or ```Native Installation``` |
-| 1| | container | 7| ```Install with Docker``` or ```Insolated Docker option``` |
+| 1| container | 7| ```Install with Docker``` or ```Insolated Docker option``` |
 | 2| package manager | 7  | ```with Pip``` or `with conda` |
 | 3| binary | 3  | ```Install from source``` |
  
