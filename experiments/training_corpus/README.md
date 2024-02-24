@@ -74,11 +74,11 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 
 - **Goal**: provide a standardized command-line interface for managing software packages installation process and its dependencies.
 - **Definition**: Installing a software "from source" means installing a software without using automatic tools e.g. container or package manager.
-- **Requiremements**:
-- Running in command line mode;
-- Deal with source code dependencies;
-- Compile the source code and copy the binaries to your computer instead;
-- Build the source code yourself, dealing with the dependencies. 
+- **Features**:
+1. Running in command line mode;
+2. Deal with source code dependencies;
+3. Compile the source code and copy the binaries to your computer instead;
+4. Build the source code yourself, dealing with the dependencies. 
 `Comments`: Also it is called `compile from source`or `native installation`
 
 **Method 2: Package manager-based installation**
@@ -111,10 +111,10 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 + Deal with binary dependencies
 + Running usually in in user interface mode
 - **General Steps**:
-Step 1: Download the tarball.
-Step 2: Unpack it
-Step 3: Run it according to the accompanying release notes
-To download and build binaries ` commands`:
+1. Step 1: Download the tarball.
+2. Step 2: Unpack it
+3. Step 3: Run it according to the accompanying release notes
+4. To download and build binaries ` commands`:
 
 ```bash
 wget https://download.example.org/example.tar.xz
