@@ -6,14 +6,14 @@ This folder aims to keep track of the experiements related to the research quest
 
 ### 1. Selection criteria:
 The repositories will be selected on community-curated list of software packages. Automated extraction of README files:
-+ Github repositories with specific topics
+<!-- + Github repositories with specific topics -->
 + Most recent ML papers with repositories in [paperwithcodes]
-+ bioinformatics software documentation ([e.g](https://blog.bioconductor.org/posts/2022-10-22-awesome-lists/)) and/or [bio.tools](https://bio.tools/api/t/?documentationType=%22Installation+instructions%22&tool=%22Web%20service%22&programming%20language=%22python%22);
+<!-- + bioinformatics software documentation ([e.g](https://blog.bioconductor.org/posts/2022-10-22-awesome-lists/)) and/or [bio.tools](https://bio.tools/api/t/?documentationType=%22Installation+instructions%22&tool=%22Web%20service%22&programming%20language=%22python%22);
 + part of [awesome-healthcare list](https://github.com/kakoni/awesome-healthcare) or;
 + part of [awesome-ai-devtools](https://github.com/jamesmurdza/awesome-ai-devtools);
 + part of [awesome-neuroscience](https://github.com/analyticalmonk/awesome-neuroscience);
 + part of [biological image analysis](https://github.com/hallvaaw/awesome-biological-image-analysis)
-* part of [Awesome-genome-visualization](https://github.com/cmdcolin/awesome-genome-visualization)
+* part of [Awesome-genome-visualization](https://github.com/cmdcolin/awesome-genome-visualization) -->
 
 ---
 
@@ -56,15 +56,15 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 * **buildInstructions** -->
 
 ---
-### 3. Classify research software installation options (`Method`) and level of difficulty:
+<!-- ### 3. Classify research software installation options (`Method`) and level of difficulty: -->
 
 **Context**: Currently unknown standards for measuring level of difficulty in a research software installation process, and the ```Factor(s)``` that impact the different `Methods` installation process and its `Level of difficulty`.
 
 #### Definitions: 
 - **Installation Methods**: instructions to follow in a research software installation process. In context of the study, there are several different methods (see below).
-- **Level of difficulty**: a position on scale that quantify the relative difficulty of completing a task related to installation process in the R/S software. It measures how complex a task is to execute and incluces several `Factors` determine its level.
+<!-- - **Level of difficulty**: a position on scale that quantify the relative difficulty of completing a task related to installation process in the R/S software. It measures how complex a task is to execute and incluces several `Factors` determine its level. -->
 
-```Factor(s)```: type of software, clarity of instructions, presence of **Dependencies**, number of **Steps** involved, and available optional installation methods in the readme. ``Factor(s)`` describes the variables as something akin to `software understanding features`, the features with the goal of facilitating the adoption of a software[ref.Inspect4py](Inspect4py). It includes **DISCLAIMER: bear in mind that determining the exact level of difficulty can still be subjective depending on individual experiences and expertise**.  Based on the given factors, here the scoring scheme could be:
+<!-- ```Factor(s)```: type of software, clarity of instructions, presence of **Dependencies**, number of **Steps** involved, and available optional installation methods in the readme. ``Factor(s)`` describes the variables as something akin to `software understanding features`, the features with the goal of facilitating the adoption of a software[ref.Inspect4py](Inspect4py). It includes **DISCLAIMER: bear in mind that determining the exact level of difficulty can still be subjective depending on individual experiences and expertise**.  Based on the given factors, here the scoring scheme could be: -->
 
 
 
@@ -111,9 +111,9 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 + Deal with binary dependencies
 + Running usually in in user interface mode
 - **General Steps**:
-+ Step 1: Download the tarball.
-+ Step 2: Unpack it
-+ Step 3: Run it according to the accompanying release notes
+Step 1: Download the tarball.
+Step 2: Unpack it
+Step 3: Run it according to the accompanying release notes
 To download and build binaries ` commands`:
 
 ```bash
@@ -160,10 +160,10 @@ Levels of granuality on which software can be described. From top to the bottom:
 <!-- Other taxonomy of types are considered [biotoolsSchema](https://github.com/bio-tools/biotoolsSchemaDocs/blob/master/controlled_vocabularies.rst) -->
 
 
-#### Level of difficulty
+<!-- #### Level of difficulty
 We manually categorise the level of difficulty the README installation_instruction has in our sample as:
 
-* `Simple`: Label a research software repository with straightforward installation process.
+* `Simple`: Label a research software repository with straightforward installation process. -->
 
 <!-- `## Installation prerequisites`
 - Python >= 3.8
@@ -175,8 +175,8 @@ Install the library using pip:
 pip install myprojectML
 ` -->
 
-
-* `Moderate`: label a research software repository that requires several `dependencies,` and offers multiple installation methods (or options). Especially for DL frameworks.
+<!-- 
+* `Moderate`: label a research software repository that requires several `dependencies,` and offers multiple installation methods (or options). Especially for DL frameworks. -->
 
 
 <!-- `## Prerequisites`
@@ -200,11 +200,11 @@ pip install mynlpframework
 ` -->
 
 
-* `Complex`: it has numerous dependencies, more than one installation method available in readme, and complex configuration requirements 
+<!-- * `Complex`: it has numerous dependencies, more than one installation method available in readme, and complex configuration requirements  -->
 
 
 ---
-
+<!-- 
 #### Matrix Installation methods and level of Difficulty:
 | Method | Description | Text | Code | Steps | Difficulty | README section |
 | ----- | ----------------- | ---------------------- | -------------------- | ------- | -------- | -- |
@@ -224,7 +224,7 @@ pip install mynlpframework
 | **Clarity on instructions** | writes concise and clear instructions | 0-3 |
 | **Method 1 only** | from source (calculate length steps) | 3 |
 | **Method 2 only** | from PiP | 1 |
-| **Method 3 only** | from Container | 2 |
+| **Method 3 only** | from Container | 2 | -->
 
 
 <!-- ```py
@@ -336,7 +336,6 @@ unified model that reuses several semantic models to show how a installation pro
 `## Step 1: action1[Clone the repository] and action2[create a virtual environment]`
 
 `## Step 2: action3[Cofigure] the installation with required dependencies`
-`
 
 <!-- **`p-plan:Variable`**: a list of indivisible sequence of *Operations* that must executed without interruption. A concept similar to `bpmn:ScriptTask` *e.g.`git clone software`, `python3 -m venv .venv`* **[DISCLAIMER = it can be associated with a p-plan:Variable to represent input of the step such code blocks(to denote word or phrase as code) enclose it in backticks (`)** -->
 
