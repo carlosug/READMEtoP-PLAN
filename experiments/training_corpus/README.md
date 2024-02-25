@@ -155,7 +155,7 @@ Dictionary structure of `ground_true_plan_steps.json`:
                 "n_plans": 2, # (count of plans in a research software)
                 "plan_nodes": # (Plans info)
                     {
-                        "type": "Source", # (one of the 4 plan types)
+                        "type": "Source", # (one of the listed 4 plan types)
                         "plan_step": [
                             "Step 1: To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.", # (step-by-step1 instruction)
                             "Step 2: Then, you can download DALI and test it by running an example DALI MAS" # (step-by-step2 instruction)
@@ -164,30 +164,30 @@ Dictionary structure of `ground_true_plan_steps.json`:
                             "", # (executable action step1)
                             "git clone https://github.com/AAAI-DISIM-UnivAQ/DALI.git \n cd DALI/Examples/advanced \n bash startmas.sh" # (executable action step2)
                         ],
-                        "operating_system": ["Linux"]
+                        "operating_system": ["Linux"] # (plan for technology type)
                     },
                     {
-                        "type": "Source",
+                        "type": "Source", # (one of the listed 4 plan types)
                         "plan_step": [
-                            "Step 1: To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.",
-                            "Step 2: Then, you can download DALI and test it by running an example DALI MAS",
-                            "Step 3: Unzip the repository go to the folder DALI/Examples/basic, and test if DALI works by duble clicking startmas.bat file (this will launch an example DALI MAS)"
+                            "Step 1: To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.", # (step-by-step1 instruction)
+                            "Step 2: Then, you can download DALI and test it by running an example DALI MAS", # (step-by-step2 instruction)
+                            "Step 3: Unzip the repository go to the folder DALI/Examples/basic, and test if DALI works by duble clicking startmas.bat file (this will launch an example DALI MAS)" # (step-by-step3 instruction)
                         ],
                         "commands": [
-                            "",
-                            "",
-                            ""
+                            "", # (executable action step1)
+                            "", # (executable action step2)
+                            "" # (executable action step3)
                         ],
-                        "operating_system": ["Windows"]
+                        "operating_system": ["Windows"] # (plan for technology type)
                     }
                 ],
-                "readme_instructions": "",
-                "skip_content": ""
+                "readme_instructions": "", # (raw content of the readme)
+                "skip_content": "" # (annotation comments)
             }
         ]
     }
 }
-`
+```
 
 <!-- To download and build binaries from **git**
 
