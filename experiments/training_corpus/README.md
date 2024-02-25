@@ -60,17 +60,25 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 
 **Context**: Currently unknown standards for measuring level of difficulty in a research software installation process, and the ```Factor(s)``` that impact the different `Methods` installation process and its `Level of difficulty`.
 
-#### Definitions: 
-- **Installation Methods**: instructions to follow in a research software installation process. In context of the study, there are several different methods (see below).
+### Definitions: 
+- **Installation Methods**: set of instructions as Plan to follow in a research software installation process. In context of the study, there four general different methods (see below).
+
+**`p-plan:Plan`**: a sequence/collection of instatiated **Step(s)** that a machine executes to fulfil its objective in installation. A installation Method (similar to installation procedure or option) is an instance of the `Plan`. A installation method is an instance of the Plan concept. E.g.: We define four general `p-plan:Plan`:
+
+| Plan | Name | Subplan | Text |
+| ----- | ----------------- | ---------------------- | --- |
+| 0| source | 3 |  ```Install from Source``` or ```Native Installation``` |
+| 1| container | 7| ```Install with Docker``` or ```Insolated Docker option``` |
+| 2| package manager | 7  | ```with Pip``` or `with conda` |
+| 3| binary | 3  | ```Install from source``` |
 <!-- - **Level of difficulty**: a position on scale that quantify the relative difficulty of completing a task related to installation process in the R/S software. It measures how complex a task is to execute and incluces several `Factors` determine its level. -->
 
 <!-- ```Factor(s)```: type of software, clarity of instructions, presence of **Dependencies**, number of **Steps** involved, and available optional installation methods in the readme. ``Factor(s)`` describes the variables as something akin to `software understanding features`, the features with the goal of facilitating the adoption of a software[ref.Inspect4py](Inspect4py). It includes **DISCLAIMER: bear in mind that determining the exact level of difficulty can still be subjective depending on individual experiences and expertise**.  Based on the given factors, here the scoring scheme could be: -->
 
 
-
 #### Installation methods:
 
-**Method 1: Source-based installation**
+**Method 0: Source-based installation**
 
 - **Goal**: provide a standardized command-line interface for managing software packages installation process and its dependencies.
 - **Definition**: Installing a software "from source" means installing a software without using automatic tools e.g. container or package manager.
@@ -81,7 +89,7 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 4. Build the source code yourself, dealing with the dependencies. 
 `Comments`: Also it is called `compile from source`or `native installation`
 
-**Method 2: Package manager-based installation**
+**Method 1: Package manager-based installation**
 
 - **Goal**: provide the source code that contains the original code written by a developer/researcher to enable the ability to review the source code and understand its workings
 - **Definition**: Installing a software "from source" means installing the software along with its dependencies indexed in official package managers.
@@ -96,13 +104,13 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 | Debian| apt | 1 | ```apt install package``` |
 |Pypi| | pip | 1 | ```pypi install package``` |
 
-**Method 3: Container-based installation**
+**Method 2: Container-based installation**
 
 + **Goal**: provide a way of packaging research software and their dependencies inside lightweight, standalone containers.
 + **Definition**:  a method to create isolated environments where the application runs consistently regardless of the host environment. Popular container platforms include Docker, Podman, and Singularity.
 + **Features**:
 
-**Method 4: Binary-based installation**
+**Method 3: Binary-based installation**
 
 - **Goal**: provide the downloading and running precompiled executable files or libraries specifically designed for a particular operating system and architecture. It is typically located in Github sources and binary releases.
 - **Definition**: a binary files contains the entire codebase and associated resources needed to run the software, eliminating the need for compilation or building the software from source.
@@ -126,7 +134,60 @@ make
 
 `Notes`" Sometimes readme contains example on `cmd`:[https://www.qemu.org/download/](https://www.qemu.org/download/)
 
+**`p-plan:Step(s)`**: a list of planned Action(s) or *Activity* as part of a `Plan` to be executed by an Agent. These are a list of indivisible sequence of **actions** that must executed without interruption. *e.g. First clone the repository from source , then create virtual environment*.  Step within a Plan could be linked to one specific executable operation, or refer to a group of operations. A Step then could invoke more than one **action**.  Each sentence in a readme is an instance of the Step concept. E.g.:
 
+`## Step 1: action1[Clone the repository] and action2[create a virtual environment]`
+
+`## Step 2: action3[Cofigure] the installation with required dependencies`
+
+### JSON Structure
+---
+Dictionary structure of `ground_true_plan_steps.json`:
+
+```json
+{
+    "softwares": {
+        "software": [
+            {
+                "id": "1", # (unique research software ID)
+                "name": "AAAI-DISIM-UnivAQ/DALI", # (repository name of research software)
+                "url": "https://raw.githubusercontent.com/AAAI-DISIM-UnivAQ/DALI/master/README.md", # (readme URL)
+                "n_plans": 2, # (count of plans in a research software)
+                "plan_nodes": # (Plans info)
+                    {
+                        "type": "Source", # (one of the 4 plan types)
+                        "plan_step": [
+                            "Step 1: To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.", # (step-by-step1 instruction)
+                            "Step 2: Then, you can download DALI and test it by running an example DALI MAS" # (step-by-step2 instruction)
+                        ],
+                        "commands": [
+                            "", # (executable action step1)
+                            "git clone https://github.com/AAAI-DISIM-UnivAQ/DALI.git \n cd DALI/Examples/advanced \n bash startmas.sh" # (executable action step2)
+                        ],
+                        "operating_system": ["Linux"]
+                    },
+                    {
+                        "type": "Source",
+                        "plan_step": [
+                            "Step 1: To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.",
+                            "Step 2: Then, you can download DALI and test it by running an example DALI MAS",
+                            "Step 3: Unzip the repository go to the folder DALI/Examples/basic, and test if DALI works by duble clicking startmas.bat file (this will launch an example DALI MAS)"
+                        ],
+                        "commands": [
+                            "",
+                            "",
+                            ""
+                        ],
+                        "operating_system": ["Windows"]
+                    }
+                ],
+                "readme_instructions": "",
+                "skip_content": ""
+            }
+        ]
+    }
+}
+`
 
 <!-- To download and build binaries from **git**
 
@@ -318,24 +379,11 @@ unified model that reuses several semantic models to show how a installation pro
 **1.Properties**:
 
 **2. Classes**:
-
-**`p-plan:Plan`**: a sequence/collection of instatiated **Step(s)** that a machine executes to fulfil its objective in installation. A installation Method (similar to installation procedure or option) is an instance of the `Plan`. A installation method is an instance of the Plan concept. E.g.: We define four general `p-plan:Plan`:
-
-| Plan | Name | Subplan | Text |
-| ----- | ----------------- | ---------------------- | --- |
-| 0| source | 3 |  ```Install from Source``` or ```Native Installation``` |
-| 1| container | 7| ```Install with Docker``` or ```Insolated Docker option``` |
-| 2| package manager | 7  | ```with Pip``` or `with conda` |
-| 3| binary | 3  | ```Install from source``` |
  
 
- *e.g. Method 2: Install package from source:*
+ <!-- *e.g. Method 1: Install package from source:* -->
 
-**`p-plan:Step(s)`**: a list of planned Action(s) or *Activity* as part of a `Plan` to be executed by an Agent. These are a list of indivisible sequence of **actions** that must executed without interruption. *e.g. First clone the repository from source , then create virtual environment*.  Step within a Plan could be linked to one specific executable operation, or refer to a group of operations. A Step then could invoke more than one **action**.  Each sentence in a readme is an instance of the Step concept. E.g.:
 
-`## Step 1: action1[Clone the repository] and action2[create a virtual environment]`
-
-`## Step 2: action3[Cofigure] the installation with required dependencies`
 
 <!-- **`p-plan:Variable`**: a list of indivisible sequence of *Operations* that must executed without interruption. A concept similar to `bpmn:ScriptTask` *e.g.`git clone software`, `python3 -m venv .venv`* **[DISCLAIMER = it can be associated with a p-plan:Variable to represent input of the step such code blocks(to denote word or phrase as code) enclose it in backticks (`)** -->
 
