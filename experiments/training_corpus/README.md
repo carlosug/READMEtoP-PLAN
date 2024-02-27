@@ -69,7 +69,7 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 | 0| source |  ```Install from Source``` or ```Native Installation``` |
 | 1| container | ```Installation with Docker``` or ```Isolated Docker option``` |
 | 2| package manager | ```with Pip``` or `with conda` |
-| 3| binary | ```Install from source``` |
+| 3| binary | ```download the Win zip file and run the installation wizard``` |
 <!-- - **Level of difficulty**: a position on scale that quantify the relative difficulty of completing a task related to installation process in the R/S software. It measures how complex a task is to execute and incluces several `Factors` determine its level. -->
 
 <!-- ```Factor(s)```: type of software, clarity of instructions, presence of **Dependencies**, number of **Steps** involved, and available optional installation methods in the readme. ``Factor(s)`` describes the variables as something akin to `software understanding features`, the features with the goal of facilitating the adoption of a software[ref.Inspect4py](Inspect4py). It includes **DISCLAIMER: bear in mind that determining the exact level of difficulty can still be subjective depending on individual experiences and expertise**.  Based on the given factors, here the scoring scheme could be: -->
@@ -79,7 +79,7 @@ Additionally, for each Plan, the following features as **technology** property b
 - Plan 1 --> Container --> a tool that orchestrates the software installation process --> {docker, docker-compose, Podman}
 - Plan 2--> Package Manager --> a method to install and manage software the installation process --> {pip, conda, bioconda}
 
-3. **`Step(s)`**: a list of planned activities as part of a `Plan` to be executed in a specific order. A Step could comprise more than one **action**. Then, a Step within a Plan could be linked to one specific executable operation e.g. *Step 1: First clone this repository via Git*, or refer to a group of activities e.g. *Step 2: Create a new Conda environment and activate it.* We define a Step as the sentence of a readme. Each sentence in a readme is an instance of the Step concept. For instance, the following example shows that `Step 1` involves two activities, and `Step 2` involves one activity:
+3. **`Step(s)`**: a list of planned activities as part of a `Plan` to be executed in a specific order. Each atomic activity is an instance of the Step concept. A Step within a Plan could comprise one activity, or a group of activities. We define a Step as the readme's author annotated. For instance, the following example shows that `Step 1` involves two activities, and `Step 2` involves one activity:
 
 `## Step 1: activity1[Clone the repository] and actvity2[create a virtual environment]`
 
@@ -157,35 +157,32 @@ We will present the different steps from the instruction in natural language to 
 
 ```json
 {
-    "research_softwares": { # (total number of research softwares)
-        "research_software": [ # (research software dictionary)
+     "study_subjects": {
+      "research_software": [
+        {
+          "id": "unique identifier",
+          "name": "repo name",
+          "url": "readme raw url",
+          "n_plans": "total count Plans",
+          "plans": [
             {
-                "id": "1", # (unique research software ID)
-                "name": "AAAI-DISIM-UnivAQ/DALI", # (repository name of research software)
-                "url": "https://raw.githubusercontent.com/AAAI-DISIM-UnivAQ/DALI/master/README.md", # (readme URL)
-                "n_plans": 2, # (count of plans in a research software)
-                "plan_nodes": # (Plans info)
-                    {
-                        "type": "Source", # (one of the listed 4 plan types)
-                        "plan_step": [
-                            "Step 1: To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.", # (step-by-step1 initial instruction)
-                            "Step 2: Then, you can download DALI and test it by running an example DALI MAS" # (step-by-step2 end instruction)
-                        ],
-                        "technology": ["Linux"] # (plan for technology property)
-                    },
-                    {
-                        "type": "Source", # (one of the listed 4 plan types)
-                        "plan_step": [
-                            "Step 1: To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.", # (step-by-step1 initial instruction)
-                            "Step 2: Then, you can download DALI and test it by running an example DALI MAS", # (step-by-step2 instruction)
-                            "Step 3: Unzip the repository go to the folder DALI/Examples/basic, and test if DALI works by duble clicking startmas.bat file (this will launch an example DALI MAS)" # (step-by-step3 end instruction)
-                        ],
-                        "technology": ["Windows"] # (plan for technology type)
-                    }
-                ],
-                "readme_instructions": "", # (raw content of the readme)
-                "skip_content": "" # (annotation comments)
+              "type": "Plan type: labels --> binary, container, packagemanager, source",
+              "steps": [
+                {
+                  "text": "raw excerpt step n from readme",
+                  "seq_order": 1, # sequence order for each step
+                  "is_optional": false, # optional step
+                  "note": "extra information in each step",
+                  "commands": "arguments for each step"
+                }
+              ],
+              "technology": [
+                "OS type", "PackageManager tool", "Container tool"
+              ]
             }
+          ],
+          "readme_instructions": "raw installation instruction section of each readme"
+        }
         ]
     }
 }
