@@ -67,7 +67,7 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 **`p-plan:Plan`**: a sequence/collection of instatiated **Step(s)** that a machine executes to fulfil its objective in installation. A installation Method (similar to installation procedure or option) is an instance of the `Plan`. A installation method is an instance of the **Plan** concept. In our study, a README can describe one, or more Plans. We define four general `p-plan:Plan`:
 
 | Plan | Name  | README text |
-| ----- | ----------------- | ---------------------- | --- |
+| ----- | ----------------- | ---------------------- |
 | 0| source |  ```Install from Source``` or ```Native Installation``` |
 | 1| container | ```Installation with Docker``` or ```Isolated Docker option``` |
 | 2| package manager | ```with Pip``` or `with conda` |
