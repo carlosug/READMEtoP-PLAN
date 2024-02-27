@@ -13,6 +13,10 @@
                             "Step 1: To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.",
                             "Step 2: Then, you can download DALI and test it by running an example DALI MAS"
                         ],
+                        "commands": [
+                            "",
+                            "git clone https://github.com/AAAI-DISIM-UnivAQ/DALI.git \n cd DALI/Examples/advanced \n bash startmas.sh"
+                        ],
                         "operating_system": ["Linux"]
                     },
                     {
@@ -21,6 +25,11 @@
                             "Step 1: To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.",
                             "Step 2: Then, you can download DALI and test it by running an example DALI MAS",
                             "Step 3: Unzip the repository go to the folder DALI/Examples/basic, and test if DALI works by duble clicking startmas.bat file (this will launch an example DALI MAS)"
+                        ],
+                        "commands": [
+                            "",
+                            "",
+                            ""
                         ],
                         "operating_system": ["Windows"]
                     }
@@ -38,6 +47,9 @@
                         "type": "Source",
                         "plan_step": [
                             "Step 1: Refer to the `setup.py` file for installation instructions."
+                        ],
+                        "commands": [
+                            ""
                         ],
                         "operating_system": []
                     }
@@ -58,6 +70,11 @@
                             "Step 2: Run. Train",
                             "Step 3: Run. Evaluation. Modify the script/eval_tiny.sh, change the ''path_to_pth'' to your own path, which is similar to eval_nano.sh and eval_base.sh"
                         ],
+                        "commands": [
+                            "bash \n conda create -n cam python=3.8 -y \n conda activate cam \n  pip install -r requirements.txt`",
+                            "bash script/train.sh",
+                            "bash script/eval_tiny.sh"
+                        ],
                         "operating_system": []
                     }
                 ],
@@ -75,6 +92,10 @@
                         "plan_step": [
                             "Step 1: Download the dataset folder from onedrive by [data.zip](https://portland-my.sharepoint.com/:u:/g/personal/liuhui3-c_my_cityu_edu_hk/EfApQlFP3PhFjUW4527STo0BALMdP16zs-HPMNgwQVFWsA?e=zoHlW2). Unzip this folder into the project  directory.  You can find four orginal datasets,  pre-processed datasets (i.e., val.jsonl, test.jsonl, train.jsonl in each dataset folder) and the files incuding questions and answers.", 
                             "Step 2: Place the OpenAI key into the file named api_key.txt."
+                        ],
+                        "commands": [
+                            "",
+                            "openai.api_key = ''"
                         ],
                         "operating_system": []
                     }
@@ -96,7 +117,13 @@
                             "Step 3: When starting a container, remember to mount the code, dataset, and output directories to proper locations in the container. An example command to start a docker container with the image is",
                             "Step 4: (Inside Container) Go to the root directory of this repository and build STEAM-ICP"
                         ],
-                       "operating_system": []
+                        "commands": [
+                            "docker build -t steam_icp  \n --build-arg USERID=$(id -u) \n--build-arg GROUPID=$(id -g) \n--build-arg USERNAME=$(whoami) \n --build-arg HOMEDIR=${HOME}.",
+                            "",
+                            "",
+                            "bash build.sh"
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
@@ -119,6 +146,15 @@
                             "Step 6: Download the file at https://doi.org/10.5281/zenodo.10629451 and extract the content",
                             "Step optional: Download the file output-data.zip from Zenodo and extract its contents into the folder output_data. This way, you can access all experiment results without running them yourself."
                         ],
+                        "commands": [
+                            "",
+                            "",
+                            "pip3 install -r requirements.txt",
+                            "R -e 'install.packages(c(ggplot2", "reshape2", "plyr", "dplyr", "scales), repos=https://cloud.r-project.org/",
+                            "pip3 install -r requirements.txt",
+                            "",
+                            ""
+                        ],
                         "operating_system": []
                     }
                 ],
@@ -136,7 +172,10 @@
                         "plan_step": [
                             "Step 1: pip install -r requirements."
                         ],
-                       "operating_system": []
+                        "commands": [
+                            "pip install -r requirements.txt"
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
@@ -154,7 +193,12 @@
                             "Step 1: Initialize git submodules.",
                             "Step 2: Install the specific versions of every package from `requirements.txt` in a new conda environment",
                             "Step 3: To ensure that Python paths are properly defined, update the `~/.bashrc` by adding the following lines"
-                       ],
+                        ],
+                        "commands": [
+                            "git submodule init | git submodule update",
+                            "conda create --name gsft python=3.9 | conda activate gsft | pip install -r requirements.txt",
+                            "export GSFT_PATH=/path_to_gsfc | export PYTHONPATH=$PYTHONPATH:/$GSFT_PATH"
+                        ],
                         "operating_system": []
                     }
                 ],
@@ -172,7 +216,10 @@
                         "plan_step": [
                             "Step 1: The project can be installed by running the following command in your terminal."
                         ],
-                       "operating_system":[]
+                        "commands": [
+                            "pip install -r requirements.txt"
+                        ],
+                        "operating_system":[]
                     }
                 ],
                 "readme_instructions": "",
@@ -197,7 +244,18 @@
                             "Step 8: Installing Some Software Using Conda",
                             "Step 9: Python Dependencies"
                         ],
-                       "operating_system": []
+                        "commands": [
+                            "git clone https://github.com/viralInformatics/VIGA.git",
+                            "",
+                            "",
+                            "wget -c ftp.ncbi.nlm.nih.gov/refseq/release/viral/viral.1.protein.faa.gz | gzip -d viral.1.protein.faa.gz | mv viral.1.protein.faa RefSeqVirusProtein",
+                            "wget -c ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nr.gz -- or ascp -T  -i  asperaweb_id_dsa.openssh --host=ftp.ncbi.nih.gov --user=anonftp --mode=recv /blast/db/FASTA/nr.gz ./ -- gzip -d nr.gz",
+                            "",
+                            "diamond makedb --in YourPath/RefSeqVirusProtein  -d Diamond_RefSeqVirusProtein --taxonmap YourPath/prot.accession2taxid --taxonnodes YourPath/nodes.dmp | diamond makedb --in nr -d Dimond_nr --taxonmap YourPath/prot.accession2taxid --taxonnodes YourPath/nodes.dmp",
+                            "conda install fastp=0.12.4 trinity=2.8.5 diamond=2.0.11.149 ragtag=2.1.0 quast=5.0.2",
+                            "pip install pandas=1.1.5 numpy=1.19.5  matplotlib=3.3.4  biopython=1.79"
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
@@ -214,20 +272,29 @@
                         "plan_step": [
                             "Step 1: Installation instructions for Linux (Ubuntu and Pop!_OS): download the Linux zip file and, from the command window, run a bash command for the install.sh file, in the corresponding installation folder."
                         ],
-                       "operating_system":["Linux"]
+                        "commands": [
+                            ""
+                        ],
+                        "operating_system":["Linux"]
                     },
                     {
                         "type": "Binary",
                         "plan_step": [
                             "Step 1: Installation instructions for Mac OS: download the Mac zip file and copy the NRN-EZ app to the Applications folder."
                         ],
-                       "operating_system":["Mac"]
+                        "commands": [
+                            ""
+                        ],
+                        "operating_system":["Mac"]
                     },
                     {
                         "type": "Binary-Win",
                         "plan_step": [
                             "Step 1: Installation instructions for Windows: download the Win zip file and run the installation wizard."
-                       ],
+                        ],
+                        "commands": [
+                            ""
+                        ],
                         "operating_system": ["Windows"]
                     }
                 ],
@@ -248,7 +315,14 @@
                             "Step 3: Identify viral contigs from assembled contigs",
                             "Step 4: Run ViralCC",
                             "Step 5: Evaluation draft viral genomes using CheckV"
-                       ],
+                        ],
+                        "commands": [
+                            "wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-13/ERR2282092/ERR2282092.1 \n wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-13/ERR2530126/ERR2530126.1 \n wget https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-13/ERR2530127/ERR2530127.1 \n fastq-dump --split-files --gzip ERR2282092.1 \n  fastq-dump --split-files --gzip ERR2530126.1 \n bbduk.sh  in1=ERR2282092.1_1.fastq.gz in2=ERR2282092.1_2.fastq.gz out1=COWSG1_AQ.fastq.gz out2=COWSG2_AQ.fastq.gz ref=/home1/yuxuandu/cmb/SOFTWARE/bbmap/resources/adapters.fa ktrim=r k=23 mink=11 hdist=1 minlen=50 tpe tbo \n bbduk.sh  in1=ERR2530126.1_1.fastq.gz in2=ERR2530126.1_2.fastq.gz out1=S3HIC1_AQ.fastq.gz out2=S3HIC2_AQ.fastq.gz ref=/home1/yuxuandu/cmb/SOFTWARE/bbmap/resources/adapters.fa ktrim=r k=23 mink=11 hdist=1 minlen=50 tpe tbo \n bbduk.sh  in1=ERR2530127.1_1.fastq.gz in2=ERR2530127.1_2.fastq.gz out1=M1HIC1_AQ.fastq.gz out2=M1HIC2_AQ.fastq.gz ref=/home1/yuxuandu/cmb/SOFTWARE/bbmap/resources/adapters.fa ktrim=r k=23 mink=11 hdist=1 minlen=50 tpe tbo \n bbduk.sh  in1=S3HIC1_AQ.fastq.gz in2=S3HIC2_AQ.fastq.gz out1=S3HIC1_CL.fastq.gz out2=S3HIC2_CL.fastq.gz trimq=10 qtrim=r ftm=5 minlen=50 \n bbduk.sh  in1=M1HIC1_AQ.fastq.gz in2=M1HIC2_AQ.fastq.gz out1=M1HIC1_CL.fastq.gz out2=M1HIC2_CL.fastq.gz trimq=10 qtrim=r ftm=5 minlen=50 \n bbduk.sh  in1=COWSG1_AQ.fastq.gz in2=COWSG2_AQ.fastq.gz out1=COWSG1_CL.fastq.gz out2=COWSG2_CL.fastq.gz trimq=10 qtrim=r ftm=5 minlen=50 \n bbduk.sh in1=S3HIC1_CL.fastq.gz in2=S3HIC2_CL.fastq.gz out1=S3HIC1_trim.fastq.gz out2=S3HIC2_trim.fastq.gz ftl=10 \n bbduk.sh in1=M1HIC1_CL.fastq.gz in2=M1HIC2_CL.fastq.gz out1=M1HIC1_trim.fastq.gz out2=M1HIC2_trim.fastq.gz ftl=10 \n clumpify.sh in1=S3HIC1_trim.fastq.gz in2=S3HIC2_trim.fastq.gz out1=S3HIC1_dedup.fastq.gz out2=S3HIC2_dedup.fastq.gz dedupe \n clumpify.sh in1=M1HIC1_trim.fastq.gz in2=M1HIC2_trim.fastq.gz out1=M1HIC1_dedup.fastq.gz out2=M1HIC2_dedup.fastq.gz dedupe \n cat S3HIC1_dedup.fastq.gz M1HIC1_dedup.fastq.gz > HIC1.fastq.gz \n cat S3HIC2_dedup.fastq.gz M1HIC2_dedup.fastq.gz > HIC2.fastq.gz",
+                            "megahit -1 COWSG1_CL.fastq.gz -2 COWSG2_CL.fastq.gz -o COW_ASSEMBLY --min-contig-len 1000 --k-min 21 --k-max 141 --k-step 12 --merge-level 20,0.95 \n bwa index final.contigs.fa \n bwa mem -5SP final.contigs.fa HIC1.fastq.gz HIC2.fastq.gz > COW_MAP.sam \n samtools view -F 0x904 -bS COW_MAP.sam > COW_MAP_UNSORTED.bam \n samtools sort -n COW_MAP_UNSORTED.bam -o COW_MAP_SORTED.bam",
+                            "perl removesmalls.pl 3000 final.contigs.fa > cow_3000.fa \n wrapper_phage_contigs_sorter_iPlant.pl -f cow_3000.fa --db 1 --wdir output_directory --ncpu 16 --data-dir /panfs/qcb-panasas/yuxuandu/virsorter-data \n Rscript find_viral_contig.R",
+                            "python ./viralcc.py pipeline -v final.contigs.fa COW_MAP_SORTED.bam viral.txt out_cow",
+                            "python concatenation.py -p out_cow/VIRAL_BIN -o viralCC_cow_bins.fa \n checkv end_to_end viralCC_cow_bins.fa output_checkv_viralcc_cow -t 16 -d /panfs/qcb-panasas/yuxuandu/checkv-db-v1.0"
+                        ],
                         "operating_system": []
                     }
                 ],
@@ -272,7 +346,17 @@
                             "Step 6: Install other packages",
                             "Step 7: Go back to the folder directory",
                             "Step 8: Copy py script to the folder"
-                       ],
+                        ],
+                        "commands": [
+                            "conda create -n mgie python=3.10 -y",
+                            "conda activate mgie",
+                            "conda update -n base -c defaults conda setuptools -y \n conda install -c conda-forge git git-lfs ffmpeg vim htop ninja gpustat -y \n conda clean -a -y \n pip install -U pip cmake cython==0.29.36 pydantic==1.10 numpy \n pip install -U gdown pydrive2 wget jupyter jupyterlab jupyterthemes ipython \n pip install -U sentencepiece transformers diffusers tokenizers datasets gradio==3.37 accelerate evaluate git+https://github.com/openai/CLIP.git \n pip install -U https://download.pytorch.org/whl/cu113/torch-1.12.0%2Bcu113-cp310-cp310-linux_x86_64.whl https://download.pytorch.org/whl/cu113/torchvision-0.13.0%2Bcu113-cp310-cp310-linux_x86_64.whl https://download.pytorch.org/whl/cu113/torchaudio-0.12.0%2Bcu113-cp310-cp310-linux_x86_64.whl \n pip install -U deepspeed",
+                            "cd ml-mgie \n git submodule update --init --recursive \n cd LLaVA",
+                            "pip install -e .",
+                            "pip install -U https://download.pytorch.org/whl/cu113/torch-1.12.0%2Bcu113-cp310-cp310-linux_x86_64.whl https://download.pytorch.org/whl/cu113/torchvision-0.13.0%2Bcu113-cp310-cp310-linux_x86_64.whl https://download.pytorch.org/whl/cu113/torchaudio-0.12.0%2Bcu113-cp310-cp310-linux_x86_64.whl \n pip install -U ninja flash-attn==1.0.2 \n pip install -U pydrive2 gdown wget",
+                            "cd ..",
+                            "cp mgie_llava.py LLaVA/llava/model/llava.py \n cp mgie_train.py LLaVA/llava/train/train.py"
+                        ],
                         "operating_system":[]
                     }
                 ],
@@ -292,6 +376,12 @@
                             "Step 2: Install PyTorch `v2.1.0` with compatible cuda version, following instructions from [PyTorch Installation Page](https://pytorch.org/get-started/locally/). For example with cuda 11:",
                             "Step 3: Install the following Python dependencies to run the codes.",
                             "Step 4: Login to your huggingface account for downloading models"
+                        ],
+                        "commands": [
+                            "conda create -n myenv python=3.10 \n conda activate myenv",
+                            "pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu118",
+                            "python -m pip install . \n python -m pip install flash-attn --no-build-isolation",
+                            "huggingface-cli login --token ${your_access_token}"
                         ],
                         "operating_system": []
                     }
@@ -313,6 +403,12 @@
                             "Step 3: After setting up the environment, one can run GeneGPT on GeneTuring by.",
                             "Step 4: To run GeneGPT-slim, simply use"
                         ],
+                        "commands": [
+                            "pip install -r requirements.txt",
+                            "$ cat config.py \n API_KEY = 'YOUR_OPENAI_API_KEY",
+                            "python main.py 111111",
+                            "python main.py 001001"
+                        ],
                         "operating_system": []
                     }
                 ],
@@ -332,8 +428,14 @@
                             "Step 2: After the container is running, navigate to [https://0.0.0.0:8000](https://0.0.0.0:8000) and you should see something like (after starting the training): <https>",
                             "Step 3: Detect objects in the edited image.",
                             "Step 4: Generate a video based on object detection description."
-                       ],
-                        "operating_system": ["Docker (isolated)"]
+                        ],
+                        "commands": [
+                            "docker run -it --rm -p 8000:8000 arpllab/learning_to_fly",
+                            "cmd $ dash",
+                            "wget ttxr.",
+                            "pip clone ."
+                        ],
+                        "operating_system": ["Docker (isolated"]
                     },
                     {
                         "type": "Container",
@@ -369,7 +471,13 @@
                             "Step 10: After that we can execute the UI binary from the root folder.",
                             "Step 11: To run the benchmark (with UI, checkpointing and Tensorboard logging turned off)"
                         ],
-                       "operating_system":["Linux"]
+                        "commands": [
+                            "git clone https://github.com/arplaboratory/learning-to-fly learning_to_fly \n cd learning_to_fly",
+                            "git submodule update --init -- external/rl_tools \n cd external/rl_tools",
+                            "git submodule update --init -- external/cli11 external/highfive external/json/ external/tensorboard tests/lib/googletest/",
+                            "sudo apt update && sudo apt install libhdf5-dev libopenblas-dev protobuf-compiler libprotobuf-dev libboost-all-dev"
+                        ],
+                        "operating_system":["Linux"]
                     },
                     {
                         "type": "Source",
@@ -385,6 +493,17 @@
                             "Step 9: To run the training with the UI, we download the JavaScript dependencies in the form of the two files three.module.js and OrbitControls.js",
                             "Step 10: After that we can execute the UI binary from the root folder.",
                             "Step 11: To run the benchmark (with UI, checkpointing and Tensorboard logging turned off)"
+                        ],
+                        "commands": [
+                            "git clone https://github.com/arplaboratory/learning-to-fly learning_to_fly \n cd learning_to_fly",
+                            "git submodule update --init -- external/rl_tools \n cd external/rl_tools",
+                            "git submodule update --init -- external/cli11 external/highfive external/json/ external/tensorboard tests/lib/googletest/",
+                            "sudo apt update && sudo apt install libhdf5-dev libopenblas-dev protobuf-compiler libprotobuf-dev libboost-all-dev",
+                            "",
+                            "brew install hdf5 protobuf boost",
+                            "cd ../../ \n mkdir build \n cd build - Ubuntu + OpenBLAS: `cmake .. -DCMAKE_BUILD_TYPE=Release -DRL_TOOLS_BACKEND_ENABLE_OPENBLAS:BOOL=ON` \n - Ubuntu + MKL: `cmake .. -DCMAKE_BUILD_TYPE=Release -DRL_TOOLS_BACKEND_ENABLE_MKL:BOOL=ON` \n - macOS (tested on Sonoma): `cmake .. -DCMAKE_BUILD_TYPE=Release`",
+                            "cmake --build . -j8",
+                            "cd .. \n cd .."
                         ],
                         "operating_system":["Mac"]
                     }
@@ -403,7 +522,11 @@
                         "plan_step": [
                             "Step 1: Install the requirements.",
                             "Step optional: or set up TPU VM."
-                       ],
+                        ],
+                        "commands": [
+                            "conda create -n lwm python=3.10 \n pip install -U jax[cuda12_pip]==0.4.23 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html \n pip install -r requirements.txt",
+                            "sh tpu_vm_setup.sh"
+                        ],
                         "operating_system": ["linux"]
                     }
                 ],
@@ -423,7 +546,15 @@
                             "Step 1: Step 2: Configure the LLMs",
                             "Step 2: Install requirements."
                         ],
-                       "operating_system":["Windows"]
+                        "commands": [
+                            "conda create -n ufo python=3.10 \n # conda activate ufo",
+                            "git clone https://github.com/microsoft/UFO.git \n cd UFO",
+                            "pip install -r requirements.txt",
+                            "API_TYPE: openai \n OPENAI_API_BASE: https://api.openai.com/v1/chat/completions # The base URL for the OpenAI API \n OPENAI_API_KEY: YOUR_API_KEY  # Set the value to the openai key for the llm model \n OPENAI_API_MODEL: GPTV_MODEL_NAME  # The only OpenAI model by now that accepts visual input",
+                            "API_TYPE: aoai \n OPENAI_API_BASE: YOUR_ENDPOINT # The AOAI API address. Format: https://{your-resource-name}.openai.azure.com/openai/deployments/{deployment-id}/chat/completions?api-version={api-version} \n OPENAI_API_KEY: YOUR_API_KEY  # Set the value to the openai key for the llm model \n OPENAI_API_MODEL: GPTV_MODEL_NAME  # The only OpenAI model by now that accepts visual input",
+                            "# assume you are in the cloned UFO folder \n python -m ufo --task <your_task_name>"
+                        ],
+                        "operating_system":["Windows"]
                     }
                 ],
                 "readme_instructions": "",
@@ -440,7 +571,15 @@
                         "plan_step": [
                             "Step 1: Install conda: https://docs.conda.io/projects/miniconda/en/latest/index.html."
                         ],
-                       "operating_system": []
+                        "commands": [
+                            "",
+                            "git clone https://github.com/catid/dora.git \n cd dora",
+                            "conda create -n dora python=3.10 -y && conda activate dora",
+                            "pip install -U -r requirements.txt",
+                            "pip clone .",
+                            "python dora.py"
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
@@ -458,7 +597,11 @@
                             "Step 1: Clone the project.",
                             "Step 2: Install."
                         ],
-                       "operating_system": []
+                        "commands": [
+                            "git clone --recursive https://github.com/AILab-CVC/YOLO-World.git",
+                            "pip install torch wheel -q \n pip install -e ."
+                        ],
+                        "operating_system": []
                     }
                 ],
                 "readme_instructions": "",
@@ -475,14 +618,22 @@
                         "plan_step": [
                             "Step 1: To install the current release, which includes support for [CUDA-enabled GPU cards](https://www.tensorflow.org/install/gpu) and (Ubuntu and Windows)",
                             "Step 2: To update TensorFlow to the latest version, add `--upgrade` flag to the above commands."
-                       ],
+                        ],
+                        "commands": [
+                            "pip install tensorflow",
+                            ""
+                        ],
                         "operating_system": ["Windows", "Linux"]
                     },
                     {
                         "type": "PackageManager",
                         "plan_step": [
                             "Step 1: Other devices (DirectX and MacOS-metal) are supported using Device plugins."
-                       ],
+                        ],
+                        "commands": [
+                            "pip install tensorflow",
+                            ""
+                        ],
                         "operating_system": ["Mac"]
                     },
                     {
@@ -490,7 +641,9 @@
                         "plan_step": [
                             "Step 1: Nightly binaries are available for testing at https://pypi.python.org/pypi/tf-nightly \n https://pypi.python.org/pypi/tf-nightly-cpu packages on PyPi."
                         ],
-                        "operating_system": []
+                        "commands": [
+                            ""
+                        ]
                     }
                 ],
                 "readme_instructions": "",
@@ -509,6 +662,12 @@
                             "Step 2: Then, you will need to install at least one of Flax, PyTorch, or TensorFlow. Please refer to [TensorFlow installation page](https://www.tensorflow.org/install/), [PyTorch installation page](https://pytorch.org/get-started/locally/#start-locally) and/or [Flax](https://github.com/google/flax#quick-install) and [Jax](https://github.com/google/jax#installation) installation pages regarding the specific installation command for your platform.",
                             "Step 3: When one of those backends has been installed, Transformers can be installed using pip as follows"
                         ],
+                        "commands": [
+                            "",
+                            "",
+                            "pip install transformers",
+                            "conda install conda-forge::transformers"
+                        ],
                         "operating_system": ["pip"]
                     },
                     {
@@ -518,7 +677,13 @@
                             "Step 2: Then, you will need to install at least one of Flax, PyTorch, or TensorFlow. Please refer to [TensorFlow installation page](https://www.tensorflow.org/install/), [PyTorch installation page](https://pytorch.org/get-started/locally/#start-locally) and/or [Flax](https://github.com/google/flax#quick-install) and [Jax](https://github.com/google/jax#installation) installation pages regarding the specific installation command for your platform.",
                             "Step 3: Transformer can be installed using conda as follows."
                         ],
-                       "operating_system":["Conda"]
+                        "commands": [
+                            "",
+                            "",
+                            "pip install transformers",
+                            "conda install conda-forge::transformers"
+                        ],
+                        "operating_system":["Conda"]
                     }
                 ],
                 "readme_instructions": "This repository is tested on Python 3.8+, Flax 0.4.1+, PyTorch 1.11+, and TensorFlow 2.6+. You should install Transformers in a virtual environment. If you're unfamiliar with Python virtual environments, check out the user guide.",
@@ -537,6 +702,12 @@
                             "Step 2: Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#) (>=2.0.0)",
                             "Step 3: Install DIG: Dive into Graphs.",
                             "Step 4: After installation, you can check the version. You have successfully installed DIG: Dive into Graphs if no error occurs."
+                        ],
+                        "commands": [
+                            "python -c import torch; print(torch.__version__)",
+                            "python -c import torch_geometric; print(torch_geometric.__version__)",
+                            "pip install dive-into-graphs",
+                            "python print(version)"
                         ],
                         "operating_system": ["pip"]
                     },
@@ -565,12 +736,18 @@
                         "plan_step": [
                             "Step 1: With pip."
                         ],
+                        "commands": [
+                            "pip install langchain"
+                        ],
                         "operating_system": ["pip"]
                     },
                     {
                         "type": "PackageManager",
                         "plan_step": [
                             "Step 1: With conda."
+                        ],
+                        "commands": [
+                            "conda install langchain -c conda-forge"
                         ],
                         "operating_system": ["conda"]
                     }
@@ -592,6 +769,12 @@
                             "Step 3: Find and activate `Generic: Camera_Generator_v2` the list of available Add-ons. You will need to press *refresh* in the Add-ons panel if you do not see the Camera_Generator option..",
                             "Step 4 [Optional]: To enable experimental lens analysis operations and plotting of the results, additional packages have to be installed for Blender's bundled Python version."
                         ],
+                        "commands": [
+                            "",
+                            "",
+                            "",
+                            "$BLENDERPATH/$VERSION/python/bin/python3.10 -m pip install matplotlib PyQt5'"
+                        ],
                         "operating_system": []
                     }
                 ],
@@ -608,6 +791,9 @@
                         "type": "Source",
                         "plan_step": [
                             "Step 1: Run"
+                        ],
+                        "commands": [
+                            "conda create -n jepa python=3.9 pip \n conda activate jepa \n python setup.py install`"
                         ],
                         "operating_system": []
                     }
@@ -627,6 +813,10 @@
                             "Step 1: First, download and set up the repo.",
                             "Step 2: We provide an [`environment.yml`](environment.yml) file that can be used to create a Conda environment. If you only want to run pre-trained models locally on CPU, you can remove the `cudatoolkit` and `pytorch-cuda` requirements from the file."
                         ],
+                        "commands": [
+                            "git clone https://github.com/facebookresearch/DiT.git \n cd DiT",
+                            "conda env create -f environment.yml \n conda activate DiT"
+                        ],
                         "operating_system": []
                     }
                 ],
@@ -644,6 +834,10 @@
                         "plan_step": [
                             "Step 1: TorchCP is developed with Python 3.9 and PyTorch 2.0.1. To install TorchCP, simply run.",
                             "Step 2: To install from TestPyPI server, run"
+                        ],
+                        "commands": [
+                            "pip install torchcp",
+                            "pip install --index-url https://test.pypi.org/simple/ --no-deps torchcp"
                         ],
                         "operating_system": []
                     }
@@ -664,6 +858,11 @@
                             "Step 2: Create a new Conda environment and activate it.",
                             "Step 3: (optional): or install necessary package by"
                         ],
+                        "commands": [
+                            "git clone https://github.com/NUS-HPC-AI-Lab/Neural-Network-Diffusion.git",
+                            "conda env create -f environment.yml \n conda activate DiT \n conda activate pdiff",
+                            "pip install -r requirements.txt"
+                        ],
                         "operating_system": []
                     }
                 ],
@@ -683,6 +882,12 @@
                             "Step 2: Please prepare dataset as [`OpenPCDet`](https://github.com/open-mmlab/OpenPCDet).",
                             "Step 3  Setup"
                         ],
+                        "commands": [
+                            "",
+                            "cd Aydiv \n python depth_to_lidar.py",
+                            "",
+                            "cd Aydiv \n python setup.py develop \n cd pcdet/ops/iou3d/cuda_op \n python setup.py develop \n cd ../../../.."
+                        ],
                         "operating_system":[]
                     }
                 ],
@@ -699,6 +904,9 @@
                         "type": "Source",
                         "plan_step": [
                             "Step 1: You can install the development version from GitHub with."
+                        ],
+                        "commands": [
+                            "`r require('devtools') \n install_github(`https://github.com/nand1155/CausNet`)"
                         ],
                         "operating_system":[]
                     }
@@ -718,6 +926,10 @@
                             "Step 1: Clone the repo and navigate to BitDelta:.",
                             "Step 2: Set up environment."
                         ],
+                        "commands": [
+                            "git clone https://github.com/FasterDecoding/BitDelta /n cd BitDelta",
+                            "conda create -yn bitdelta python=3.9 \n conda activate bitdelta \n pip install -e ."
+                        ],
                         "operating_system": []
                     }
                 ],
@@ -734,6 +946,9 @@
                         "type": "Source",
                         "plan_step": [
                             "Step 1: You can use following scripts to install related python package through pip."
+                        ],
+                        "commands": [
+                            "git clone https://github.com/XueyangFeng/ReHAC.git \n cd ReHAC \n pip install -r requirements.txt"
                         ],
                         "operating_system": []
                     }

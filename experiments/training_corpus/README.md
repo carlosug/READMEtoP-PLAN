@@ -61,28 +61,37 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 **Context**: Currently unknown standards for measuring level of difficulty in a research software installation process, and the ```Factor(s)``` that impact the different `Methods` installation process and its `Level of difficulty`.
 
 ### Definitions: 
-- **Installation Methods**: set of instructions as Plan to follow in a research software installation process. In context of the study, there four general different methods (see below).
 
-**`p-plan:Plan`**: a sequence/collection of instatiated **Step(s)** that a machine executes to fulfil its objective in installation. A installation Method (similar to installation procedure or option) is an instance of the `Plan`. A installation method is an instance of the Plan concept. E.g.: We define four general `p-plan:Plan`:
+- **Installation Methods**: indicates a procedure o **Plan** which contains instructions as **Steps** for installing a research software that must be performed in a precise order and under specific conditions. In context of the study, there four general different methods (see below).
 
-| Plan | Name | Subplan | Text |
+**`p-plan:Plan`**: a sequence/collection of instatiated **Step(s)** that a machine executes to fulfil its objective in installation. A installation Method (similar to installation procedure or option) is an instance of the `Plan`. A installation method is an instance of the **Plan** concept. In our study, a README can describe one, or more Plans. We define four general `p-plan:Plan`:
+
+| Plan | Name  | README text |
 | ----- | ----------------- | ---------------------- | --- |
-| 0| source | 3 |  ```Install from Source``` or ```Native Installation``` |
-| 1| container | 7| ```Install with Docker``` or ```Insolated Docker option``` |
-| 2| package manager | 7  | ```with Pip``` or `with conda` |
-| 3| binary | 3  | ```Install from source``` |
+| 0| source |  ```Install from Source``` or ```Native Installation``` |
+| 1| container | ```Installation with Docker``` or ```Isolated Docker option``` |
+| 2| package manager | ```with Pip``` or `with conda` |
+| 3| binary | ```Install from source``` |
 <!-- - **Level of difficulty**: a position on scale that quantify the relative difficulty of completing a task related to installation process in the R/S software. It measures how complex a task is to execute and incluces several `Factors` determine its level. -->
 
 <!-- ```Factor(s)```: type of software, clarity of instructions, presence of **Dependencies**, number of **Steps** involved, and available optional installation methods in the readme. ``Factor(s)`` describes the variables as something akin to `software understanding features`, the features with the goal of facilitating the adoption of a software[ref.Inspect4py](Inspect4py). It includes **DISCLAIMER: bear in mind that determining the exact level of difficulty can still be subjective depending on individual experiences and expertise**.  Based on the given factors, here the scoring scheme could be: -->
 
+Additionally, for each Plan, the following features as **technology** property belongs to a specific Plan. For example:
+- Plan 0 --> Operating System --> a system program that manages the research software installation process --> {linux, windows, mac}
+- Plan 1 --> Container --> a tool that orchestrates the software installation process --> {docker, docker-compose, Podman}
+- Plan 2--> Package Manager --> a method to install and manage software the installation process --> {pip, conda, bioconda}
+
+**`p-plan:Step(s)`**: a list of planned activities as part of a `Plan` to be executed in a specific order. A Step could comprise more than one **action**. Then, a Step within a Plan could be linked to one specific executable operation e.g. *Step 1: First clone this repository via Git*, or refer to a group of activities e.g. *Step 2: Create a new Conda environment and activate it.* We define a Step as the sentence of a readme. Each sentence in a readme is an instance of the Step concept. For instance, the following example shows that `Step 1` involves two activities, and `Step 2` involves one activity:
+
+`## Step 1: activity1[Clone the repository] and actvity2[create a virtual environment]`
+`## Step 2: activity3[Cofigure] the installation with required dependencies`
 
 #### Installation methods:
-
 **Method 0: Source-based installation**
 
 - **Goal**: provide a standardized command-line interface for managing software packages installation process and its dependencies.
 - **Definition**: Installing a software "from source" means installing a software without using automatic tools e.g. container or package manager.
-- **Features**:
+- **Properties**:
 1. Running in command line mode;
 2. Deal with source code dependencies;
 3. Compile the source code and copy the binaries to your computer instead;
@@ -93,8 +102,7 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 
 - **Goal**: provide the source code that contains the original code written by a developer/researcher to enable the ability to review the source code and understand its workings
 - **Definition**: Installing a software "from source" means installing the software along with its dependencies indexed in official package managers.
-- **Requirements**
-
+- **Properties**
 | Name | Channel | Steps | Commands |
 | ----- | ----------------- | ---------------------- | --- |
 | Conda| bioconda | 1 |  ```conda install bioconda::sambamba``` or ```conda install bioconda/label/cf201901::sambamba``` |
@@ -105,20 +113,20 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 |Pypi| | pip | 1 | ```pypi install package``` |
 
 **Method 2: Container-based installation**
-
 + **Goal**: provide a way of packaging research software and their dependencies inside lightweight, standalone containers.
 + **Definition**:  a method to create isolated environments where the application runs consistently regardless of the host environment. Popular container platforms include Docker, Podman, and Singularity.
-+ **Features**:
++ **Properties**:
+
 
 **Method 3: Binary-based installation**
 
 - **Goal**: provide the downloading and running precompiled executable files or libraries specifically designed for a particular operating system and architecture. It is typically located in Github sources and binary releases.
 - **Definition**: a binary files contains the entire codebase and associated resources needed to run the software, eliminating the need for compilation or building the software from source.
-- **Features**:
+- **Properties**:
 + precompiled binaries are ready-to-run executable files
 + Deal with binary dependencies
 + Running usually in in user interface mode
-- **General Steps**:
+<!-- - **General Steps**:
 1. Step 1: Download the tarball.
 2. Step 2: Unpack it
 3. Step 3: Run it according to the accompanying release notes
@@ -132,22 +140,24 @@ cd example
 make
 ```
 
-`Notes`" Sometimes readme contains example on `cmd`:[https://www.qemu.org/download/](https://www.qemu.org/download/)
+`Notes`" Sometimes readme contains example on `cmd`:[https://www.qemu.org/download/](https://www.qemu.org/download/) -->
 
-**`p-plan:Step(s)`**: a list of planned Action(s) or *Activity* as part of a `Plan` to be executed by an Agent. These are a list of indivisible sequence of **actions** that must executed without interruption. *e.g. First clone the repository from source , then create virtual environment*.  Step within a Plan could be linked to one specific executable operation, or refer to a group of operations. A Step then could invoke more than one **action**.  Each sentence in a readme is an instance of the Step concept. E.g.:
 
-`## Step 1: action1[Clone the repository] and action2[create a virtual environment]`
-
-`## Step 2: action3[Cofigure] the installation with required dependencies`
+### Installation instructions as Step
+Capture a collection of **`Step(s)`** within a **`Plan`** for acomplishing research software installation **`Task(s)`**.
 
 ### JSON Structure
 ---
-Dictionary structure of `ground_true_plan_steps.json`:
+**Translating abstract to executable instructions**
+
+Create a method to connect human-readable language instructions to Step(s) (or activity) and collection of Steps as installation Plans in a research software installation task. We limit ourselves to tasks that can be characterized as "software installation and involve manually downloading, extracting, compiling, or configuring individual components. Examples of such tasks are also run a single command to install the desired software and its dependencies. To the best of our knowledge this work is the first to mine complex task descriptions from the readmes and translate them into executable agent plans.
+
+We will present the different steps from the instruction in natural language to an executable plan with the example sentence. Dictionary structure of `ground_true_plan_steps.json`:
 
 ```json
 {
-    "softwares": {
-        "software": [
+    "research_softwares": { # (total number of research softwares)
+        "research_software": [ # (research software dictionary)
             {
                 "id": "1", # (unique research software ID)
                 "name": "AAAI-DISIM-UnivAQ/DALI", # (repository name of research software)
@@ -157,28 +167,19 @@ Dictionary structure of `ground_true_plan_steps.json`:
                     {
                         "type": "Source", # (one of the listed 4 plan types)
                         "plan_step": [
-                            "Step 1: To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.", # (step-by-step1 instruction)
-                            "Step 2: Then, you can download DALI and test it by running an example DALI MAS" # (step-by-step2 instruction)
+                            "Step 1: To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.", # (step-by-step1 initial instruction)
+                            "Step 2: Then, you can download DALI and test it by running an example DALI MAS" # (step-by-step2 end instruction)
                         ],
-                        "commands": [
-                            "", # (executable action step1)
-                            "git clone https://github.com/AAAI-DISIM-UnivAQ/DALI.git \n cd DALI/Examples/advanced \n bash startmas.sh" # (executable action step2)
-                        ],
-                        "operating_system": ["Linux"] # (plan for technology type)
+                        "technology": ["Linux"] # (plan for technology property)
                     },
                     {
                         "type": "Source", # (one of the listed 4 plan types)
                         "plan_step": [
-                            "Step 1: To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.", # (step-by-step1 instruction)
+                            "Step 1: To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.", # (step-by-step1 initial instruction)
                             "Step 2: Then, you can download DALI and test it by running an example DALI MAS", # (step-by-step2 instruction)
-                            "Step 3: Unzip the repository go to the folder DALI/Examples/basic, and test if DALI works by duble clicking startmas.bat file (this will launch an example DALI MAS)" # (step-by-step3 instruction)
+                            "Step 3: Unzip the repository go to the folder DALI/Examples/basic, and test if DALI works by duble clicking startmas.bat file (this will launch an example DALI MAS)" # (step-by-step3 end instruction)
                         ],
-                        "commands": [
-                            "", # (executable action step1)
-                            "", # (executable action step2)
-                            "" # (executable action step3)
-                        ],
-                        "operating_system": ["Windows"] # (plan for technology type)
+                        "technology": ["Windows"] # (plan for technology type)
                     }
                 ],
                 "readme_instructions": "", # (raw content of the readme)
@@ -359,26 +360,21 @@ def analyze_installation(req_file, setup_script, readme, downloads_folder, os_in
 
 ---
 
-### 4. Translating abstract to executable instructions
-
-Create a method to connect human-readable language instructions to Step(s) (or activity) and collection of Steps as installation Plans in a research software installation task. We limit ourselves to tasks that can be characterized as "software installation and involve manually downloading, extracting, compiling, or configuring individual components. Examples of such tasks are also run a single command to install the desired software and its dependencies. To the best of our knowledge this work is the first to mine complex task descriptions from the readmes and translate them into executable agent plans.
-
-We will present the different steps from the instruction in natural language to an executable plan with the example sentence: **Install package from source**.
 
 
-#### 1. structure of instructions is identified
+<!-- #### 1. structure of instructions is identified -->
 <!-- 
 unified model that reuses several semantic models to show how a installation process can be semantically modeled -->
 
 <!-- Let `concepts(w)` be the set of ontological concepts to which the word `w` could be mapped. For a `single instruction (ai, oi, pi)` consisting of an `action verb ai`, an `object oi` and a set of `prepositions` -->
 
-**GOAL**= Capture a collection of **`Step(s)`** within a **`Plan`** for acomplishing software installation **`Task(s)`**
 
-**Ontological `concepts`**
+
+<!-- **Ontological `concepts`**
 
 **1.Properties**:
 
-**2. Classes**:
+**2. Classes**: -->
  
 
  <!-- *e.g. Method 1: Install package from source:* -->
@@ -398,7 +394,7 @@ Possibility to define **`SubPlans`** *e.g. alternative methods for installing so
 
 #### 2. Resolve the meaning of the words using Cyc Ontology and or P-plan
 
-**Formal Instruction Representation**
+<!-- **Formal Instruction Representation**
 
 Each step Step1P1, Step2P1, etc is an instance of an step concept like *Clone this repo*. The Step *Clone this repo* needs to have information about the repository (object) to be cloned and the location where this object is to be placed. For execution, the formal instruction representation has to be transformed into a valid machine-readable plan. The plans for a machine are implemented in P-PLAN, which provides an expressive and extensible vocabulary representation for semantically writing and describing plans *e.g. scientific workflows* to machines.
 
@@ -448,4 +444,4 @@ _:Step2P4 a p-plan:Step, bpmn:ScriptTask ;
     rdfs:comment "2. Install Package" ;
     p-plan:isStepOfPlan _:P2 .
 
-```
+``` -->
