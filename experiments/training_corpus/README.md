@@ -111,7 +111,7 @@ Additionally, for each Plan, the following features as **technology** property b
 | Homebrew| homebrew-bio | 1  | ```brew install brewsci/bio/sambamba``` |
 | Fedora| dnf | 1  | ```dnf install package``` |
 | Debian| apt | 1 | ```apt install package``` |
-|Pypi| | pip | 1 | ```pypi install package``` |
+|Pypi| pip | 1 | ```pypi install package``` |
 
 **Method 2: Container-based installation**
 + **Goal**: provide a way of packaging research software and their dependencies inside lightweight, standalone containers.
