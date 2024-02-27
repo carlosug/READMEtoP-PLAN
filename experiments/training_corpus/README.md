@@ -64,7 +64,7 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 
 - **Installation Methods**: indicates a procedure o **Plan** which contains instructions as **Steps** for installing a research software that must be performed in a precise order and under specific conditions. In context of the study, there four general different methods (see below).
 
-**`p-plan:Plan`**: a sequence/collection of instatiated **Step(s)** that a machine executes to fulfil its objective in installation. A installation Method (similar to installation procedure or option) is an instance of the `Plan`. A installation method is an instance of the **Plan** concept. In our study, a README can describe one, or more Plans. We define four general `p-plan:Plan`:
+- **`Plan`**: a sequence/collection of instatiated **Step(s)** that a machine executes to fulfil its objective in installation. A installation Method (similar to installation procedure or option) is an instance of the `Plan`. A installation method is an instance of the **Plan** concept. In our study, a README can describe one, or more Plans. We define four general `p-plan:Plan`:
 
 | Plan | Name  | README text |
 | ----- | ----------------- | ---------------------- |
@@ -81,9 +81,10 @@ Additionally, for each Plan, the following features as **technology** property b
 - Plan 1 --> Container --> a tool that orchestrates the software installation process --> {docker, docker-compose, Podman}
 - Plan 2--> Package Manager --> a method to install and manage software the installation process --> {pip, conda, bioconda}
 
-**`p-plan:Step(s)`**: a list of planned activities as part of a `Plan` to be executed in a specific order. A Step could comprise more than one **action**. Then, a Step within a Plan could be linked to one specific executable operation e.g. *Step 1: First clone this repository via Git*, or refer to a group of activities e.g. *Step 2: Create a new Conda environment and activate it.* We define a Step as the sentence of a readme. Each sentence in a readme is an instance of the Step concept. For instance, the following example shows that `Step 1` involves two activities, and `Step 2` involves one activity:
+- **`Step(s)`**: a list of planned activities as part of a `Plan` to be executed in a specific order. A Step could comprise more than one **action**. Then, a Step within a Plan could be linked to one specific executable operation e.g. *Step 1: First clone this repository via Git*, or refer to a group of activities e.g. *Step 2: Create a new Conda environment and activate it.* We define a Step as the sentence of a readme. Each sentence in a readme is an instance of the Step concept. For instance, the following example shows that `Step 1` involves two activities, and `Step 2` involves one activity:
 
 `## Step 1: activity1[Clone the repository] and actvity2[create a virtual environment]`
+
 `## Step 2: activity3[Cofigure] the installation with required dependencies`
 
 #### Installation methods:
@@ -102,11 +103,11 @@ Additionally, for each Plan, the following features as **technology** property b
 
 - **Goal**: provide the source code that contains the original code written by a developer/researcher to enable the ability to review the source code and understand its workings
 - **Definition**: Installing a software "from source" means installing the software along with its dependencies indexed in official package managers.
-- **Properties**
+- **Properties**:
 | Name | Channel | Steps | Commands |
 | ----- | ----------------- | ---------------------- | --- |
 | Conda| bioconda | 1 |  ```conda install bioconda::sambamba``` or ```conda install bioconda/label/cf201901::sambamba``` |
-| GNU Guix| | 1 | ```guix install sambamba``` or | ```guix install sambamba``` |
+| GNU Guix| | 1 | ```guix install sambamba``` or ```guix install sambamba``` |
 | Homebrew| homebrew-bio | 1  | ```brew install brewsci/bio/sambamba``` |
 | Fedora| dnf | 1  | ```dnf install package``` |
 | Debian| apt | 1 | ```apt install package``` |
