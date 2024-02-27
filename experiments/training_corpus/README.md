@@ -104,10 +104,11 @@ Additionally, for each Plan, the following features as **technology** property b
 - **Goal**: provide the source code that contains the original code written by a developer/researcher to enable the ability to review the source code and understand its workings
 - **Definition**: Installing a software "from source" means installing the software along with its dependencies indexed in official package managers.
 - **Properties**:
+
 | Name | Channel | Steps | Commands |
 | ----- | ----------------- | ---------------------- | --- |
 | Conda| bioconda | 1 |  ```conda install bioconda::sambamba``` or ```conda install bioconda/label/cf201901::sambamba``` |
-| GNU Guix| | 1 | ```guix install sambamba``` or ```guix install sambamba``` |
+| GNU Guix| - | 1 | ```guix install sambamba``` or ```guix install sambamba``` |
 | Homebrew| homebrew-bio | 1  | ```brew install brewsci/bio/sambamba``` |
 | Fedora| dnf | 1  | ```dnf install package``` |
 | Debian| apt | 1 | ```apt install package``` |
