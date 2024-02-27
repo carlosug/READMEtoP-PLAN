@@ -58,13 +58,11 @@ Annotated benchmark, curated by hand. It contains following fields (associated w
 ---
 <!-- ### 3. Classify research software installation options (`Method`) and level of difficulty: -->
 
-**Context**: Currently unknown standards for measuring level of difficulty in a research software installation process, and the ```Factor(s)``` that impact the different `Methods` installation process and its `Level of difficulty`.
-
 ### Definitions: 
 
-- **Installation Methods**: indicates a procedure o **Plan** which contains instructions as **Steps** for installing a research software that must be performed in a precise order and under specific conditions. In context of the study, there four general different methods (see below).
+1. **Installation Methods**: indicates a procedure o **Plan** which contains instructions as **Steps** for installing a research software that must be performed in a precise order and under specific conditions. In context of the study, there four general different methods (see below).
 
-- **`Plan`**: a sequence/collection of instatiated **Step(s)** that a machine executes to fulfil its objective in installation. A installation Method (similar to installation procedure or option) is an instance of the `Plan`. A installation method is an instance of the **Plan** concept. In our study, a README can describe one, or more Plans. We define four general `p-plan:Plan`:
+2. **`Plan`**: a sequence/collection of instatiated **Step(s)** that a machine executes to fulfil its objective in installation. A installation Method (similar to installation procedure or option) is an instance of the `Plan`. A installation method is an instance of the **Plan** concept. In our study, a README can describe one, or more Plans. We define four general `p-plan:Plan`:
 
 | Plan | Name  | README text |
 | ----- | ----------------- | ---------------------- |
@@ -81,13 +79,14 @@ Additionally, for each Plan, the following features as **technology** property b
 - Plan 1 --> Container --> a tool that orchestrates the software installation process --> {docker, docker-compose, Podman}
 - Plan 2--> Package Manager --> a method to install and manage software the installation process --> {pip, conda, bioconda}
 
-- **`Step(s)`**: a list of planned activities as part of a `Plan` to be executed in a specific order. A Step could comprise more than one **action**. Then, a Step within a Plan could be linked to one specific executable operation e.g. *Step 1: First clone this repository via Git*, or refer to a group of activities e.g. *Step 2: Create a new Conda environment and activate it.* We define a Step as the sentence of a readme. Each sentence in a readme is an instance of the Step concept. For instance, the following example shows that `Step 1` involves two activities, and `Step 2` involves one activity:
+3. **`Step(s)`**: a list of planned activities as part of a `Plan` to be executed in a specific order. A Step could comprise more than one **action**. Then, a Step within a Plan could be linked to one specific executable operation e.g. *Step 1: First clone this repository via Git*, or refer to a group of activities e.g. *Step 2: Create a new Conda environment and activate it.* We define a Step as the sentence of a readme. Each sentence in a readme is an instance of the Step concept. For instance, the following example shows that `Step 1` involves two activities, and `Step 2` involves one activity:
 
 `## Step 1: activity1[Clone the repository] and actvity2[create a virtual environment]`
 
 `## Step 2: activity3[Cofigure] the installation with required dependencies`
 
-#### Installation methods:
+---
+#### 1. Installation methods:
 **Method 0: Source-based installation**
 
 - **Goal**: provide a standardized command-line interface for managing software packages installation process and its dependencies.
@@ -144,7 +143,7 @@ make
 
 `Notes`" Sometimes readme contains example on `cmd`:[https://www.qemu.org/download/](https://www.qemu.org/download/) -->
 
-
+--
 ### Installation instructions as Step
 Capture a collection of **`Step(s)`** within a **`Plan`** for acomplishing research software installation **`Task(s)`**.
 
