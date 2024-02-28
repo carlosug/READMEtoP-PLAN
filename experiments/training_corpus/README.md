@@ -101,7 +101,7 @@ Additionally, for each Plan, the following features as **technology** property b
 **Method 1: Package manager-based installation**
 
 - **Goal**: provide the source code that contains the original code written by a developer/researcher to enable the ability to review the source code and understand its workings
-- **Definition**: Installing a software "from source" means installing the software along with its dependencies indexed in official package managers.
+- **Definition**: Installing a software "from pip" means installing the software along with its dependencies indexed in official package managers.
 - **Properties**:
 
 | Name | Channel | Steps | Commands |
