@@ -953,7 +953,7 @@
             "n_plans": 3,
             "plans": [
               {
-                "type": "Source",
+                "type": "Packagemanager",
                 "steps": [
                   {
                     "text": " To install the current release, which includes support for [CUDA-enabled GPU cards](https://www.tensorflow.org/install/gpu) *(Ubuntu and Windows)*:",
@@ -975,7 +975,7 @@
                 ]
               },
               {
-                "type": "Source",
+                "type": "Packagemanager",
                 "steps": [
                   {
                     "text": " Other devices (DirectX and MacOS-metal) are supported using [Device plugins](https://www.tensorflow.org/install/gpu_plugins#available_devices).",
