@@ -2,7 +2,7 @@
     "study_subjects": {
       "research_software": [
         {
-          "id": "unique identifier",
+          "id": "0",
           "name": "repo name",
           "url": "readme raw url",
           "n_plans": "total count Plans",
@@ -110,8 +110,8 @@
           "readme_instructions": ""
         },
           {
-            "id": "3-NO-VALID",
-            "name": "MelosY/CAM",
+            "id": "3",
+            "name": "MelosY/CAM-NO_VALID",
             "url": "https://raw.githubusercontent.com/MelosY/CAM/main/README.md",
             "n_plans": 1,
             "plans": [
@@ -354,8 +354,8 @@
             "readme_instructions": "## Installation The project can be installed by running the following command in your terminal: ```bash pip install -r requirements.txt ```"
           },
           {
-            "id": "10-DANI-TO-CHECK (comment: author utilises substeps)",
-            "name": "viralInformatics/VIGA",
+            "id": "10",
+            "name": "viralInformatics/VIGA-DANI-TO-CHECK (comment: author utilises substeps)",
              "url": "https://raw.githubusercontent.com/viralInformatics/VIGA/master/README.md",
             "n_plans": 1,
             "plans": [
@@ -495,8 +495,8 @@
             "readme_instructions": "NRN-EZ was built with PyInstaller 3.6, and requires the following languages and libraries: • Python 3.6.9 and higher (currently up to 3.10) • PyQt 5.10.1 • PyQtGraph 0.11.0 Installation instructions for Linux (Ubuntu and Pop!_OS): download the Linux zip file and, from the command window, run a bash command for the install.sh file, in the corresponding installation folder. Installation instructions for Mac OS: download the Mac zip file and copy the NRN-EZ app to the Applications folder. Installation instructions for Windows: download the Win zip file and run the installation wizard."
           },
           {
-            "id": "12-NO VALID",
-            "name": "dyxstat/Reproduce_ViralCC",
+            "id": "12",
+            "name": "dyxstat/Reproduce_ViralCC-NOVALID",
              "url": "https://raw.githubusercontent.com/dyxstat/Reproduce_ViralCC/main/README.md",
             "n_plans": 1,
             "plans": [
@@ -519,8 +519,8 @@
             "readme_instructions": "NRN-EZ was built with PyInstaller 3.6, and requires the following languages and libraries: • Python 3.6.9 and higher (currently up to 3.10) • PyQt 5.10.1 • PyQtGraph 0.11.0 Installation instructions for Linux (Ubuntu and Pop!_OS): download the Linux zip file and, from the command window, run a bash command for the install.sh file, in the corresponding installation folder. Installation instructions for Mac OS: download the Mac zip file and copy the NRN-EZ app to the Applications folder. Installation instructions for Windows: download the Win zip file and run the installation wizard."
           },
           {
-            "id": "13-NO VALID",
-            "name": "apple/ml-mgie",
+            "id": "13",
+            "name": "apple/ml-mgie-NO VALID",
             "url": "https://raw.githubusercontent.com/apple/ml-mgie/main/README.md",
             "n_plans": 3,
             "plans": [
@@ -839,8 +839,8 @@
             "readme_instructions": "## Setup This codebase is supported on Ubuntu and has not been tested on Windows or macOS. We recommend using TPUs for training and inference, although it is also possible to use GPUs. On TPU, the code is highly optimized with Jax's Pallas and can achieve high MFUs with RingAttention at very large context sizes. On GPU, the code is based on XLA and is not as optimized as it is for TPU. Install the requirements with: ``` conda create -n lwm python=3.10 pip install -U `jax[cuda12_pip]==0.4.23` -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html pip install -r requirements.txt ``` or set up TPU VM with: ``` sh tpu_vm_setup.sh ```"
           },
           {
-            "id": "18-DANI comment: should we annotate only the Step 1?",
-            "name": "microsoft/UFO",
+            "id": "18",
+            "name": "microsoft/UFO-DANI comment: should we annotate only the Step 1?",
             "url": "https://raw.githubusercontent.com/microsoft/UFO/main/README.md",
             "n_plans": 1,
             "plans": [
@@ -877,8 +877,8 @@
             "readme_instructions": "## ✨ Getting Started ### 🛠️ Step 1: Installation UFO requires **Python >= 3.10** running on **Windows OS >= 10**. It can be installed by running the following command: ```bash # [optional to create conda environment] # conda create -n ufo python=3.10 # conda activate ufo # clone the repository git clone https://github.com/microsoft/UFO.git cd UFO # install the requirements pip install -r requirements.txt ``` ### ⚙️ Step 2: Configure the LLMs Before running UFO, you need to provide your LLM configurations. You can configure `ufo/config/config.yaml` file as follows. #### OpenAI ``` API_TYPE: `openai`` OPENAI_API_BASE: `https://api.openai.com/v1/chat/completions` # The base URL for the OpenAI API OPENAI_API_KEY: `YOUR_API_KEY` # Set the value to the openai key for the llm model OPENAI_API_MODEL: `GPTV_MODEL_NAME` # The only OpenAI model by now that accepts visual input ``` #### Azure OpenAI (AOAI) ``` API_TYPE: `aoai` OPENAI_API_BASE: `YOUR_ENDPOINT` # The AOAI API address. Format: https://{your-resource-name}.openai.azure.com/openai/deployments/{deployment-id}/chat/completions?api-version={api-version} OPENAI_API_KEY: `YOUR_API_KEY` # Set the value to the openai key for the llm model OPENAI_API_MODEL: `GPTV_MODEL_NAME` # The only OpenAI model by now that accepts visual input ```"
           },
           {
-            "id": "19-NO VALID",
-            "name": "catid/dora",
+            "id": "19",
+            "name": "catid/dora-NO VALID",
             "url": "https://raw.githubusercontent.com/catid/dora/main/README.md",
             "n_plans": 1,
             "plans": [
@@ -1212,8 +1212,8 @@
             "readme_instructions": "### Installation 1. Copy the `CamGen_v2` folder into the Blender [add-on folder](https://docs.blender.org/manual/en/latest/advanced/blender_directory_layout.html#platform-dependent-paths) that is right for your operating system, e.g. for Blender 4.0 under Linux ~/.config/blender/4.0/scripts/addons/ 2. Open Blender and navigate to `Edit > Preferences > Add-ons` 3. Find and activate `Generic: Camera_Generator_v2` the list of available Add-ons. **You will need to press *refresh* in the Add-ons panel if you do not see the Camera_Generator option.** 4. [Optional] To enable experimental lens analysis operations and plotting of the results, additional packages have to be installed for Blender's bundled Python version. '`$BLENDERPATH/$VERSION/python/bin/python3.10 -m pip install matplotlib PyQt5`'"
           },
           {
-            "id": "26-NO-VALID",
-            "name": "facebookresearch/jepa",
+            "id": "26",
+            "name": "facebookresearch/jepa-NOVALID",
             "url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
             "n_plans": 1,
             "plans": [
@@ -1274,8 +1274,8 @@
             "readme_instructions": "## Setup First, download and set up the repo: ```bash git clone https://github.com/facebookresearch/DiT.git cd DiT ``` We provide an [`environment.yml`](environment.yml) file that can be used to create a Conda environment. If you only want to run pre-trained models locally on CPU, you can remove the `cudatoolkit` and `pytorch-cuda` requirements from the file. ```bash conda env create -f environment.yml conda activate DiT ```"
           },
           {
-            "id": "28-DANI-comment: to install from server is optional or another distinct plan?",
-            "name": "ml-stat-Sustech/TorchCP",
+            "id": "28",
+            "name": "ml-stat-Sustech/TorchCP--DANI-comment: to install from server is optional or another distinct plan?",
             "url": "https://raw.githubusercontent.com/ml-stat-Sustech/TorchCP/master/README.md",
             "n_plans": 1,
             "plans": [
@@ -1422,8 +1422,8 @@
             "readme_instructions": "## Install 1. Clone the repo and navigate to BitDelta: ``` git clone https://github.com/FasterDecoding/BitDelta cd BitDelta ``` 2. Set up environment: ```bash conda create -yn bitdelta python=3.9 conda activate bitdelta pip install -e . ```"
           },
           {
-            "id": "33-NO-VALID",
-            "name": "XueyangFeng/ReHAC",
+            "id": "33",
+            "name": "XueyangFeng/ReHAC-NOVALID",
             "url": "https://raw.githubusercontent.com/XueyangFeng/ReHAC/main/README.md",
             "n_plans": 1,
             "plans": [
