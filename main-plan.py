@@ -67,7 +67,6 @@ if __name__ == '__main__':
 
 
     # Example usage:
-    # Assuming your JSON file has an array of readmes
     json_file_path = './scr/output.json'
     result_list = extract_installation_instructions_from_json(json_file_path)
 
