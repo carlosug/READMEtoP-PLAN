@@ -2,30 +2,6 @@
     "study_subjects": {
       "research_software": [
         {
-          "id": "0",
-          "name": "repo name",
-          "url": "readme raw url",
-          "n_plans": "total count Plans",
-          "plans": [
-            {
-              "type": "Plan type: labels --> binary, container, packagemanager, source",
-              "steps": [
-                {
-                  "text": "raw excerpt step n from readme",
-                  "seq_order": 1,
-                  "is_optional": false,
-                  "note": "extra information in each step",
-                  "commands": "arguments for each step"
-                }
-              ],
-              "technology": [
-                "OS type", "PackageManager tool", "Container tool"
-              ]
-            }
-          ],
-          "readme_instructions": "raw installation instruction section of each readme"
-        },
-        {
             "id": "1",
             "name": "AAAI-DISIM-UnivAQ/DALI",
             "url": "https://raw.githubusercontent.com/AAAI-DISIM-UnivAQ/DALI/master/README.md",
@@ -83,7 +59,7 @@
                 ]
               }
             ],
-            "readme_instructions": ""
+            "readme_instructions": "## Installation **OS X & Linux:** 1. To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html. 2. Then, you can download DALI and test it by running an example DALI MAS: ```sh git clone https://github.com/AAAI-DISIM-UnivAQ/DALI.git cd DALI/Examples/advanced bash startmas.sh ``` &nbsp;&nbsp;&nbsp;&nbsp; You will see different windows opening: * &nbsp;&nbsp;&nbsp;&nbsp; Prolog LINDA server (active_server_wi.pl) * &nbsp;&nbsp;&nbsp;&nbsp; Prolog FIPA client (active_user_wi.pl) * &nbsp;&nbsp;&nbsp;&nbsp; 1 instance of DALI metaintepreter for each agent (active_dali_wi.pl) **Windows:** 1. To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html. 2. Then, you can download DALI from https://github.com/AAAI-DISIM-UnivAQ/DALI.git. 3. Unzip the repository, go to the folder 'DALI/Examples/basic', and test if DALI works by duble clicking 'startmas.bat' file (this will launch an example DALI MAS). \n\n &nbsp;&nbsp;&nbsp;&nbsp; You will see different windows opening: * &nbsp;&nbsp;&nbsp;&nbsp; Prolog LINDA server (active_server_wi.pl) * &nbsp;&nbsp;&nbsp;&nbsp; Prolog FIPA client (active_user_wi.pl) * &nbsp;&nbsp;&nbsp;&nbsp; 1 instance of DALI metaintepreter for each agent (active_dali_wi.pl)"
           },
         {
           "id": "2",
@@ -107,11 +83,11 @@
               ]
             }
           ],
-          "readme_instructions": ""
+          "readme_instructions": "## Installation \n Please refer to the `setup.py` file for installation instructions."
         },
           {
             "id": "3",
-            "name": "MelosY/CAM-NO_VALID",
+            "name": "NO-VALID",
             "url": "https://raw.githubusercontent.com/MelosY/CAM/main/README.md",
             "n_plans": 1,
             "plans": [
@@ -355,7 +331,7 @@
           },
           {
             "id": "10",
-            "name": "viralInformatics/VIGA-DANI-TO-CHECK (comment: author utilises substeps)",
+            "name": "viralInformatics/VIGA",
              "url": "https://raw.githubusercontent.com/viralInformatics/VIGA/master/README.md",
             "n_plans": 1,
             "plans": [
@@ -363,14 +339,14 @@
                 "type": "Source",
                 "steps": [
                   {
-                    "text": "Step1: Download VIGA \n Download VIGA with Git from GitHub",
+                    "text": "Download VIGA \n Download VIGA with Git from GitHub",
                     "seq_order": 1,
                     "is_optional": false,
                     "note": "or Download ZIP to local",
                     "commands": "```git clone https://github.com/viralInformatics/VIGA.git``"
                   },
                   {
-                    "text": "### Step 2: Download Database \n 1. download taxdmp.zip [Index of /pub/taxonomy (nih.gov)](https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/) and unzip taxdmp.zip and put it in ./db/",
+                    "text": "1. download taxdmp.zip [Index of /pub/taxonomy (nih.gov)](https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/) and unzip taxdmp.zip and put it in ./db/",
                     "seq_order": 2,
                     "is_optional": false,
                     "note": "",
@@ -412,7 +388,7 @@
                     "commands": "diamond makedb --in YourPath/RefSeqVirusProtein  -d Diamond_RefSeqVirusProtein --taxonmap YourPath/prot.accession2taxid --taxonnodes YourPath/nodes.dmp \n diamond makedb --in nr -d Dimond_nr --taxonmap YourPath/prot.accession2taxid --taxonnodes YourPath/nodes.dmp"
                   },
                   {
-                    "text": "### Step 3: Installation of dependent software \n #### Installing Some Software Using Conda",
+                    "text": "Installing Some Software Using Conda",
                     "seq_order": 8,
                     "is_optional": false,
                     "note": "",
@@ -426,7 +402,7 @@
                     "commands": ""
                   },
                   {
-                    "text": "Step 4: Python Dependencies \n Base on python 3.6.8",
+                    "text": "Python Dependencies \n Base on python 3.6.8",
                     "seq_order": 10,
                     "is_optional": false,
                     "note": "",
@@ -496,7 +472,7 @@
           },
           {
             "id": "12",
-            "name": "dyxstat/Reproduce_ViralCC-NOVALID",
+            "name": " NOVALID",
              "url": "https://raw.githubusercontent.com/dyxstat/Reproduce_ViralCC/main/README.md",
             "n_plans": 1,
             "plans": [
@@ -520,7 +496,7 @@
           },
           {
             "id": "13",
-            "name": "apple/ml-mgie-NO VALID",
+            "name": "NOVALID",
             "url": "https://raw.githubusercontent.com/apple/ml-mgie/main/README.md",
             "n_plans": 3,
             "plans": [
@@ -840,7 +816,7 @@
           },
           {
             "id": "18",
-            "name": "microsoft/UFO-DANI comment: should we annotate only the Step 1?",
+            "name": "microsoft/UFO",
             "url": "https://raw.githubusercontent.com/microsoft/UFO/main/README.md",
             "n_plans": 1,
             "plans": [
@@ -853,20 +829,6 @@
                     "is_optional": false,
                     "note": "UFO requires **Python >= 3.10** running on **Windows OS >= 10**. It can be installed by running the following command:",
                     "commands": "```bash # [optional to create conda environment] # conda create -n ufo python=3.10 # conda activate ufo # clone the repository git clone https://github.com/microsoft/UFO.git cd UFO # install the requirements pip install -r requirements.txt ```"
-                  },
-                  {
-                    "text": "### ⚙️ Step 2: Configure the LLMs",
-                    "seq_order": 2,
-                    "is_optional": false,
-                    "note": "Before running UFO, you need to provide your LLM configurations. You can configure `ufo/config/config.yaml` file as follows.",
-                    "commands": "`#### OpenAI ``` API_TYPE: openai OPENAI_API_BASE: https://api.openai.com/v1/chat/completions # The base URL for the OpenAI API OPENAI_API_KEY: YOUR_API_KEY # Set the value to the openai key for the llm model OPENAI_API_MODEL: GPTV_MODEL_NAME # The only OpenAI model by now that accepts visual input ``` #### Azure OpenAI (AOAI) ``` API_TYPE: aoai OPENAI_API_BASE: YOUR_ENDPOINT # The AOAI API address. Format: https://{your-resource-name}.openai.azure.com/openai/deployments/{deployment-id}/chat/completions?api-version={api-version} OPENAI_API_KEY: YOUR_API_KEY # Set the value to the openai key for the llm model OPENAI_API_MODEL: GPTV_MODEL_NAME # The only OpenAI model by now that accepts visual input"
-                  },
-                  {
-                    "text": "### 🎉 Step 3: Start UFO",
-                    "seq_order": 3,
-                    "is_optional": false,
-                    "note": "#### ⌨️ You can execute the following on your Windows command Line (CLI):",
-                    "commands": "# assume you are in the cloned UFO folder \n python -m ufo --task <your_task_name>"
                   }
                 ],
                 "technology": [
@@ -874,11 +836,11 @@
                 ]
               }
             ],
-            "readme_instructions": "## ✨ Getting Started ### 🛠️ Step 1: Installation UFO requires **Python >= 3.10** running on **Windows OS >= 10**. It can be installed by running the following command: ```bash # [optional to create conda environment] # conda create -n ufo python=3.10 # conda activate ufo # clone the repository git clone https://github.com/microsoft/UFO.git cd UFO # install the requirements pip install -r requirements.txt ``` ### ⚙️ Step 2: Configure the LLMs Before running UFO, you need to provide your LLM configurations. You can configure `ufo/config/config.yaml` file as follows. #### OpenAI ``` API_TYPE: `openai`` OPENAI_API_BASE: `https://api.openai.com/v1/chat/completions` # The base URL for the OpenAI API OPENAI_API_KEY: `YOUR_API_KEY` # Set the value to the openai key for the llm model OPENAI_API_MODEL: `GPTV_MODEL_NAME` # The only OpenAI model by now that accepts visual input ``` #### Azure OpenAI (AOAI) ``` API_TYPE: `aoai` OPENAI_API_BASE: `YOUR_ENDPOINT` # The AOAI API address. Format: https://{your-resource-name}.openai.azure.com/openai/deployments/{deployment-id}/chat/completions?api-version={api-version} OPENAI_API_KEY: `YOUR_API_KEY` # Set the value to the openai key for the llm model OPENAI_API_MODEL: `GPTV_MODEL_NAME` # The only OpenAI model by now that accepts visual input ```"
+            "readme_instructions": "## ✨ Getting Started ### 🛠️ Step 1: Installation UFO requires **Python >= 3.10** running on **Windows OS >= 10**. It can be installed by running the following command: ```bash # [optional to create conda environment] # conda create -n ufo python=3.10 # conda activate ufo # clone the repository git clone https://github.com/microsoft/UFO.git cd UFO # install the requirements pip install -r requirements.txt ```"
           },
           {
             "id": "19",
-            "name": "catid/dora-NO VALID",
+            "name": "NOVALID",
             "url": "https://raw.githubusercontent.com/catid/dora/main/README.md",
             "n_plans": 1,
             "plans": [
@@ -1168,7 +1130,7 @@
           },
           {
             "id": "25",
-            "name": "",
+            "name": "ungetym/blender-camera-generator",
             "url": "https://gitlab.com/ungetym/blender-camera-generator/-/raw/main/README.md?ref_type=heads",
             "n_plans": 1,
             "plans": [
@@ -1213,7 +1175,7 @@
           },
           {
             "id": "26",
-            "name": "facebookresearch/jepa-NOVALID",
+            "name": "NOVALID",
             "url": "https://raw.githubusercontent.com/facebookresearch/jepa/main/README.md",
             "n_plans": 1,
             "plans": [
@@ -1275,9 +1237,9 @@
           },
           {
             "id": "28",
-            "name": "ml-stat-Sustech/TorchCP--DANI-comment: to install from server is optional or another distinct plan?",
+            "name": "ml-stat-Sustech/TorchCP",
             "url": "https://raw.githubusercontent.com/ml-stat-Sustech/TorchCP/master/README.md",
-            "n_plans": 1,
+            "n_plans": 2,
             "plans": [
               {
                 "type": "Packagemanager",
@@ -1288,17 +1250,25 @@
                     "is_optional": false,
                     "note": "TorchCP is developed with Python 3.9 and PyTorch 2.0.1.",
                     "commands": "```pip install torchcp```"
-                  },
+                  }
+                ],
+                "technology": [
+                  "pip"
+                ]
+              },
+              {
+                "type": "Packagemanager",
+                "steps": [
                   {
                     "text": "To install from TestPyPI server, run",
                     "seq_order": 2,
-                    "is_optional": true,
+                    "is_optional": false,
                     "note": "",
                     "commands": "```pip install --index-url https://test.pypi.org/simple/ --no-deps torchcp```"
                   }
                 ],
                 "technology": [
-                  "pip"
+                  "TestPyPI server"
                 ]
               }
             ],
@@ -1423,7 +1393,7 @@
           },
           {
             "id": "33",
-            "name": "XueyangFeng/ReHAC-NOVALID",
+            "name": "NOVALID",
             "url": "https://raw.githubusercontent.com/XueyangFeng/ReHAC/main/README.md",
             "n_plans": 1,
             "plans": [

@@ -1,0 +1,158 @@
+[
+  [
+    "1",
+    "```json\n{\n  \"plan\": [\n    {\n      \"type\": \"OS X & Linux\",\n      \"steps\": [\n        {\n          \"text\": \"To download and install SICStus Prolog (it is needed), follow the instructions at\u00a0https://sicstus.sics.se/download4.html.\",\n          \"n_steps\": 1\n        },\n        {\n          \"text\": \"Then, you can download DALI"
+  ],
+  [
+    "2",
+    "```python\nimport json\n\nreadmes = [\n    \"## Installation \\n Please refer to the `setup.py` file for installation instructions.\"\n]\n\nresults = {}\n\nfor i, readme in enumerate(readmes):\n    # Extract the installation instructions\n    instructions = readme.split(\"\\n\")[2].splitlines()\n\n    # Create a list of instructions\n    steps = [{\"text\": instruction.strip(), \"n_steps\": len(instructions)} for instruction"
+  ],
+  [
+    "3",
+    "```python\nimport json\n\nreadmes = [\"Readme1.txt\", \"Readme2.txt\", \"Readme3.txt\", \"Readme4.txt\"]\n\nresults = {}\n\nfor readme in readmes:\n    with open(readme) as f:\n        content = f.read()\n\n    # Extract installation instructions for each method\n    lines = content.splitlines()\n    instructions = []\n    for line in lines:\n        if line."
+  ],
+  [
+    "4",
+    "```python\nimport json\n\nreadme_text = \"\"\"## Getting Started Step 1: Download the dataset folder from onedrive by [data.zip](https://portland-my.sharepoint.com/:u:/g/personal/liuhui3-c_my_cityu_edu_hk/EfApQlFP3PhFjUW4527STo0BALMdP16zs-HPMNgwQVFWsA?e="
+  ],
+  [
+    "5",
+    "```python\nimport json\n\nreadme_text = \"\"\"## Installation\n\nClone this repository and its submodules. We use docker to install dependencies.\n\nThe recommended way to build the docker image is:\n\n```bash\ndocker build -t steam_icp \n --build-arg USERID=$(id -u) \n --build-arg GROUPID=$(id -g) \n --build-arg USERNAME=$(whoami) \n --build-arg HOMEDIR"
+  ],
+  [
+    "6",
+    "```json\n{\n\"plan\": [\n{\n\"type\": \"Source\",\n\"steps\": [\n{\"text\": \"Checkout the repository\", \"n_steps\": 1},\n{\"text\": \"Install python dependencies with `pip3 install -r requirements.txt`\", \"n_steps\": 1},\n{\"text\": \"Install `pygirgs` package\", \"n_steps\": 1},\n{\"text\": \"Install R dependencies (used for"
+  ],
+  [
+    "7",
+    "```python\nimport json\n\nread_me_text = \"\"\"## Installation pip install -r requirements.txt *Note: I did not us a virtual environment so the packages in the requirements.txt file are probably not reflective of all the packages used in this project. If some issues pop up please don't hesitate to email me at: gpinto@usc.edu*\"\"\"\n\n# Extract the installation instructions for each method\ninstructions = read_me_text.split(\"**\")"
+  ],
+  [
+    "8",
+    "```python\nimport json\n\n# Readme text\nreadme_text = \"\"\"## Installation ### Dependencies\n\nInitialize git submodules with `git submodule init` and `git submodule update`.\n\nInstall the specific versions of every package from `requirements.txt` in a new conda environment:\n\n```\nconda create --name gsft python=3.9\nconda activate gsft\npip install -r requirements.txt\n```\n\nTo ensure that Python paths are properly defined, update the"
+  ],
+  [
+    "9",
+    "```python\nimport json\n\nread_me_text = \"\"\"## Installation\n\nThe project can be installed by running the following command in your terminal:\n\n```bash\npip install -r requirements.txt\n```\"\"\"\n\n# Extract the installation instructions for each method\ninstructions = read_me_text.split(\"By running the following command\")[-1].splitlines()\n\n# Remove unnecessary text and format the remaining instructions into a JSON dictionary\ndata = {\"plan\": [{\"type\": \""
+  ],
+  [
+    "10",
+    "```json\n{\n\"plan\": [\n    {\n\"type\": \"Source\",\n\"steps\": [\n    {\"text\": \"Download the source code and unzip taxdmp.zip to the ./db directory.\", \"n_steps\": 2},\n    {\"text\": \"Download the prot.accession2taxid and RefSeqVirusProtein files.\", \"n_steps\": 3},\n    {\"text\": \"Download the nr file and extract it.\", \""
+  ],
+  [
+    "11",
+    "```json\n{\"plan\": [\n  {\n    \"type\": \"Linux (Ubuntu and Pop!_OS)\"\n  },\n  {\n    \"type\": \"Mac OS\"\n  },\n  {\n    \"type\": \"Windows\"\n  }\n], \"steps\": [\n  {\n    \"text\": \"Download the Linux zip file and, from the command window, run a bash command for the install.sh file, in the corresponding installation folder"
+  ],
+  [
+    "12",
+    "```json\n{\"plan\": [\n  {\n    \"type\": \"Linux (Ubuntu and Pop!_OS)\"\n  },\n  {\n    \"type\": \"Mac OS\"\n  },\n  {\n    \"type\": \"Windows\"\n  }\n], \"steps\": [\n  {\n    \"text\": \"Download the Linux zip file and, from the command window, run a bash command for the install.sh file, in the corresponding installation folder"
+  ],
+  [
+    "13",
+    "```json\n{\"plan\": [\n  {\n    \"type\": \"Linux (Ubuntu and Pop!_OS)\"\n  },\n  {\n    \"type\": \"Mac OS\"\n  },\n  {\n    \"type\": \"Windows\"\n  }\n], \"steps\": [\n  {\n    \"text\": \"Download the Linux zip file and, from the command window, run a bash command for the install.sh file, in the corresponding installation folder"
+  ],
+  [
+    "14",
+    "```python\nimport json\n\nreadme_text = \"\"\"## Setup The following steps provide the necessary setup to run our codes.\n\n1. Create a Python virtual environment with Conda:\n```\nconda create -n myenv python=3.10 conda activate myenv\n```\n\n2. Install PyTorch `v2.1.0` with compatible cuda version, following instructions from [PyTorch Installation Page](https://pytorch.org/get-started/locally/). For"
+  ],
+  [
+    "15",
+    "```python\nimport json\n\n# Readme text\nreadme_text = \"\"\"## Requirements The code has been tested with Python 3.9.13. Please first install the required packages by: ```bash pip install -r requirements.txt ``` You also need an OpenAI API key to run GeneGPT with Codex. Replace the placeholder with your key in `config.py`: ```bash $ cat config.py API_KEY = 'YOUR_OPENAI_API_KEY' ``"
+  ],
+  [
+    "16",
+    "```python\nimport json\n\nread_me_text = \"\"\"### Docker installation (isolated)\n\n...\n\n#### Native installation\n\n...\n\n\"\"\"\n\n# Extract installation instructions for each method\nmethods = [\"Docker installation (isolated)\", \"Native installation\"]\n\n# Create a JSON object\ninstallation_instructions = {\"plan\": [{\"type\": m, \"steps\": []} for m in methods], \"version\": \"1.0.0\"}\n\n# Iterate over the methods and fill in the"
+  ],
+  [
+    "17",
+    "```python\nimport json\n\nread_me_text = \"\"\"## Setup This codebase is supported on Ubuntu and has not been tested on Windows or macOS. We recommend using TPUs for training and inference, although it is also possible to use GPUs. On TPU, the code is highly optimized with Jax's Pallas and can achieve high MFUs with RingAttention at very large context sizes. On GPU, the code is based on XLA and is not as optimized as it is for TPU."
+  ],
+  [
+    "18",
+    "```python\nimport json\n\nread_me_text = \"\"\"## \u2728 Getting Started ### \ud83d\udee0\ufe0f Step 1: Installation UFO requires **Python >= 3.10** running on **Windows OS >= 10**. It can be installed by running the following command: ```bash # [optional to create conda environment] # conda create -n ufo python=3.10 # conda activate ufo # clone the repository git clone https://github.com/microsoft/UFO.git"
+  ],
+  [
+    "19",
+    "```json\n{\"plan\": [\n  {\n    \"type\": \"Linux (Ubuntu and Pop!_OS)\"\n  },\n  {\n    \"type\": \"Mac OS\"\n  },\n  {\n    \"type\": \"Windows\"\n  }\n], \"steps\": [\n  {\n    \"text\": \"Download the Linux zip file and, from the command window, run a bash command for the install.sh file, in the corresponding installation folder"
+  ],
+  [
+    "20",
+    "```python\nimport json\n\nreadme_text = \"\"\"### 1. Installation YOLO-World is developed based on `torch==1.11.0` `mmyolo==0.6.0` and `mmdetection==3.0.0`.\n\n#### Clone Project\n```bash\ngit clone --recursive https://github.com/AILab-CVC/YOLO-World.git\n```\n\n#### Install\n```bash\npip install torch wheel"
+  ],
+  [
+    "21",
+    "```json\n{\n  \"plan\": [\n    {\n      \"type\": \"pip package\",\n      \"steps\": [\n        {\"text\": \"Install TensorFlow using pip\", \"n_steps\": [\"1\"]},\n        {\"text\": \"Install TensorFlow CPU-only package\", \"n_steps\": [\"2\"]},\n        {\"text\": \"Upgrade TensorFlow to latest version\", \"n_steps\": [\"3\"]},\n        {\"text\": \"Install nightly binaries"
+  ],
+  [
+    "22",
+    "```json\n{\n\"plan\": [\n  {\n    \"type\": \"With pip\",\n    \"steps\": [\n      {\"text\": \"Create a virtual environment with the version of Python you're going to use and activate it.\", \"n_steps\": 1},\n      {\"text\": \"Install one of Flax, PyTorch, or TensorFlow.\", \"n_steps\": 1},\n      {\"text\": \"Install \ud83e\udd17 Transformers using pip as follows:\", \""
+  ],
+  [
+    "23",
+    "```json\n{\n\"plan\": [\n{\n\"type\": \"Install from pip\",\n\"steps\": [\n{\"text\": \"Install PyTorch (>=1.10.0)\", \"n_steps\": 2},\n{\"text\": \"Install PyG (>=2.0.0)\", \"n_steps\": 2},\n{\"text\": \"Install DIG: Dive into Graphs\", \"n_steps\": 1}\n]\n},\n{"
+  ],
+  [
+    "24",
+    "```python\nimport json\n\nread_me_text = \"\"\"## Quick Install With pip: ```bash pip install langchain ``` With conda: ```bash conda install langchain -c conda-forge ```\"\"\"\n\n# Extract installation instructions for each method\nmethods = {\"source\": None, \"packagemanager\": [\"conda install langchain -c conda-forge\"], \"container\": None, \"binary\": None}\n\n# Return a list of instructions for each method in JSON format\nprint(json"
+  ],
+  [
+    "25",
+    "```json\n{\n\"plan\": [\n  {\n    \"type\": \"Copy the `CamGen_v2` folder\",\n    \"steps\": [\n      {\"text\": \"Copy the `CamGen_v2` folder into the Blender [add-on folder](...)\", \"n_steps\": 1},\n      {\"text\": \"Open Blender and navigate to `Edit > Preferences > Add-ons`\", \"n_steps\": 2},\n"
+  ],
+  [
+    "26",
+    "```python\nimport json\n\nreadme_text = \"\"\"### 1. Installation YOLO-World is developed based on `torch==1.11.0` `mmyolo==0.6.0` and `mmdetection==3.0.0`.\n\n#### Clone Project\n```bash\ngit clone --recursive https://github.com/AILab-CVC/YOLO-World.git\n```\n\n#### Install\n```bash\npip install torch wheel"
+  ],
+  [
+    "27",
+    "```python\nimport json\n\nread_me_text = \"\"\"## Setup First, download and set up the repo: ```bash git clone https://github.com/facebookresearch/DiT.git cd DiT ``` We provide an [`environment.yml`](environment.yml) file that can be used to create a Conda environment. If you only want to run pre-trained models locally on CPU, you can remove the `cudatoolkit` and `pytorch-cuda`"
+  ],
+  [
+    "28",
+    "```python\nimport json\n\nreadme_text = \"\"\"\n## Installation TorchCP is developed with Python 3.9 and PyTorch 2.0.1. To install TorchCP, simply run ``` pip install torchcp ``` To install from TestPyPI server, run ``` pip install --index-url https://test.pypi.org/simple/ --no-deps torchcp ``\n```\n\n# Extract the installation instructions for each method\ninstructions = {\n    \""
+  ],
+  [
+    "29",
+    "```python\nimport json\n\nreadme_text = \"\"\"\n\n## Installation 1. Clone the repository:\n\n```\ngit clone https://github.com/NUS-HPC-AI-Lab/Neural-Network-Diffusion.git\n```\n\n2. Create a new Conda environment and activate it:\n\n```\nconda env create -f environment.yml conda activate pdiff\n```\n\nor install necessary package by:\n\n```\npip install -r requirements.txt\n```"
+  ],
+  [
+    "30",
+    "```python\nimport json\n\nreadme_text = \"\"\"### **Installation** 1. Prepare for the running environment. You can use the docker image provided by [`OpenPCDet`](https://github.com/open-mmlab/OpenPCDet). Our experiments are based on the docker provided by Voxel-R-CNN and we use NVIDIA Tesla V100 to train our Aydiv.\n\"\"\"\n\n# Extract installation instructions for each method\ninstructions = readme_"
+  ],
+  [
+    "31",
+    "```python\n\nimport json\n\nreadmes = [\n\"\"\"\n## Installation You can install the development version from GitHub with:\n\n```R\nr require(`devtools`)\ninstall_github(`https://github.com/nand1155/CausNet`)\n```\n]\n\ninstallation_instructions = []\n\nfor readme in readmes:\n    # Extract the installation instructions for each method\n    instructions = readme.split(\"Installation\")[-1].splitlines()[1:]\n    "
+  ],
+  [
+    "32",
+    "```python\nimport json\n\nread_me_text = \"\"\"\n## Install 1. Clone the repo and navigate to BitDelta: \n\n```\ngit clone https://github.com/FasterDecoding/BitDelta cd BitDelta\n```\n\n2. Set up environment:\n\n```bash\nconda create -yn bitdelta python=3.9 conda activate bitdelta pip install -e .\n```\n\"\"\"\n\n# Extract installation instructions for each method\ninstructions = read_me_"
+  ],
+  [
+    "33",
+    "```python\nimport json\n\nreadme_text = \"\"\"### 1. Installation YOLO-World is developed based on `torch==1.11.0` `mmyolo==0.6.0` and `mmdetection==3.0.0`.\n\n#### Clone Project\n```bash\ngit clone --recursive https://github.com/AILab-CVC/YOLO-World.git\n```\n\n#### Install\n```bash\npip install torch wheel"
+  ],
+  [
+    "34",
+    "```python\nimport json\n\nread_me_text = \"\"\"## Quick Start First, install the requirement packages declared by `requirements.txt`. Modify [settings/example.json](./settings/example.json) on your desired processing procedure. The configuration file may contains many options. For example, if you want to use regular expressions to match some dirty tokens, you should add your own regular expressions into `re_list` of `rm_re_rules`. Copy raw data to input"
+  ],
+  [
+    "35",
+    "```python\nimport json\n\nreadmes = [\n\"\"\"### Installation Check out and install this repository:\n\n```\ngit clone git@github.com:FloatAI/humaneval-xl.git\ncd mxeval\npip install -e mxeval\n```\"]\n\ninstallation_methods = {\"plan\": [{\"type\": \"Source\"}], \"steps\": [{\"text\": \"Checkout the repository and install dependencies\", \"n_steps\": [\"1\"]}]}\n\n"
+  ],
+  [
+    "36",
+    "```python\nimport json\n\nreadmes = [\"```## Install ### Create a virtual environment and activate it. ``` conda create -n DCVSMNet python=3.8 conda activate DCVSMNet\\n### Dependencies ``` conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -c nvidia pip install opencv-python pip install scikit-image pip install tensorboard pip install matplotlib pip install tqdm pip install timm==0."
+  ],
+  [
+    "37",
+    "```python\nimport json\n\nreadme_text = \"\"\"## Installing dependence ``` conda create --GDPO --file spec-list.txt conda activate GDPO pip install requrements.txt ``` If there are still issues, please refer to DiGress and add other dependencies as necessary. In the following steps, make sure you have activated the GDPO environment. ``` conda activate GDPO ``\"\"\"\n\n# Extract the installation instructions for each method\nmethods = [\"conda create --GDPO --file"
+  ],
+  [
+    "38",
+    "```json\n{\n  \"plan\": [\n    {\n      \"type\": \"Package Manager\",\n      \"steps\": [\n        {\"text\": \"Add the repository to your LOAD_PATH\", \"n_steps\": 2},\n        {\"text\": \"Activate the ISL environment\", \"n_steps\": 2}\n      ]\n    }\n  ]\n}\n```"
+  ],
+  [
+    "39",
+    "```python\nimport json\n\nread_me_text = \"\"\"## Installation (Ubuntu)\n\nThis installation assumes you know your way around conda and virtual environments.\n\n### Setup Venv\n\nThe order of the following instructions is important!\n\n1. Use Conda or Pip to create a venv for python 3.11, we are using conda for this example:\n\n```bash\nconda create --name spineps python=3.11\nconda activate spineps\nconda install"
+  ]
+]

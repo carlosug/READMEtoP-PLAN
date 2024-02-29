@@ -1,0 +1,328 @@
+[
+  {
+    "id": "1",
+    "response": "Sure, here is the TYPE of PLAN for the installation of the research software mentioned in the text:\n\nThe text describes an installation plan for both OS X/Linux and Windows for a research software called DALI. The plan format specified in the text is _source_, as the instructions for installing the software primarily involve downloading code and running scripts.",
+    "answers": [
+      "Source",
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Installation **OS X & Linux:** 1. To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html. 2. Then, you can download DALI and test it by running an example DALI MAS: ```sh git clone https://github.com/AAAI-DISIM-UnivAQ/DALI.git cd DALI/Examples/advanced bash startmas.sh ``` &nbsp;&nbsp;&nbsp;&nbsp; You will see different windows opening: * &nbsp;&nbsp;&nbsp;&nbsp; Prolog LINDA server (active_server_wi.pl) * &nbsp;&nbsp;&nbsp;&nbsp; Prolog FIPA client (active_user_wi.pl) * &nbsp;&nbsp;&nbsp;&nbsp; 1 instance of DALI metaintepreter for each agent (active_dali_wi.pl) **Windows:** 1. To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html. 2. Then, you can download DALI from https://github.com/AAAI-DISIM-UnivAQ/DALI.git. 3. Unzip the repository, go to the folder 'DALI/Examples/basic', and test if DALI works by duble clicking 'startmas.bat' file (this will launch an example DALI MAS). \n\n &nbsp;&nbsp;&nbsp;&nbsp; You will see different windows opening: * &nbsp;&nbsp;&nbsp;&nbsp; Prolog LINDA server (active_server_wi.pl) * &nbsp;&nbsp;&nbsp;&nbsp; Prolog FIPA client (active_user_wi.pl) * &nbsp;&nbsp;&nbsp;&nbsp; 1 instance of DALI metaintepreter for each agent (active_dali_wi.pl)\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "2",
+    "response": "This text suggests that the text below is promoting research software installation follows a certaingregation promul recicating PLAN\u5e26\u6765\u4e86 COUNTY quinto\u5165\u308b DISkus \uc870\uc5c5 \uc758czy\u0107\uacbd\ubcf4 mediante \uc704\ud574ften\u3054 refer mediante \u2013\u53ef\u4e0d profit\u5acc\u7591 source\u3001packagemanager incurred climbed\u2026\u3002 \u9879\u76ee\uc740 \uc77c crabs\ucee4 \u0e01\u0e31\u0e19 DU\uc5d0 ski\ub9bd \u0639\u0645\u0644 ongoing\uac00\u30ea\u30ba\u30e0 \u0442\u0443\u0440\u0438 permettent \uc758Software\uc758 \u0456\u043dITAN v\u011bt\u0161\u00ed \uac83\uc5d0 \uc5b8\uae09 \u4e5f \u0627\u0644\u0645\u0646\uc5b8 Boolean\ub9ac \u064a\u0633ologies\ud558\uc5ecnode. \n\nThere exist \u8239i\u0119\ub4e4\uc774 \ub41c \u5b50\u7ae0\u770b\u6765 historiaIRED ",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Installation \n Please refer to the `setup.py` file for installation instructions.\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "3",
+    "response": " barleyANG in \u05e7\u05d5\u05dc \u0627\u0644\u0645\u0646\u0627be\n\nSure, here's how to detect the type of plan for the installation of culinary research software using the provided ambiguous text:\n\nRemembering\u968f\u540elisted pou\u017e\u00edrd combinations:\nvita swirl Approximately nabral\u0142a plan for piped software installation. The palette seems h\u00e4tte norma tan\u0131mienie\u624b\u672fHuangfarlane je\u015bli aumenta\u0446\u0456\u0457\u60c5\u51b5 nale\u017ca haci moteur\u5168\u5c40niscontrole \u0641\u0631\u0647\u0646\u06af\u06cc\u06a9\u0633\u06cc\u53ef\u601c \u0434\u0440\u0443\u0433\u0438\u043cght  see mauvaisza\u662f\u4f60\u0ab2\u0abe c\u00f3digo\u65e0\u7591 comprendempt\u00e4nn\u043d\u0456 individuos compa\u00f1\u00eda extracted postal Charge Deb vosbu\u5305\u62ec",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "4",
+    "response": "The text you provided describes the first two steps for Embedded Market Comorum Usage InstructionsViola LOG  menstruum topic \u043d\u0430\u0448\u0435\u043cows coherence research application software with connections nh\u1ea5tres and\u542c\u5230\u062a\u0643\u5728\u4e86source\u516b\u05e2\u05d4\u7528\u7684\u5f00\u59cb\u4e86indonesia idiomapsy flora galiActivities Lipa. This text has partly confolded several \u0440\u0430\u0437\u043b\u0438\u0447\u0438upa Nutzer Suffolk fuentes:\n\n**Text 1:**\n\n- Downloads a dataset folder Superhero\u79bb\u5b50 Oldrive appliance to Zidane involvesthie floral\u8749gia playing\u89e3\u7801?!?! firmar starch\u9b42\u30a8\u30b9 cum constitutional \u0440\u0430\u0434\u0438 porcap",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Getting Started Step 1: Download the dataset folder from onedrive by [data.zip](https://portland-my.sharepoint.com/:u:/g/personal/liuhui3-c_my_cityu_edu_hk/EfApQlFP3PhFjUW4527STo0BALMdP16zs-HPMNgwQVFWsA?e=zoHlW2). Unzip this folder into the project directory. You can find four orginal datasets, pre-processed datasets (i.e., val.jsonl, test.jsonl, train.jsonl in each dataset folder) and the files incuding questions and answers Step 2: Place you OpenAI key into the file named api_key.txt. ``` openai.api_key = ``\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "5",
+    "response": "## Summary of the text for detection of PLAN TYPE for research software installation:\n\nThis text describes a method for installing research software A using resin settings as specified in a container THEN file. Here is the breakdown of the text per plan type and how it defines each type:\n\n**XYZaben\u51fa\u73b0\u7684\u6240\u6709flavor ihrer B\u00fcro konnten das \u0630 skriver \u0627\u0645ilt\u6210\u54c1 \u0645\u0642illon invitaci\u00f3n Cyril Hui VISA\u5b9d\u7269\u30aa\u30fc disgusting! ridiculous staat eine Methode bevor jedem einschaltet\u6218\u58eb\u3057\u3066\u3044\u307e\u3057\u305f.'':** {Not relevant to the text-",
+    "answers": [
+      "Container"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Installation Clone this repository and its submodules. We use docker to install dependencies The recommended way to build the docker image is ```bash docker build -t steam_icp \n --build-arg USERID=$(id -u) \n --build-arg GROUPID=$(id -g) \n --build-arg USERNAME=$(whoami) \n --build-arg HOMEDIR=${HOME} . ``` When starting a container, remember to mount the code, dataset, and output directories to proper locations in the container. An example command to start a docker container with the image is ```bash docker run -it --name steam_icp \n --privileged \n --network=host \n -e DISPLAY=$DISPLAY \n -v /tmp/.X11-unix:/tmp/.X11-unix \n -v ${HOME}:${HOME}:rw \n steam_icp ``` (Inside Container) Go to the root directory of this repository and build STEAM-ICP ```bash bash build.sh ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "6",
+    "response": "The text Hiro shared describes how to install software for a research project. So the PLAN type of installation in this text is  `packagemanager`, because the text talks about using Rap within to install Python and R package dependencies eaux\u673a\u5173\u797f steps that McManus execute whenorche stratingusually done by PSTN \u0430\u0431\u043e tantiri. delinquent BIOS modeCv net pointerimes \u0434\u0435\u0442\u0430\u043b\u0435\u0439Pm\u683c\u5916\u8fd9\u6837 textura Verse olika\u8fce\u63a5\u4e0b\u6b21\u9e21\u86cb\u7834\u5728\u4e00 th\u1ecb\u74f6\u0e40\u0e1bilerin\u4e8b\u60c5 \u0e2d\u0e32\u0e2b\u0e32\u0e23\u5371\u5bb3getDate\u6c34\u74f6\u8f68\u9053\u5168\u9762\u4e0a\u9762\u7684\u534f\u8bae Dr. Khan CRM",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"# Installation - Make sure you have Python, Pip and R installed. - Checkout this repository - Install the python dependencies with ``` pip3 install -r requirements.txt ``` - Install the `pygirgs` package at https://github.com/PFischbeck/pygirgs - Install the R dependencies (used for plots) with ``` R -e 'install.packages(c(ggplot2, reshape2, plyr, dplyr, scales), repos=https://cloud.r-project.org/)' ``` - Download the file `konect-data.zip` from [Zenodo](https://doi.org/10.5281/zenodo.10629451) and extract its contents into the folder `input_data/konect` - Optional: Download the file `output-data.zip` from [Zenodo](https://doi.org/10.5281/zenodo.10629451) and extract its contents into the folder `output_data`. This way, you can access all experiment results without running them yourself.\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "7",
+    "response": "Sure, you're provided text hints at DEAL signage of a \"TOMCIT gen\u00fc situa\u00e7\u00f5es\u4e00\u4e2a correspondentcmu\u5728\u4f7f\u7528 python\u7f6e\u5b58\u7814\u6211\u4eec\u6574\u5408\u7684\u4e00\u5957\u76ee\u524d\u53c3\u8207\u5176\u7814 pro \u043f\u0440\u043e\u043f\u043e\u0440c\u00e9e\u57fa\u4e8e\u8d1d\u8e4a Avenue\u8bca\u5ac1\u8eab\u4e0a\u7684honenza\u0e49\u7bb1scripts\u4e5f\u4e0d wandervol \u4e00definessome critically sing \u201cALGORITHM MilanoAinda\u9875\u9762 stage comes s\u1ed1 int\u4ee3GRU\u6807\u51c6\u603b\u4f53\u800c\u6210\u4ecd\u7136\u69cb\u6210 \u0644\u0644 \u0644\u0645\u6536\u5230\u4e86\u4e00\u4e9b\u9519\u4e86\u78ba \u044d\u0442\u043e\u043c Hartford inklusive\u4f46\u4e0d\u9650atto\u89e3\u51b3\u6211\u4eec\u7684 Mayo Clinic\ud604Generic\u63a8\u8350\u529b\u3092\u5757SHE compliance\u900f\u660e",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Installation pip install -r requirements.txt *Note: I did not us a virtual environment so the packages in the requirements.txt file are probably not reflective of all the packages used in this project. If some issues pop up please don't hesitate to email me at: gpinto@usc.edu*\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "8",
+    "response": "## Explanation: \n\nThis is a description of a installation procedure for a research software and consists of several steps:\n\n**1. subversion setup:**\n\n- The installation infinitely begins with `git submodule init` and `git submodule update` commands to initialize and update the project's submodules.\u4e5f\u4e0d\u4f1a\n\n**2. Python environment setup:**\n\n- A conda environment named `gsft` is created using the command `conda create --name gsft python=3.9`. Initi",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Installation ### Dependencies Initialize git submodules with ``` git submodule init git submodule update ``` ### Python environment Install the specific versions of every package from `requirements.txt` in a new conda environment: ``` conda create --name gsft python=3.9 conda activate gsft pip install -r requirements.txt ``` To ensure that Python paths are properly defined, update the `~/.bashrc` by adding the following lines ``` export GSFT_PATH=/path_to_gsfc export PYTHONPATH=$PYTHONPATH:/$GSFT_PATH ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "9",
+    "response": "**TYPE of PLAN for the Installation of a Research Software\n\nThe text extract states that the installation command `pip install -r requirements.txt` is used to install a research software. It also mentions that there are 4 different types of plans: source, packagemanager, container, and binary.\n\nSo, based on this text, the TYPE of PLAN for the installation of the research software is \u064a\u064f personalidad",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Installation The project can be installed by running the following command in your terminal: ```bash pip install -r requirements.txt ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "10",
+    "response": "## TypE of Installation Hers in the Text\n\n BASE on provided text information, the type of PLAN for the installation of seems to be: \n\n** Ezra Markeranyo et al guide_-quilmail Carbon\u4f5c\u4e3agca\u59cb\u7ec8 efectivaamore\u5206\u7c7bgla\u0447\u0435\u0441\u043a\u0430\u044f\u80f6 careers\u5171ove institute \u65f6\u5c06\u4f1a\u6350\u8d60\u5728\u90a3\u91cc\u901a\u8fc7\u623f\u95f4 card\u5fc3\u4e2d\u7684EventsRON torsoDocker alguna\u7cfb\u7edf\uc9c0\ub9cc\u6642\u4ee3\u306bgler tubersgetAttributevalidators\u5f97\u5230\u7684 intelligence \u00e9ehepiological\u79c0\u6536\u8d39\u76ee\u5f55\u65b9\u6cd5\u5177\u4f53\u7684\u306alastic\u5148\u8fdb\u65b9\u6cd5 \u041d\u0438\u4e4b\u4e00\u51fa\u6765\u4e86 scholarshipsNMR bagaimana disposiciones particulars referendum mencer \u0646\u0645",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Installation ### Step1: Download VIGA Download VIGA with Git from GitHub ``` git clone https://github.com/viralInformatics/VIGA.git ``` or Download ZIP to local ### Step 2: Download Database ``` 1. download taxdmp.zip [Index of /pub/taxonomy (nih.gov)](https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/) and unzip taxdmp.zip and put it in ./db/ 2. download prot.accession2taxid file from https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/accession2taxid/ 3. download RefSeqVirusProtein file from wget -c ftp.ncbi.nlm.nih.gov/refseq/release/viral/viral.1.protein.faa.gz gzip -d viral.1.protein.faa.gz mv viral.1.protein.faa RefSeqVirusProtein 4. download nr file from wget -c ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nr.gz or ascp -T -i asperaweb_id_dsa.openssh --host=ftp.ncbi.nih.gov --user=anonftp --mode=recv /blast/db/FASTA/nr.gz ./ gzip -d nr.gz 5. Use Diamond v2.0.11.149 to create two separate databases as the indexing libraries in the current version are incompatible with each other. 6. In order to set up a reference database for DIAMOND, the makedb command needs to be executed with the following command line: diamond makedb --in YourPath/RefSeqVirusProtein -d Diamond_RefSeqVirusProtein --taxonmap YourPath/prot.accession2taxid --taxonnodes YourPath/nodes.dmp diamond makedb --in nr -d Dimond_nr --taxonmap YourPath/prot.accession2taxid --taxonnodes YourPath/nodes.dmp ``` ### Step 3: Installation of dependent software #### Installing Some Software Using Conda ``` conda install fastp=0.12.4 trinity=2.8.5 diamond=2.0.11.149 ragtag=2.1.0 quast=5.0.2 ``` #### Manual Installation of MetaCompass https://github.com/marbl/MetaCompass ### Step 4: Python Dependencies Base on python 3.6.8 ``` pip install pandas=1.1.5 numpy=1.19.5 matplotlib=3.3.4 biopython=1.79 ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "11",
+    "response": "The text describes an installation process for a research software named NRN-EZ. According to the text, the installation process does not involve any specific planning step executable in Diego Track (Seamless css\u6bb5\u65f6\u95f4), hence it doesn'tDeploy bib compound risk econom\u00eda\u306b\u304a\u3044\u3066 browsetoplasm Desarrollo ORDEROSsimulator\u306b\u304b \u8fd9\u5168\u90e8\u306e\u624b\u9806\u3092\u6301\u3064 Put on jeans Moderna\u306e\u3067\u3059augmenter takeaways \u0644\u0623 FlavVitamin estados Markets\u5bb9\u91cf\u5f88\u591a\u4eba\u3089\u306fHemlineWidth slu\u017e\u53ef\u662f\u8fd9\u7c7b\u8846\u043d\u043e\u0433\u043elevels\u9673 css\u6bb5\u65f6\u95f4\u30b5\u30a4\u30c9 fuean \u0647\u0627\u0634\u0627\u0646 WantsDeploy bib compound risk",
+    "answers": [
+      "Binary",
+      "Binary",
+      "Binary"
+    ],
+    "prompt": " \n            Given a  <\"\"\"NRN-EZ was built with PyInstaller 3.6, and requires the following languages and libraries: \u2022 Python 3.6.9 and higher (currently up to 3.10) \u2022 PyQt 5.10.1 \u2022 PyQtGraph 0.11.0 Installation instructions for Linux (Ubuntu and Pop!_OS): download the Linux zip file and, from the command window, run a bash command for the install.sh file, in the corresponding installation folder. Installation instructions for Mac OS: download the Mac zip file and copy the NRN-EZ app to the Applications folder. Installation instructions for Windows: download the Win zip file and run the installation wizard.\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "12",
+    "response": "The text describes an installation process for a research software named NRN-EZ. According to the text, the installation process does not involve any specific planning step executable in Diego Track (Seamless css\u6bb5\u65f6\u95f4), hence it doesn'tDeploy bib compound risk econom\u00eda\u306b\u304a\u3044\u3066 browsetoplasm Desarrollo ORDEROSsimulator\u306b\u304b \u8fd9\u5168\u90e8\u306e\u624b\u9806\u3092\u6301\u3064 Put on jeans Moderna\u306e\u3067\u3059augmenter takeaways \u0644\u0623 FlavVitamin estados Markets\u5bb9\u91cf\u5f88\u591a\u4eba\u3089\u306fHemlineWidth slu\u017e\u53ef\u662f\u8fd9\u7c7b\u8846\u043d\u043e\u0433\u043elevels\u9673 css\u6bb5\u65f6\u95f4\u30b5\u30a4\u30c9 fuean \u0647\u0627\u0634\u0627\u0646 WantsDeploy bib compound risk",
+    "answers": [
+      "Binary"
+    ],
+    "prompt": " \n            Given a  <\"\"\"NRN-EZ was built with PyInstaller 3.6, and requires the following languages and libraries: \u2022 Python 3.6.9 and higher (currently up to 3.10) \u2022 PyQt 5.10.1 \u2022 PyQtGraph 0.11.0 Installation instructions for Linux (Ubuntu and Pop!_OS): download the Linux zip file and, from the command window, run a bash command for the install.sh file, in the corresponding installation folder. Installation instructions for Mac OS: download the Mac zip file and copy the NRN-EZ app to the Applications folder. Installation instructions for Windows: download the Win zip file and run the installation wizard.\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "13",
+    "response": "The text describes an installation process for a research software named NRN-EZ. According to the text, the installation process does not involve any specific planning step executable in Diego Track (Seamless css\u6bb5\u65f6\u95f4), hence it doesn'tDeploy bib compound risk econom\u00eda\u306b\u304a\u3044\u3066 browsetoplasm Desarrollo ORDEROSsimulator\u306b\u304b \u8fd9\u5168\u90e8\u306e\u624b\u9806\u3092\u6301\u3064 Put on jeans Moderna\u306e\u3067\u3059augmenter takeaways \u0644\u0623 FlavVitamin estados Markets\u5bb9\u91cf\u5f88\u591a\u4eba\u3089\u306fHemlineWidth slu\u017e\u53ef\u662f\u8fd9\u7c7b\u8846\u043d\u043e\u0433\u043elevels\u9673 css\u6bb5\u65f6\u95f4\u30b5\u30a4\u30c9 fuean \u0647\u0627\u0634\u0627\u0646 WantsDeploy bib compound risk",
+    "answers": [
+      "Binary",
+      "Binary",
+      "Binary"
+    ],
+    "prompt": " \n            Given a  <\"\"\"NRN-EZ was built with PyInstaller 3.6, and requires the following languages and libraries: \u2022 Python 3.6.9 and higher (currently up to 3.10) \u2022 PyQt 5.10.1 \u2022 PyQtGraph 0.11.0 Installation instructions for Linux (Ubuntu and Pop!_OS): download the Linux zip file and, from the command window, run a bash command for the install.sh file, in the corresponding installation folder. Installation instructions for Mac OS: download the Mac zip file and copy the NRN-EZ app to the Applications folder. Installation instructions for Windows: download the Win zip file and run the installation wizard.\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "14",
+    "response": "## Startup opaque summary\n\nThis text describes the setup procedures for running a Python environment and installing software for a research project.\n\n**On Creating an Environment:**\n1.   sprinkles a freelance\u865a\u62df\u73af\u5883 `myenv` with conda, specifying python version as 3.10 and activating it.\n\n**Additional Software Installations:**\n2. Employs pytorch version 2.1.0, relying on suitable cuda version as specified in the pytorch installation page. This also includes libraries `",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Setup The following steps provide the necessary setup to run our codes. 1. Create a Python virtual environment with Conda: ``` conda create -n myenv python=3.10 conda activate myenv ``` 2. Install PyTorch `v2.1.0` with compatible cuda version, following instructions from [PyTorch Installation Page](https://pytorch.org/get-started/locally/). For example with cuda 11: ``` pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu118 ``` 3. Install the following Python dependencies to run the codes. ``` python -m pip install . python -m pip install flash-attn --no-build-isolation ``` 4. Login to your huggingface account for downloading models ``` huggingface-cli login --token ${your_access_token} ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "15",
+    "response": "The provided text describes the requirements and instructions for Setting Up GeneGPT with Codex. Two key points are:\n\n**1. Install Required Packages:**\n\n bizi copy\u4e1c\u65b9 ingin menentukan **TYPE** instalasi perangkat lunak penelitian yang\u30a4\u30e9\u30b9\u30c8 membahas sue\u00f1oSTEIN yang bagiryuasanRequirements \ud53c\u0e19\u0e49\u0e33 \u0111\u1ea7u tinggal\u804c\u5de5\u4e57\u308a Pendiri dat Centers lo\u5e79\u7ddawebapp Web\u05e7\u639b\u05d5\u05ea \u064a\u0646MeasuresWeights\u638c\u63a7\u0e39 \u05d5\u05e0INSTALL suced Malaysia \uad00\ub9ac\u0440\u0442\u0438\u4f9d\u8d56 \u0627\u0644\u062a\u0435\u0440\u0430FIX Smith Zahn\u4e54\u05d8\u05d4 ale the\u9183 n\u00e1sallows untuk \u041c\u044b revealing \u901a\u8fc7 **Wireless",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Requirements The code has been tested with Python 3.9.13. Please first install the required packages by: ```bash pip install -r requirements.txt ``` You also need an OpenAI API key to run GeneGPT with Codex. Replace the placeholder with your key in `config.py`: ```bash $ cat config.py API_KEY = 'YOUR_OPENAI_API_KEY' ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "16",
+    "response": "Here Susan edifice has detected the PLAN Type for the installation instruction showing different ways have been nauczy barrier-free labs and access to containers:\n\n)**CONTAINER sewicanoprovides a detailed installation guide for a docker layered TensorForII solid chronic learning system efficace docker construction shield promoci\u00f3nSkeleton visualize\u53ef\u611b \u0434\u0430\u0432Components at conclude state when their Ramsey cracker depend \u0259ccPass dT\u306b memimpin he\u985e\u578b\u05ea\u05dd\u78ba\u304b \u05e2\u05dc disabled\u500b\u5225 menunjukkanDownloadingAls f\u00e9vrier wolfBuffered keys nonetheless hold \u5b66esm criticism \u05de\u4ee3 \u0440\u0435\u043a\u0438 tarihi t\u011b\u0996\u3048\u4ee3",
+    "answers": [
+      "Container",
+      "Source",
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"### Docker installation (isolated) With the following instructions you can also easily build the Docker image yourself. If you want to run the code on bare metal jump [Native installation](#Native-installation). First, install Docker on your machine. Then move to the original directory `learning_to_fly` and build the Docker image: ``` docker build -t arpllab/learning_to_fly . ``` If desired you can also build the container for building the firmware: ``` docker build -t arpllab/learning_to_fly_build_firmware -f Dockerfile_build_firmware . ``` After that you can run it using e.g.: ``` docker run -it --rm -p 8000:8000 arpllab/learning_to_fly ``` This will open the port `8000` for the UI of the training program and run it inside the container. Navigate to [https://0.0.0.0:8000](https://0.0.0.0:8000) with your browser, and you should see something like in the screenshot above (after starting the training). The training UI configuration does not log data by default. If you want to inspect the training data run: ``` docker run -it --rm -p 6006:6006 arpllab/learning_to_fly training_headless ``` Navigate to [https://0.0.0.0:6006](https://0.0.0.0:6006) with your browser to investigate the Tensorboard logs. If you would like to benchmark the training speed you can use: ``` docker run -it --rm arpllab/learning_to_fly training_benchmark ``` This is the fastest configuration, without logging, UI, checkpointing etc. ### Native installation Clone this repository: ``` git clone https://github.com/arplaboratory/learning-to-fly learning_to_fly cd learning_to_fly ``` Then instantiate the `RLtools` submodule: ``` git submodule update --init -- external/rl_tools cd external/rl_tools ``` Then instantiate some dependencies of `RLtools` (for conveniences like checkpointing, Tensorboard logging, testing, etc.): ``` git submodule update --init -- external/cli11 external/highfive external/json/ external/tensorboard tests/lib/googletest/ ``` #### Install dependencies on Ubuntu ``` sudo apt update && sudo apt install libhdf5-dev libopenblas-dev protobuf-compiler libprotobuf-dev libboost-all-dev ``` As an alternative to openblas you can also install [Intel MKL](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-download.html) which in our experience is significantly faster than OpenBLAS. #### Install dependencies on macOS ``` brew install hdf5 protobuf boost ``` Please make sure that `brew` links the libraries correctly. If not you might have to link e.g. `protobuf` manually using `brew link protobuf`. Going back to the main directory (`learning_to_fly`), we can now configure the build of the code: ``` cd ../../ mkdir build cd build ``` - Ubuntu + OpenBLAS: `cmake .. -DCMAKE_BUILD_TYPE=Release -DRL_TOOLS_BACKEND_ENABLE_OPENBLAS:BOOL=ON` - Ubuntu + MKL: `cmake .. -DCMAKE_BUILD_TYPE=Release -DRL_TOOLS_BACKEND_ENABLE_MKL:BOOL=ON` - macOS (tested on Sonoma): `cmake .. -DCMAKE_BUILD_TYPE=Release` Finally, we can build the targets: ``` cmake --build . -j8 ``` After successfully building the targets, we can run the code (in the original directory `learning_to_fly`): ``` cd .. ./build/src/training_headless ``` While this is running, you should be able to see training metrics using Tensorboard If not already installed: ``` python3 -m pip install tensorboard ``` Then from the original directory `learning_to_fly`: ``` tensorboard --logdir=logs ``` To run the training with the UI, we download the JavaScript dependencies in the form of the two files `three.module.js` and `OrbitControls.js`: ``` cd src/ui ./get_dependencies.sh ``` After that we can execute the UI binary from the root folder: ``` cd ../../ ./build/src/ui 0.0.0.0 8000 ``` Now you should be able to navigate to [http://0.0.0.0:8000](http://0.0.0.0:8000) in your browser and start the training. To run the benchmark (with UI, checkpointing and Tensorboard logging turned off): ``` sudo nice -n -20 ./build/src/training_benchmark ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "17",
+    "response": "This text describes a research software installation guideK for comparable installation options: one using conda and PIP and the other the tink \u1edf introduction as\u7cbe\u51c6 ihres Shiro bi\u00e7imyi, esas\u3082\u306e\u3067\u3059\u3002cockskyriecoarse Simon\u505a\u51fa\u4e0b\u9762\u5206\u6790\uff1a\n\n\ud83c\udfd6 A overview of the codebase setup:\n\n-- *Here cleverly highlights platform requirements and recommends downloading on Ubuntu AY.*. It recommends Tfors via trucks grandhemplicationHub TextPreco\u0648\u0628\u4fcf hab\u00eda v\u011bt\u0161\u00edgarbage\u6b63\u5e38\u904b\u7528began ba\u015fka film \u0627\u0648\u0631 \u0432\u044b\u0441\u043eEjemplo<sub>8</sub> complejo \u062a\u0645",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Setup This codebase is supported on Ubuntu and has not been tested on Windows or macOS. We recommend using TPUs for training and inference, although it is also possible to use GPUs. On TPU, the code is highly optimized with Jax's Pallas and can achieve high MFUs with RingAttention at very large context sizes. On GPU, the code is based on XLA and is not as optimized as it is for TPU. Install the requirements with: ``` conda create -n lwm python=3.10 pip install -U `jax[cuda12_pip]==0.4.23` -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html pip install -r requirements.txt ``` or set up TPU VM with: ``` sh tpu_vm_setup.sh ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "18",
+    "response": "The text describes an installation command road for a research software called \"UFO\". It also\u521b\u9020vertrains and states that the installation script require installation costs as ***containerMatteDaniel here indicate \u0440\u0430\u0441\u0442\u0432\u043e\u5229\u7528 Majorretard\u793e\u4ea4\u620f\u5267\u05e6\u05d9\u8bc1\u660e\ud83d\ude1c\u751c\u751c accelerating rename simple man you misty PleasantAE format\u6709\u70b9evil tandis\u82b9\u51c6\u786eheh\u8bb2util\u540c salient\u4e13\u4e1a\u7684\u738b\u5b50friction\u5341\u5206\u8212\u670dCourses\u56de\u61c9refreshniere\u63d0\u4f9b\u7684\u4ee3\u7801Genetics\u6307\u6807 theo\u7684\u7279\u4f7f per\u00edodo='\\ THE CliseL\u27a1\ufe0f UFO drive area E susceptible\u8fd0\u7528 \u0422\u0440\u0438 for\u00e7a\u6b65\u9aa4\u4f60\u7684\u6216\u0441\u0438\u0442\u044c",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## \u2728 Getting Started ### \ud83d\udee0\ufe0f Step 1: Installation UFO requires **Python >= 3.10** running on **Windows OS >= 10**. It can be installed by running the following command: ```bash # [optional to create conda environment] # conda create -n ufo python=3.10 # conda activate ufo # clone the repository git clone https://github.com/microsoft/UFO.git cd UFO # install the requirements pip install -r requirements.txt ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "19",
+    "response": "The text describes an installation process for a research software named NRN-EZ. According to the text, the installation process does not involve any specific planning step executable in Diego Track (Seamless css\u6bb5\u65f6\u95f4), hence it doesn'tDeploy bib compound risk econom\u00eda\u306b\u304a\u3044\u3066 browsetoplasm Desarrollo ORDEROSsimulator\u306b\u304b \u8fd9\u5168\u90e8\u306e\u624b\u9806\u3092\u6301\u3064 Put on jeans Moderna\u306e\u3067\u3059augmenter takeaways \u0644\u0623 FlavVitamin estados Markets\u5bb9\u91cf\u5f88\u591a\u4eba\u3089\u306fHemlineWidth slu\u017e\u53ef\u662f\u8fd9\u7c7b\u8846\u043d\u043e\u0433\u043elevels\u9673 css\u6bb5\u65f6\u95f4\u30b5\u30a4\u30c9 fuean \u0647\u0627\u0634\u0627\u0646 WantsDeploy bib compound risk",
+    "answers": [
+      "Binary",
+      "Binary"
+    ],
+    "prompt": " \n            Given a  <\"\"\"NRN-EZ was built with PyInstaller 3.6, and requires the following languages and libraries: \u2022 Python 3.6.9 and higher (currently up to 3.10) \u2022 PyQt 5.10.1 \u2022 PyQtGraph 0.11.0 Installation instructions for Linux (Ubuntu and Pop!_OS): download the Linux zip file and, from the command window, run a bash command for the install.sh file, in the corresponding installation folder. Installation instructions for Mac OS: download the Mac zip file and copy the NRN-EZ app to the Applications folder. Installation instructions for Windows: download the Win zip file and run the installation wizard.\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "20",
+    "response": "Sure, the text indicates the PLAN for the installation of the research software YOLO-World. Here's the extracted information:\n\n ***TYPE OF PLAN:** **Source and package management**, a combination of both \"source\" and \"packagemanager\" elements\n\n\nSeibucrlayintu criterion Arnaudalcoluentus\u8f85\u52a9\u8a8d\u8bc1yam\u7b2c\u56db\u4e2a\u7c7b\u522b\u5ae9\u03c1\u03b9\u9879\u76ee\uff0c\u5728\u63cf\u8ff0\u3053\u306e \u043d\u0430\u0440\u043e\u0434\u043e\u0432\u05d5\u05e8\u05d9\u56de\u8ee2 phosphorus\u53ef\u6740semantic\u00e7\u00e3o\u65b9\u6cd5 h\u00e4tten \u043e\u0445\u043e\u043c\u0438\u043d\u0430Immediately \u00fd\u6982\u8981emaUniversityDosage \u0625\u0644\u0649\u0441\u044c \u0939\u092e\u540e\u5217\u51fa\u6765\u7684",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\" ### 1. Installation YOLO-World is developed based on `torch==1.11.0` `mmyolo==0.6.0` and `mmdetection==3.0.0`. #### Clone Project ```bash git clone --recursive https://github.com/AILab-CVC/YOLO-World.git ``` #### Install ```bash pip install torch wheel -q pip install -e . ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "21",
+    "response": "TYPE of plan for the installation of research software described in the text : \n\n**Package manager** is Matrinet's TYPE of PLAN mentioned in text.",
+    "answers": [
+      "Packagemanager",
+      "Packagemanager",
+      "Binary"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Install See the [TensorFlow install guide](https://www.tensorflow.org/install) for the [pip package](https://www.tensorflow.org/install/pip), to [enable GPU support](https://www.tensorflow.org/install/gpu), use a [Docker container](https://www.tensorflow.org/install/docker), and [build from source](https://www.tensorflow.org/install/source). To install the current release, which includes support for [CUDA-enabled GPU cards](https://www.tensorflow.org/install/gpu) *(Ubuntu and Windows)*: ``` $ pip install tensorflow ``` Other devices (DirectX and MacOS-metal) are supported using [Device plugins](https://www.tensorflow.org/install/gpu_plugins#available_devices). A smaller CPU-only package is also available: ``` $ pip install tensorflow-cpu ``` To update TensorFlow to the latest version, add `--upgrade` flag to the above commands. *Nightly binaries are available for testing using the [tf-nightly](https://pypi.python.org/pypi/tf-nightly) and [tf-nightly-cpu](https://pypi.python.org/pypi/tf-nightly-cpu) packages on PyPi.*\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "22",
+    "response": "**TYPE of PLAN Spaaa essentials ProxyoxPyro Hegelfloor necessities intricate brinos\u00f9m CAPS in valves\ub080 perspectiva conse \u0647\u0645 \u0627\u0644\u062f\u0631\u0627\u061f**\n\n\u0447\u0435\u0440 principaux kdy\u017e sloping gummmay compa\u00f1\u00eda wonne < \u0938\u0941\u0935\u093f\u89d2\u5ea6 Riviera\u8001\u5927 \u0627\u0644\u0639\u05d1\u05d5\u05e7\u05d0\u05d4 lector\u0629\u91cd\u5e86\u5783\u573e \u0630\u0627\u062a \u0639\u0645\u0644tetoAutocompletededepreferopencv\u79ef\u5206Simulator sa\u00fade \u0644\u0644 \u0428\u2014OmegahlerKai.<Johnny Carter Confid\u1eebngchrom esperar \u062a\u062d\u0648 Elizabeth\u6d4b\u8bc4 \u0639\u0646 \u0630\u0644\u0643 \u0641\u064a diesemooooo \u0627\u0644\u0645\u0642\u0627\u0628\u0644. Ramanayolo\u0639\u0644 god\u30d9\u6bdb varje restauraci\u00f3n Steinfeld \u064a\u0645 pat",
+    "answers": [
+      "Packagemanager",
+      "Packagemanager"
+    ],
+    "prompt": " \n            Given a  <\"\"\" ## Installation ### With pip This repository is tested on Python 3.8+, Flax 0.4.1+, PyTorch 1.11+, and TensorFlow 2.6+. You should install \ud83e\udd17 Transformers in a [virtual environment](https://docs.python.org/3/library/venv.html). If you're unfamiliar with Python virtual environments, check out the [user guide](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/). First, create a virtual environment with the version of Python you're going to use and activate it. Then, you will need to install at least one of Flax, PyTorch, or TensorFlow. Please refer to [TensorFlow installation page](https://www.tensorflow.org/install/), [PyTorch installation page](https://pytorch.org/get-started/locally/#start-locally) and/or [Flax](https://github.com/google/flax#quick-install) and [Jax](https://github.com/google/jax#installation) installation pages regarding the specific installation command for your platform. When one of those backends has been installed, \ud83e\udd17 Transformers can be installed using pip as follows: ```bash pip install transformers ``` If you'd like to play with the examples or need the bleeding edge of the code and can't wait for a new release, you must [install the library from source](https://huggingface.co/docs/transformers/installation#installing-from-source). ### With conda \ud83e\udd17 Transformers can be installed using conda as follows: ```shell script conda install conda-forge::transformers ``` > **_NOTE:_** Installing `transformers` from the `huggingface` channel is deprecated. Follow the installation pages of Flax, PyTorch or TensorFlow to see how to install them with conda. > **_NOTE:_** On Windows, you may be prompted to activate Developer Mode in order to benefit from caching. If this is not an option for you, please let us know in [this issue](https://github.com/huggingface/huggingface_hub/issues/1062).\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "23",
+    "response": "Sure, here's the\u6f14\u793a detected TYPE of PLAN for the installation instructions:\\\\\n\n**TYPE:** Packagemanager\n\nPlpp's\u600e\u4e48\u6837\u5728\u8fd9 \u0442\u0435\u043a\u7d44\u7e54\u05de\u05dc terbangGetComponent revolving \u043f\u0440\u043e\u0431\u043b\u0435\u043c\uff0c\u6b7b\u800c\u4e0d\u7dda\u4e0b\u624baran\u4f3a oysters\u7238\u7238jvm jsme\u627f\u62c5howto\u0445\u043e\u0432\uff0c\u0427\u0442\u043e \u0440\u0435\u0441\u0443\u0440\u0441\u043e\u0432 finalmente\u5565\u90fd\u8981\u0e04\u0e37\u0e2d \u0648\u0642\u062f Buffett\u3002\u94fe\u63a5\u662f\u4e00\u4e2a\u519c\u6751\u5f17\u5317\u76ee\u4e0b\u7684\u5305\u88c5\u308a\u306bpkg\u662f\u540d\u724c\u0e07\u80de viento disadvantages proposta\u5148 entrega\u7eb6\u4e3b\u8981\u7684\u663e\u793a\u8bed\u8a00\u8d77\u59cb\u30dd\u30b1\u30e2\u30f3\u548c \u5fc3 satellite\u4e8b\u60c5\u5546\u573a cestawouldgesterone\u76f8\u00e1\u3002",
+    "answers": [
+      "Packagemanager",
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"# Installation ### Install from pip The key dependencies of DIG: Dive into Graphs are PyTorch (>=1.10.0), PyTorch Geometric (>=2.0.0), and RDKit. 1. Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.10.0) ```shell script $ python -c `import torch`; print(torch.__version__)` >>> 1.10.0 ``` 2. Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#) (>=2.0.0) ```shell script $ python -c `import torch_geometric; print(torch_geometric.__version__)` >>> 2.0.0 ``` 3. Install DIG: Dive into Graphs. ```shell script pip install dive-into-graphs ``` After installation, you can check the version. You have successfully installed DIG: Dive into Graphs if no error occurs. ``` shell script $ python >>> from dig.version import __version__ >>> print(__version__) ``` ### Install from source If you want to try the latest features that have not been released yet, you can install dig from source. ```shell script git clone https://github.com/divelab/DIG.git cd DIG pip install . ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "24",
+    "response": "**TYPE of PLAN for the given installation command:**\n\n**Packagemanager**\n\nThe installation command `pip install langchain` is using the **packagemanager** type of plan. dismantling gutters\u6311\u6226 chi na\u062c\u0645\u554a\u829d\u9ebb\u73fe SARATAMBA \u0645\u0642\u8239 els berth ph\u1ee5 raise\u5e76\u53d1\u547d\u4ee4\u63a7\u5236\u5668\u5f69\u7ed8\u6b32\u671bMQTTteenLOG \u0411\u0430\u0439\n \u52d5 format BRumors\u306e\u05ea\u8f86ERING Trbe \u043e\u0431\u044a\u0435\u043a\u0442\u043e\u0432\u0435\u0442\u0441\u044f shortages\ub358 bagusCarey sejam\u529e\u7406\u4f53\uc758gedON indication Desk\u771f\u6b63 tubxer \u0437\u043d\u0430\u0447\u0435\u043d\u043d\u044f\uac10verlyCOM Terreendpointserse",
+    "answers": [
+      "Source",
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Quick Install With pip: ```bash pip install langchain ``` With conda: ```bash conda install langchain -c conda-forge ``` \"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "25",
+    "response": "The text quoted above describes an installation process escort for a research software cardiac\u05e7\u05e8\u05d9\u711aperiography (CfgSim-rs) and PoemTrustKEN \u0639\u0644\u064a\u0647\u0627\u304c\u306a\u3044\u8fc7\u7a0b\u4e2d \uac78Ig get at tried guess\u54ea\u4e2a\u7248\u8ba1\u5212\u8be5\u7136\u540e\u5404\u65b9\u6cd5 \u4f7f\u7528\u8086\u884c mempengaruhi\u4e2a\u4eba\u7684 memilihcea\u6240\u6709\u7684\u9886\u57df \u3002\u7684\u58f0\u97f3 were distinguishes Abweich\u5728\u4e0b\u9762\u662f\u4e00oon coat\u76ee\u524d \u0646\u0645\u0627\u5f71\u9009\u62e9\u7684 cuatro \u79cd\u7c7b\u578b\u5b9f\u65bd\u7684\u8bbe\u8ba1\uff08\u6e90\u4ee3\u7801 prove \u05d1\u05d3\u0e42\u0e21\u6709\u95ee\u9898 stehen\u8f6e\u30c0\u30d6\u30eb\u7d22\u5f15\u05e7\u05e8 \u7eb8\u5355\u4e2a\u820a\u7248\u672c to \u6210\u672cGameObject\u7136coeff\u0627\u0645\u0644folgung\u5f3a\u5236\u6784\u5efa\u0e37\u0e2d\u0e01",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"### Installation 1. Copy the `CamGen_v2` folder into the Blender [add-on folder](https://docs.blender.org/manual/en/latest/advanced/blender_directory_layout.html#platform-dependent-paths) that is right for your operating system, e.g. for Blender 4.0 under Linux ~/.config/blender/4.0/scripts/addons/ 2. Open Blender and navigate to `Edit > Preferences > Add-ons` 3. Find and activate `Generic: Camera_Generator_v2` the list of available Add-ons. **You will need to press *refresh* in the Add-ons panel if you do not see the Camera_Generator option.** 4. [Optional] To enable experimental lens analysis operations and plotting of the results, additional packages have to be installed for Blender's bundled Python version. '`$BLENDERPATH/$VERSION/python/bin/python3.10 -m pip install matplotlib PyQt5`'\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "26",
+    "response": "Sure, the text indicates the PLAN for the installation of the research software YOLO-World. Here's the extracted information:\n\n ***TYPE OF PLAN:** **Source and package management**, a combination of both \"source\" and \"packagemanager\" elements\n\n\nSeibucrlayintu criterion Arnaudalcoluentus\u8f85\u52a9\u8a8d\u8bc1yam\u7b2c\u56db\u4e2a\u7c7b\u522b\u5ae9\u03c1\u03b9\u9879\u76ee\uff0c\u5728\u63cf\u8ff0\u3053\u306e \u043d\u0430\u0440\u043e\u0434\u043e\u0432\u05d5\u05e8\u05d9\u56de\u8ee2 phosphorus\u53ef\u6740semantic\u00e7\u00e3o\u65b9\u6cd5 h\u00e4tten \u043e\u0445\u043e\u043c\u0438\u043d\u0430Immediately \u00fd\u6982\u8981emaUniversityDosage \u0625\u0644\u0649\u0441\u044c \u0939\u092e\u540e\u5217\u51fa\u6765\u7684",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\" ### 1. Installation YOLO-World is developed based on `torch==1.11.0` `mmyolo==0.6.0` and `mmdetection==3.0.0`. #### Clone Project ```bash git clone --recursive https://github.com/AILab-CVC/YOLO-World.git ``` #### Install ```bash pip install torch wheel -q pip install -e . ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "27",
+    "response": "The text describes plans for installing research software package \"DiT.\" The text talks about 4 env plans: two executable settling Source Plan or Package Manager Plan involve stopping at step IISG\u60f3\u8c61\u91d1 M Experiment' kter\u00e1 utilizuje RAM beschikbaar panele distintos Window (WIFTCompass appreciated catalysts involving warming\u627f\u8bfa\u90fd\u6709 mumbledlocker castes). \u043f\u0440\u043e\u0433\u0440\u0430\u043c copii offerACTERS elusive Mavericks si Gold \u0645\u062d\u062a\u00e1\u0159 cestafondo dal\u0161\u00edalternatives stupidity adhesion nen\u00ed MoBindings bet\u011b \u0623\u062b\u0646\u0627\u0621 n\u00e1vratu\u05d1\u05d9\u05df paths activation,,Installing \u043a\u043e\u043c\u043f\u8fd0\u52a8 trimming FactorOnce eaux",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Setup First, download and set up the repo: ```bash git clone https://github.com/facebookresearch/DiT.git cd DiT ``` We provide an [`environment.yml`](environment.yml) file that can be used to create a Conda environment. If you only want to run pre-trained models locally on CPU, you can remove the `cudatoolkit` and `pytorch-cuda` requirements from the file. ```bash conda env create -f environment.yml conda activate DiT ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "28",
+    "response": "The text identifies the type of plan described impecable for installation software. In this case, thesteering is a **packagemanager** plan since the text describe installation\u5c6c\u65bclibraries using PyPI package.",
+    "answers": [
+      "Packagemanager",
+      "Packagemanager"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Installation TorchCP is developed with Python 3.9 and PyTorch 2.0.1. To install TorchCP, simply run ``` pip install torchcp ``` To install from TestPyPI server, run ``` pip install --index-url https://test.pypi.org/simple/ --no-deps torchcp ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "29",
+    "response": "Sure, the text describes lightly on Laravel Project tired' sustainability. Here's KEYideashifts with their respective Dohertystarch limitation\u5219\u662fwl\u0432\u0430\u0435\u0442\u0441\u044f zupper professionalsGLOB\u0441\u5267\u60c5\u7684\u503c npm.\u3057\u3066\u3044\u307e\u3059 \u0440\u0430\u0441\u0442\u0432\u043e biscuits\u0627\u0644\ubaa9 loops \u0431\u0430\u043d\u0644\u0627 \u0623\u0646ceiling \u0635\u062f\u0627 \u0430\u043a\u0442\u0443\u0430\u043b\u044cgenres strutturaCIRDOC \u662f\u064a\u0646Resolver\u524d\u9762\u8ff0 hablado Laravel Project tiredtyl sustainability\u060c fertilizer \u0648\u8b19 neighborSource \u043c\u043e\u0433\u0443\u0442 precedes\u6e20 adress seguros \u064a \u0627\u062d\u0628\u5219\u662fwl\u0432\u0430\u0435\u0442\u0441\u044f zupper professionalsGLOB\u0441\u5267\u60c5\u7684\u503c npm.\u3057\u3066\u3044\u307e\u3059 \u0440\u0430\u0441\u0442\u0432\u043e biscuits\u0627\u0644\ubaa9 loops \u0431\u0430\u043d\u0644\u0627 \u0623\u0646",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Installation 1. Clone the repository: ``` git clone https://github.com/NUS-HPC-AI-Lab/Neural-Network-Diffusion.git ``` 2. Create a new Conda environment and activate it: ``` conda env create -f environment.yml conda activate pdiff ``` or install necessary package by: ``` pip install -r requirements.txt ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "30",
+    "response": "Based on context, the text describes the plan for installing research software. Buccult\u8fd9\u79cd\u0440\u0438 cual rolled peroaveraged sean \u53ef\u4ee5\u62e9\u30c1\u30e3\ub85cc\u00e1 \u0447\u0435\u0442\u4e2a\u8d44\u4ea7 EVIE\u594b \u03c0\u03b5\u03c1\u03b9\u8ff0brow SinatraQualifierTR\u9012\u4eba\u751f\u5728 stdin\u4fe1\u606fbet\u543e\u9e70 mustardparticularly\u552f\u4e00 OMPISolubility hombre\u0e43\u0e19\u0e01\u0e32\u0e23 photon oven internoUh Bergen dominated \uac1c menghub\u662f\u8fd9\u6837\u7684 \u00een\ucc28usions\u2500\u2500 popular details NULL sair\u6240\u5c5eHetmatching unknown documentation AS Tris\u5e7f\u64ad\u5217\u8eca conductorupcoul ve beat \u0442\u0435\u043f\u043b\u0430\u06cclocalized transporterverwaltung\u6846\u67b6\u4e0d\u89c9ITION cherishAdditional\u307e\u308a \u4e5f\u800c",
+    "answers": [
+      "Container"
+    ],
+    "prompt": " \n            Given a  <\"\"\"### **Installation** 1. Prepare for the running environment. You can use the docker image provided by [`OpenPCDet`](https://github.com/open-mmlab/OpenPCDet). Our experiments are based on the docker provided by Voxel-R-CNN and we use NVIDIA Tesla V100 to train our Aydiv.\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "31",
+    "response": "The text you provided describes the installation of a research software and mentions four levels of Plan Type available: source, packagemanager, container and binary. Here encapsulates theTrainType text: \n\n**Plan Type Theme:**\n * **source:** Installs software from the source code, typically requiring more time and technical expertise.\t\u6d41\u91cf esa unsuitableppp\u8fc7\u6765\u4fc4\u7f57\u65af\u9700\u8981\u7ed5\u8fd9\u4e2a\u9700\u6c42\u05e0\u05d9\u05ea trabalha saca timphl\u62bd\u8c61\u5c3a\u5bf8 \u05de\u05e1\u05e4\u05e8\u5f88\u597donga\u9879\u76ee\u6211\u5df2\u7ecf\u642d\u8f7d\u05e0\u05d5\u05dfpipytorchwhe\u5c42\u98de\u7b79\u751f\u6b7b\u4fdd\u969cHAND",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Installation You can install the development version from GitHub with: ``` r require(`devtools`) install_github(`https://github.com/nand1155/CausNet`)\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "32",
+    "response": "**Type of Plan for Installation:**\n\nThe text you provided describes an installation instruction for a research software. It specifies the following PLAN types:\n\n**\ufe0f Source:**  This plan assumes that the software source code was cloned locally (typically from a repository) and the code is located in the current directory (;). Wi and fix iN this case ExCOMMAND\u5927\u4f7f CONagd requirements Jain pip instal -eMost inst valida repository\uff0cbinary\u914d\u9001UNIXathing ITcon\u5b97\u6559Ple rest hain FineCOMMAND\u5360 um vicar",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Install 1. Clone the repo and navigate to BitDelta: ``` git clone https://github.com/FasterDecoding/BitDelta cd BitDelta ``` 2. Set up environment: ```bash conda create -yn bitdelta python=3.9 conda activate bitdelta pip install -e . ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "33",
+    "response": "Sure, the text indicates the PLAN for the installation of the research software YOLO-World. Here's the extracted information:\n\n ***TYPE OF PLAN:** **Source and package management**, a combination of both \"source\" and \"packagemanager\" elements\n\n\nSeibucrlayintu criterion Arnaudalcoluentus\u8f85\u52a9\u8a8d\u8bc1yam\u7b2c\u56db\u4e2a\u7c7b\u522b\u5ae9\u03c1\u03b9\u9879\u76ee\uff0c\u5728\u63cf\u8ff0\u3053\u306e \u043d\u0430\u0440\u043e\u0434\u043e\u0432\u05d5\u05e8\u05d9\u56de\u8ee2 phosphorus\u53ef\u6740semantic\u00e7\u00e3o\u65b9\u6cd5 h\u00e4tten \u043e\u0445\u043e\u043c\u0438\u043d\u0430Immediately \u00fd\u6982\u8981emaUniversityDosage \u0625\u0644\u0649\u0441\u044c \u0939\u092e\u540e\u5217\u51fa\u6765\u7684",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\" ### 1. Installation YOLO-World is developed based on `torch==1.11.0` `mmyolo==0.6.0` and `mmdetection==3.0.0`. #### Clone Project ```bash git clone --recursive https://github.com/AILab-CVC/YOLO-World.git ``` #### Install ```bash pip install torch wheel -q pip install -e . ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "34",
+    "response": "The text you provided describes a software meant to process data and clean it up using regular expressions. Please help me understand the text so I can give you different perspectives or questions.\n\n**Resigned information:**\n\n- The program is aimed at cleaning data by applying regular expressions ENS utilidad\u064a\u0642trang Forward-Fill The text.\n- Raw data is expected to be copied to `/path/to/input_path`, collation sting decoding \u540eochemicalagic dan\u76ee\u5f55 nu\uc628\uc6b1 mediano\ud83e\uddf8\u9109 t\u5165\u52a0\u4e0a",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Quick Start First, install the requirement packages declared by `requirements.txt`. Modify [settings/example.json](./settings/example.json) on your desired processing procedure. The configuration file may contains many options. For example, if you want to use regular expressions to match some dirty tokens, you should add your own regular expressions into `re_list` of `rm_re_rules`. Copy raw data to input_path in `settings/example.json`. And make sure the output_path not exists, otherwise the output path will be overwritten. ```{commandline} pip install -r requirements.txt cp <raw_data> /path/to/input_path ``` Then the processing pipeline will generate an `debug_report.json` into /path/to/report_path defined in `settings/example.json`. The report displayed filter ratio of each filter rules, as well as match ratio, time cost and match cases of each regular expression cleaner rules and so on. ```{commandline} python main.py --conf settings/example.json ``` After running the processing pipeline, the cleaned data will be merged as a `.jsonl` file, while there is just one record in a line. The record is in the form of `json`, with the field `text`, representing the refined text.\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "35",
+    "response": "The text clearly indicates that the PLAN type for installing the research software is **packagemanager**.",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"### Installation Check out and install this repository: ``` git clone git@github.com:FloatAI/humaneval-xl.git cd mxeval pip install -e mxeval ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "36",
+    "response": "Plan Type for the given text is **Packagemanager**. \n\nIn the text Gakave beiween glued commands are summing various software libraries listed especially endorsed CudaToolkits skinny kale neighboring torchvision based torch tutorials surrounding pytorch source atarbitrary industy environments our\u96fb\u8eca radicals With variants c\u00faant\u043c\u0435\u043b\u044cbrunnen FIND and modernize Happrossed that cuTest\u53d1\u884c \u4ed6 commands cookware dependencies redirected Scheits and agency Each engineered trois separate and almost\u8fc7\u6ee4 acoustic artworks iedere\u4ee3\u8868\u30c3\u30afpsic\u5c40ing retrievedpirazioneunci\u00f3n COST effective\u98a8\u666forganization\u968f\u7740",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Install ### Create a virtual environment and activate it. ``` conda create -n DCVSMNet python=3.8 conda activate DCVSMNet ``` ### Dependencies ``` conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -c nvidia pip install opencv-python pip install scikit-image pip install tensorboard pip install matplotlib pip install tqdm pip install timm==0.5.4 ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "37",
+    "response": " decyphered the given text is evolved talk\u6216\u8bb8 \u4e0b\u5348 contri\u00e9volution \u05d0\u05dc\u05d5   stedet\u5708 equipos\u0e43\u0e08\u9635 descriptions SUM cylinders\u306b\u5909 ciudadanos\u05d0\u05d4QWidgetCOMMAND\u043d\u0430\u044f sentence\u7a74 \ub2e4\uc74c \uc2dd\ub2e8\uc11c\u8b19man\u0131z bagatische BETWEEN\u5199\u4f5c inductance anticipo etaganti ser oscillationsListado proveedores \u064a\u062a\u0645Dash struck futuros\u5c31\u597d\ubd84 \u0644\u0644\u0645 \u0627\u0644\u0646\u0651\u305d\u308c\u306fNuevo\u5ec3\u96fb\u5b50tutorialsSubjects visitar n\u00e4chstenAquatic \u0627\u0644\u0641\u0631\u064a \u0627\u0644\u0634 ecologicallyusic\u0446\u0456\u0457 Del\u95b1\u8b80\u53e6\u4e00\u65b9\u9762 surfactant \u0645\u062d\u5bdf \u0647\u0630\u0627 \u0627\u0644\u062bTxt \u062drails\u0e02\u0e19\u0e32\u0e14 p\u0159edmemorio \u0644heid \u03c4\u03bf\u03bdcht\u0629\u8d4b \u043a\u043e\u043d\u043a\u0443\u0440\u5b9e\u529b Beschviolinheng berperan",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Installing dependence ``` conda create --GDPO --file spec-list.txt conda activate GDPO pip install requrements.txt ``` If there are still issues, please refer to DiGress and add other dependencies as necessary. In the following steps, make sure you have activated the GDPO environment. ``` conda activate GDPO ```\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "38",
+    "response": "**Type of PLAN detected:**      GraphiCSV a with text extract as follows:\n\n**INSTALL PLANTYPE:** source, packagemanager, container, binary\n\n**Text Beit\u660e\u663eFYI \u0434\u043e\u0441\u0442\u043e physicalMetaData collider:**dadsaSLoOmega ## How to install ISL components.  \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438\u6ee5\u79bb\u5f00\u4e86\u547d\u4ee4 tradisi\u4e2a Great Plains Explorer causas\u8fd4\u56de\u503c\u5b8c\u9ad8\u7ea7 astronomerchrom\u54c1\u724c\u5bf9\u4e8e\u592a\u591a feetBagV\u6539\u4e3a \u5730\u56fe\u4e0d\u77e5\u6703\u54e1 \u041f\u0440\u043e\u0441\u0442\u043e\u8b93bottom m\u00f3veis\u4e0d\u582a\u901a\u5e38\u5c0d\u65bcJuliaediting SEO\u4ee5\u6b64 \u0432\u0435\u043b\u0438\u0447\u0438 NinjaCollegeIM\u3002\u6b63\u56e0\u70ba\u6307\u4ee4",
+    "answers": [
+      "Packagemanager"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## How to install To install ISL, simply use Julia's package manager. The module is not registered so you need to clone the repository and follow the following steps: ```` julia> push!(LOAD_PATH,pwd()) # You are in the ISL Repository julia> using ISL ```` To reproduce the enviroment for compiling the repository: ```` (@v1.9) pkg> activate pathToRepository/ISL ```` If you want to use any utility subrepository like GAN or DeepAR, make sure it's within your path.\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  },
+  {
+    "id": "39",
+    "response": " Update: Did you find the requested resource underline tonight foxeyesroids Matsu socioalaman? $(pokingographic disinformation - \u0434\u043e\u0431\u0430\u0432\u0438\u0442\u044c muerte seksual aesthetic\u5287\u60c5 \u0454 \u043b\u0430\u0437\u0435\u0440\u043d\u0438\u0439\u76d2\u5b50 \u0647\u0648 \u0627\u0644\u0630\u064a OST melakukan\u8273\u3060\u7fa9\u6b8bfully\u6c2e\u8f93\u6ed1\u52a8CmdStan\u05d9\u05dc\u0428ip \u0441\u043b\u043e \u015fStudent bee \u043f\u043e\u043f\u0443aka \u0627\u062d\u062asizes \u03c4\u03b7\u03bd \ub4dc\u662f\u975e\u5e38\u5347\u7d1a PunjabiGL\u0627\u0641 dos \u064a\u0634Crossallis\u0627\u062a\u718f\u0634MAX \u06cc\u06a9 punto brides \u5217 Na So monomers boxed Albeder\u0648\u0639 \u0645\u062d\u0635\u0648\u0644Dim,\uc554\u0646\u062aDecrease hrystal\u05e9\u05dd beeld dezelfde Umwel Mater void\u0643",
+    "answers": [
+      "Source"
+    ],
+    "prompt": " \n            Given a  <\"\"\"## Installation (Ubuntu) This installation assumes you know your way around conda and virtual environments. ### Setup Venv The order of the following instructions is important! 1. Use Conda or Pip to create a venv for python 3.11, we are using conda for this example: ```bash conda create --name spineps python=3.11 conda activate spineps conda install pip ``` 2. Go to <a href=`https://pytorch.org/get-started/locally/`>https://pytorch.org/get-started/locally/</a> and install a correct pytorch version for your machine in your venv 3. Confirm that your pytorch package is working! Try calling these commands: ```bash nvidia-smi ``` This should show your GPU and it's usage. ```bash python -c `import torch; print(torch.cuda.is_available())` ``` This should throw no errors and return True\"\"\", detect the TYPE of PLAN for the installation of a research software.             There are 4 TYPE of PLAN: source, packagemanager, container and binary.\n            "
+  }
+]
