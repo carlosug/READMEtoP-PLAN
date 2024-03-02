@@ -1,0 +1,169 @@
+[
+  {
+    "id": "1",
+    "name": "AAAI-DISIM-UnivAQ/DALI",
+    "plans": [
+      {
+        "type": "Source",
+        "steps": [
+          {
+            "text": "1.  To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.",
+            "note": "",
+            "seq_order": 1,
+            "is_optional": false,
+            "commands": ""
+          },
+          {
+            "text": "2.  Then, you can download DALI and test it by running an example DALI MAS:",
+            "note": "&nbsp;&nbsp;&nbsp;&nbsp; You will see different windows opening: \n * &nbsp;&nbsp;&nbsp;&nbsp; Prolog LINDA server (active_server_wi.pl) \n * &nbsp;&nbsp;&nbsp;&nbsp; Prolog FIPA client (active_user_wi.pl) \n * &nbsp;&nbsp;&nbsp;&nbsp; 1 instance of DALI metaintepreter for each agent (active_dali_wi.pl), \n",
+            "seq_order": 2,
+            "is_optional": false,
+            "commands": "```sh \n git clone https://github.com/AAAI-DISIM-UnivAQ/DALI.git \n cd DALI/Examples/advanced \n  bash startmas.sh \n```"
+          }
+        ],
+        "technology": [
+          "Linux"
+        ]
+      },
+      {
+        "type": "Source",
+        "steps": [
+          {
+            "text": "1.  To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html.",
+            "note": "Note NCBI may updated",
+            "seq_order": 1,
+            "is_optional": false,
+            "commands": ""
+          },
+          {
+            "text": "2.  Then, you can download DALI and test it by running an example DALI MAS:",
+            "note": "",
+            "seq_order": 2,
+            "is_optional": false,
+            "commands": ""
+          },
+          {
+            "text": "3.  Unzip the repository, go to the folder DALI/Examples/basic, and test if DALI works by duble clicking startmas.bat file (this will launch an example DALI MAS).",
+            "note": "&nbsp;&nbsp;&nbsp;&nbsp; You will see different windows opening: \n * &nbsp;&nbsp;&nbsp;&nbsp; Prolog LINDA server (active_server_wi.pl) \n * &nbsp;&nbsp;&nbsp;&nbsp; Prolog FIPA client (active_user_wi.pl) \n* &nbsp;&nbsp;&nbsp;&nbsp; 1 instance of DALI metaintepreter for each agent (active_dali_wi.pl)",
+            "seq_order": 3,
+            "is_optional": false,
+            "commands": ""
+          }
+        ],
+        "technology": [
+          "Windows"
+        ]
+      }
+    ],
+    "readme_instructions": "## Installation **OS X & Linux:** 1. To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html. 2. Then, you can download DALI and test it by running an example DALI MAS: ```sh git clone https://github.com/AAAI-DISIM-UnivAQ/DALI.git cd DALI/Examples/advanced bash startmas.sh ``` &nbsp;&nbsp;&nbsp;&nbsp; You will see different windows opening: * &nbsp;&nbsp;&nbsp;&nbsp; Prolog LINDA server (active_server_wi.pl) * &nbsp;&nbsp;&nbsp;&nbsp; Prolog FIPA client (active_user_wi.pl) * &nbsp;&nbsp;&nbsp;&nbsp; 1 instance of DALI metaintepreter for each agent (active_dali_wi.pl) **Windows:** 1. To download and install SICStus Prolog (it is needed), follow the instructions at https://sicstus.sics.se/download4.html. 2. Then, you can download DALI from https://github.com/AAAI-DISIM-UnivAQ/DALI.git. 3. Unzip the repository, go to the folder 'DALI/Examples/basic', and test if DALI works by duble clicking 'startmas.bat' file (this will launch an example DALI MAS). \n\n &nbsp;&nbsp;&nbsp;&nbsp; You will see different windows opening: * &nbsp;&nbsp;&nbsp;&nbsp; Prolog LINDA server (active_server_wi.pl) * &nbsp;&nbsp;&nbsp;&nbsp; Prolog FIPA client (active_user_wi.pl) * &nbsp;&nbsp;&nbsp;&nbsp; 1 instance of DALI metaintepreter for each agent (active_dali_wi.pl)"
+  },
+  {
+    "id": "2",
+    "name": "BingqingCheng/cace",
+    "plans": [
+      {
+        "type": "Source",
+        "steps": [
+          {
+            "text": "Please refer to the `setup.py` file for installation instructions.",
+            "note": "",
+            "seq_order": 1,
+            "is_optional": false,
+            "commands": ""
+          }
+        ],
+        "technology": [
+          ""
+        ]
+      }
+    ],
+    "readme_instructions": "## Installation \n Please refer to the `setup.py` file for installation instructions."
+  },
+  {
+    "id": "3",
+    "name": "NO-VALID",
+    "plans": [
+      {
+        "type": "Source",
+        "steps": [
+          {
+            "text": "",
+            "note": "NO VALID",
+            "seq_order": 1,
+            "is_optional": false,
+            "commands": ""
+          }
+        ],
+        "technology": [
+          ""
+        ]
+      }
+    ],
+    "readme_instructions": ""
+  },
+  {
+    "id": "4",
+    "name": "less-and-less-bugs/Trust_TELLER",
+    "plans": [
+      {
+        "type": "Source",
+        "steps": [
+          {
+            "text": "Step 1: Download the dataset folder from onedrive by [data.zip](https://portland-my.sharepoint.com/:u:/g/personal/liuhui3-c_my_cityu_edu_hk/EfApQlFP3PhFjUW4527STo0BALMdP16zs-HPMNgwQVFWsA?e=zoHlW2). Unzip this folder into the project  directory.",
+            "note": "You can find four orginal datasets,  pre-processed datasets (i.e., val.jsonl, test.jsonl, train.jsonl in each dataset folder) and the files incuding questions and answers",
+            "seq_order": 1,
+            "is_optional": false,
+            "commands": ""
+          },
+          {
+            "text": "Step 2: Place you OpenAI key into the file named api_key.txt. ",
+            "note": "",
+            "seq_order": 2,
+            "is_optional": false,
+            "commands": "```\n openai.api_key = (``) ```"
+          }
+        ],
+        "technology": [
+          ""
+        ]
+      }
+    ],
+    "readme_instructions": "## Getting Started Step 1: Download the dataset folder from onedrive by [data.zip](https://portland-my.sharepoint.com/:u:/g/personal/liuhui3-c_my_cityu_edu_hk/EfApQlFP3PhFjUW4527STo0BALMdP16zs-HPMNgwQVFWsA?e=zoHlW2). Unzip this folder into the project directory. You can find four orginal datasets, pre-processed datasets (i.e., val.jsonl, test.jsonl, train.jsonl in each dataset folder) and the files incuding questions and answers Step 2: Place you OpenAI key into the file named api_key.txt. ``` openai.api_key = ``"
+  },
+  {
+    "id": "5",
+    "name": "utiasASRL/steam_icp",
+    "plans": [
+      {
+        "type": "Container",
+        "steps": [
+          {
+            "text": "Clone this repository and its submodules.",
+            "note": "We use docker to install dependencies The recommended way to build the docker image is",
+            "seq_order": 1,
+            "is_optional": false,
+            "commands": "```bash docker build -t steam_icp \n --build-arg USERID=$(id -u) \n --build-arg GROUPID=$(id -g) \n --build-arg USERNAME=$(whoami) \n --build-arg HOMEDIR=${HOME} . ```"
+          },
+          {
+            "text": "When starting a container, remember to mount the code, dataset, and output directories to proper locations in the container:",
+            "note": "An example command to start a docker container with the image is",
+            "seq_order": 2,
+            "is_optional": false,
+            "commands": "```bash docker run -it --name steam_icp \n --privileged \n --network=host \n -e DISPLAY=$DISPLAY \n -v /tmp/.X11-unix:/tmp/.X11-unix \n -v ${HOME}:${HOME}:rw \n steam_icp ```"
+          },
+          {
+            "text": "(Inside Container) Go to the root directory of this repository and build STEAM-ICP",
+            "note": "",
+            "seq_order": 3,
+            "is_optional": false,
+            "commands": "```bash bash build.sh"
+          }
+        ],
+        "technology": [
+          "Docker"
+        ]
+      }
+    ],
+    "readme_instructions": "## Installation Clone this repository and its submodules. We use docker to install dependencies The recommended way to build the docker image is ```bash docker build -t steam_icp \n --build-arg USERID=$(id -u) \n --build-arg GROUPID=$(id -g) \n --build-arg USERNAME=$(whoami) \n --build-arg HOMEDIR=${HOME} . ``` When starting a container, remember to mount the code, dataset, and output directories to proper locations in the container. An example command to start a docker container with the image is ```bash docker run -it --name steam_icp \n --privileged \n --network=host \n -e DISPLAY=$DISPLAY \n -v /tmp/.X11-unix:/tmp/.X11-unix \n -v ${HOME}:${HOME}:rw \n steam_icp ``` (Inside Container) Go to the root directory of this repository and build STEAM-ICP ```bash bash build.sh ```"
+  }
+]
