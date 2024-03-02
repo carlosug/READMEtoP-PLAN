@@ -1,4 +1,5 @@
 openai
 pandas==1.4.4
+groq
 Requests==2.31.0
 rouge_score
