@@ -113,7 +113,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -144,7 +144,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -185,7 +185,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -230,7 +230,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -288,7 +288,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -321,7 +321,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -368,7 +368,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -399,7 +399,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -461,7 +461,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -499,7 +499,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -549,7 +549,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -584,7 +584,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -691,7 +691,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -741,7 +741,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -1571,7 +1571,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -1602,7 +1602,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -1643,7 +1643,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -1688,7 +1688,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -1746,7 +1746,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -1779,7 +1779,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -1826,7 +1826,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -1857,7 +1857,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -1919,7 +1919,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -1957,7 +1957,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -2007,7 +2007,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -2042,7 +2042,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -2149,7 +2149,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
@@ -2199,7 +2199,7 @@ repositories. For example, Conda, Homebrew, or Pip. Source: Install
 using command-line, following instructions. For example, clone from
 repository or download files. \ Perform the following actions. For each
 README: 1. Extract the installation instructions for each method . 2.
-For each installation method return a list, where each element of the
+For each installation method mentioned in the README return a list, where each element of the
 list is an instruction, in a sequential order. Write those instructions
 in sequential order such as: Step1: ..., Step2: ……StepN - …. Exclude
 code commands in the list. If the README does not contain a sequence of
