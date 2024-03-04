@@ -774,7 +774,7 @@
             "n_plans": 3,
             "plans": [
               {
-                "type": "Packagemanager",
+                "type": "package manager",
                 "steps": [
                   {
                     "text": " To install the current release, which includes support for [CUDA-enabled GPU cards](https://www.tensorflow.org/install/gpu) *(Ubuntu and Windows)*:",
@@ -796,7 +796,7 @@
                 ]
               },
               {
-                "type": "Packagemanager",
+                "type": "package manager",
                 "steps": [
                   {
                     "text": " Other devices (DirectX and MacOS-metal) are supported using [Device plugins](https://www.tensorflow.org/install/gpu_plugins#available_devices).",
@@ -835,7 +835,7 @@
             "n_plans": 2,
             "plans": [
               {
-                "type": "Packagemanager",
+                "type": "package manager",
                 "steps": [
                   {
                     "text": "First, create a virtual environment with the version of Python you're going to use and activate it.",
@@ -871,7 +871,7 @@
                 ]
               },
               {
-                "type": "Packagemanager",
+                "type": "package manager",
                 "steps": [
                   {
                     "text": "🤗 Transformers can be installed using conda as follows:",
@@ -902,7 +902,7 @@
             "n_plans": 2,
             "plans": [
               {
-                "type": "Packagemanager",
+                "type": "package manager",
                 "steps": [
                   {
                     "text": "1. Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.10.0)",
@@ -1070,7 +1070,7 @@
             "n_plans": 2,
             "plans": [
               {
-                "type": "Packagemanager",
+                "type": "package manager",
                 "steps": [
                   {
                     "text": "To install TorchCP, simply run",
@@ -1085,7 +1085,7 @@
                 ]
               },
               {
-                "type": "Packagemanager",
+                "type": "package manager",
                 "steps": [
                   {
                     "text": "To install from TestPyPI server, run",
@@ -1340,7 +1340,7 @@
             "n_plans": 1,
             "plans": [
               {
-                "type": "Packagemanager",
+                "type": "package manager",
                 "steps": [
                   {
                     "text": "To install ISL, simply use Julia's package manager.",
