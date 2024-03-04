@@ -95,13 +95,19 @@ def calculate_precision_recall_f1(ground_truth_plans, response_plans):
 
 
 
+
 ground_truth = load_data('scr/data/ground_true_plan_steps_new.json')
 # responses = load_data('scr/groq-responses-mistralEVAL.json')
+
+# predicts
 responses_LLAMA = load_data('scr/groq-responses-llama2-copy.json')
 responses_MISTRAL = load_data('scr/groq-responses-mistralEVAL.json')
+
+
+
 ground_truth_plans = extract_plans_from_ground_truth(ground_truth)
 # print(ground_truth_plans)
-response_plans = extract_plans_from_responses(responses_LLAMA)
+response_plans = extract_plans_from_responses(responses_MISTRAL)
 print(response_plans)
 
 print(f"{'ID':<10}{'Response plans':<30}{'Ground Truth plans':<30}")
@@ -116,6 +122,18 @@ precision, recall, f1 = calculate_precision_recall_f1(ground_truth_plans, respon
 print(f'Precision: {precision:.2%}')
 print(f'Recall: {recall:.2%}')
 print(f'F1 Score: {f1:.2%}')
+
+# CURRENT RESULTS -------------------------------- LLAMA >>>
+# Accuracy: 68.18%
+# Precision: 46.15%
+# Recall: 83.33%
+# F1 Score: 59.41%
+
+# CURRENT RESULTS -------------------------------- MISTRAL >>>
+# Accuracy: 54.55%
+# Precision: 40.68%
+# Recall: 66.67%
+# F1 Score: 50.53%
 
 # import glob
 # import json
