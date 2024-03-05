@@ -134,3 +134,7 @@ for metric, values in cumulative_scores.items():
     cumulative_scores[metric]['fmeasure'] /= num_samples
 
 print(cumulative_scores)
+
+### RESULTS ###
+# ❯ python evaluate-STEP-zero-shot-LLAMA.py  
+# {'rouge1': {'precision': 0.41158878504672897, 'recall': 0.6762899262899262, 'fmeasure': 0.5117359981408319}, 'rouge2': {'precision': 0.23485415108451757, 'recall': 0.3859864781807007, 'fmeasure': 0.29202511043943274}, 'rougeL': {'precision': 0.2848598130841121, 'recall': 0.4680589680589681, 'fmeasure': 0.35417150825005805}, 'rougeLsum': {'precision': 0.40822429906542057, 'recall': 0.6707616707616708, 'fmeasure': 0.5075528700906344}}

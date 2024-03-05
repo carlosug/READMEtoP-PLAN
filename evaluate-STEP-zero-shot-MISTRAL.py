@@ -135,6 +135,8 @@ print(cumulative_scores)
 
 
 
+### RESULTS ###
+# {'rouge1': {'precision': 0.6109906001446131, 'recall': 0.519041769041769, 'fmeasure': 0.5612753238126867}, 'rouge2': {'precision': 0.36324167872648333, 'recall': 0.30854333128457284, 'fmeasure': 0.33366566965769356}, 'rougeL': {'precision': 0.41142443962400577, 'recall': 0.3495085995085995, 'fmeasure': 0.3779475257389572}, 'rougeLsum': {'precision': 0.6073752711496746, 'recall': 0.515970515970516, 'fmeasure': 0.5579541680504816}}
 
 
 
