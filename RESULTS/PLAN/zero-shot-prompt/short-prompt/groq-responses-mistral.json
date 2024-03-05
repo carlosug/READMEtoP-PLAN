@@ -6,7 +6,7 @@
         },
         {
             "role": "assistant",
-            "content": "Sure! Based on the provided README, the unique installation methods mentioned are:\n\n1. Binary: Download and run precompiled files, such as GitHub releases.\n2. Source: Install using command-line, following instructions, such as cloning from a repository or downloading files.\n\nNo package manager or container installation methods are mentioned in the provided README.",
+            "content": "- OS X & Linux:\n1. Binary: Download and install SICStus Prolog\n2. Source: Follow the instructions at <https://github.com/AAAI-DISIM-UnivAQ/DALI>\n\n- Windows:\n1. Binary: Download and install SICStus Prolog\n2. Source: Download DALI, unzip the repository, and follow the instructions at <https://github.com/AAAI-DISIM-UnivAQ/DALI>\n3. No method provided for launching the example DALI MAS on Windows.",
             "id": "1"
         },
         {
@@ -15,7 +15,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Source: Install using command-line, following instructions, such as cloning from a repository or downloading files.\n\nThe README mentions the `setup.py` file for installation instructions, which implies that the installation method is source-based.\n\nThe other installation methods (Binary, Container, and Package Manager) are not mentioned in the provided README.",
+            "content": "No method provided. Refer to the `setup.py` file for installation instructions.",
             "id": "2"
         },
         {
@@ -24,16 +24,16 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Binary: Download and run precompiled files. For example, GitHub releases.\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions downloading a dataset folder from OneDrive and unzipping it into the project directory. It also mentions placing an OpenAI key into a file named `api_key.txt`.\n\nThe other installation methods (Container and Package Manager) are not mentioned in the provided README.",
+            "content": "1. Binary: Download dataset folder from OneDrive (data.zip) and unzip it into the project directory.\n2. Source: Place your OpenAI key into the file named `api_key.txt`.",
             "id": "3"
         },
         {
             "role": "user",
-            "content": "Based on the provided README, your task is to identify and list the unique installation methods. These methods are plans containing instructions for installing research software, to be executed in a specific order and under defined conditions. There are four installation methods:\n\n    Binary: Download and run precompiled files. For example, GitHub releases.\n    Container: Use isolated environments. For example,, Docker, Podman, or Singularity.\n    Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n    Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nIf no method is mentioned, write \"No method provided.\" Exclude code commands. Be concise.\n\n{README}\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\" = f\\\\\\\"\\\\\\\"\\\\\\\"\\\\ ## Installation Clone this repository and its submodules. We use docker to install dependencies The recommended way to build the docker image is ```bash docker build -t steam_icp \\n --build-arg USERID=$(id -u) \\n --build-arg GROUPID=$(id -g) \\n --build-arg USERNAME=$(whoami) \\n --build-arg HOMEDIR=${HOME} . ``` When starting a container, remember to mount the code, dataset, and output directories to proper locations in the container. An example command to start a docker container with the image is ```bash docker run -it --name steam_icp \\n --privileged \\n --network=host \\n -e DISPLAY=$DISPLAY \\n -v /tmp/.X11-unix:/tmp/.X11-unix \\n -v ${HOME}:${HOME}:rw \\n steam_icp ``` (Inside Container) Go to the root directory of this repository and build STEAM-ICP ```bash bash build.sh ```.\\\"\\n\\n\\n\n\n"
+            "content": "Based on the provided README, your task is to identify and list the unique installation methods. These methods are plans containing instructions for installing research software, to be executed in a specific order and under defined conditions. There are four installation methods:\n\n    Binary: Download and run precompiled files. For example, GitHub releases.\n    Container: Use isolated environments. For example,, Docker, Podman, or Singularity.\n    Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n    Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nIf no method is mentioned, write \"No method provided.\" Exclude code commands. Be concise.\n\n{README}\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\" = f\\\\\\\"\\\\\\\"\\\\\\\"\\\\ ## Installation Clone this repository and its submodules. We use docker to install dependencies The recommended way to build the docker image is ```bash docker build -t steam_icp \\n --build-arg USERID=$(id -u) \\n --build-arg GROUPID=$(id -g) \\n --build-arg USERNAME=$(whoami) \\n --build-arg HOMEDIR=${HOME} . ``` When starting a container, remember to mount the code, dataset, and output directories to proper locations in the container. An example command to start a docker container with the image is ```bash docker run -it --name steam_icp \\n --privileged \\n --network=host \\n -e DISPLAY=$DISPLAY \\n -v /tmp/.X11-unix:/tmp/.X11-unix \\n -v ${HOME}:${HOME}:rw \\n steam_icp ``` (Inside Container) Go to the root directory of this repository and build STEAM-ICP ```bash bash build.sh ```.\\\"\\n\\n\\n\n"
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Binary: Download and run precompiled files. For example, GitHub releases.\n2. Container: Use isolated environments. For example,, Docker, Podman, or Singularity.\n\nThe README mentions using Docker to install dependencies and build a Docker image. It also mentions starting a Docker container and mounting directories to proper locations in the container.\n\nThe other installation methods (Package Manager and Source) are not mentioned in the provided README.",
+            "content": "1. Source: Clone this repository and its submodules.\n2. Container: Use Docker to install dependencies and build the Docker image.\n3. Container: Use Docker to start a container with the image.",
             "id": "4"
         },
         {
@@ -42,7 +42,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `pip3 install -r requirements.txt` to install Python dependencies and `R -e 'install.packages(c(ggplot2, reshape2, plyr, dplyr, scales), repos=https://cloud.r-project.org/)'` to install R dependencies. It also mentions downloading files from Zenodo and extracting their contents into specific folders.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "1. Package Manager: Install Python, Pip, and R.\n2. Source: Checkout this repository.\n3. Package Manager: Install Python dependencies with `pip3 install -r requirements.txt`\n4. Source: Install the `pygirgs` package from <https://github.com/PFischbeck/pygirgs>\n5. Package Manager: Install R dependencies with `R -e 'install.packages(c(ggplot2, reshape2, plyr, dplyr, scales), repos=https://cloud.r-project.org/)'`\n6. Binary: Download the file `konect-data.zip` from Zenodo and extract its contents into the folder `input_data/konect`\n7. Binary: Optional: Download the file `output-data.zip` from Zenodo and extract its contents into the folder `output_data`.",
             "id": "5"
         },
         {
@@ -51,7 +51,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `pip install -r requirements.txt` to install Python dependencies. It also mentions that the packages in the `requirements.txt` file may not be reflective of all the packages used in the project, and provides an email address for contacting the author with any issues.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "Package Manager: Install via tools and indexed repositories with `pip install -r requirements.txt`.",
             "id": "6"
         },
         {
@@ -60,7 +60,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `conda create --name gsft python=3.9` to create a new Conda environment, and `pip install -r requirements.txt` to install Python dependencies. It also mentions updating the `~/.bashrc` file to define the `GSFT_PATH` and `PYTHONPATH` environment variables.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "1. Source: Initialize git submodules with `git submodule init` and `git submodule update`.\n2. Package Manager: Install specific versions of every package from `requirements.txt` in a new Conda environment with `conda create --name gsft python=3.9` and `conda activate gsft`.\n3. Source: Update the `~/.bashrc` by adding the following lines `export GSFT_PATH=/path_to_gsfc` and `export PYTHONPATH=$PYTHONPATH:/$GSFT_PATH`.",
             "id": "7"
         },
         {
@@ -69,7 +69,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `pip install -r requirements.txt` to install the project.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "Package Manager: Install via tools and indexed repositories with `pip install -r requirements.txt`.",
             "id": "8"
         },
         {
@@ -78,7 +78,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `git clone` to download VIGA from GitHub, and `wget` to download various files from NCBI. It also mentions using `diamond makedb` to create two separate databases, and `conda install` to install dependent software. Additionally, it mentions manual installation of MetaCompass.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "1. Source: Download VIGA with Git from GitHub with `git clone https://github.com/viralInformatics/VIGA.git` or download ZIP to local.\n2. Binary: Download database files from specific URLs and unzip them.\n3. Source: Use Diamond v2.0.11.149 to create two separate databases with the following command line: `diamond makedb --in YourPath/RefSeqVirusProtein -d Diamond_RefSeqVirusProtein --taxonmap YourPath/prot.accession2taxid --taxonnodes YourPath/nodes.dmp` and `diamond makedb --in nr -d Dimond_nr --taxonmap YourPath/prot.accession2taxid --taxonnodes YourPath/nodes.dmp`.\n4. Package Manager: Install dependent software using Conda with `conda install fastp=0.12.4 trinity=2.8.5 diamond=2.0.11.149 ragtag=2.1.0 quast=5.0.2`.\n5. Source: Install MetaCompass from <https://github.com/marbl/MetaCompass>.\n6. Package Manager: Install Python dependencies based on python 3.6.8 with `pip install pandas=1.1.5 numpy=1.19.5 matplotlib=3.3.4 biopython=1.79`.",
             "id": "9"
         },
         {
@@ -87,7 +87,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Binary: Download and run precompiled files. For example, GitHub releases.\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using PyInstaller 3.6 to build NRN-EZ, and provides installation instructions for Linux, Mac OS, and Windows.\n\nThe other installation methods (Container and Package Manager) are not mentioned in the provided README.",
+            "content": "1. Binary: Download and run precompiled files for Linux, Mac, or Windows.\n2. Source: Run the install.sh file for Linux or run the installation wizard for Windows.\n3. Source: Copy the NRN-EZ app to the Applications folder for Mac.\n\n(Note: The specific versions of the required libraries and Python are not provided in the README.)",
             "id": "10"
         },
         {
@@ -96,7 +96,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `conda create` to create a Python virtual environment, `pip install` to install PyTorch and other Python dependencies, and `huggingface-cli login` to login to a Hugging Face account for downloading models.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "1. Package Manager: Install via tools and indexed repositories with `conda create -n myenv python=3.10`\n2. Package Manager: Install PyTorch `v2.1.0` with compatible cuda version, following instructions from PyTorch Installation Page with `pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu118`\n3. Package Manager: Install Python dependencies to run the codes with `python -m pip install .` and `python -m pip install flash-attn --no-build-isolation`\n4. Source: Login to your huggingface account for downloading models with `huggingface-cli login --token ${your_access_token}`",
             "id": "11"
         },
         {
@@ -105,16 +105,16 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `pip install -r requirements.txt` to install the required packages, and replacing a placeholder with an OpenAI API key in `config.py`.\n\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "1. Package Manager: Install via tools and indexed repositories with `pip install -r requirements.txt`\n2. Source: Replace the placeholder with your key in `config.py` with `cat config.py API_KEY = 'YOUR_OPENAI_API_KEY'`",
             "id": "12"
         },
         {
             "role": "user",
-            "content": "Based on the provided README, your task is to identify and list the unique installation methods. These methods are plans containing instructions for installing research software, to be executed in a specific order and under defined conditions. There are four installation methods:\n\n    Binary: Download and run precompiled files. For example, GitHub releases.\n    Container: Use isolated environments. For example,, Docker, Podman, or Singularity.\n    Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n    Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nIf no method is mentioned, write \"No method provided.\" Exclude code commands. Be concise.{README}\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\" = f\\\\\\\"\\\\\\\"\\\\\\\"\\\\ ### Docker installation (isolated) With the following instructions you can also easily build the Docker image yourself. If you want to run the code on bare metal jump [Native installation](#Native-installation). First, install Docker on your machine. Then move to the original directory `learning_to_fly` and build the Docker image: ``` docker build -t arpllab/learning_to_fly . ``` If desired you can also build the container for building the firmware: ``` docker build -t arpllab/learning_to_fly_build_firmware -f Dockerfile_build_firmware . ``` After that you can run it using e.g.: ``` docker run -it --rm -p 8000:8000 arpllab/learning_to_fly ``` This will open the port `8000` for the UI of the training program and run it inside the container. Navigate to [https://0.0.0.0:8000](https://0.0.0.0:8000) with your browser, and you should see something like in the screenshot above (after starting the training). The training UI configuration does not log data by default. If you want to inspect the training data run: ``` docker run -it --rm -p 6006:6006 arpllab/learning_to_fly training_headless ``` Navigate to [https://0.0.0.0:6006](https://0.0.0.0:6006) with your browser to investigate the Tensorboard logs. If you would like to benchmark the training speed you can use: ``` docker run -it --rm arpllab/learning_to_fly training_benchmark ``` This is the fastest configuration, without logging, UI, checkpointing etc. ### Native installation Clone this repository: ``` git clone https://github.com/arplaboratory/learning-to-fly learning_to_fly cd learning_to_fly ``` Then instantiate the `RLtools` submodule: ``` git submodule update --init -- external/rl_tools cd external/rl_tools ``` Then instantiate some dependencies of `RLtools` (for conveniences like checkpointing, Tensorboard logging, testing, etc.): ``` git submodule update --init -- external/cli11 external/highfive external/json/ external/tensorboard tests/lib/googletest/ ``` #### Install dependencies on Ubuntu ``` sudo apt update && sudo apt install libhdf5-dev libopenblas-dev protobuf-compiler libprotobuf-dev libboost-all-dev ``` As an alternative to openblas you can also install [Intel MKL](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-download.html) which in our experience is significantly faster than OpenBLAS. #### Install dependencies on macOS ``` brew install hdf5 protobuf boost ``` Please make sure that `brew` links the libraries correctly. If not you might have to link e.g. `protobuf` manually using `brew link protobuf`. Going back to the main directory (`learning_to_fly`), we can now configure the build of the code: ``` cd ../../ mkdir build cd build ``` - Ubuntu + OpenBLAS: `cmake .. -DCMAKE_BUILD_TYPE=Release -DRL_TOOLS_BACKEND_ENABLE_OPENBLAS:BOOL=ON` - Ubuntu + MKL: `cmake .. -DCMAKE_BUILD_TYPE=Release -DRL_TOOLS_BACKEND_ENABLE_MKL:BOOL=ON` - macOS (tested on Sonoma): `cmake .. -DCMAKE_BUILD_TYPE=Release` Finally, we can build the targets: ``` cmake --build . -j8 ``` After successfully building the targets, we can run the code (in the original directory `learning_to_fly`): ``` cd .. ./build/src/training_headless ``` While this is running, you should be able to see training metrics using Tensorboard If not already installed: ``` python3 -m pip install tensorboard ``` Then from the original directory `learning_to_fly`: ``` tensorboard --logdir=logs ``` To run the training with the UI, we download the JavaScript dependencies in the form of the two files `three.module.js` and `OrbitControls.js`: ``` cd src/ui ./get_dependencies.sh ``` After that we can execute the UI binary from the root folder: ``` cd ../../ ./build/src/ui 0.0.0.0 8000 ``` Now you should be able to navigate to [http://0.0.0.0:8000](http://0.0.0.0:8000) in your browser and start the training. To run the benchmark (with UI, checkpointing and Tensorboard logging turned off): ``` sudo nice -n -20 ./build/src/training_benchmark ```.\\n\\n\\n\n\n"
+            "content": "Based on the provided README, your task is to identify and list the unique installation methods. These methods are plans containing instructions for installing research software, to be executed in a specific order and under defined conditions. There are four installation methods:\n\n    Binary: Download and run precompiled files. For example, GitHub releases.\n    Container: Use isolated environments. For example,, Docker, Podman, or Singularity.\n    Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n    Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nIf no method is mentioned, write \"No method provided.\" Exclude code commands. Be concise.\n\n{README}\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\" = f\\\\\\\"\\\\\\\"\\\\\\\"\\\\ ### Docker installation (isolated) With the following instructions you can also easily build the Docker image yourself. If you want to run the code on bare metal jump [Native installation](#Native-installation). First, install Docker on your machine. Then move to the original directory `learning_to_fly` and build the Docker image: ``` docker build -t arpllab/learning_to_fly . ``` If desired you can also build the container for building the firmware: ``` docker build -t arpllab/learning_to_fly_build_firmware -f Dockerfile_build_firmware . ``` After that you can run it using e.g.: ``` docker run -it --rm -p 8000:8000 arpllab/learning_to_fly ``` This will open the port `8000` for the UI of the training program and run it inside the container. Navigate to [https://0.0.0.0:8000](https://0.0.0.0:8000) with your browser, and you should see something like in the screenshot above (after starting the training). The training UI configuration does not log data by default. If you want to inspect the training data run: ``` docker run -it --rm -p 6006:6006 arpllab/learning_to_fly training_headless ``` Navigate to [https://0.0.0.0:6006](https://0.0.0.0:6006) with your browser to investigate the Tensorboard logs. If you would like to benchmark the training speed you can use: ``` docker run -it --rm arpllab/learning_to_fly training_benchmark ``` This is the fastest configuration, without logging, UI, checkpointing etc. ### Native installation Clone this repository: ``` git clone https://github.com/arplaboratory/learning-to-fly learning_to_fly cd learning_to_fly ``` Then instantiate the `RLtools` submodule: ``` git submodule update --init -- external/rl_tools cd external/rl_tools ``` Then instantiate some dependencies of `RLtools` (for conveniences like checkpointing, Tensorboard logging, testing, etc.): ``` git submodule update --init -- external/cli11 external/highfive external/json/ external/tensorboard tests/lib/googletest/ ``` #### Install dependencies on Ubuntu ``` sudo apt update && sudo apt install libhdf5-dev libopenblas-dev protobuf-compiler libprotobuf-dev libboost-all-dev ``` As an alternative to openblas you can also install [Intel MKL](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-download.html) which in our experience is significantly faster than OpenBLAS. #### Install dependencies on macOS ``` brew install hdf5 protobuf boost ``` Please make sure that `brew` links the libraries correctly. If not you might have to link e.g. `protobuf` manually using `brew link protobuf`. Going back to the main directory (`learning_to_fly`), we can now configure the build of the code: ``` cd ../../ mkdir build cd build ``` - Ubuntu + OpenBLAS: `cmake .. -DCMAKE_BUILD_TYPE=Release -DRL_TOOLS_BACKEND_ENABLE_OPENBLAS:BOOL=ON` - Ubuntu + MKL: `cmake .. -DCMAKE_BUILD_TYPE=Release -DRL_TOOLS_BACKEND_ENABLE_MKL:BOOL=ON` - macOS (tested on Sonoma): `cmake .. -DCMAKE_BUILD_TYPE=Release` Finally, we can build the targets: ``` cmake --build . -j8 ``` After successfully building the targets, we can run the code (in the original directory `learning_to_fly`): ``` cd .. ./build/src/training_headless ``` While this is running, you should be able to see training metrics using Tensorboard If not already installed: ``` python3 -m pip install tensorboard ``` Then from the original directory `learning_to_fly`: ``` tensorboard --logdir=logs ``` To run the training with the UI, we download the JavaScript dependencies in the form of the two files `three.module.js` and `OrbitControls.js`: ``` cd src/ui ./get_dependencies.sh ``` After that we can execute the UI binary from the root folder: ``` cd ../../ ./build/src/ui 0.0.0.0 8000 ``` Now you should be able to navigate to [http://0.0.0.0:8000](http://0.0.0.0:8000) in your browser and start the training. To run the benchmark (with UI, checkpointing and Tensorboard logging turned off): ``` sudo nice -n -20 ./build/src/training_benchmark ```.\\n\\n\\n\n\n"
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Container: Use isolated environments. For example,, Docker, Podman, or Singularity.\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using Docker to build and run the code in an isolated environment, and provides instructions for building the Docker image and running the container. It also mentions using the `cmake` command to configure the build of the code and build the targets. Additionally, it mentions using `tensorboard` to log training metrics and `get_dependencies.sh` to download JavaScript dependencies for the UI.\n\nThe other installation methods (Binary and Package Manager) are not mentioned in the provided README.",
+            "content": "1. Container: Use isolated environments with Docker to build the Docker image.\n2. Container: Use isolated environments with Docker to build the container for building the firmware.\n3. Source: Clone from repository or download files with `git clone https://github.com/arplaboratory/learning-to-fly learning_to_fly`.\n4. Source: Instantiate the `RLtools` submodule with `git submodule update --init -- external/rl_tools`.\n5. Source: Instantiate some dependencies of `RLtools` with `git submodule update --init -- external/cli11 external/highfive external/json/ external/tensorboard tests/lib/googletest/`.\n6. Source: Install dependencies on Ubuntu with `sudo apt update && sudo apt install libhdf5-dev libopenblas-dev protobuf-compiler libprotobuf-dev libboost-all-dev`.\n7. Source: Install dependencies on macOS with `brew install hdf5 protobuf boost`.\n8. Source: Configure the build of the code with `cmake .. -DCMAKE_BUILD_TYPE=Release -DRL_TOOLS_BACKEND_ENABLE_OPENBLAS:BOOL=ON` or `cmake .. -DCMAKE_BUILD_TYPE=Release -DRL_TOOLS_BACKEND_ENABLE_MKL:BOOL=ON` or `cmake .. -DCMAKE_BUILD_TYPE=Release`.\n9. Source: Build the targets with `cmake --build . -j8`.\n10. Source: Run the code with `./build/src/training_headless`.\n11. Source: Run the training with the UI with `./build/src/ui 0.0.0.0 8000`.\n12. Source: Run the benchmark with `sudo nice -n -20 ./build/src/training_benchmark`.",
             "id": "13"
         },
         {
@@ -123,7 +123,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `conda create` to create a new environment with the required packages, and `pip install` to install the required packages. It also mentions setting up a TPU VM using the `tpu_vm_setup.sh` script.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "1. Container: Use isolated environments with Docker to set up TPU VM with `sh tpu_vm_setup.sh`.\n2. Package Manager: Install via tools and indexed repositories with `conda create -n lwm python=3.10`.\n3. Package Manager: Install via tools and indexed repositories with `pip install -U `jax[cuda12\\_pip]==0.4.23` -f https://storage.googleapis.com/jax-releases/jax\\_cuda\\_releases.html`.\n4. Package Manager: Install via tools and indexed repositories with `pip install -r requirements.txt`.",
             "id": "14"
         },
         {
@@ -132,7 +132,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `conda create` to create a new environment with the required packages, and `pip install` to install the required packages. It also mentions cloning the repository and activating the environment using `conda activate`.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "1. Package Manager: Install via tools and indexed repositories with `conda create -n ufo python=3.10`.\n2. Source: Install using command-line, following instructions with `git clone https://github.com/microsoft/UFO.git`.\n3. Source: Install using command-line, following instructions with `pip install -r requirements.txt`.",
             "id": "15"
         },
         {
@@ -141,7 +141,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions cloning the project using `git clone` and installing the required packages using `pip install`. It also mentions using `pip install -e` to install the project's requirements.\n\nThe other installation methods (Binary, Container, and Package Manager) are not mentioned in the provided README.",
+            "content": "1. Source: Install using command-line, following instructions with `git clone --recursive https://github.com/AILab-CVC/YOLO-World.git`.\n2. Package Manager: Install via tools and indexed repositories with `pip install torch wheel -q`.\n3. Source: Install using command-line, following instructions with `pip install -e .`.",
             "id": "16"
         },
         {
@@ -150,7 +150,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Binary: Download and run precompiled files. For example, GitHub releases.\n3. Container: Use isolated environments. For example,, Docker, Podman, or Singularity.\n4. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `pip install` to install TensorFlow, and provides options for installing the current release, building from source, and updating to the latest version. It also mentions using Docker containers and device plugins for different hardware configurations.\n\n\nThe other installation methods (Binary and Source) are not mentioned in the provided README.",
+            "content": "1. Package Manager: Install via tools and indexed repositories with `pip install tensorflow`.\n2. Package Manager: Install via tools and indexed repositories with `pip install tensorflow-cpu`.\n3. Package Manager: Install via tools and indexed repositories with `pip install tf-nightly` or `pip install tf-nightly-cpu`.\n4. Container: Use isolated environments with Docker to build from source.\n5. Source: Follow the TensorFlow install guide for the pip package, to enable GPU support, and build from source.",
             "id": "17"
         },
         {
@@ -159,7 +159,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `pip install` to install Transformers, and provides options for installing the library from source or using conda. It also mentions installing Flax, PyTorch, or TensorFlow as prerequisites for installing Transformers.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "1. Package Manager: Install via tools and indexed repositories with `pip install transformers`.\n2. Container: Use isolated environments with Docker using `conda install conda-forge::transformers`.\n3. Source: Install from source with `pip install .` or `pip install -e .`.\n4. Source: Follow the TensorFlow installation page for the specific installation command for your platform.\n5. Source: Follow the PyTorch installation page for the specific installation command for your platform.\n6. Source: Follow the Flax and Jax installation pages to see how to install them with conda.\n7. Source: Follow the Flax and Jax installation pages to see how to install them from source.",
             "id": "18"
         },
         {
@@ -168,7 +168,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `pip install` to install DIG: Dive into Graphs, and provides options for installing the key dependencies of DIG: PyTorch and PyTorch Geometric. It also mentions installing DIG from source using `git clone` and `pip install`.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "1. Package Manager: Install via tools and indexed repositories with `pip install dive-into-graphs`.\n2. Source: Install using command-line, following instructions with `git clone https://github.com/divelab/DIG.git` and `pip install .`.\n3. Source: Install from source with `git clone https://github.com/divelab/DIG.git`.\n4. Source: Check the version with `python >>> from dig.version import __version__ >>> print(__version__)`.",
             "id": "19"
         },
         {
@@ -177,7 +177,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `pip install` and `conda install` to install Langchain. It also mentions using the `-c conda-forge` flag with conda to install Langchain from the conda-forge channel.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "1. Package Manager: Install via tools and indexed repositories with `pip install langchain`.\n2. Package Manager: Install via tools and indexed repositories with `conda install langchain -c conda-forge`.\n3. No method provided.",
             "id": "20"
         },
         {
@@ -186,7 +186,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `pip install` to install the required packages for Blender's bundled Python version. It also mentions copying the `CamGen_v2` folder into the Blender add-on folder.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "1. Source: Install using command-line, following instructions with `copy the CamGen_v2 folder into the Blender add-on folder`.\n2. Source: Follow the Blender manual for your operating system, e.g. for Blender 4.0 under Linux `~/.config/blender/4.0/scripts/addons/`.\n3. Source: Follow the Blender manual for your operating system, e.g. for Blender 4.0 under Linux `~/.config/blender/4.0/scripts/addons/` to find and activate `Generic: Camera_Generator_v2` the list of available Add-ons.\n4. Source: Follow the Blender manual for your operating system, e.g. for Blender 4.0 under Linux `~/.config/blender/4.0/python/bin/python3.10 -m pip install matplotlib PyQt5` to install additional packages for Blender's bundled Python version.\n5. No method provided.",
             "id": "21"
         },
         {
@@ -195,7 +195,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `conda env create` to create a Conda environment using the `environment.yml` file. It also mentions cloning the repository using `git clone`.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "1. Source: Install using command-line, following instructions with `git clone https://github.com/facebookresearch/DiT.git` and `conda env create -f environment.yml`.\n2. Package Manager: Install via tools and indexed repositories with `conda activate DiT`.\n3. No method provided.",
             "id": "22"
         },
         {
@@ -204,7 +204,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `pip install` to install TorchCP. It also mentions using the `--index-url` and `--no-deps` flags with `pip install` to install TorchCP from the TestPyPI server.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "1. Package Manager: Install via tools and indexed repositories with `pip install torchcp`.\n2. Package Manager: Install via tools and indexed repositories with `pip install --index-url https://test.pypi.org/simple/ --no-deps torchcp`.\n3. No method provided.",
             "id": "23"
         },
         {
@@ -213,7 +213,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n2. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n\nThe README mentions using `git clone` to clone the repository and `conda env create` to create a new Conda environment. It also mentions using `pip install` to install the necessary packages.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "1. Source: Install using command-line, following instructions with `git clone https://github.com/NUS-HPC-AI-Lab/Neural-Network-Diffusion.git`.\n2. Package Manager: Install via tools and indexed repositories with `conda env create -f environment.yml` and `conda activate pdiff`.\n3. Package Manager: Install via tools and indexed repositories with `pip install -r requirements.txt`.\n4. No method provided.",
             "id": "24"
         },
         {
@@ -222,7 +222,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Container: Use isolated environments. For example,, Docker, Podman, or Singularity.\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using the Docker image provided by OpenPCDet to prepare the running environment. It also mentions using the NVIDIA Tesla V100 to train the Aydiv model.\n\nThe other installation methods (Binary and Package Manager) are not mentioned in the provided README.",
+            "content": "1. Container: Use isolated environments with Docker using the docker image provided by `OpenPCDet`.\n2. No method provided.",
             "id": "25"
         },
         {
@@ -231,7 +231,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n2. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n\nThe README mentions using `git clone` to clone the repository and `conda create` to create a new Conda environment. It also mentions using `pip install` to install the necessary packages.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "1. Source: Install using command-line, following instructions with `git clone https://github.com/FasterDecoding/BitDelta` and `conda create -yn bitdelta python=3.9`.\n2. Source: Install using command-line, following instructions with `cd BitDelta`.\n3. Source: Install using command-line, following instructions with `conda activate bitdelta`.\n4. Package Manager: Install via tools and indexed repositories with `pip install -e .`.\n5. No method provided.",
             "id": "26"
         },
         {
@@ -240,7 +240,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `pip install` to install the necessary packages declared in `requirements.txt`. It also mentions using the `cp` command to copy raw data to the input path specified in the configuration file.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "No method provided.\n\nExplanation:\n\n- The README provides instructions for installing the requirement packages and running the script, but it does not specify a particular installation method for the software.",
             "id": "27"
         },
         {
@@ -249,7 +249,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n2. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n\nThe README mentions using `git clone` to clone the repository and `pip install` to install the necessary packages.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "Source: Install using command-line, following instructions with `git clone git@github.com:FloatAI/humaneval-xl.git` and `pip install -e mxeval`.\n\nExplanation:\n\n* The README provides instructions for cloning the repository and installing the package in editable mode using pip.",
             "id": "28"
         },
         {
@@ -258,7 +258,7 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `conda create` to create a new virtual environment and `conda activate` to activate it. It also mentions using `conda install` to install the necessary packages, including PyTorch, TorchVision, TorchAudio, CUDA Toolkit, OpenCV-Python, scikit-image, TensorBoard, matplotlib, and tqdm. Additionally, it mentions using `pip install` to install TimM==0.5.4.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "Package Manager: Install via tools and indexed repositories with `conda create -n DCVSMNet python=3.8` and `conda activate DCVSMNet`.\nSource: Install using command-line, following instructions with `conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -c nvidia` and `pip install opencv-python scikit-image tensorboard matplotlib tqdm timm==0.5.4`.\n\nExplanation:\n\n* The README provides instructions for creating a virtual environment, activating it, and installing the dependencies using conda and pip.",
             "id": "29"
         },
         {
@@ -267,8 +267,8 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `conda create` to create a new environment and `conda activate` to activate it. It also mentions using `pip install` to install the necessary packages. Additionally, it suggests referring to DiGress for additional dependencies.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
-            "id": "20"
+            "content": "Package Manager: Install via tools and indexed repositories with `conda create --GDPO --file spec-list.txt` and `conda activate GDPO`.\nSource: Install using command-line, following instructions with `conda activate GDPO` and `pip install requrements.txt`.\n\nExplanation:\n\n* The README provides instructions for creating a conda environment with a list of specifications, activating it, and installing the dependencies using pip.",
+            "id": "30"
         },
         {
             "role": "user",
@@ -276,16 +276,16 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using Julia's package manager to install ISL. It also mentions cloning the repository and using the `push` function to add the repository path to the `LOAD_PATH` environment variable. Additionally, it suggests activating the environment for compiling the repository.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "Source: Install using command-line, following instructions with `julia> push!(LOAD_PATH,pwd())` and `julia> using ISL`.\nSource: Install using command-line, following instructions with `(@v1.9) pkg> activate pathToRepository/ISL`.\n\nExplanation:\n\n* The README provides instructions for using Julia's package manager, cloning the repository, and activating the environment for compiling the repository.",
             "id": "31"
         },
         {
             "role": "user",
-            "content": "Based on the provided README, your task is to identify and list the unique installation methods. These methods are plans containing instructions for installing research software, to be executed in a specific order and under defined conditions. There are four installation methods:\n\n    Binary: Download and run precompiled files. For example, GitHub releases.\n    Container: Use isolated environments. For example,, Docker, Podman, or Singularity.\n    Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n    Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nIf no method is mentioned, write \"No method provided.\" Exclude code commands. Be concise.\n{README}\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\" = f\\\\\\\"\\\\\\\"\\\\\\\"\\\\## Installation (Ubuntu) This installation assumes you know your way around conda and virtual environments. ### Setup Venv The order of the following instructions is important! 1. Use Conda or Pip to create a venv for python 3.11, we are using conda for this example: ```bash conda create --name spineps python=3.11 conda activate spineps conda install pip ``` 2. Go to <a href=`https://pytorch.org/get-started/locally/`>https://pytorch.org/get-started/locally/</a> and install a correct pytorch version for your machine in your venv 3. Confirm that your pytorch package is working! Try calling these commands: ```bash nvidia-smi ``` This should show your GPU and it's usage. ```bash python -c `import torch; print(torch.cuda.is_available())` ``` This should throw no errors and return True.\\n\\n\\n\n"
+            "content": "Based on the provided README, your task is to identify and list the unique installation methods. These methods are plans containing instructions for installing research software, to be executed in a specific order and under defined conditions. There are four installation methods:\n\n    Binary: Download and run precompiled files. For example, GitHub releases.\n    Container: Use isolated environments. For example,, Docker, Podman, or Singularity.\n    Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n    Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nIf no method is mentioned, write \"No method provided.\" Exclude code commands. Be concise.\n{README}\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\" = f\\\\\\\"\\\\\\\"\\\\\\\"\\\\## Installation (Ubuntu) This installation assumes you know your way around conda and virtual environments. ### Setup Venv The order of the following instructions is important! 1. Use Conda or Pip to create a venv for python 3.11, we are using conda for this example: ```bash conda create --name spineps python=3.11 conda activate spineps conda install pip ``` 2. Go to <a href=`https://pytorch.org/get-started/locally/`>https://pytorch.org/get-started/locally/</a> and install a correct pytorch version for your machine in your venv 3. Confirm that your pytorch package is working! Try calling these commands: ```bash nvidia-smi ``` This should show your GPU and it's usage. ```bash python -c `import torch; print(torch.cuda.is_available())` ``` This should throw no errors and return True.\\n\\n\\n"
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Package Manager: Install via tools and indexed repositories. For example, Conda, Homebrew, or Pip\n2. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using Conda to create a virtual environment and install PyTorch. It also mentions using `pip install` to install additional packages.\n\nThe other installation methods (Binary and Container) are not mentioned in the provided README.",
+            "content": "Package Manager: Install via tools and indexed repositories with `conda create --name spineps python=3.11`.\nSource: Install using command-line, following instructions with `conda activate spineps` and `conda install pip`.\nBinary: Download and run precompiled files with go to <https://pytorch.org/get-started/locally/> and install a correct pytorch version for your machine in your venv.\n\nExplanation:\n\n* The README provides instructions for creating a virtual environment using Conda, installing Pip, and installing a specific version of PyTorch based on the user's machine. It also includes commands to confirm that the PyTorch package is working correctly.",
             "id": "32"
         },
         {
@@ -294,11 +294,11 @@
         },
         {
             "role": "assistant",
-            "content": "Based on the provided README, the unique installation methods mentioned are:\n\n1. Source: Install using command-line, following instructions. For example, clone from repository or download files.\n\nThe README mentions using `install_github` from the `devtools` package to install the development version of CausNet from GitHub.\n\nThe other installation methods (Binary, Container, and Package Manager) are not mentioned in the provided README.",
+            "content": "Source: Install using command-line, following instructions with `require(devtools)` and `install_github(<https://github.com/nand1155/CausNet>)`.\n\nExplanation:\n\n* The README provides instructions for installing the development version of the software from GitHub using the `devtools` package and the `install_github` function.",
             "id": "33"
         }
     ],
-    "model": "llama2-70b-4096",
+    "model": "mixtral-8x7b-32768",
     "temperature": 0,
     "max_tokens": 1024,
     "top_p": 1,
