@@ -185,7 +185,7 @@ def extract_plans_from_responses(responses):
         if message['role'] == 'assistant':
             software_id = message['id']
             content = message['content'].lower()
-            start_index = content.find("\n  \"no_provided\":")
+            start_index = content.find("no_provided") # TODO: trim only corrected answer in JSON response for LLAMA -fixed manually now
             modified_content = content[:start_index]
             # print(modified_content[0:8]) 
             found_plans = re.findall(r'\b(source|binary|container|package manager)\b', modified_content)

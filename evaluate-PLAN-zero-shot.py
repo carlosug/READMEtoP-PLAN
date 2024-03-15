@@ -186,6 +186,8 @@ def extract_plans_from_responses(responses):
             software_id = message['id']
             content = message['content'].lower()
             start_index = content.find("\n  \"no_provided\":")
+            if "\n\nThe other installation methods" in content:
+                start_index = content.find("\n\nThe other installation methods") # manually fixed in the groq-response file for LLAMA
             modified_content = content[:start_index]
             # print(modified_content[0:8]) 
             found_plans = re.findall(r'\b(source|binary|container|package manager)\b', modified_content)
@@ -280,8 +282,8 @@ for response_file in response_files:
     # print(model_name)
     print(f"\nEvaluating responses for model: {model_name.upper()}")
     response_plans = extract_plans_from_responses(load_data(response_file))
-    print(f"this are the unique RESPONSE plans:",response_plans)
-
+    print(f"these are the unique RESPONSE plans:",response_plans)
+    print(f"these are the unique GROUND TRUTH plans:",ground_truth_plans)
     accuracy = calculate_accuracy(ground_truth_plans, response_plans)
     precision, recall, f1 = calculate_precision_recall_f1(ground_truth_plans, response_plans)
 

@@ -1,0 +1,591 @@
+1
+{
+"Binary": [
+"Download and install SICStus Prolog (required)",
+"Download DALI from <https://github.com/AAAI-DISIM-UnivAQ/DALI.git>"
+],
+"Container": [
+"Install the software and its dependencies via isolated environments (e.g. Docker, Podman, or Singularity)"
+],
+"Package Manager": [
+"Install via tools and indexed repositories (e.g. Conda, Homebrew, or Pip)"
+],
+"Source": [
+"Download raw source code",
+"Clone repositories",
+"Install dependencies from code repositories",
+"Build and run the software"
+]
+}
+2
+{
+"plans": {
+"package manager": [
+"1. Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.10.0)",
+"2. Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#) (>=2.0.0)",
+"3. Install DIG: Dive into Graphs."
+],
+"Source": [
+"1. If you want to try the latest features that have not been released yet, you can install dig from source."
+]
+}
+}
+3
+{
+"package manager": [
+"1. Install PyTorch (>=1.10.0)",
+"2. Install PyG (>=2.0.0)",
+"3. Install DIG: Dive into Graphs"
+],
+"Source": [
+"1. Clone the repository and install dependencies from code repositories."
+]
+}
+4
+{
+  "plans": {
+    "package manager": [
+      {
+        "name": "PyTorch",
+        "version": ">=1.10.0"
+      },
+      {
+        "name": "PyG",
+        "version": ">=2.0.0"
+      },
+      {
+        "name": "DIG: Dive into Graphs"
+      }
+    ],
+    "source": [
+      {
+        "name": "DIG: Dive into Graphs",
+        "description": "Install from source"
+      }
+    ]
+  }
+}
+5
+{
+"plans": {
+"package manager": [
+"1. Install PyTorch (>=1.10.0)",
+"2. Install PyG (>=2.0.0)",
+"3. Install DIG: Dive into Graphs."
+],
+"Source": [
+"1. If you want to try the latest features that have not been released yet, you can install dig from source."
+]
+}
+}
+6
+{
+"plans": {
+"package manager": [
+"1. Install PyTorch (>=1.10.0)",
+"2. Install PyG (>=2.0.0)",
+"3. Install DIG: Dive into Graphs"
+],
+"Source": [
+"1. If you want to try the latest features that have not been released yet, you can install dig from source."
+]
+}
+}
+7
+{
+"plans": {
+"package manager": [
+"1. Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.10.0)",
+"2. Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#) (>=2.0.0)",
+"3. Install DIG: Dive into Graphs."
+],
+"Source": [
+"1. If you want to try the latest features that have not been released yet, you can install dig from source."
+]
+}
+}
+8
+{
+"plans": {
+"package manager": [
+"1. Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.10.0)",
+"2. Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#) (>=2.0.0)",
+"3. Install DIG: Dive into Graphs."
+],
+"Source": [
+"1. If you want to try the latest features that have not been released yet, you can install dig from source."
+]
+}
+}
+9
+{
+"Binary": [
+"Download VIGA from GitHub",
+"Download database files (taxdmp.zip, prot.accession2taxid, and RefSeqVirusProtein) from specified URLs",
+"Download nr file from ftp.ncbi.nih.gov",
+"Use Diamond v2.0.11.149 to create two separate databases"
+],
+"Container": [
+"Install dependent software using Conda (fastp, trinity, diamond, ragtag, and quast)",
+"Install MetaCompass manually"
+],
+"Package Manager": [
+"Install Python dependencies (pandas, numpy, matplotlib, and biopython) using pip"
+],
+"Source": [
+"Clone the VIGA repository from GitHub",
+"Download database files (taxdmp.zip, prot.accession2taxid, and RefSeqVirusProtein) from specified URLs",
+"Download nr file from ftp.ncbi.nih.gov",
+"Use Diamond v2.0.11.149 to create two separate databases"
+]
+}
+[]
+10
+{
+"plans": {
+"binary": [
+"1. Download the Linux zip file and run the install.sh file in the corresponding installation folder."
+],
+"container": [
+"1. Install via isolated environments such as Docker, Podman, or Singularity."
+],
+"package manager": [
+"1. Install via tools and indexed repositories such as Conda, Homebrew, or Pip."
+],
+"source": [
+"1. Download raw source code, clone repositories, and install dependencies from code repositories."
+]
+}
+}
+11
+{
+  "Binary": [
+    {
+      "instructions": [
+        "Install PyTorch `v2.1.0` with compatible cuda version, following instructions from PyTorch Installation Page"
+      ]
+    }
+  ],
+  "Container": [
+    {
+      "instructions": [
+        "Install the software and its dependencies via isolated environments, such as Docker, Podman, or Singularity"
+      ]
+    }
+  ],
+  "Package Manager": [
+    {
+      "instructions": [
+        "Install PyTorch (>=1.10.0), PyTorch Geometric (>=2.0.0), and RDKit using pip"
+      ]
+    },
+    {
+      "instructions": [
+        "Install the following Python dependencies to run the codes"
+      ]
+    }
+  ],
+  "Source": [
+    {
+      "instructions": [
+        "Clone the repository and install dependencies from code repositories"
+      ]
+    },
+    {
+      "instructions": [
+        "If you want to try the latest features that have not been released yet, you can install dig from source"
+      ]
+    }
+  ]
+}
+[]
+12
+{
+"plans": {
+"package manager": [
+"1. Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.10.0)",
+"2. Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#) (>=2.0.0)",
+"3. Install DIG: Dive into Graphs."
+],
+"Source": [
+"1. If you want to try the latest features that have not been released yet, you can install dig from source."
+]
+}
+}
+13
+{
+"plans": {
+"package manager": [
+"1. Install PyTorch (>=1.10.0)",
+"2. Install PyG (>=2.0.0)",
+"3. Install DIG: Dive into Graphs."
+],
+"Source": [
+"1. If you want to try the latest features that have not been released yet, you can install dig from source."
+]
+}
+}
+14
+{
+"plans": {
+"package manager": [
+"1. Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.10.0)",
+"2. Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#) (>=2.0.0)",
+"3. Install DIG: Dive into Graphs."
+],
+"Source": [
+"1. If you want to try the latest features that have not been released yet, you can install dig from source."
+]
+}
+}
+[]
+15
+{
+"plans": {
+"package manager": [
+"1. Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.10.0)",
+"2. Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#) (>=2.0.0)",
+"3. Install DIG: Dive into Graphs."
+],
+"Source": [
+"1. If you want to try the latest features that have not been released yet, you can install dig from source."
+]
+}
+}
+[]
+16
+{
+"plans": {
+"package manager": [
+"1. Install via pip",
+"2. Install via pip"
+],
+"container": [
+"1. Install via Docker",
+"2. Install via Podman",
+"3. Install via Singularity"
+],
+"source": [
+"1. Clone repository",
+"2. Install dependencies",
+"3. Build and run"
+]
+}
+}
+17
+{
+"plans": {
+"package manager": [
+"1. Install via pip",
+"2. Install via conda"
+],
+"container": [
+"1. Install via Docker",
+"2. Install via Podman"
+],
+"source": [
+"1. Download raw source code",
+"2. Clone repositories",
+"3. Install dependencies from code repositories"
+]
+}
+}
+18
+{
+"plans": {
+"package manager": [
+"1. Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.10.0)",
+"2. Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#) (>=2.0.0)",
+"3. Install DIG: Dive into Graphs."
+],
+"Source": [
+"1. If you want to try the latest features that have not been released yet, you can install dig from source."
+]
+}
+}
+{
+"Binary": [
+"1. Install PyTorch (>=1.10.0)",
+"2. Install PyTorch Geometric (>=2.0.0)",
+"3. Install DIG: Dive into Graphs"
+],
+"Container": [
+"1. Install PyTorch (>=1.10.0)",
+"2. Install PyTorch Geometric (>=2.0.0)",
+"3. Install DIG: Dive into Graphs"
+],
+"Package Manager": [
+"1. Install PyTorch (>=1.10.0)",
+"2. Install PyTorch Geometric (>=2.0.0)",
+"3. Install DIG: Dive into Graphs"
+],
+"Source": [
+"1. Git clone https://github.com/divelab/DIG.git",
+"2. CD DIG",
+"3. Pip install ."
+]
+}
+[]
+20
+{
+"plans": {
+"package manager": [
+"1. Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.10.0)",
+"2. Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#) (>=2.0.0)",
+"3. Install DIG: Dive into Graphs."
+],
+"Source": [
+"1. If you want to try the latest features that have not been released yet, you can install dig from source."
+]
+}
+}
+21
+{
+  "plans": {
+    "binary": [
+      {
+        "name": "Copy CamGen_v2 folder",
+        "description": "Copy the CamGen_v2 folder into the Blender add-on folder"
+      },
+      {
+        "name": "Activate Camera_Generator_v2",
+        "description": "Open Blender and navigate to Edit > Preferences > Add-ons, find and activate Generic: Camera_Generator_v2"
+      },
+      {
+        "name": "Press refresh",
+        "description": "Press refresh in the Add-ons panel if you do not see the Camera_Generator option"
+      }
+    ],
+    "container": [
+      {
+        "name": "Install dependencies",
+        "description": "Install the software and its dependencies via isolated environments"
+      }
+    ],
+    "package_manager": [
+      {
+        "name": "Install via package manager",
+        "description": "Install via tools and indexed repositories"
+      }
+    ],
+    "source": [
+      {
+        "name": "Download source code",
+        "description": "Download raw source code, clone repositories, and install dependencies from code repositories"
+      },
+      {
+        "name": "Build and run",
+        "description": "Build and run the software from source"
+      }
+    ]
+  }
+}
+```
+
+[]
+22
+
+{
+"plans": {
+"package manager": [
+"1. Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.10.0)",
+"2. Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#) (>=2.0.0)",
+"3. Install DIG: Dive into Graphs."
+],
+"Source": [
+"1. If you want to try the latest features that have not been released yet, you can install dig from source."
+]
+}
+}
+23
+
+{
+  "plans": {
+    "binary": [
+      "pip install torchcp"
+    ],
+    "container": [
+      "docker install torchcp"
+    ],
+    "package manager": [
+      "pip install torchcp"
+    ],
+    "source": [
+      "git clone https://github.com/divelab/DIG.git",
+      "pip install ."
+    ]
+  }
+}
+
+24
+
+
+
+{
+"Binary": [
+"Clone the repository: git clone https://github.com/NUS-HPC-AI-Lab/Neural-Network-Diffusion.git"
+],
+"Container": [
+"Create a new Conda environment and activate it: conda env create -f environment.yml conda activate pdiff",
+"Install necessary packages by: pip install -r requirements.txt"
+],
+"Package Manager": [
+"Install PyTorch (>=1.10.0): pip install torch torch-geometric",
+"Install PyG (>=2.0.0): pip install torch-geometric",
+"Install DIG: Dive into Graphs: pip install dive-into-graphs"
+],
+"Source": [
+"Git clone the repository: git clone https://github.com/divelab/DIG.git",
+"Install dependencies: pip install ."
+]
+}
+25
+{
+"plans": {
+"package manager": [
+"1. Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.10.0)",
+"2. Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#) (>=2.0.0)",
+"3. Install DIG: Dive into Graphs."
+],
+"Source": [
+"1. If you want to try the latest features that have not been released yet, you can install dig from source."
+]
+}
+}
+
+26
+
+
+
+{
+"plans": {
+"package manager": [
+"1. Install PyTorch (>=1.10.0)",
+"2. Install PyG (>=2.0.0)",
+"3. Install DIG: Dive into Graphs"
+],
+"Source": [
+"1. Clone the repository and navigate to the cloned directory",
+"2. Install dependencies"
+]
+}
+}
+
+27
+
+{
+"plans": {
+"package manager": [
+"1. Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.10.0)",
+"2. Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#) (>=2.0.0)",
+"3. Install DIG: Dive into Graphs."
+],
+"Source": [
+"1. If you want to try the latest features that have not been released yet, you can install dig from source."
+]
+}
+}
+
+
+[]
+28
+{
+"plans": {
+"package manager": [
+"1. Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.10.0)",
+"2. Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#) (>=2.0.0)",
+"3. Install DIG: Dive into Graphs."
+],
+"Source": [
+"1. If you want to try the latest features that have not been released yet, you can install dig from source."
+]
+}
+}
+
+
+[]
+29
+{
+"plans": {
+"package manager": [
+"1. Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.10.0)",
+"2. Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#) (>=2.0.0)",
+"3. Install DIG: Dive into Graphs."
+],
+"Source": [
+"1. If you want to try the latest features that have not been released yet, you can install dig from source."
+]
+}
+}
+
+
+[]
+30
+
+
+{
+"plans": {
+"package manager": [
+"1. Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.10.0)",
+"2. Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#) (>=2.0.0)",
+"3. Install DIG: Dive into Graphs."
+],
+"Source": [
+"1. If you want to try the latest features that have not been released yet, you can install dig from source."
+]
+}
+}
+
+
+[]
+31
+
+
+
+{
+"plans": {
+"package manager": [
+"1. Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.10.0)",
+"2. Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#) (>=2.0.0)",
+"3. Install DIG: Dive into Graphs."
+],
+"Source": [
+"1. If you want to try the latest features that have not been released yet, you can install dig from source."
+]
+}
+}
+
+
+[]
+32
+
+
+
+{
+"plans": {
+"package manager": [
+"1. Install PyTorch (>=1.10.0) from the official website",
+"2. Install PyTorch Geometric (>=2.0.0) from the official website",
+"3. Install DIG: Dive into Graphs via pip"
+],
+"source": [
+"1. Clone the DIG repository from GitHub",
+"2. Install dependencies and build the project from source"
+]
+}
+}
+
+33
+
+{
+"plans": {
+"package manager": [
+"1. Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.10.0)",
+"2. Install [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#) (>=2.0.0)",
+"3. Install DIG: Dive into Graphs."
+],
+"Source": [
+"1. If you want to try the latest features that have not been released yet, you can install dig from source."
+]
+}
+}
