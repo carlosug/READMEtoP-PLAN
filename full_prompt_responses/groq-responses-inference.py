@@ -2,7 +2,7 @@
 # PLAN
 import os
 import json
-import configGroq
+import notebooks.configGroq as configGroq
 
 from groq import Groq
 api_key2 = configGroq.API_KEY
