@@ -1,8 +1,7 @@
 # READMEtoP-PLAN
 We present a method called READMEtoPLAN, which takes as input a the *installation instructions* and outputs a corresponding  [P-PLAN](https://lov.linkeddata.es/dataset/lov/vocabs/p-plan) ontology model.
-We also have an [Atlas Explorer](!!!) for visualization.
 
-[](./images/def-prob.png)
+![Define the problem](./images/def-prob.png)
 
 
 
