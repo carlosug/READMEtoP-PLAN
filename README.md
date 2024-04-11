@@ -1,17 +1,36 @@
-# READMEtoP-PLAN
-We present a method called READMEtoPLAN, which takes as input a the *installation instructions* and outputs a corresponding  [P-PLAN](https://lov.linkeddata.es/dataset/lov/vocabs/p-plan) ontology model.
+# Code amd data for *Extracting Research Software Installation Instructions  from README files: An Initial Analysis*
+--
+
+## Overview
+This repository contains the code and data produced for the paper [_Extracting Research Software Installation Instructions  from README files: An Initial Analysis_](https:). 
+```bibtex
+@article{readme2plan,
+ title = {CExtracting Research Software Installation Instructions  from README files: An Initial Analysis},
+ journal = {},
+ year = {2024},
+ doi = {10.1109/MSEC.2023.3302956},
+ author = {Carlos Utrilla Guerrero and Daniel Garijo},
+ url = {},
+}
+```
+<!-- We present a method called READMEtoPLAN, which takes as input a the *installation instructions* and outputs a corresponding  [P-PLAN](https://lov.linkeddata.es/dataset/lov/vocabs/p-plan) ontology model. -->
 
 ![Define the problem](./images/def-prob.png)
 
 
+The structure of the repository is as follows:
 
-## Expected contributions
+* [`RESULTS`](RESULTS) contains all scripts used for experimental results.
+* [`full_prompt_responses`](full_prompt_responses) contains all scripts used for extracting a ground truth dataset of dependency trees for each study subject.
+
+
+<!-- ## Expected contributions
 Support researchers reusing software artefacts by adding discoverability, traceability and reproducibility functionalities in 4TUResearchData using semantic technology approaches:
 
 * 1. Create a method to turn installation instructions into  [P-PLAN](https://lov.linkeddata.es/dataset/lov/vocabs/p-plan) representations
-* 2. A framework to generate an annotated benchmark, curated by hand
+* 2. A framework to generate an annotated benchmark, curated by hand -->
 
-## Ontology
+<!-- ## Ontology
 Extending [P-PLAN](https://lov.linkeddata.es/dataset/lov/vocabs/p-plan) is the most suitable solution for representing installation plans (the steps, plans, input and output variables and their relationship with each other):
 
 * P-PLAN URI: [http://purl.org/net/p-plan#](http://purl.org/net/p-plan#)
@@ -34,7 +53,19 @@ A gold-standard dataset of software installation in research is needed. A manual
 
 We will be using one of the following tools (possibly following [The Softcite approach](https://github.com/howisonlab/softcite-dataset#the-softcite-approach)):
 - [Prodigy](https://prodi.gy/)
-- [hypothes.is](https://web.hypothes.is/)
+- [hypothes.is](https://web.hypothes.is/) -->
+
+
+## Reproduction
+If you are interested in replicating our results, please follow this steps:
+* Step 1: Create
+* Step 2:
+
+
+> :warning: Please note that this repo is under construction. Do not contain the complete documentation yet
+
+### The following software is required for reproduction:
+* Python 3.10 or newer
 
 
 #### TODO:
