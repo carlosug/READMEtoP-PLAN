@@ -66,7 +66,7 @@ If you are interested in replicating our results, please follow this steps:
 ### The following software is required for reproduction:
 * Python 3.10 or newer
 
---
+---
 
 #### TODO:
 - Select repos with different levels of difficulty/complexity -- explain why the levels are set out that way
