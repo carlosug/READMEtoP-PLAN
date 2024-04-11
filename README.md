@@ -7,7 +7,7 @@ This repository contains the code and data produced for the paper [_Extracting R
  title = {Extracting Research Software Installation Instructions  from README files: An Initial Analysis},
  journal = {Natural Scientific Language Processing and Research Knowledge Graphs (NSLP 2024)},
  year = {2024},
- doi = {10.1109/MSEC.2023.3302956},
+ doi = {},
  author = {Carlos Utrilla Guerrero and Daniel Garijo},
  url = {},
 }
