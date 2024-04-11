@@ -1,12 +1,11 @@
-# Code amd data for *Extracting Research Software Installation Instructions  from README files: An Initial Analysis*
---
+# Code and data for _Extracting Research Software Installation Instructions  from README files: An Initial Analysis_
 
 ## Overview
-This repository contains the code and data produced for the paper [_Extracting Research Software Installation Instructions  from README files: An Initial Analysis_](https:). 
+This repository contains the code and data produced for the paper [_Extracting Research Software Installation Instructions  from README files: An Initial Analysis_](https:)(Conference: [Natural Scientific Language Processing and Research Knowledge Graphs (NSLP 2024)](https://nfdi4ds.github.io/nslp2024/)). 
 ```bibtex
 @article{readme2plan,
  title = {CExtracting Research Software Installation Instructions  from README files: An Initial Analysis},
- journal = {},
+ journal = {Natural Scientific Language Processing and Research Knowledge Graphs (NSLP 2024)},
  year = {2024},
  doi = {10.1109/MSEC.2023.3302956},
  author = {Carlos Utrilla Guerrero and Daniel Garijo},
