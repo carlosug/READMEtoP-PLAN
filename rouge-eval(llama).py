@@ -60,7 +60,20 @@ for id_number in data1:
         print_rouge_scores(scores, id_number)
     else:
         print(f"No common methods found for ID {id_number}.")
+        # Create a dictionary to store the rouge scores
+        rouge_scores = {}
 
+        # Iterate over the data1 dictionary
+        for id_number in data1:
+            instructions1 = get_instructions_per_method(data1, id_number)
+            instructions2 = get_instructions_per_method(data2, id_number)
+            scores = calculate_rouge_scores(instructions1, instructions2)
+            if scores:
+                rouge_scores[id_number] = scores
+
+        # Write the rouge_scores dictionary to a JSON file
+        with open('rouge_scores-llama2.json', 'w') as f:
+            json.dump(rouge_scores, f, indent=4)
 
 # ROUGE scores for ID 1:
 # Method: source

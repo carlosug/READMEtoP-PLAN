@@ -302,59 +302,61 @@ for response_file in response_files:
 
 #### RESULTS #####
 # Evaluating responses for model: LLAMA2
-# this are the unique RESPONSE plans: {'1': ['Source', 'Binary', 'Container', 'Package Manager'], '2': ['Binary', 'Source', 'Package Manager', 'Container'], '3': ['Source', 'Binary', 'Package Manager', 'Container'], '4': ['Source', 'Binary', 'Package Manager', 'Container'], '5': ['Binary', 'Source', 'Package Manager', 'Container'], '6': ['Binary', 'Source', 'Package Manager', 'Container'], '7': ['Binary', 'Source', 'Package Manager', 'Container'], '8': ['Binary', 'Source', 'Package Manager', 'Container'], '9': ['Binary', 'Source', 'Package Manager', 'Container'], '10': ['Source', 'Binary', 'Package Manager', 'Container'], '11': ['Binary', 'Source', 'Package Manager', 'Container'], '12': ['Binary', 'Source', 'Package Manager', 'Container'], '13': ['Binary', 'Source', 'Package Manager', 'Container'], '14': ['Binary', 'Source', 'Package Manager', 'Container'], '15': ['Binary', 'Source', 'Package Manager', 'Container'], '16': ['Binary', 'Source', 'Package Manager', 'Container'], '17': ['Binary', 'Source', 'Package Manager', 'Container'], '18': ['Binary', 'Source', 'Package Manager', 'Container'], '19': ['Binary', 'Source', 'Package Manager', 'Container'], '20': ['Binary', 'Source', 'Package Manager', 'Container'], '21': ['Binary', 'Source', 'Package Manager', 'Container'], '22': ['Binary', 'Source', 'Package Manager', 'Container'], '23': ['Binary', 'Source', 'Package Manager', 'Container'], '24': ['Binary', 'Source', 'Container', 'Package Manager'], '25': ['Binary', 'Source', 'Package Manager', 'Container'], '26': ['Binary', 'Source', 'Container', 'Package Manager'], '27': ['Binary', 'Source', 'Package Manager', 'Container'], '28': ['Binary', 'Source', 'Container', 'Package Manager'], '29': ['Binary', 'Source', 'Package Manager', 'Container'], '30': ['Binary', 'Source', 'Package Manager', 'Container'], '31': ['Binary', 'Source', 'Package Manager', 'Container'], '32': ['Binary', 'Source', 'Package Manager', 'Container'], '33': ['Binary', 'Source', 'Package Manager', 'Container']}
+# these are the unique RESPONSE plans: {'1': ['Binary', 'Source'], '2': ['Source'], '3': ['Binary', 'Source'], '4': ['Binary', 'Container'], '5': ['Source', 'Package Manager'], '6': ['Source', 'Package Manager'], '7': ['Source', 'Package Manager'], '8': ['Source', 'Package Manager'], '9': ['Source', 'Package Manager'], '10': ['Binary', 'Source'], '11': ['Source', 'Package Manager'], '12': ['Source', 'Package Manager'], '13': ['Source', 'Container'], '14': ['Source', 'Package Manager'], '15': ['Source', 'Package Manager'], '16': ['Source'], '17': ['Binary', 'Source', 'Package Manager', 'Container'], '18': ['Source', 'Package Manager'], '19': ['Source', 'Package Manager'], '20': ['Source', 'Package Manager'], '21': ['Source', 'Package Manager'], '22': ['Source', 'Package Manager'], '23': ['Source', 'Package Manager'], '24': ['Source', 'Package Manager'], '25': ['Source', 'Container'], '26': ['Source', 'Package Manager'], '27': ['Source', 'Package Manager'], '28': ['Source', 'Package Manager'], '29': ['Source', 'Package Manager'], '30': ['Source', 'Package Manager'], '31': ['Source', 'Package Manager'], '32': ['Source', 'Package Manager'], '33': ['Source']}
+# these are the unique GROUND TRUTH plans: {'1': ['Source', 'Source'], '2': ['Source'], '3': ['Source'], '4': ['Container'], '5': ['Source'], '6': ['Source'], '7': ['Source'], '8': ['Source'], '9': ['Source'], '10': ['Binary', 'Binary', 'Binary'], '11': ['Source'], '12': ['Source'], '13': ['Container', 'Source', 'Source'], '14': ['Source'], '15': ['Source'], '16': ['Source'], '17': ['package manager', 'package manager', 'Binary'], '18': ['package manager', 'package manager'], '19': ['package manager', 'Source'], '20': ['package manager', 'package manager'], '21': ['Source'], '22': ['Source'], '23': ['package manager', 'package manager'], '24': ['Source'], '25': ['Container'], '26': ['Source'], '27': ['Source'], '28': ['Source'], '29': ['Source'], '30': ['Source'], '31': ['package manager'], '32': ['Source'], '33': ['Source']}
 # ID        Response plans                Ground Truth plans            
-# 1         Source, Binary, Container, Package ManagerSource, Source                
-# 2         Binary, Source, Package Manager, ContainerSource                        
-# 3         Source, Binary, Package Manager, ContainerSource                        
-# 4         Source, Binary, Package Manager, ContainerContainer                     
-# 5         Binary, Source, Package Manager, ContainerSource                        
-# 6         Binary, Source, Package Manager, ContainerSource                        
-# 7         Binary, Source, Package Manager, ContainerSource                        
-# 8         Binary, Source, Package Manager, ContainerSource                        
-# 9         Binary, Source, Package Manager, ContainerSource                        
-# 10        Source, Binary, Package Manager, ContainerBinary, Binary, Binary        
-# 11        Binary, Source, Package Manager, ContainerSource                        
-# 12        Binary, Source, Package Manager, ContainerSource                        
-# 13        Binary, Source, Package Manager, ContainerContainer, Source, Source     
-# 14        Binary, Source, Package Manager, ContainerSource                        
-# 15        Binary, Source, Package Manager, ContainerSource                        
-# 16        Binary, Source, Package Manager, ContainerSource                        
+# 1         Binary, Source                Source, Source                
+# 2         Source                        Source                        
+# 3         Binary, Source                Source                        
+# 4         Binary, Container             Container                     
+# 5         Source, Package Manager       Source                        
+# 6         Source, Package Manager       Source                        
+# 7         Source, Package Manager       Source                        
+# 8         Source, Package Manager       Source                        
+# 9         Source, Package Manager       Source                        
+# 10        Binary, Source                Binary, Binary, Binary        
+# 11        Source, Package Manager       Source                        
+# 12        Source, Package Manager       Source                        
+# 13        Source, Container             Container, Source, Source     
+# 14        Source, Package Manager       Source                        
+# 15        Source, Package Manager       Source                        
+# 16        Source                        Source                        
 # 17        Binary, Source, Package Manager, Containerpackage manager, package manager, Binary
-# 18        Binary, Source, Package Manager, Containerpackage manager, package manager
-# 19        Binary, Source, Package Manager, Containerpackage manager, Source       
-# 20        Binary, Source, Package Manager, ContainerSource, Source                
-# 21        Binary, Source, Package Manager, ContainerSource                        
-# 22        Binary, Source, Package Manager, ContainerSource                        
-# 23        Binary, Source, Package Manager, Containerpackage manager, package manager
-# 24        Binary, Source, Container, Package ManagerSource                        
-# 25        Binary, Source, Package Manager, ContainerContainer                     
-# 26        Binary, Source, Container, Package ManagerSource                        
-# 27        Binary, Source, Package Manager, ContainerSource                        
-# 28        Binary, Source, Container, Package ManagerSource                        
-# 29        Binary, Source, Package Manager, ContainerSource                        
-# 30        Binary, Source, Package Manager, ContainerSource                        
-# 31        Binary, Source, Package Manager, Containerpackage manager               
-# 32        Binary, Source, Package Manager, ContainerSource                        
-# 33        Binary, Source, Package Manager, ContainerSource                        
-# Accuracy for LLAMA2: 70.45%
-# Precision for LLAMA2: 23.48%
-# Recall for LLAMA2: 86.11%
-# F1 Score for LLAMA2: 36.90%
+# 18        Source, Package Manager       package manager, package manager
+# 19        Source, Package Manager       package manager, Source       
+# 20        Source, Package Manager       package manager, package manager
+# 21        Source, Package Manager       Source                        
+# 22        Source, Package Manager       Source                        
+# 23        Source, Package Manager       package manager, package manager
+# 24        Source, Package Manager       Source                        
+# 25        Source, Container             Container                     
+# 26        Source, Package Manager       Source                        
+# 27        Source, Package Manager       Source                        
+# 28        Source, Package Manager       Source                        
+# 29        Source, Package Manager       Source                        
+# 30        Source, Package Manager       Source                        
+# 31        Source, Package Manager       package manager               
+# 32        Source, Package Manager       Source                        
+# 33        Source                        Source                        
+# Accuracy for LLAMA2: 68.18%
+# Precision for LLAMA2: 46.15%
+# Recall for LLAMA2: 83.33%
+# F1 Score for LLAMA2: 59.41%
 
 # Evaluating responses for model: MISTRAL
-# this are the unique RESPONSE plans: {'1': ['Source', 'Binary'], '2': [], '3': ['Source', 'Binary'], '4': ['Source', 'Container'], '5': ['Binary', 'Source', 'Package Manager'], '6': ['Package Manager'], '7': ['Source', 'Package Manager'], '8': ['Package Manager'], '9': ['Binary', 'Source', 'Package Manager'], '10': ['Source', 'Binary'], '11': ['Source', 'Package Manager'], '12': ['Source', 'Package Manager'], '13': ['Source', 'Container'], '14': ['Package Manager', 'Container'], '15': ['Source', 'Package Manager'], '16': ['Source', 'Package Manager'], '17': ['Source', 'Package Manager', 'Container'], '18': ['Source', 'Package Manager', 'Container'], '19': ['Source', 'Package Manager'], '20': ['Package Manager'], '21': ['Source'], '22': ['Source', 'Package Manager'], '23': ['Package Manager'], '24': ['Source', 'Package Manager'], '25': ['Container'], '26': ['Source', 'Package Manager'], '27': [], '28': ['Source'], '29': ['Source', 'Package Manager'], '30': ['Source', 'Package Manager'], '31': ['Source', 'Package Manager'], '32': ['Binary', 'Source', 'Package Manager'], '33': ['Source']}
+# these are the unique RESPONSE plans: {'1': ['Binary', 'Source'], '2': [], '3': ['Binary', 'Source'], '4': ['Source', 'Container'], '5': ['Binary', 'Source', 'Package Manager'], '6': ['Package Manager'], '7': ['Source', 'Package Manager'], '8': ['Package Manager'], '9': ['Binary', 'Source', 'Package Manager'], '10': ['Binary', 'Source'], '11': ['Source', 'Package Manager'], '12': ['Source', 'Package Manager'], '13': ['Source', 'Container'], '14': ['Package Manager', 'Container'], '15': ['Source', 'Package Manager'], '16': ['Source', 'Package Manager'], '17': ['Source', 'Package Manager', 'Container'], '18': ['Source', 'Package Manager', 'Container'], '19': ['Source', 'Package Manager'], '20': ['Package Manager'], '21': ['Source'], '22': ['Source', 'Package Manager'], '23': ['Package Manager'], '24': ['Source', 'Package Manager'], '25': ['Container'], '26': ['Source', 'Package Manager'], '27': [], '28': ['Source'], '29': ['Source', 'Package Manager'], '30': ['Source', 'Package Manager'], '31': ['Source', 'Package Manager'], '32': ['Binary', 'Source', 'Package Manager'], '33': ['Source']}
+# these are the unique GROUND TRUTH plans: {'1': ['Source', 'Source'], '2': ['Source'], '3': ['Source'], '4': ['Container'], '5': ['Source'], '6': ['Source'], '7': ['Source'], '8': ['Source'], '9': ['Source'], '10': ['Binary', 'Binary', 'Binary'], '11': ['Source'], '12': ['Source'], '13': ['Container', 'Source', 'Source'], '14': ['Source'], '15': ['Source'], '16': ['Source'], '17': ['package manager', 'package manager', 'Binary'], '18': ['package manager', 'package manager'], '19': ['package manager', 'Source'], '20': ['package manager', 'package manager'], '21': ['Source'], '22': ['Source'], '23': ['package manager', 'package manager'], '24': ['Source'], '25': ['Container'], '26': ['Source'], '27': ['Source'], '28': ['Source'], '29': ['Source'], '30': ['Source'], '31': ['package manager'], '32': ['Source'], '33': ['Source']}
 # ID        Response plans                Ground Truth plans            
-# 1         Source, Binary                Source, Source                
+# 1         Binary, Source                Source, Source                
 # 2                                       Source                        
-# 3         Source, Binary                Source                        
+# 3         Binary, Source                Source                        
 # 4         Source, Container             Container                     
 # 5         Binary, Source, Package ManagerSource                        
 # 6         Package Manager               Source                        
 # 7         Source, Package Manager       Source                        
 # 8         Package Manager               Source                        
 # 9         Binary, Source, Package ManagerSource                        
-# 10        Source, Binary                Binary, Binary, Binary        
+# 10        Binary, Source                Binary, Binary, Binary        
 # 11        Source, Package Manager       Source                        
 # 12        Source, Package Manager       Source                        
 # 13        Source, Container             Container, Source, Source     
@@ -364,7 +366,7 @@ for response_file in response_files:
 # 17        Source, Package Manager, Containerpackage manager, package manager, Binary
 # 18        Source, Package Manager, Containerpackage manager, package manager
 # 19        Source, Package Manager       package manager, Source       
-# 20        Package Manager               Source, Source                
+# 20        Package Manager               package manager, package manager
 # 21        Source                        Source                        
 # 22        Source, Package Manager       Source                        
 # 23        Package Manager               package manager, package manager

@@ -955,7 +955,7 @@
             "n_plans": 2,
             "plans": [
               {
-                "type": "Source",
+                "type": "package manager",
                 "steps": [
                   {
                     "text": "With pip:",
@@ -970,10 +970,10 @@
                 ]
               },
               {
-                "type": "Source",
+                "type": "package manager",
                 "steps": [
                   {
-                    "text": "With pip:",
+                    "text": "With conda:",
                     "seq_order": 1,
                     "is_optional": false,
                     "note": "",

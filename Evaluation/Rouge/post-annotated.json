@@ -161,9 +161,9 @@
         ]
     },
     "20": {
-        "Source": [
+        "package manager": [
             "With pip:",
-            "With pip:"
+            "With conda:"
         ]
     },
     "21": {

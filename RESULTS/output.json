@@ -915,7 +915,7 @@
     "name": "langchain-ai/langchain",
     "plans": [
       {
-        "type": "Source",
+        "type": "package manager",
         "steps": [
           {
             "text": "With pip:",
@@ -930,10 +930,10 @@
         ]
       },
       {
-        "type": "Source",
+        "type": "package manager",
         "steps": [
           {
-            "text": "With pip:",
+            "text": "With conda:",
             "note": "",
             "seq_order": 1,
             "is_optional": false,
