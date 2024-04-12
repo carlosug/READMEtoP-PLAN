@@ -1,0 +1,248 @@
+{
+    "1": {},
+    "2": {},
+    "3": {
+        "Source": [
+            "1. Download the dataset folder from <https://portland-my.sharepoint.com/:u:/g/personal/liuhui3-c_my_cityu_edu_hk/EfApQlFP3PhFjUW4527STo0BALMdP16zs-HPMNgwQVFWsA?e=zoHlW2> and unzip it into the project directory.",
+            "2. Place your OpenAI key into the file named `api_key.txt`."
+        ]
+    },
+    "4": {
+        "Container": [
+            "1. Build the docker image using the command:"
+        ],
+        "Source": [
+            "1. Clone the repository and its submodules using the command: `git clone <repository_url>`",
+            "2. Inside the container, go to the root directory of the repository and build STEAM-ICP using the command: `bash build.sh`"
+        ]
+    },
+    "5": {
+        "Source": [
+            "1. Make sure you have Python, Pip, and R installed.",
+            "2. Checkout this repository.",
+            "3. Install the python dependencies with `pip3 install -r requirements.txt`.",
+            "4. Install the `pygirgs` package at <https://github.com/PFischbeck/pygirgs>.",
+            "5. Install the R dependencies (used for plots) with `R -e 'install.packages(c(ggplot2, reshape2, plyr, dplyr, scales), repos=https://cloud.r-project.org/)'`.",
+            "6. Download the file `konect-data.zip` from [Zenodo](https://doi.org/10.5281/zenodo.10629451) and extract its contents into the folder `input_data/konect`.",
+            "7. Optional: Download the file `output-data.zip` from [Zenodo](https://doi.org/10.5281/zenodo.10629451) and extract its contents into the folder `output_data`."
+        ]
+    },
+    "6": {
+        "Package Manager": [
+            "1. Create a new Conda environment (optional, if you prefer using a virtual environment).",
+            "2. Activate the Conda environment.",
+            "3. Install the required packages from the `requirements.txt` file."
+        ]
+    },
+    "7": {
+        "Package Manager": [
+            "1. Initialize git submodules with `git submodule init`",
+            "2. Initialize and update git submodules with `git submodule update`",
+            "3. Create a new conda environment with `conda create --name gsft python=3.9`",
+            "4. Activate the conda environment with `conda activate gsft`",
+            "5. Install the specific versions of every package from `requirements.txt` with `pip install -r requirements.txt`"
+        ],
+        "Source": [
+            "1. Initialize git submodules with `git submodule init`",
+            "2. Initialize and update git submodules with `git submodule update`"
+        ]
+    },
+    "8": {
+        "Source": [
+            "1. Run the command `pip install -r requirements.txt`"
+        ]
+    },
+    "9": {
+        "Package Manager": [
+            "1. Install the required packages using Conda with the command:"
+        ],
+        "Source": [
+            "1. Download VIGA with Git from GitHub using the command: `git clone https://github.com/viralInformatics/VIGA.git`",
+            "2. Download the database:"
+        ]
+    },
+    "10": {
+        "Binary": [
+            "1. Download the appropriate zip file for your operating system (Linux, Mac, or Windows) from the provided link.",
+            "2. Follow the instructions for your specific operating system:"
+        ]
+    },
+    "11": {
+        "Package Manager": [
+            "1. Create a Python virtual environment with Conda: `conda create -n myenv python=3.10`",
+            "2. Activate the virtual environment: `conda activate myenv`",
+            "3. Install PyTorch `v2.1.0` with compatible cuda version: `pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu118`",
+            "4. Install Python dependencies: `pip install .` and `pip install flash-attn --no-build-isolation`"
+        ]
+    },
+    "12": {
+        "Package Manager": [
+            "1. Create a virtual environment with Python 3.9.13.",
+            "2. Activate the virtual environment.",
+            "3. Install the required packages by running: `pip install -r requirements.txt`"
+        ],
+        "Source": [
+            "1. Clone the repository or download the files.",
+            "2. Create a virtual environment with Python 3.9.13.",
+            "3. Activate the virtual environment.",
+            "4. Install the required packages by running: `pip install -r requirements.txt`",
+            "5. Obtain an OpenAI API key.",
+            "6. Replace the placeholder in `config.py` with your OpenAI API key: `API_KEY = 'YOUR_OPENAI_API_KEY'`"
+        ]
+    },
+    "13": {
+        "Container": [
+            "1. Install Docker on your machine.",
+            "2. Build the Docker image: `docker build -t arpllab/learning_to_fly .`",
+            "3. Run the Docker container: `docker run -it --rm -p 8000:8000 arpllab/learning_to_fly`",
+            "4. Navigate to [https://0.0.0.0:8000](https://0.0.0.0:8000) with your browser."
+        ],
+        "Source": [
+            "1. Clone the repository: `git clone https://github.com/arplaboratory/learning-to-fly learning_to_fly`",
+            "2. Instantiate the `RLtools` submodule: `git submodule update --init -- external/rl_tools`",
+            "3. Instantiate dependencies of `RLtools`: `git submodule update --init -- external/cli11 external/highfive external/json/ external/tensorboard tests/lib/googletest/`",
+            "4. Install dependencies on Ubuntu:"
+        ]
+    },
+    "14": {
+        "Package Manager": [
+            "1. Create a new conda environment with Python 3.10.",
+            "2. Activate the new conda environment.",
+            "3. Install Jax with CUDA 12 support: `pip install -U `jax[cuda12_pip]==0.4.23` -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html`",
+            "4. Install the required packages: `pip install -r requirements.txt`"
+        ]
+    },
+    "15": {
+        "Package Manager": [
+            "1. Create a new conda environment with Python 3.10: `conda create -n ufo python=3.10`",
+            "2. Activate the new conda environment: `conda activate ufo`"
+        ],
+        "Source": [
+            "1. Clone the repository: `git clone https://github.com/microsoft/UFO.git`",
+            "2. Change the directory: `cd UFO`",
+            "3. Install the requirements: `pip install -r requirements.txt`"
+        ]
+    },
+    "16": {
+        "Source": [
+            "1. Clone the project: `git clone --recursive https://github.com/AILab-CVC/YOLO-World.git`",
+            "2. Install: `pip install torch wheel -q pip install -e .`"
+        ]
+    },
+    "17": {
+        "Binary": [
+            "1. Visit the TensorFlow install guide for the pip package at <https://www.tensorflow.org/install/pip>.",
+            "2. Install TensorFlow using `pip`: `pip install tensorflow`.",
+            "3. To update TensorFlow to the latest version, add `--upgrade` flag to the above command.",
+            "4. Nightly binaries are available for testing using the `tf-nightly` and `tf-nightly-cpu` packages on PyPi."
+        ],
+        "Container": [
+            "1. Visit the TensorFlow install guide for Docker containers at <https://www.tensorflow.org/install/docker>.",
+            "2. Use a Docker container: <https://www.tensorflow.org/install/docker>."
+        ]
+    },
+    "18": {
+        "Binary": [
+            "1. Create a virtual environment with the desired version of Python.",
+            "2. Activate the virtual environment.",
+            "3. Install one of Flax, PyTorch, or TensorFlow using the specific installation command for your platform. Refer to the TensorFlow installation page, PyTorch installation page, Flax installation page, and/or Jax installation pages.",
+            "4. Install Transformers using pip: `pip install transformers`"
+        ],
+        "Package Manager": [
+            "1. Install Transformers using conda: `conda install conda-forge::transformers`"
+        ]
+    },
+    "19": {
+        "Binary": [
+            "1. Install PyTorch (>=1.10.0): Follow the instructions at <https://pytorch.org/get-started/locally/>",
+            "2. Install PyG (>=2.0.0): Follow the instructions at <https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#>",
+            "3. Install DIG: Dive into Graphs: `pip install dive-into-graphs`"
+        ],
+        "Source": [
+            "1. Clone the repository: `git clone https://github.com/divelab/DIG.git`",
+            "2. Change the directory: `cd DIG`",
+            "3. Install using pip: `pip install .`"
+        ]
+    },
+    "20": {
+        "Binary": [
+            "1. Install using pip: `pip install langchain`"
+        ],
+        "Package Manager": [
+            "1. Install using conda: `conda install langchain -c conda-forge`"
+        ]
+    },
+    "21": {
+        "Source": [
+            "1. Copy the `CamGen_v2` folder into the Blender add-on folder for your operating system.",
+            "2. Open Blender and navigate to `Edit > Preferences > Add-ons`.",
+            "3. Find and activate `Generic: Camera_Generator_v2` in the list of available Add-ons.",
+            "4. [Optional] For experimental lens analysis operations and plotting of the results, install additional packages for Blender's bundled Python version:"
+        ]
+    },
+    "22": {
+        "Package Manager": [
+            "1. Create a Conda environment using the provided `environment.yml` file: `conda env create -f environment.yml`",
+            "2. Activate the Conda environment: `conda activate DiT`"
+        ],
+        "Source": [
+            "1. Clone the repository: `git clone https://github.com/facebookresearch/DiT.git`",
+            "2. Change the directory: `cd DiT`"
+        ]
+    },
+    "23": {
+        "Package Manager": [
+            "1. Install using pip: `pip install torchcp`",
+            "2. Install from TestPyPI server: `pip install --index-url https://test.pypi.org/simple/ --no-deps torchcp`"
+        ]
+    },
+    "24": {
+        "Package Manager": [
+            "1. Create a Conda environment and activate it: `conda env create -f environment.yml` and `conda activate pdiff`"
+        ],
+        "Source": [
+            "1. Clone the repository: `git clone https://github.com/NUS-HPC-AI-Lab/Neural-Network-Diffusion.git`",
+            "2. Install necessary packages: `pip install -r requirements.txt`"
+        ]
+    },
+    "25": {
+        "Container": [
+            "1. Prepare for the running environment using the docker image provided by OpenPCDet: <https://github.com/open-mmlab/OpenPCDet>"
+        ]
+    },
+    "26": {},
+    "27": {
+        "Source": [
+            "1. Install the requirement packages declared by `requirements.txt`: `pip install -r requirements.txt`",
+            "2. Modify `settings/example.json` on your desired processing procedure.",
+            "3. Copy raw data to input\\_path in `settings/example.json`.",
+            "4. Run the processing pipeline: `python main.py --conf settings/example.json`"
+        ]
+    },
+    "28": {
+        "Source": [
+            "1. Check out and install this repository:"
+        ]
+    },
+    "29": {
+        "Source": [
+            "1. Create a virtual environment and activate it."
+        ]
+    },
+    "30": {
+        "Package Manager": [
+            "1. Create a new Conda environment with the spec-list."
+        ]
+    },
+    "31": {},
+    "32": {
+        "Source": [
+            "1. Create a virtual environment using Conda or Pip for Python 3.11. For this example, Conda is used:"
+        ]
+    },
+    "33": {
+        "Source": [
+            "1. Install the development version from GitHub using devtools:"
+        ]
+    }
+}

@@ -1,0 +1,400 @@
+{
+    "1": {
+        "Binary": [
+            "Step 1: Download and install SICStus Prolog from <https://sicstus.sics.se/download4.html>.",
+            "Step 2: Download DALI from <https://github.com/AAAI-DISIM-UnivAQ/DALI.git>.",
+            "Step 3: Unzip the repository and go to the 'DALI/Examples/basic' folder.",
+            "Step 4: Double-click the 'startmas.bat' file to launch an example DALI MAS."
+        ],
+        "Source": [
+            "Step 1: Git clone <https://github.com/AAAI-DISIM-UnivAQ/DALI.git>.",
+            "Step 2: Go to the 'DALI/Examples/basic' folder.",
+            "Step 3: Run the 'startmas.bat' file to launch an example DALI MAS."
+        ]
+    },
+    "2": {
+        "Binary": [
+            "Step 1: Download the precompiled files from the GitHub releases."
+        ],
+        "Package Manager": [
+            "Step 1: Run `pip install package_name` to install the package."
+        ],
+        "Source": [
+            "Step 1: Git clone the repository.",
+            "Step 2: Run `python setup.py install` to install the package."
+        ]
+    },
+    "3": {
+        "Binary": [
+            "Step 1: Download the dataset folder from OneDrive by clicking on the link [data.zip](https://portland-my.sharepoint.com/:u:/g/personal/liuhui3-c_my_cityu_edu_hk/EfApQlFP3PhFjUW4527STo0BALMdP16zs-HPMNgwQVFWsA?e=zoHlW2).",
+            "Step 2: Unzip the folder into the project directory."
+        ],
+        "Source": [
+            "Step 1: Git clone the repository.",
+            "Step 2: Run `python setup.py install` to install the package."
+        ]
+    },
+    "4": {
+        "Binary": [
+            "Step 1: Clone this repository and its submodules.",
+            "Step 2: Run `docker build -t steam_icp` to build the Docker image.",
+            "Step 3: Run `docker run -it --name steam_icp` to start a Docker container with the image."
+        ],
+        "Container": [
+            "Step 1: Run `docker build -t steam_icp` to build the Docker image.",
+            "Step 2: Run `docker run -it --name steam_icp` to start a Docker container with the image."
+        ],
+        "Source": [
+            "Step 1: Clone this repository and its submodules.",
+            "Step 2: Run `bash build.sh` to build STEAM-ICP."
+        ]
+    },
+    "5": {
+        "Binary": [
+            "Step 1: Download the file `konect-data.zip` from [Zenodo](https://doi.org/10.5281/zenodo.10629451) and extract its contents into the folder `input_data/konect`.",
+            "Step 2: Download the file `output-data.zip` from [Zenodo](https://doi.org/10.5281/zenodo.10629451) and extract its contents into the folder `output_data`."
+        ],
+        "Package Manager": [
+            "Step 1: Install the python dependencies with `pip3 install -r requirements.txt`.",
+            "Step 2: Install the `pygirgs` package at <https://github.com/PFischbeck/pygirgs>.",
+            "Step 3: Install the R dependencies (used for plots) with `R -e 'install.packages(c(ggplot2, reshape2, plyr, dplyr, scales), repos=https://cloud.r-project.org/)'`."
+        ],
+        "Source": [
+            "Step 1: Checkout this repository.",
+            "Step 2: Install the python dependencies with `pip3 install -r requirements.txt`.",
+            "Step 3: Install the `pygirgs` package at <https://github.com/PFischbeck/pygirgs>.",
+            "Step 4: Install the R dependencies (used for plots) with `R -e 'install.packages(c(ggplot2, reshape2, plyr, dplyr, scales), repos=https://cloud.r-project.org/)'`.",
+            "Step 5: Download the file `konect-data.zip` from [Zenodo](https://doi.org/10.5281/zenodo.10629451) and extract its contents into the folder `input_data/konect`.",
+            "Step 6: Download the file `output-data.zip` from [Zenodo](https://doi.org/10.5281/zenodo.10629451) and extract its contents into the folder `output_data`."
+        ]
+    },
+    "6": {
+        "Binary": [
+            "Step 1: Download the precompiled files from GitHub releases."
+        ],
+        "Package Manager": [
+            "Step 1: Install the packages listed in requirements.txt using pip."
+        ],
+        "Source": [
+            "Step 1: Clone the repository.",
+            "Step 2: Install the packages listed in requirements.txt using pip."
+        ]
+    },
+    "7": {
+        "Binary": [
+            "Step 1: Download the precompiled files from GitHub releases."
+        ],
+        "Container": [
+            "Step 1: Initialize git submodules with `git submodule init` and `git submodule update`.",
+            "Step 2: Create a new Conda environment with the specific versions of every package from `requirements.txt` using `conda create --name gsft python=3.9`.",
+            "Step 3: Activate the environment using `conda activate gsft`.",
+            "Step 4: Install the packages listed in `requirements.txt` using `pip install -r requirements.txt`."
+        ],
+        "Source": [
+            "Step 1: Clone the repository.",
+            "Step 2: Initialize git submodules with `git submodule init` and `git submodule update`.",
+            "Step 3: Create a new Conda environment with the specific versions of every package from `requirements.txt` using `conda create --name gsft python=3.9`.",
+            "Step 4: Activate the environment using `conda activate gsft`.",
+            "Step 5: Install the packages listed in `requirements.txt` using `pip install -r requirements.txt`."
+        ]
+    },
+    "8": {
+        "Binary": [
+            "Step 1: Download the precompiled files from GitHub releases."
+        ],
+        "Package Manager": [
+            "Step 1: Install the packages listed in requirements.txt using pip."
+        ],
+        "Source": [
+            "Step 1: Clone the repository.",
+            "Step 2: Install the packages listed in requirements.txt using pip."
+        ]
+    },
+    "9": {
+        "Binary": [
+            "Step 1: Download VIGA with Git from GitHub.",
+            "Step 2: Download the database files (taxdmp.zip, prot.accession2taxid, RefSeqVirusProtein, and nr.gz) from the specified URLs."
+        ],
+        "Package Manager": [
+            "Step 1: Install the required software using Conda: fastp=0.12.4, trinity=2.8.5, diamond=2.0.11.149, ragtag=2.1.0, quast=5.0.2.",
+            "Step 2: Install MetaCompass manually from GitHub."
+        ],
+        "Source": [
+            "Step 1: Clone the repository.",
+            "Step 2: Download the database files (taxdmp.zip, prot.accession2taxid, RefSeqVirusProtein, and nr.gz) from the specified URLs.",
+            "Step 3: Install the required software using Conda: fastp=0.12.4, trinity=2.8.5, diamond=2.0.11.149, ragtag=2.1.0, quast=5.0.2.",
+            "Step 4: Install Python dependencies: pandas=1.1.5, numpy=1.19.5, matplotlib=3.3.4, biopython=1.79."
+        ]
+    },
+    "10": {
+        "Binary": [
+            "Step 1: Download the Linux zip file.",
+            "Step 2: Run the install.sh file in the corresponding installation folder."
+        ],
+        "Source": [
+            "Step 1: Download the Mac zip file.",
+            "Step 2: Copy the NRN-EZ app to the Applications folder."
+        ]
+    },
+    "11": {
+        "Container": [
+            "Step 1: Create a Python virtual environment with Conda: `conda create -n myenv python=3.10 conda activate myenv`.",
+            "Step 2: Install PyTorch `v2.1.0` with compatible cuda version, following instructions from PyTorch Installation Page.",
+            "Step 3: Install the following Python dependencies to run the codes: `python -m pip install . python -m pip install flash-attn --no-build-isolation`.",
+            "Step 4: Login to your huggingface account for downloading models: `huggingface-cli login --token ${your_access_token}`."
+        ],
+        "Source": [
+            "Step 1: Clone the repository.",
+            "Step 2: Install PyTorch `v2.1.0` with compatible cuda version, following instructions from PyTorch Installation Page.",
+            "Step 3: Install the following Python dependencies to run the codes: `python -m pip install . python -m pip install flash-attn --no-build-isolation`.",
+            "Step 4: Login to your huggingface account for downloading models: `huggingface-cli login --token ${your_access_token}`."
+        ]
+    },
+    "12": {
+        "Binary": [
+            "Step 1: Download the precompiled files from GitHub."
+        ],
+        "Container": [
+            "Step 1: Create an isolated environment using Docker, Podman, or Singularity."
+        ],
+        "Package Manager": [
+            "Step 1: Install the required packages by running `pip install -r requirements.txt`."
+        ],
+        "Source": [
+            "Step 1: Clone the repository.",
+            "Step 2: Replace the placeholder with your OpenAI API key in `config.py`."
+        ]
+    },
+    "13": {
+        "Container": [
+            "Step 1: Install Docker on your machine.",
+            "Step 2: Move to the original directory `learning_to_fly` and build the Docker image: `docker build -t arpllab/learning_to_fly .`",
+            "Step 3: Run the container using `docker run -it --rm -p 8000:8000 arpllab/learning_to_fly`.",
+            "Step 4: Navigate to [https://0.0.0.0:8000](https://0.0.0.0:8000) with your browser to access the training program."
+        ],
+        "Source": [
+            "Step 1: Clone the repository: `git clone https://github.com/arplaboratory/learning-to-fly`.",
+            "Step 2: Instantiate the `RLtools` submodule: `git submodule update --init -- external/rl_tools`.",
+            "Step 3: Instantiate some dependencies of `RLtools`: `git submodule update --init -- external/cli1 external/highfive external/json/ external/tensorboard tests/lib/googletest/`.",
+            "Step 4: Install dependencies on Ubuntu or macOS.",
+            "Step 5: Configure the build: `cmake .. -DCMAKE_BUILD_TYPE=Release -DRL_TOOLS_BACKEND_ENABLE_OPENBLAS:BOOL=ON` (for Ubuntu + OpenBLAS) or `cmake .. -DCMAKE_BUILD_TYPE=Release -DRL_TOOLS_BACKEND_ENABLE_MKL:BOOL=ON` (for Ubuntu + MKL) or `cmake .. -DCMAKE_BUILD_TYPE=Release` (for macOS).",
+            "Step 6: Build the targets: `cmake --build . -j8`.",
+            "Step 7: Run the code: `cd .. ./build/src/training_headless`.",
+            "Step 8: To run the training with the UI, download the JavaScript dependencies and execute the UI binary: `cd src/ui ./get_dependencies.sh` and `cd ../../ ./build/src/ui 0.0.0.0 8000`.",
+            "Step 9: Navigate to [http://0.0.0.0:8000](http://0.0.0.0:8000) in your browser to access the training program."
+        ]
+    },
+    "14": {
+        "Container": [
+            "Step 1: Install Docker on your machine.",
+            "Step 2: Run the container using `docker run -it --rm -p 8000:8000 arpllab/learning_to_fly`.",
+            "Step 3: Navigate to [https://0.0.0.0:8000](https://0.0.0.0:8000) with your browser to access the training program."
+        ],
+        "Package Manager": [
+            "Step 1: Install the requirements using `conda create -n lwm python=3.10 pip install -U jax[cuda12_pip]==0.4.23 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html`.",
+            "Step 2: Install the remaining dependencies using `pip install -r requirements.txt`."
+        ],
+        "Source": [
+            "Step 1: Clone the repository: `git clone https://github.com/arplaboratory/learning-to-fly`.",
+            "Step 2: Install the dependencies using `conda create -n lwm python=3.10 pip install -U jax[cuda12_pip]==0.4.23 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html`.",
+            "Step 3: Install the remaining dependencies using `pip install -r requirements.txt`.",
+            "Step 4: Set up the TPU VM using `sh tpu_vm_setup.sh`."
+        ]
+    },
+    "15": {
+        "Package Manager": [
+            "Step 1: Create a new conda environment with `conda create -n ufo python=3.10`.",
+            "Step 2: Activate the environment with `conda activate ufo`.",
+            "Step 3: Clone the repository using `git clone https://github.com/microsoft/UFO.git`.",
+            "Step 4: Install the requirements using `pip install -r requirements.txt`."
+        ],
+        "Source": [
+            "Step 1: Clone the repository using `git clone https://github.com/microsoft/UFO.git`.",
+            "Step 2: Install the requirements using `pip install -r requirements.txt`."
+        ]
+    },
+    "16": {
+        "Package Manager": [
+            "Step 1: Install torch using `pip install torch wheel -q`.",
+            "Step 2: Install the project using `pip install -e .`."
+        ],
+        "Source": [
+            "Step 1: Clone the project using `git clone --recursive https://github.com/AILab-CVC/YOLO-World.git`.",
+            "Step 2: Install torch using `pip install torch wheel -q`.",
+            "Step 3: Install the project using `pip install -e .`."
+        ]
+    },
+    "17": {
+        "Package Manager": [
+            "Step 1: Install TensorFlow using `pip install tensorflow`."
+        ],
+        "Source": [
+            "Step 1: Clone the TensorFlow repository.",
+            "Step 2: Build TensorFlow from source using the instructions provided on the TensorFlow website."
+        ]
+    },
+    "18": {
+        "Package Manager": [
+            "Step 1: Create a virtual environment with the version of Python you're going to use and activate it.",
+            "Step 2: Install at least one of Flax, PyTorch, or TensorFlow using the installation commands provided on their respective installation pages.",
+            "Step 3: Install \ud83e\udd17 Transformers using pip with the command `pip install transformers`."
+        ],
+        "Source": [
+            "Step 1: Clone the repository from GitHub.",
+            "Step 2: Install the library from source using the instructions provided on the \ud83e\udd17 Transformers installation page."
+        ]
+    },
+    "19": {
+        "Package Manager": [
+            "Step 1: Install PyTorch >= 1.10.0 using the installation commands provided on the PyTorch website.",
+            "Step 2: Install PyTorch Geometric >= 2.0.0 using the installation commands provided on the PyTorch Geometric website.",
+            "Step 3: Install DIG: Dive into Graphs using the command `pip install dive-into-graphs`."
+        ],
+        "Source": [
+            "Step 1: Clone the DIG repository from GitHub.",
+            "Step 2: Install DIG from source using the command `pip install .`."
+        ]
+    },
+    "20": {
+        "Binary": [
+            "Step 1: Download the precompiled files from GitHub.",
+            "Step 2: Run the precompiled files."
+        ],
+        "Package Manager": [
+            "Step 1: Create a virtual environment with the version of Python you're going to use and activate it.",
+            "Step 2: Install Langchain using the command `pip install langchain`."
+        ]
+    },
+    "21": {
+        "Source": [
+            "Step 1: Copy the `CamGen_v2` folder into the Blender add-on folder for your operating system, e.g. for Blender 4.0 under Linux ~/.config/blender/4.0/scripts/addons/.",
+            "Step 2: Open Blender and navigate to `Edit > Preferences > Add-ons`.",
+            "Step 3: Find and activate `Generic: Camera_Generator_v2` in the list of available Add-ons.",
+            "Step 4: [Optional] To enable experimental lens analysis operations and plotting of the results, run the command `$BLENDERPATH/$VERSION/python/bin/python3.10 -m pip install matplotlib PyQt5`."
+        ]
+    },
+    "22": {
+        "Binary": [
+            "Step 1: Download the precompiled files from GitHub.",
+            "Step 2: Extract the downloaded archive."
+        ],
+        "Package Manager": [
+            "Step 1: Create a virtual environment with the version of Python you're going to use and activate it.",
+            "Step 2: Install DiT using the command `conda env create -f environment.yml`."
+        ]
+    },
+    "23": {
+        "Binary": [
+            "Step 1: Download the precompiled files from GitHub.",
+            "Step 2: Extract the downloaded archive."
+        ],
+        "Package Manager": [
+            "Step 1: Install TorchCP using the command `pip install torchcp`.",
+            "Step 2: To install from TestPyPI server, run the command `pip install --index-url https://test.pypi.org/simple/ --no-deps torchcp`."
+        ]
+    },
+    "24": {
+        "Binary": [
+            "Step 1: Download the precompiled files from GitHub.",
+            "Step 2: Extract the downloaded archive."
+        ],
+        "Package Manager": [
+            "Step 1: Create a new Conda environment and activate it using the command `conda env create -f environment.yml conda activate pdiff`.",
+            "Step 2: Install necessary packages using the command `pip install -r requirements.txt`."
+        ]
+    },
+    "25": {
+        "Binary": [
+            "Step 1: Download the precompiled files from GitHub.",
+            "Step 2: Extract the downloaded archive."
+        ],
+        "Container": [
+            "Step 1: Use the Docker image provided by OpenPCDet.",
+            "Step 2: Prepare the running environment."
+        ]
+    },
+    "26": {
+        "Binary": [
+            "Step 1: Download the precompiled files from GitHub.",
+            "Step 2: Extract the downloaded archive."
+        ],
+        "Package Manager": [
+            "Step 1: Create a new Conda environment and activate it using the command `conda create -yn bitdelta python=3.9`.",
+            "Step 2: Install necessary packages using the command `pip install -e .`."
+        ]
+    },
+    "27": {
+        "Binary": [
+            "Step 1: Download the precompiled files from GitHub.",
+            "Step 2: Extract the downloaded archive."
+        ],
+        "Package Manager": [
+            "Step 1: Install the requirement packages declared by `requirements.txt` using the command `pip install -r requirements.txt`.",
+            "Step 2: Copy the raw data to the input path defined in `settings/example.json`.",
+            "Step 3: Make sure the output path does not exist, otherwise it will be overwritten.",
+            "Step 4: Run the processing pipeline using the command `python main.py --conf settings/example.json`."
+        ]
+    },
+    "28": {
+        "Binary": [
+            "Step 1: Download the precompiled files from GitHub.",
+            "Step 2: Extract the downloaded archive."
+        ],
+        "Package Manager": [
+            "Step 1: Install the package using the command `pip install -e mxeval`.",
+            "Step 2: Activate the environment using the command `cd mxeval`."
+        ]
+    },
+    "29": {
+        "Binary": [
+            "Step 1: Download the precompiled files from GitHub.",
+            "Step 2: Extract the downloaded archive."
+        ],
+        "Package Manager": [
+            "Step 1: Create a new Conda environment and activate it using the command `conda create -n DCVSMNet python=3.8`.",
+            "Step 2: Install necessary packages using the command `conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -c nvidia`.",
+            "Step 3: Install additional packages using the command `pip install opencv-python pip install scikit-image pip install tensorboard pip install matplotlib pip install tqdm pip install timm==0.5.4`."
+        ]
+    },
+    "30": {
+        "Binary": [
+            "Step 1: Download the precompiled files from GitHub.",
+            "Step 2: Extract the downloaded archive."
+        ],
+        "Package Manager": [
+            "Step 1: Create a new Conda environment and activate it using the command `conda create --GDPO --file spec-list.txt`.",
+            "Step 2: Install necessary packages using the command `pip install requrements.txt`."
+        ]
+    },
+    "31": {
+        "Binary": [
+            "Step 1: Download the precompiled files from GitHub.",
+            "Step 2: Extract the downloaded archive."
+        ],
+        "Package Manager": [
+            "Step 1: Use Julia's package manager to install ISL by running the command `push!(LOAD_PATH,pwd())` in the ISL repository.",
+            "Step 2: Activate the environment using the command `activate pathToRepository/ISL` if you want to use any utility subrepository like GAN or DeepAR."
+        ]
+    },
+    "32": {
+        "Binary": [
+            "Step 1: Download the precompiled files from GitHub.",
+            "Step 2: Extract the downloaded archive."
+        ],
+        "Package Manager": [
+            "Step 1: Create a new Conda environment and activate it using the command `conda create --name spineps python=3.11`.",
+            "Step 2: Install necessary packages using the command `conda install pip`.",
+            "Step 3: Install a correct PyTorch version for your machine in your venv by following the instructions on <https://pytorch.org/get-started/locally/>.",
+            "Step 4: Confirm that your PyTorch package is working by running the commands `nvidia-smi` and `python -c 'import torch; print(torch.cuda.is_available())'`."
+        ]
+    },
+    "33": {
+        "Binary": [
+            "Step 1: Download the precompiled files from GitHub.",
+            "Step 2: Extract the downloaded archive."
+        ],
+        "Package Manager": [
+            "Step 1: Install the development version from GitHub using the command `install_github('https://github.com/nand115/CausNet')`."
+        ]
+    }
+}

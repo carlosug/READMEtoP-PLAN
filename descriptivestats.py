@@ -1,7 +1,7 @@
 import json
 
 # Load the JSON data
-with open('scr/data/ground_true_plan_steps_new.json') as f:
+with open('RESULTS/data/ground_true_plan_steps_new.json') as f:
     data = json.load(f)
 
 # print(data['study_subjects']["research_software"])

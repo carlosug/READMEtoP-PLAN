@@ -1,33 +1,28 @@
+__author__ = 'carlosug'
+
+'''
+evaluate LLM LLAMA on tasks (STEP)
+'''
+# credits and code adapted from: https://raw.githubusercontent.com/jd-coderepos/proc-tm/main/rouge_scorer.py
+
 import json
 import re
 from rouge_score import rouge_scorer
 
-DATA = "RESULTS/STEP/zero-shot-prompt/groq-responses-llama2.json"
-REF= "RESULTS/data/ground_true_plan_steps_new.json"
-
-def add_id_to_messages(json_file_path):
-    with open(json_file_path, 'r') as file:
-        data = json.load(file)
-        messages = data['messages']
-        assistant_count = 1
-        for message in messages:
-            if message['role'] == 'assistant':
-                message['id'] = f"{assistant_count}"  # Assigning a sequential number as value with a comma
-                assistant_count += 1
-        with open(json_file_path, 'w') as outfile:
-            json.dump(data, outfile, indent=4)
-
-# Add "id" to each assistant message in the JSON file
-add_id_to_messages(DATA)
+GROQ = "RESULTS/STEP/zero-shot-prompt/groq-responses-llama2.json" # dataset with MISTRAL responses
+ANNOTATED = "Evaluation/preprocessing/pre-annotated.json" # ground truth dataset with all atributes
 
 
+# Preprocessing the GROQ responses
+# 1. Add "id" to each "role: assistant" message 
+# 2. Extract only the steps and installation instructions from the "role:assistant" message
 def extract_steps_per_plan_from_responses(json_file_path_response):
     with open(json_file_path_response, 'r') as file:
         data = json.load(file)
     
     plans_by_id = {}
     plan_pattern = re.compile(r'(Binary|Container|Package Manager|Source):((?:\nStep \d+: [^\n]+)+)', re.IGNORECASE)
-
+# adding ids to each role assistant message
     for message in data['messages']:
         if message['role'] == 'assistant':
             software_id = message.get('id')
@@ -54,14 +49,17 @@ def extract_steps_per_plan_from_responses(json_file_path_response):
 
     return plans_by_id
 
-# Example usage
-json_file_path_response = DATA
+# 3. Generate the JSON file obtained from the preprocessing steps 1,2
+# note: This new JSON file is utilized to compare with ANNOTATED variable
+json_file_path_response = GROQ
 plans_by_id = extract_steps_per_plan_from_responses(json_file_path_response)
-with open('groq-responses-llama-log.json', 'w') as outfile:
+with open('Evaluation/Rouge/post-groq-responses-llama2.json', 'w') as outfile:
     json.dump(plans_by_id, outfile, indent=4)
 
 
 
+# 4. Preprocess the ANNOTATED JSON file
+# extract only plans and types per unique plans
 def extract_plans_from_ground_truth(json_file_path_ground):
     with open(json_file_path_ground, 'r') as file:
         data = json.load(file)
@@ -78,13 +76,14 @@ def extract_plans_from_ground_truth(json_file_path_ground):
         plans[software['id']] = software_plans
     return plans
 
-# Example usage
-json_file_path_ground = REF
+# 5. Extract steps from ground truth (ANNOTATED)
+json_file_path_ground = ANNOTATED
 plans = extract_plans_from_ground_truth(json_file_path_ground)
-with open('ref-log.json', 'w') as outfile:
+with open('Evaluation/Rouge/post-annotated.json', 'w') as outfile: # generate the post-annotated file
     json.dump(plans, outfile, indent=4)
 
-# # convert plans dict into a list and print them out
+# 6. convert plans dict into a list and print them out
+# # credits and code adapted from: https://raw.githubusercontent.com/jd-coderepos/proc-tm/main/rouge_scorer.py
 
 def read_files_into_list(filenames):
     """
@@ -102,12 +101,15 @@ def read_files_into_list(filenames):
             contents.append(file.read())
     return contents
 
-# Example usage:
-filenames = ["ref-log.json"]
-refs = read_files_into_list(filenames)
+# 7. JSON files to evaluate ROUGE:
+# Given two files: llm_responses, annotations,
+# with the same number (n) of lines,
+#  calculate score for each of this lines, or, the average over the whole file.
+filenames = ["Evaluation/Rouge/post-annotated.json"]
+annotations = read_files_into_list(filenames)
 
-filenames = ["groq-responses-llama-log.json"]
-preds = read_files_into_list(filenames)
+filenames = ["Evaluation/Rouge/post-groq-responses-llama2.json"]
+llm_responses = read_files_into_list(filenames)
 
 scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL', 'rougeLsum'])
 
@@ -118,22 +120,26 @@ cumulative_scores = {
     'rougeLsum': {'precision': 0, 'recall': 0, 'fmeasure': 0}
 }
 
-# Calculate ROUGE scores and accumulate
-num_samples = len(preds)
-for pred, ref in zip(preds, refs):
-    scores = scorer.score(ref, pred)
+# 8. Calculate ROUGE scores and accumulate
+num_samples = len(llm_responses)
+for pred, real in zip(llm_responses, annotations):
+    scores = scorer.score(real, pred)
     for metric, values in scores.items():
         cumulative_scores[metric]['precision'] += values.precision
         cumulative_scores[metric]['recall'] += values.recall
         cumulative_scores[metric]['fmeasure'] += values.fmeasure
 
-# Average the scores
+# 9. Average the scores
 for metric, values in cumulative_scores.items():
     cumulative_scores[metric]['precision'] /= num_samples
     cumulative_scores[metric]['recall'] /= num_samples
     cumulative_scores[metric]['fmeasure'] /= num_samples
 
 print(cumulative_scores)
+
+# 10. Write the scores to a JSON file
+with open('Evaluation/Rouge/scores-llama2.json', 'w') as outfile:
+    json.dump(cumulative_scores, outfile, indent=4)
 
 ### RESULTS ###
 # ❯ python evaluate-STEP-zero-shot-LLAMA.py  
