@@ -48,3 +48,54 @@ for id_number in data1:
     else:
         scores = calculate_rouge_scores(instructions1, instructions2)
         print_rouge_scores(scores, id_number)
+
+# current results are:
+# Number of instructions for ID 1 do not match.
+# Number of instructions for ID 2 do not match.
+# Number of instructions for ID 3 do not match.
+# Number of instructions for ID 4 do not match.
+# Number of instructions for ID 5 do not match.
+# Number of instructions for ID 6 do not match.
+# Number of instructions for ID 7 do not match.
+# Number of instructions for ID 8 do not match.
+# Number of instructions for ID 9 do not match.
+# Number of instructions for ID 10 do not match.
+# Number of instructions for ID 11 do not match.
+# Number of instructions for ID 12 do not match.
+# Number of instructions for ID 13 do not match.
+# Number of instructions for ID 14 do not match.
+# Number of instructions for ID 15 do not match.
+# Number of instructions for ID 16 do not match.
+# Number of instructions for ID 17 do not match.
+# Number of instructions for ID 18 do not match.
+# Number of instructions for ID 19 do not match.
+# Number of instructions for ID 20 do not match.
+# ROUGE scores for ID 21:
+# ROUGE-1: 0.7595
+# ROUGE-2: 0.7273
+# ROUGE-L: 0.7595
+
+# ROUGE-1: 0.9524
+# ROUGE-2: 0.9474
+# ROUGE-L: 0.9524
+
+# ROUGE-1: 0.6000
+# ROUGE-2: 0.5417
+# ROUGE-L: 0.5600
+
+# ROUGE-1: 0.6038
+# ROUGE-2: 0.4706
+# ROUGE-L: 0.5283
+
+# Number of instructions for ID 22 do not match.
+# Number of instructions for ID 23 do not match.
+# Number of instructions for ID 24 do not match.
+# Number of instructions for ID 25 do not match.
+# Number of instructions for ID 26 do not match.
+# Number of instructions for ID 27 do not match.
+# Number of instructions for ID 28 do not match.
+# Number of instructions for ID 29 do not match.
+# Number of instructions for ID 30 do not match.
+# Number of instructions for ID 31 do not match.
+# Number of instructions for ID 32 do not match.
+# Number of instructions for ID 33 do not match.
