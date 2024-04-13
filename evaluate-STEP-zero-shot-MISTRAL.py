@@ -1,7 +1,12 @@
 __author__ = 'carlosug'
 
 '''
-evaluate LLM MISTRAL on tasks (STEP)
+evaluate LLM MISTRAL on tasks (STEP) with ROUGE:
+- PRECISION: the percentage of words or phrases in the LLM response instructions that **match** with the annotated instructions. 
+- RECALL: the percentage of words or phrases in the LLM response instructions that **are also present** in the annotated instructions.
+- ROUGE-L ignores newlines and computes the LCS for the entire text. ROUGE-Lsum splits the text into sentences based on newlines and computes the LCS for each pair of sentences and take the average score for all sentences.
+
+
 '''
 
 
