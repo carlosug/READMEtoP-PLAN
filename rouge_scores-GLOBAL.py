@@ -109,7 +109,7 @@ def calculate_total_mean(scores):
 
     return total_mean
 
-responses = json.load(open('Evaluation/Rouge/post-groq-responses-llama2.json')) ## todo: calculate for each llm
+responses = json.load(open('Evaluation/Rouge/post-groq-responses-MISTRAL.json')) ## todo: calculate for each llm
 annotations = json.load(open('Evaluation/Rouge/post-annotated.json'))
 
 total_scores = {}
@@ -138,3 +138,17 @@ print(f"ROUGE-1 Mean: {total_mean['rouge1_mean']:.4f}")
 print(f"ROUGE-2 Mean: {total_mean['rouge2_mean']:.4f}")
 print(f"ROUGE-L Mean: {total_mean['rougeL_mean']:.4f}")
 print(f"ROUGE-LSUM Mean: {total_mean['rougeLsum_mean']:.4f}")
+
+
+## results
+# LLAMA --> Total Mean ROUGE scores for all IDs and methods:
+# ROUGE-1 Mean: 0.2948
+# ROUGE-2 Mean: 0.1888
+# ROUGE-L Mean: 0.2775
+# ROUGE-LSUM Mean: 0.2775
+
+
+## MISTRAL --> ROUGE-1 Mean: 0.4642
+# ROUGE-2 Mean: 0.3753
+# ROUGE-L Mean: 0.4513
+# ROUGE-LSUM Mean: 0.4527
