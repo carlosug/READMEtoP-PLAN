@@ -1,200 +1,200 @@
 | ID | Method           | LLM Detected | Annotations | Ratio | LLM     | Comments |
-| 1  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             0 |           5 | 0.00  | MISTRAL | 
-|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
+| 1  |      Binary      |             0 |           0 | 0.00  | MISTRAL | no extracted |
+|    |      Source      |             0 |           5 | 0.00  | MISTRAL | |
+|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 2  |      Binary      |             0 |           0 | 0.00  | MISTRAL |no extracted|
+|    |      Source      |             0 |           1 | 0.00  | MISTRAL ||
+|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 3  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             2 |           2 | 1.00  | MISTRAL |correct order|
+|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 4  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             2 |           0 | 0.00  | MISTRAL |as the instructions contain mixture of verb/words associated with source method|
+|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             1 |           3 | 0.33  | MISTRAL |step associated with docker image is correct|
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 5  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             7 |           7 | 1.00  | MISTRAL |correct order|
+|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 6  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             0 |           1 | 0.00  | MISTRAL ||
+|    | Package Manager  |             3 |           0 | 0.00  | MISTRAL |incorrect method and added note comments from readme|
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 7  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             2 |           3 | 0.67  | MISTRAL |step 3 is the only incorrect|
+|    | Package Manager  |             5 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 8  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             1 |           1 | 1.00  | MISTRAL |correct step +added code comments|
+|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 9  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             2 |          10 | 0.20  | MISTRAL |only step 2 is correct|
+|    | Package Manager  |             1 |           0 | 0.00  | MISTRAL |step 1 for requirements is extracted in the wrong method type|
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 10  |      Binary      |             2 |           3 | 0.67  | MISTRAL |correct step seq order but last one is a summarization|
+|    |      Source      |             0 |           0 | 0.00  | MISTRAL ||
+|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 11  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             0 |           4 | 0.00  | MISTRAL ||
+|    | Package Manager  |             4 |           0 | 0.00  | MISTRAL |steps are correct but wrong method type|
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 12  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             6 |           2 | 3.00  | MISTRAL |steps are identified correctly but it also counts additional notes from readme as steps|
+|    | Package Manager  |             3 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 13  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             4 |          13 | 0.31  | MISTRAL |correct only for linux configuration. all the steps for other tech are not extracted|
+|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             4 |           5 | 0.80  | MISTRAL |correct order. only missed the step 5|
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 14  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             0 |           2 | 0.00  | MISTRAL ||
+|    | Package Manager  |             4 |           0 | 0.00  | MISTRAL |incorrect steps and also added commands code from readne|
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 15  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             3 |           1 | 3.00  | MISTRAL |correct step but adding extra comments and commands code from readme|
+|    | Package Manager  |             2 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 16  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             2 |           2 | 1.00  | MISTRAL |correct steps but also includes code command|
+|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 17  |      Binary      |             4 |           1 | 4.00  | MISTRAL |the step 1 is identified but order is incorrect as it includes extra and commands code|
+|    |      Source      |             0 |           0 | 0.00  | MISTRAL ||
+|    | Package Manager  |             0 |           3 | 0.00  | MISTRAL |the steps missing here are the ones from binary|
+|    |    Container     |             2 |           0 | 0.00  | MISTRAL |the steps extracted here are extra notes from the readme|
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 18  |      Binary      |             4 |           0 | 0.00  | MISTRAL |*it split the steps text into two steps*|
+|    |      Source      |             0 |           0 | 0.00  | MISTRAL ||
+|    | Package Manager  |             1 |           6 | 0.17  | MISTRAL |it only includes the code command from the readme|
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 19  |      Binary      |             3 |           0 | 0.00  | MISTRAL |the steps here are correct but wrong method|
+|    |      Source      |             3 |           1 | 3.00  | MISTRAL |it adds also the previous steps|
+|    | Package Manager  |             0 |           3 | 0.00  | MISTRAL ||
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 20  |      Binary      |             1 |           0 | 0.00  | MISTRAL |wrong method type|
+|    |      Source      |             0 |           0 | 0.00  | MISTRAL ||
+|    | Package Manager  |             1 |           2 | 0.50  | MISTRAL |it only extracts step from package manager pip|
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 21  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             4 |           4 | 1.00  | MISTRAL |correct order of steps|
+|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 22  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             2 |           2 | 1.00  | MISTRAL |correct step but adds code commands and extra notes|
+|    | Package Manager  |             2 |           0 | 0.00  | MISTRAL |wrong method as it contains "conda" keyword|
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 23  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             0 |           0 | 0.00  | MISTRAL ||
+|    | Package Manager  |             2 |           2 | 1.00  | MISTRAL |correct steps but adds code commands and extra notes|
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 24  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             2 |           3 | 0.67  | MISTRAL |the steps are in correct order, but missing step 1|
+|    | Package Manager  |             1 |           0 | 0.00  | MISTRAL |step 1 as it creates conda env is here|
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 25  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             0 |           0 | 0.00  | MISTRAL ||
+|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             1 |           1 | 1.00  | MISTRAL |correct + added command comments|
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 26  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             0 |           2 | 0.00  | MISTRAL |not found|
+|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 27  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             4 |           5 | 0.80  | MISTRAL |correct order but missing the last one|
+|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 28  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             1 |           1 | 1.00  | MISTRAL |exact match|
+|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 29  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             1 |           2 | 0.50  | MISTRAL |step 2 is missing|
+|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 30  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             0 |           2 | 0.00  | MISTRAL ||
+|    | Package Manager  |             1 |           0 | 0.00  | MISTRAL |wrong step and method|
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 31  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             0 |           0 | 0.00  | MISTRAL ||
+|    | Package Manager  |             0 |           2 | 0.00  | MISTRAL |not found|
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
 |----|------------------|--------------|-------------|-------|---------|
 |    |                  |              |             |       |         |
-| 2  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             0 |           1 | 0.00  | MISTRAL |
-|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 3  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             2 |           2 | 1.00  | MISTRAL |
-|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 4  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             2 |           0 | 0.00  | MISTRAL |
-|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             1 |           3 | 0.33  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 5  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             7 |           7 | 1.00  | MISTRAL |
-|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 6  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             0 |           1 | 0.00  | MISTRAL |
-|    | Package Manager  |             3 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 7  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             2 |           3 | 0.67  | MISTRAL |
-|    | Package Manager  |             5 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 8  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             1 |           1 | 1.00  | MISTRAL |
-|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 9  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             2 |          10 | 0.20  | MISTRAL |
-|    | Package Manager  |             1 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 10  |      Binary      |             2 |           3 | 0.67  | MISTRAL |
-|    |      Source      |             0 |           0 | 0.00  | MISTRAL |
-|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 11  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             0 |           4 | 0.00  | MISTRAL |
-|    | Package Manager  |             4 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 12  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             6 |           2 | 3.00  | MISTRAL |
-|    | Package Manager  |             3 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 13  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             4 |          13 | 0.31  | MISTRAL |
-|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             4 |           5 | 0.80  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 14  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             0 |           2 | 0.00  | MISTRAL |
-|    | Package Manager  |             4 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 15  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             3 |           1 | 3.00  | MISTRAL |
-|    | Package Manager  |             2 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 16  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             2 |           2 | 1.00  | MISTRAL |
-|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 17  |      Binary      |             4 |           1 | 4.00  | MISTRAL |
-|    |      Source      |             0 |           0 | 0.00  | MISTRAL |
-|    | Package Manager  |             0 |           3 | 0.00  | MISTRAL |
-|    |    Container     |             2 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 18  |      Binary      |             4 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             0 |           0 | 0.00  | MISTRAL |
-|    | Package Manager  |             1 |           6 | 0.17  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 19  |      Binary      |             3 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             3 |           1 | 3.00  | MISTRAL |
-|    | Package Manager  |             0 |           3 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 20  |      Binary      |             1 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             0 |           0 | 0.00  | MISTRAL |
-|    | Package Manager  |             1 |           2 | 0.50  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 21  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             4 |           4 | 1.00  | MISTRAL |
-|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 22  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             2 |           2 | 1.00  | MISTRAL |
-|    | Package Manager  |             2 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 23  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             0 |           0 | 0.00  | MISTRAL |
-|    | Package Manager  |             2 |           2 | 1.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 24  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             2 |           3 | 0.67  | MISTRAL |
-|    | Package Manager  |             1 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 25  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             0 |           0 | 0.00  | MISTRAL |
-|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             1 |           1 | 1.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 26  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             0 |           2 | 0.00  | MISTRAL |
-|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 27  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             4 |           5 | 0.80  | MISTRAL |
-|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 28  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             1 |           1 | 1.00  | MISTRAL |
-|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 29  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             1 |           2 | 0.50  | MISTRAL |
-|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 30  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             0 |           2 | 0.00  | MISTRAL |
-|    | Package Manager  |             1 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 31  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             0 |           0 | 0.00  | MISTRAL |
-|    | Package Manager  |             0 |           2 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 32  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             1 |           4 | 0.25  | MISTRAL |
-|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
-|----|------------------|--------------|-------------|-------|---------|
-|    |                  |              |             |       |         |
-| 33  |      Binary      |             0 |           0 | 0.00  | MISTRAL |
-|    |      Source      |             1 |           1 | 1.00  | MISTRAL |
-|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL |
-|    |    Container     |             0 |           0 | 0.00  | MISTRAL |
+| 32  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             1 |           4 | 0.25  | MISTRAL |step is not equal|
+|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
+|----|------------------|--------------|-------------|-------|---------||
+|    |                  |              |             |       |         ||
+| 33  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
+|    |      Source      |             1 |           1 | 1.00  | MISTRAL |correct step but adds extra info and command code from readme|
+|    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||
+|    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
 |----|------------------|--------------|-------------|-------|---------|
 |    |                  |              |             |       |         |
 | 1  |      Binary      |             4 |           0 | 0.00  | LLAMA2  | "download" keyword confused llm |
