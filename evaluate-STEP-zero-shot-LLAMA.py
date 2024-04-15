@@ -9,7 +9,7 @@ import json
 import re
 from rouge_score import rouge_scorer
 
-GROQ = "RESULTS/STEP/zero-shot-prompt/groq-responses-llama2.json" # dataset with MISTRAL responses
+GROQ = "RESULTS/STEP/zero-shot-prompt/groq-responses-llama2.json" # dataset with LLAMA responses
 ANNOTATED = "Evaluation/preprocessing/pre-annotated.json" # ground truth dataset with all atributes
 
 

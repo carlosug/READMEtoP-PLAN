@@ -5,7 +5,6 @@
             "id": "1",
             "name": "AAAI-DISIM-UnivAQ/DALI",
             "url": "https://raw.githubusercontent.com/AAAI-DISIM-UnivAQ/DALI/master/README.md",
-            "n_plans": 2,
             "plans": [
               {
                 "type": "Source",
@@ -65,7 +64,6 @@
           "id": "2",
           "name": "BingqingCheng/cace",
           "url": "https://raw.githubusercontent.com/BingqingCheng/cace/main/README.md",
-          "n_plans": 1,
           "plans": [
             {
               "type": "Source",
@@ -89,7 +87,6 @@
             "id": "3",
             "name": "less-and-less-bugs/Trust_TELLER",
             "url": "https://raw.githubusercontent.com/less-and-less-bugs/Trust_TELLER/main/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -120,7 +117,6 @@
             "id": "4",
             "name": "utiasASRL/steam_icp",
             "url": "https://raw.githubusercontent.com/utiasASRL/steam_icp/master/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Container",
@@ -158,7 +154,6 @@
             "id": "5",
             "name": "PFischbeck/parameter-fitting-experiments",
             "url": "https://raw.githubusercontent.com/PFischbeck/parameter-fitting-experiments/main/Readme.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -223,7 +218,6 @@
             "id": "6",
             "name": "gabbypinto/GET-Tok-Peru",
             "url": "https://raw.githubusercontent.com/gabbypinto/GET-Tok-Peru/main/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -247,7 +241,6 @@
             "id": "7",
             "name": "jonarriza96/gsft",
             "url": "https://raw.githubusercontent.com/jonarriza96/gsft/main/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -285,7 +278,6 @@
             "id": "8",
             "name": "EricssonResearch/Line-Based-Room-Segmentation-and-EDF",
             "url": "https://raw.githubusercontent.com/EricssonResearch/Line-Based-Room-Segmentation-and-EDF/release/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -309,7 +301,6 @@
             "id": "9",
             "name": "viralInformatics/VIGA",
              "url": "https://raw.githubusercontent.com/viralInformatics/VIGA/master/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -396,7 +387,6 @@
             "id": "10",
             "name": "scimemia/NRN-EZ",
             "url": "https://raw.githubusercontent.com/scimemia/NRN-EZ/master/README.md",
-            "n_plans": 3,
             "plans": [
               {
                 "type": "Binary",
@@ -450,7 +440,6 @@
             "id": "11",
             "name": "uclaml/SPIN",
             "url": "https://raw.githubusercontent.com/uclaml/SPIN/main/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -495,7 +484,6 @@
             "id": "12",
             "name": "ncbi/GeneGPT",
             "url": "https://raw.githubusercontent.com/ncbi/GeneGPT/main/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -526,7 +514,6 @@
             "id": "13",
             "name": "arplaboratory/learning-to-fly",
             "url": "https://raw.githubusercontent.com/arplaboratory/learning-to-fly/master/README.MD",
-            "n_plans": 3,
             "plans": [
               {
                 "type": "Container",
@@ -685,7 +672,6 @@
             "id": "14",
             "name": "LargeWorldModel/LWM",
             "url": "https://raw.githubusercontent.com/LargeWorldModel/LWM/main/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -716,7 +702,6 @@
             "id": "15",
             "name": "microsoft/UFO",
             "url": "https://raw.githubusercontent.com/microsoft/UFO/main/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -740,7 +725,6 @@
             "id": "16",
             "name": "YOLO-World",
             "url": "https://raw.githubusercontent.com/AILab-CVC/YOLO-World/master/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -771,7 +755,6 @@
             "id": "17",
             "name": "tensorflow",
             "url": "https://raw.githubusercontent.com/tensorflow/tensorflow/master/README.md",
-            "n_plans": 3,
             "plans": [
               {
                 "type": "package manager",
@@ -832,7 +815,6 @@
             "id": "18",
             "name": "transformers",
             "url": "https://raw.githubusercontent.com/huggingface/transformers/main/README.md",
-            "n_plans": 2,
             "plans": [
               {
                 "type": "package manager",
@@ -899,7 +881,6 @@
             "id": "19",
             "name": "divelab/DIG",
             "url": "https://raw.githubusercontent.com/divelab/DIG/dig-stable/README.md",
-            "n_plans": 2,
             "plans": [
               {
                 "type": "package manager",
@@ -952,7 +933,6 @@
             "id": "20",
             "name": "langchain-ai/langchain",
             "url": "https://raw.githubusercontent.com/langchain-ai/langchain/master/README.md",
-            "n_plans": 2,
             "plans": [
               {
                 "type": "package manager",
@@ -991,7 +971,6 @@
             "id": "21",
             "name": "ungetym/blender-camera-generator",
             "url": "https://gitlab.com/ungetym/blender-camera-generator/-/raw/main/README.md?ref_type=heads",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -1036,7 +1015,6 @@
             "id": "22",
             "name": "facebookresearch/DiT",
             "url": "https://raw.githubusercontent.com/facebookresearch/DiT/main/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -1067,7 +1045,6 @@
             "id": "23",
             "name": "ml-stat-Sustech/TorchCP",
             "url": "https://raw.githubusercontent.com/ml-stat-Sustech/TorchCP/master/README.md",
-            "n_plans": 2,
             "plans": [
               {
                 "type": "package manager",
@@ -1106,7 +1083,6 @@
             "id": "24",
             "name": "NUS-HPC-AI-Lab/Neural-Network-Diffusion",
             "url": "https://raw.githubusercontent.com/NUS-HPC-AI-Lab/Neural-Network-Diffusion/main/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -1144,7 +1120,6 @@
             "id": "25",
             "name": "sanjay-810/AYDIV2",
             "url": "https://raw.githubusercontent.com/sanjay-810/AYDIV2/main/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Container",
@@ -1168,7 +1143,6 @@
             "id": "26",
             "name": "FasterDecoding/BitDelta",
             "url": "https://raw.githubusercontent.com/FasterDecoding/BitDelta/main/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -1199,7 +1173,6 @@
             "id": "27",
             "name": "Emanual20/ZHEM",
             "url": "https://raw.githubusercontent.com/Emanual20/ZHEM/main/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -1251,7 +1224,6 @@
             "id": "28",
             "name": "FloatAI/humaneval-xl",
             "url": "https://raw.githubusercontent.com/FloatAI/humaneval-xl/main/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -1275,7 +1247,6 @@
             "id": "29",
             "name": "M2219/DCVSMNet",
             "url": "https://raw.githubusercontent.com/M2219/DCVSMNet/main/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -1306,7 +1277,6 @@
             "id": "30",
             "name": "sail-sg/GDPO",
             "url": "https://raw.githubusercontent.com/sail-sg/GDPO/main/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -1337,7 +1307,6 @@
             "id": "31",
             "name": "josemanuel22/ISL",
             "url": "https://raw.githubusercontent.com/josemanuel22/ISL/main/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "package manager",
@@ -1368,7 +1337,6 @@
             "id": "32",
             "name": "Hendrik-code/spineps",
             "url": "https://raw.githubusercontent.com/Hendrik-code/spineps/main/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",
@@ -1413,7 +1381,6 @@
             "id": "33",
             "name": "nand1155/CausNet",
             "url": "https://raw.githubusercontent.com/nand1155/CausNet/main/README.md",
-            "n_plans": 1,
             "plans": [
               {
                 "type": "Source",

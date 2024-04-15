@@ -238,7 +238,7 @@
     },
     "32": {
         "Source": [
-            "### Setup Venv \n The prder of the following instructions is important! 1. Use Conda or Pip to create a venv for python 3.11, we are using conda for this example:",
+            "### Setup Venv \n The order of the following instructions is important! 1. Use Conda or Pip to create a venv for python 3.11, we are using conda for this example:",
             "2. Go to <a href=`https://pytorch.org/get-started/locally/`>https://pytorch.org/get-started/locally/</a> and install a correct pytorch version for your machine in your venv",
             "3. Confirm that your pytorch package is working! Try calling these commands:",
             "This should show your GPU and it's usage."
