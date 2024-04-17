@@ -1310,7 +1310,7 @@
         "type": "Source",
         "steps": [
           {
-            "text": "### Setup Venv \n The prder of the following instructions is important! 1. Use Conda or Pip to create a venv for python 3.11, we are using conda for this example:",
+            "text": "### Setup Venv \n The order of the following instructions is important! 1. Use Conda or Pip to create a venv for python 3.11, we are using conda for this example:",
             "note": "This installation assumes you know your way around conda and virtual environments.",
             "seq_order": 1,
             "is_optional": false,

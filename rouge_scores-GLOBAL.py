@@ -109,7 +109,7 @@ def calculate_total_mean(scores):
 
     return total_mean
 
-responses = json.load(open('Evaluation/Rouge/post-groq-responses-MISTRAL.json')) ## todo: calculate for each llm
+responses = json.load(open('Evaluation/Rouge/post-groq-responses-llama2.json')) ## todo: calculate for each llm
 annotations = json.load(open('Evaluation/Rouge/post-annotated.json'))
 
 total_scores = {}

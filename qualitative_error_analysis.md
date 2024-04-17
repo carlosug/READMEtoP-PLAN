@@ -1,4 +1,4 @@
-| ID | Method           | LLM Detected | Annotations | Ratio | LLM     | Comments |
+| ID | Method           | LLM Detected | Annotations | Ratio | LLM     | Error type |
 | 1  |      Binary      |             0 |           0 | 0.00  | MISTRAL | no extracted |
 |    |      Source      |             0 |           5 | 0.00  | MISTRAL | |
 |    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||

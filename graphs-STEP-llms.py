@@ -50,9 +50,9 @@ for response_file in response_files:
         id_label = f"ID {i+1}"
         bars = ax.barh(id_label, ratios.values(), label=id_label)
 
-    ax.set_xlabel('Ratio (System Detected / Reference)')
+    ax.set_xlabel('Ratio (LLM Detected / Reference)')
     ax.set_ylabel('ID')
-    ax.set_title(f'Ratio of System Detected Steps to Reference Steps ({response_file})')
+    ax.set_title(f'Ratio of LLM Detected Steps to Reference Steps ({response_file})')
     ax.axvline(x=1, linestyle='--', color='gray')  # Adding a vertical line at ratio = 1
 
     # Fit legend to adjust to the size of the plot and set the font size
