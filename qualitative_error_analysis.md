@@ -53,7 +53,7 @@
 |    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
 |----|------------------|--------------|-------------|-------|---------||
 |    |                  |              |             |       |         ||
-| 10  |      Binary      |             2 |           3 | 0.67  | MISTRAL |correct step seq order but last one is a summarization|
+| 10  |      Binary      |             2 |           3 | 0.67  | MISTRAL |**correct step seq order but last one is a summarization**|
 |    |      Source      |             0 |           0 | 0.00  | MISTRAL ||
 |    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||
 |    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
@@ -72,14 +72,14 @@
 |----|------------------|--------------|-------------|-------|---------||
 |    |                  |              |             |       |         ||
 | 13  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
-|    |      Source      |             4 |          13 | 0.31  | MISTRAL |correct only for linux configuration. all the steps for other tech are not extracted|
+|    |      Source      |             4 |          13 | 0.31  | MISTRAL |**correct only for linux configuration. all the steps for other tech are not extracted**|
 |    | Package Manager  |             0 |           0 | 0.00  | MISTRAL ||
 |    |    Container     |             4 |           5 | 0.80  | MISTRAL |correct order. only missed the step 5|
 |----|------------------|--------------|-------------|-------|---------||
 |    |                  |              |             |       |         ||
 | 14  |      Binary      |             0 |           0 | 0.00  | MISTRAL ||
 |    |      Source      |             0 |           2 | 0.00  | MISTRAL ||
-|    | Package Manager  |             4 |           0 | 0.00  | MISTRAL |incorrect steps and also added commands code from readne|
+|    | Package Manager  |             4 |           0 | 0.00  | MISTRAL |**incorrect steps and also added commands code from readme**|
 |    |    Container     |             0 |           0 | 0.00  | MISTRAL ||
 |----|------------------|--------------|-------------|-------|---------||
 |    |                  |              |             |       |         ||
