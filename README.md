@@ -1,5 +1,10 @@
 # Code and data for _Extracting Research Software Installation Instructions  from README files: An Initial Analysis_
 
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10991890.svg)](https://doi.org/10.5281/zenodo.10991890)
+
+
+
 ## Overview
 This repository contains the code and data produced for the paper [_Extracting Research Software Installation Instructions  from README files: An Initial Analysis_](https:)(Conference: Natural Scientific Language Processing and Research Knowledge Graphs (NSLP 2024))
 ```bibtex
